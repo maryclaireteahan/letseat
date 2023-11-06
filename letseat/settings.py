@@ -29,7 +29,7 @@ if os.path.isfile('env.py'):
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = ['maryclaireteahan-letseat.herokuapp.com', 'maryclaireteahan-letseat-0b5910f8e882.herokuapp.com', 'localhost', '8000', '127.0.0.1']
 
