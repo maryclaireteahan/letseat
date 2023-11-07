@@ -9,7 +9,7 @@ STATUS =((0, 'Draft'), (1, 'Published'))
 """ 
 Database model for creating recipe posts
 """
-class Post(models.Model):
+class Recipe(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
@@ -60,7 +60,4 @@ Returns string representation of an object
 """
 def __str__(self):
     return f'Comment {self.body} by {self.name}'
-    
-
-
     
