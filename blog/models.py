@@ -61,3 +61,19 @@ Returns string representation of an object
 def __str__(self):
     return f'Comment {self.body} by {self.name}'
     
+class Category(models.Model):
+    
+    name = models.CharField(max_length=80)
+
+"""
+Order comments from oldest to newest
+""" 
+class Meta:
+    ordering = ['created_on']
+    
+""" 
+Returns string representation of an object
+"""
+def __str__(self):
+    return f'Comment {self.body} by {self.name}'
+    
