@@ -4,6 +4,25 @@ from cloudinary.models import CloudinaryField
 
 STATUS =((0, 'Draft'), (1, 'Published'))
 
+""" 
+Database model for assigning categories to the recipes
+"""
+class Category(models.Model):
+    
+    name = models.CharField(max_length=80)
+
+"""
+Order categories by name
+""" 
+class Meta:
+    ordering = ['name']
+    
+""" 
+Returns string representation of an object
+"""
+def __str__(self):
+    return self.name
+    
 
 
 """ 
@@ -20,7 +39,7 @@ class Recipe(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
-   
+    category = models.ManyToManyField(Category, related_name='recipes')
 
 """
 Order posts from newest to oldest
@@ -60,20 +79,3 @@ Returns string representation of an object
 """
 def __str__(self):
     return f'Comment {self.body} by {self.name}'
-    
-class Category(models.Model):
-    
-    name = models.CharField(max_length=80)
-
-"""
-Order comments from oldest to newest
-""" 
-class Meta:
-    ordering = ['created_on']
-    
-""" 
-Returns string representation of an object
-"""
-def __str__(self):
-    return f'Comment {self.body} by {self.name}'
-    
