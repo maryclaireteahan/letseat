@@ -1,3 +1,4 @@
+from msilib import CAB
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
@@ -24,6 +25,16 @@ def __str__(self):
     return self.name
     
 
+"""
+The categories to be assigned to the recipes
+"""
+CATEGORY_CHOICES = (
+    ("breakfast", "Breakfast"),
+    ("lunch", "Lunch"),
+    ("dinner", "Dinner"),
+    ("dessert", "Dessert"),
+    ("snack", "Snack"),
+)
 
 """ 
 Database model for creating recipe posts
@@ -39,7 +50,8 @@ class Recipe(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
-    category = models.ManyToManyField(Category, related_name='recipes')
+    category = models.ManyToManyField(Category, related_name='recipes', choices=CATEGORY_CHOICES)
+    
 
 """
 Order posts from newest to oldest

@@ -1,6 +1,6 @@
 from turtle import clear
 from django.contrib import admin
-from .models import Recipe, Comment
+from .models import Recipe, Comment, Category
 from django_summernote.admin import SummernoteModelAdmin
 
 """ 
@@ -26,3 +26,12 @@ class CommentAdmin(admin.ModelAdmin):
     
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
+
+""" 
+Register Category model and CategoryAdmin class to admin site
+"""
+@admin.register(Category)
+class CategoryAdmin(SummernoteModelAdmin):   
+    prepopulated_fields= {'slug': ('name',)}
+
+
