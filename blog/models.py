@@ -59,6 +59,10 @@ Returns the total number of like on a post
 def number_of_likes(self):
     return self.likes.count()
 
+
+""" 
+Database model for commenting on recipe posts
+"""
 class Comment(models.Model):
     
     post = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments')
@@ -66,8 +70,9 @@ class Comment(models.Model):
     email = models.EmailField()
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
-    
+
 """
 Order comments from oldest to newest
 """ 
