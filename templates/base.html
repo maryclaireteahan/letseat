@@ -1,11 +1,68 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Meta tags for search engines -->
+    <meta name="description" content="Let's Eat! is a recipe blog'.">
+    <meta name="keywords" content="Recipe, Blog, Breakfast, Lunch, Dinner, Dessert, Snack, Food, Delicious">
+    <!--Title-->
+    <title>Let's Eat!</title>
+    <!--Favicon-->
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <footer></footer>
+    <header>
+        <a href="index.html">
+            <h1 id="logo">Lets's Eat</h1>
+        </a>
+        <input type="checkbox" id="nav-toggle" name="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label"><i class="fa-solid fa-bars"
+                style="color: #3a3a3a;"></i></label>
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html" class="active" aria-label="Go to Home page">Home</a></li>
+                <li><a href="recipe_detail.html" aria-label="Go to Recipe page">Recipes</a></li>
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sign up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+    </main>
+    <footer>
+        <ul id="social-networks">
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                    aria-label="Visit my Facebook page (opens in a new tab)"><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li><a href="https://www.twitter.com/" target="_blank" rel="noopener"
+                    aria-label="Visit my Twitter page (opens in a new tab)"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener"
+                    aria-label="Visit my Youtube page (opens in a new tab)"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                    aria-label="Visit my Instagram (opens in a new tab)"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener"
+                    aria-label="Visit my LinkedIn (opens in a new tab)"><i class="fa-brands fa-linkedin-in"></i></a>
+            </li>
+        </ul>
+    </footer>
 </body>
 </html>
