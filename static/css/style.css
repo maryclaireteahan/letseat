@@ -1,0 +1,95 @@
+ /* Google fonts import */
+ @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+ /* Asterisk wildcard selector to override default styles added by the browser */
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+
+ /* General styles */
+ body {
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+     /* Generic project styles */
+     color: #3a3a3a;
+     font-family: 'Oxygen', sans-serif;
+     margin-bottom: 0;
+     padding-bottom: 0;
+ }
+
+ hr {
+     border-top: 1px solid #3a3a3a;
+     margin: 5px 0;
+ }
+
+ /* Navbar styles with dropdown toggle */
+ nav {
+     background-color: seashell;
+     width: 100%;
+     left: 0;
+     padding: 0 1rem;
+     display: none;
+     top: 100%;
+     bottom: 90%;
+ }
+
+ /* Nav toggle */
+ #nav-toggle:checked~nav {
+     display: block;
+ }
+
+ #nav-toggle {
+     display: none;
+ }
+
+ .nav-toggle-label {
+     font-size: 2rem;
+ }
+
+ #menu a:hover {
+     border-bottom: 1px solid #3a3a3a;
+ }
+
+ /*Header------------------------------------Header----------------------------------Header---------------------------------------------------------------------------------------*/
+
+
+ /*Index-------------------------------------Index-----------------------------------Index---------------------------------------------------------------------------------------*/
+
+
+ /*Actor-------------------------------------Actor-----------------------------------Actor----------------------------------------------------------------------------------------*/
+
+
+ /*Costume-----------------------------------Costume---------------------------------Costume--------------------------------------------------------------------------------------*/
+
+
+ /*Gallery-----------------------------------Gallery---------------------------------Gallery--------------------------------------------------------------------------------------*/
+
+
+ /*Contact-----------------------------------Contact---------------------------------Contact--------------------------------------------------------------------------------------*/
+
+
+ /*Footer------------------------------------Footer----------------------------------Footer---------------------------------------------------------------------------------------*/
+
+
+
+ /* Media query: large or landscape phones (576px and up) -----------------------------------------------576px----------------------------------------------------------------------- */
+ @media screen and (min-width: 576px) {
+
+ }
+
+ /* Media query: tablets and larger (768px and up) ------------------------------------------------------768px----------------------------------------------------------------------- */
+ @media screen and (min-width: 768px) {
+
+ }
+
+ /* Large devices (laptops and desktops, 992px and up) -----------------------------------------------992px---------------------------------------------------------------------------- */
+ @media screen and (min-width: 992px) {
+       
+ }
+
+ /* Large devices (laptops and desktops, 1200px and up) -----------------------------------------------1200--------------------------------------------------------------------------- */
+ @media screen and (min-width: 1200px) {
+ }
