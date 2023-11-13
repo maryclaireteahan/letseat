@@ -1,11 +1,10 @@
- /* Google fonts import */
- @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 
  /* Asterisk wildcard selector to override default styles added by the browser */
  * {
      padding: 0;
      margin: 0;
      box-sizing: border-box;
+     font-weight: 700;
  }
 
  /* General styles */
@@ -20,9 +19,12 @@
      padding-bottom: 0;
  }
 
- hr {
+ header {
      border-top: 1px solid #3a3a3a;
-     margin: 5px 0;
+ }
+
+ header h1 {
+    font-weight: 700;
  }
 
  /* Navbar styles with dropdown toggle */
@@ -54,10 +56,37 @@
  }
 
  /*Header------------------------------------Header----------------------------------Header---------------------------------------------------------------------------------------*/
+ header {
+     background-color: seashell;
+     position: fixed;
+     padding: 0 2px;
+     margin-bottom: 0;
+     z-index: 99;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: baseline;
+     text-decoration: none;
+     box-shadow: 0 2px 2px #3a3a3a;
+ }
+
+ header a {
+     text-decoration: none;
+     color: inherit;
+ }
 
 
  /*Index-------------------------------------Index-----------------------------------Index---------------------------------------------------------------------------------------*/
 
+ main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(155, 239, 239);
+    padding-bottom: 0;
+    margin-bottom: 0;
+    align-content: flex-start;
+}
 
  /*Actor-------------------------------------Actor-----------------------------------Actor----------------------------------------------------------------------------------------*/
 
@@ -72,6 +101,26 @@
 
 
  /*Footer------------------------------------Footer----------------------------------Footer---------------------------------------------------------------------------------------*/
+ footer {
+    background-color: darkcyan;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    box-shadow: 0 2px 2px rgb(1, 54, 54);
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
+}
 
 
 
