@@ -27,7 +27,7 @@ if os.path.isfile('env.py'):
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
-DEBUG = False
+DEBUG = True
 # SECURITY WARNING: don't run with debug turned on in production!
 
 ALLOWED_HOSTS = ['maryclaireteahan-letseat.herokuapp.com', 'maryclaireteahan-letseat-0b5910f8e882.herokuapp.com', 'localhost', '8000', '127.0.0.1']
