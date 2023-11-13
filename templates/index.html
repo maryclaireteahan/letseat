@@ -16,27 +16,47 @@
 <h2 class = "h2-top-picks">My Top Picks</h2>
 <div class = "top-picks">
     <div class ="img-div-top-picks">
-        <img class = "img-top-picks" src="" alt="">
+        {% if "placeholder" in post.featured_image.url %}
+        <img class="img-top-picks"
+            src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+        {% else %}
+        <img class="img-top-picks" src=" {{ post.featured_image.url }}">
+        {% endif %}
     </div>
-    <h3 class = "h3-top-picks">Placeholder</h3>
-    <div class = "button-div-top-picks"><button class = "button-top-picks">Select</button></div>
+    <h3 class = "h3-top-picks">placeholder{{ recipe.title }}</h3>
+    <div class = "button-div-top-picks">
+        <button class = "button-top-picks">Select</button>
+    </div>
 </div>
 <div class = "top-picks">
-    <div class = "img-div-top-picks">
-        <img class = "img-top-picks" src="" alt="">
+    <div class ="img-div-top-picks">
+        {% if "placeholder" in post.featured_image.url %}
+        <img class="img-top-picks"
+            src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+        {% else %}
+        <img class="img-top-picks" src=" {{ post.featured_image.url }}">
+        {% endif %}
     </div>
-    <h3 class = "h3-top-picks">Placeholder</h3>
-    <div class = "button-div-top-picks"><button class = "button-top-picks">Select</button></div>
+    <h3 class = "h3-top-picks">{{ recipe.title }}</h3>
+    <div class = "button-div-top-picks">
+        <button class = "button-top-picks"><a href="#">Select</a></button>
+    </div>
 </div>
 <div class = "top-picks">
-    <div class = "img-div-top-picks">
-        <img class = "img-top-picks" src="" alt="">
+    <div class ="img-div-top-picks">
+        {% if "placeholder" in post.featured_image.url %}
+        <img class="img-top-picks"
+            src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+        {% else %}
+        <img class="img-top-picks" src=" {{ post.featured_image.url }}">
+        {% endif %}
     </div>
-    <h3 class = "h3-top-picks"> Placeholder</h3>
-    <div class = "button-div-top-picks"><button class = "button-top-picks">Select</button></div>
+    <h3 class = "h3-top-picks">{{ recipe.title }}</h3>
+    <div class = "button-div-top-picks">
+        <button class = "button-top-picks">Select</button>
+    </div>
 </div>
-
-{% comment %} <div class="container">
+ {% comment %} <div class="container">
     <div class="row">
 
         <!-- Blog Entries Column -->
@@ -89,5 +109,5 @@
         </ul>
     </nav>
     {% endif %}
-</div> {% endcomment %}
+</div>  {% endcomment %}
 {%endblock%}

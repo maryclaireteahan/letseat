@@ -151,7 +151,8 @@ div {
 }
 
 .img-top-picks{
-
+    height: 100%;
+    width: 100%;
 }
 
 .h3-top-picks {
