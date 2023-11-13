@@ -3,6 +3,7 @@ from django.views import generic, View
 from .models import Recipe
 
 class RecipeHome(generic.ListView):
+    model = Recipe
     template_name = 'index.html'
     
 class RecipeList(generic.ListView):
