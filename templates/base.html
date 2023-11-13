@@ -1,5 +1,4 @@
 {% load static %}
-{% load crispy_forms_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +41,7 @@
         <nav>
             <ul id="menu">
                 <li><a href="{% url 'home' %}" class="active" aria-label="Go to Home page">Home</a></li>
-                <li><a href="recipe_detail.html" aria-label="Go to Recipe page">Recipes</a></li>
+                <li><a href="{% url 'recipes' %}" aria-label="Go to Recipe page">Recipes</a></li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link" href="#">Logout</a>
