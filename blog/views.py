@@ -24,7 +24,7 @@ class RecipeDetail(View):
         
         return render (
             request,
-            'recipe_detail.html',
+            'single_recipe.html',
             {
                 'recipe': recipe,
                 'comments': comments,
