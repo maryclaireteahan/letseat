@@ -90,6 +90,36 @@
 
  /*Actor-------------------------------------Actor-----------------------------------Actor----------------------------------------------------------------------------------------*/
 
+div {
+    background-color: blueviolet;
+    height: 5em;
+    width: 5em;
+
+}
+
+#hero {
+    height: 600px;
+    width: 100%;
+    background: url("../images/acting/box3.webp") no-repeat top right/cover;
+
+    padding-top: 0;
+    margin-top: 20px;
+    flex: auto;
+    display: flex;
+    align-items: flex-end;
+}
+
+#cover-text-hero {
+    text-align: right;
+    background-color: rgba(46, 99, 99, 0.8);
+    color: seashell;
+    font-size: 160%;
+    width: 100%;
+    border-radius: 0 5px 5px 0;
+    min-height: 135px;
+    padding: 40px 10px;
+    margin-top: 70px;
+}
 
  /*Costume-----------------------------------Costume---------------------------------Costume--------------------------------------------------------------------------------------*/
 

@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'django_summernote',
     'blog',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'letseat.wsgi.application'
 
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+ 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
