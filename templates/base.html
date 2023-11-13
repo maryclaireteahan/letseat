@@ -41,7 +41,7 @@
                 style="color: #3a3a3a;"></i></label>
         <nav>
             <ul id="menu">
-                <li><a href="index.html" class="active" aria-label="Go to Home page">Home</a></li>
+                <li><a href="{% url 'home' %}" class="active" aria-label="Go to Home page">Home</a></li>
                 <li><a href="recipe_detail.html" aria-label="Go to Recipe page">Recipes</a></li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
