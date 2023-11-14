@@ -11,11 +11,11 @@
     {% for recipe in recipe_list%}
     <div class ="img-div-recipes">
         <img class = "img-recipes" src="" alt="">
-        {% if 'placeholder' in Recipe.featured_image.url %}
+        {% if 'placeholder' in recipe.featured_image.url %}
         <img class="img-recipes"
             src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
         {% else %}
-        <img class="img-recipes" src=" {{ Recipe.featured_image.url }}">
+        <img class="img-recipes" src=" {{ recipe.featured_image.url }}">
         {% endif %}
     </div>
     <h3 class = "h3-recipe">Placeholder</h3>
@@ -23,8 +23,7 @@
         <button class = "button-recipes">Select</button>
     </div>
 </div>
-{% endif %}
-{% endfor %}
+    {% endfor %}
 
 
 {%endblock%}
