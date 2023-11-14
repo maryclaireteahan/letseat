@@ -7,35 +7,33 @@ STATUS =((0, 'Draft'), (1, 'Published'))
 """
 The categories to be assigned to the recipes
 """
-CATEGORY_CHOICES = (
-    ("breakfast", "Breakfast"),
-    ("lunch", "Lunch"),
-    ("dinner", "Dinner"),
-    ("dessert", "Dessert"),
-    ("snack", "Snack"),
-)
+
 
 """ 
 Database model for assigning categories to the recipes
 """
 class Category(models.Model):
+
+    CATEGORY_CHOICES = [
+    (1, "Breakfast"),
+    (2, "Lunch"),
+    (3, "Dinner"),
+    (4, "Dessert"),
+    (5, "Snack"),
+]
+    
     name = models.CharField(max_length=80, choices=CATEGORY_CHOICES)
     slug = models.SlugField(max_length=20, unique=True)
-    
-
-"""
-Order categories by name
-""" 
-class Meta:
-    ordering = ['name']
-    
-""" 
-Returns string representation of an object
-"""
-def __str__(self):
-    return self.name
-    
-
+    """
+    Order categories by name
+    """ 
+    class Meta:
+        ordering = ['name']
+    """ 
+    Returns string representation of an object
+    """
+    def __str__(self):
+        return self.name    
 
 """ 
 Database model for creating recipe posts
@@ -51,8 +49,7 @@ class Recipe(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
-    category = models.ManyToManyField(Category, related_name='recipes')
-    
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, blank=True)    
 
 """
 Order posts from newest to oldest

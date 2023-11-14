@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from .models import Recipe
+from .models import Recipe, Category
 
 class RecipeHome(generic.ListView):
     model = Recipe
@@ -31,3 +31,10 @@ class RecipeDetail(View):
                 'liked': liked
             },
         )
+        
+        
+        
+class CategoryListView(generic.ListView):
+    model = Category
+    template_name='all_recipes.html'
+    context_object_name = 'categories'

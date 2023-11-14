@@ -6,8 +6,9 @@
 {% block content %}
 
 <h2 class="h2-recipes">Recipes</h2>
+{% for category in categories %}
 <div class="recipes-row">
-    {% for recipe in recipe_list%}
+    {% for recipe in category.recipe_set.all %}
     <div class="recipes">
         <div class="img-div-recipes">
             {% if 'placeholder' in recipe.featured_image.url %}
@@ -24,9 +25,10 @@
 
 
     {% if forloop.counter|divisibleby:3%}
-{% endif %}
-{% endfor %}
+    {% endif %}
+    {% endfor %}
 </div>
+{% endfor %}
 {% if is_paginated %}
 <nav aria-label="Page navigation">
     <ul class="pagination justify-content-center">
