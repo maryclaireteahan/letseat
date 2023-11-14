@@ -8,7 +8,6 @@
 <h2 class = "h2-recipes">Recipes</h2>
 
 <div class = "recipes">
-    {% for recipe in recipe_list%}
     <div class ="img-div-recipes">
         <img class = "img-recipes" src="" alt="">
         {% if 'placeholder' in recipe.featured_image.url %}
@@ -18,12 +17,11 @@
         <img class="img-recipes" src=" {{ recipe.featured_image.url }}">
         {% endif %}
     </div>
-    <h3 class = "h3-recipe">Placeholder</h3>
+    <h3 class = "h3-recipe">{{ recipe.title }}</h3>
     <div class = "button-div-recipe">
         <button class = "button-recipes">Select</button>
     </div>
 </div>
-    {% endfor %}
 
 
 {%endblock%}
