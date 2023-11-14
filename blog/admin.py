@@ -31,7 +31,7 @@ class CommentAdmin(admin.ModelAdmin):
 Register Category model and CategoryAdmin class to admin site
 """
 @admin.register(Category)
-class CategoryAdmin(SummernoteModelAdmin):   
+class CategoryAdmin(admin.ModelAdmin):   
     prepopulated_fields= {'slug': ('name',)}
 
 

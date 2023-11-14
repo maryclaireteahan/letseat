@@ -1,14 +1,25 @@
+from msilib import CAB
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 STATUS =((0, 'Draft'), (1, 'Published'))
+"""
+The categories to be assigned to the recipes
+"""
+CATEGORY_CHOICES = (
+    ("breakfast", "Breakfast"),
+    ("lunch", "Lunch"),
+    ("dinner", "Dinner"),
+    ("dessert", "Dessert"),
+    ("snack", "Snack"),
+)
 
 """ 
 Database model for assigning categories to the recipes
 """
 class Category(models.Model):
-    name = models.CharField(max_length=80)
+    name = models.CharField(max_length=80, choices=CATEGORY_CHOICES)
     slug = models.SlugField(max_length=20, unique=True)
     
 
@@ -25,16 +36,6 @@ def __str__(self):
     return self.name
     
 
-"""
-The categories to be assigned to the recipes
-"""
-CATEGORY_CHOICES = (
-    ("breakfast", "Breakfast"),
-    ("lunch", "Lunch"),
-    ("dinner", "Dinner"),
-    ("dessert", "Dessert"),
-    ("snack", "Snack"),
-)
 
 """ 
 Database model for creating recipe posts
