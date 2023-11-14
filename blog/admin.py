@@ -9,8 +9,8 @@ Register Recipe model and RecipeAdmin class to admin site
 @admin.register(Recipe)
 class RecipeAdmin(SummernoteModelAdmin):
     prepopulated_fields= {'slug': ('title',)}
-    list_filter = ('status', 'created_on')
-    summernote_fields = ('content')
+    list_filter = ('status', 'created_on', 'category')
+    summernote_fields = ('ingredients','instructions')
     list_display = ('title', 'slug', 'status', 'created_on')
     search_fields = ['title', 'content']
     
