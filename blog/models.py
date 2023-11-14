@@ -51,23 +51,23 @@ class Recipe(models.Model):
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, blank=True)    
 
-"""
-Order posts from newest to oldest
-"""  
-class Meta:
-    ordering = ['-created_on']
-    
-""" 
-Returns string representation of an object
-"""
-def __str__(self):
-    return self.title
+    """
+    Order posts from newest to oldest
+    """  
+    class Meta:
+        ordering = ['-created_on']
+        
+    """ 
+    Returns string representation of an object
+    """
+    def __str__(self):
+        return self.title
 
-""" 
-Returns the total number of like on a post
-"""
-def number_of_likes(self):
-    return self.likes.count()
+    """ 
+    Returns the total number of like on a post
+    """
+    def number_of_likes(self):
+        return self.likes.count()
 
 
 """ 
@@ -83,14 +83,14 @@ class Comment(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
 
-"""
-Order comments from oldest to newest
-""" 
-class Meta:
-    ordering = ['created_on']
-    
-""" 
-Returns string representation of an object
-"""
-def __str__(self):
-    return f'Comment {self.body} by {self.name}'
+    """
+    Order comments from oldest to newest
+    """ 
+    class Meta:
+        ordering = ['created_on']
+        
+    """ 
+    Returns string representation of an object
+    """
+    def __str__(self):
+        return f'Comment {self.body} by {self.name}'
