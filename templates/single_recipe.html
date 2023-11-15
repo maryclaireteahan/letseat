@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 {% endblock css %}
 {% block content %}
+{% load crispy_forms_tags %}
 <h2 class = "h2-single-recipe">{{ recipe.title }}</h2>
 
 <div class="single-recipe">
@@ -40,6 +41,22 @@
         </div>
     </div>
     <div class="comments">
+        {% if commented %}
+        <div class="alert alert-success" role="alert">
+            Your comment is awaiting approval
+        </div>
+        {% else %}
+        {% if user.is_authenticated %}
+
+        <h3>Leave a comment:</h3>
+        <p>Posting as: {{ user.username }}</p>
+        <form method="post" style="margin-top: 1.3em;">
+            {{ comment_form | crispy }}
+            {% csrf_token %}
+            <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+        </form>
+        {% endif %}
+        {% endif %}
     </div>
 
 </div>
