@@ -7,22 +7,40 @@
 <h2 class = "h2-single-recipe">{{ recipe.title }}</h2>
 
 <div class="single-recipe">
-<div class = "img-and-ingredients">
-    <div class ="img-div-single-recipe">
-        <img class="img-single-recipe"
-            src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+    <div class="like">
+        <strong>
+            {% if user.is_authenticated %}
+            <form class="form-like" action="{% url 'recipe_like' recipe.slug %}" method="POST">
+                {% csrf_token %}
+                {% if liked %}
+                <button type="submit" name="blogpost_id" value="{{recipe.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
+                {% else %}
+                <button type="submit" name="blogpost_id" value="{{recipe.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
+                {% endif %}
+            </form>
+            {% else %}
+            <span class="text-secondary"><i class="far fa-heart"></i></span>
+            {% endif %}
+        <!-- The number of likes goes before the closing strong tag -->
+        <span class="text-secondary">{{ recipe.number_of_likes }} </span>
+        </strong>
     </div>
-    <div class="ingredients">
-        {{ recipe.ingredients }}
+    <div class = "img-and-ingredients">
+        <div class ="img-div-single-recipe">
+            <img class="img-single-recipe"
+                src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+        </div>
+        <div class="ingredients">
+            {{ recipe.ingredients }}
+        </div>
     </div>
-</div>
-<div class="div-instructions">
-    <div class="instructions">
-        {{ recipe.instructions }}
-    </div
-></div>
-<div class="comments">
-</div>
+    <div class="div-instructions">
+        <div class="instructions">
+            {{ recipe.instructions }}
+        </div>
+    </div>
+    <div class="comments">
+    </div>
 
 </div>
 {%endblock%}
