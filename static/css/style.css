@@ -242,6 +242,9 @@ div {
     width: 100%;
     justify-content: start;
     overflow-y: auto;
+    /* Scrollbar style for Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #888888 #f4f4f4;
 }
 .recipes-row::-webkit-scrollbar {
     width: 10px; /* Width of the scrollbar */
