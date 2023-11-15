@@ -127,6 +127,21 @@ div {
     justify-content: center;
 }
 
+.div-about-me {
+    height: fit-content;
+    width: 90%;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.h2-about-me {
+
+}
+
+.p-about-me {
+    padding-top: 1em;
+}
+
 .h2-top-picks{
     text-align: center;
     margin-top: 2em
@@ -187,7 +202,8 @@ div {
     justify-content: center;
     flex-wrap: nowrap;
     align-items: center;
-    margin: 1em
+    margin: 1em;
+    min-width: 10em;
 }
 
 .img-div-recipes {
@@ -224,11 +240,59 @@ div {
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: center;
+    justify-content: start;
     overflow-y: auto;
 }
- /*Costume-----------------------------------Costume---------------------------------Costume--------------------------------------------------------------------------------------*/
+ /*Single Recipe-----------------------------------Single Recipe---------------------------------Single Recipe--------------------------------------------------------------------------------------*/
 
+ .single-recipe {
+    height:100%;
+    Width:100%;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(155, 239, 239);
+    padding-bottom: 0;
+    margin-bottom: 0;
+    align-items: flex-start;
+    justify-content: center;
+ }
+ .h2-single-recipe {
+
+}
+/*img-and-ingredients DIV*/
+ .img-and-ingredients{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+
+.img-div-single-recipe{
+
+}
+
+.img-single-recipe {
+    height: 100%;
+    width: 100%;
+}
+
+.ingredients {
+    font-size: .75em;
+    height: fit-content;
+    width: fit-content;
+}
+
+/*instructions DIV*/
+.instructions {
+    width: 100%;
+}
+
+/*comments DIV*/
+.comments {
+    width: 100%;
+
+}
 
  /*Gallery-----------------------------------Gallery---------------------------------Gallery--------------------------------------------------------------------------------------*/
 

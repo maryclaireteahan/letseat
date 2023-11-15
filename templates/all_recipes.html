@@ -7,9 +7,10 @@
 
 <h2 class="h2-recipes">Recipes</h2>
 {% for category in categories %}
-<h3 class="category">{{ category.name }}</h3>
-<div class="recipes-row">
+    <h3 class="category">{{ category.name }}</h3>
+    <div class="recipes-row">
         {% for recipe in category.recipe_set.all %}
+        {% if recipe.status == 1 %}
         <div class="recipes">
             <div class="img-div-recipes">
                 {% if 'placeholder' in recipe.featured_image.url %}
@@ -23,12 +24,9 @@
                 <button class="button-recipes"><a href="{% url 'single_recipe' recipe.slug %}">Go</a></button>
             </div>
         </div>
-
-
-        {% if forloop.counter|divisibleby:3%}
         {% endif %}
         {% endfor %}
-</div>
+    </div>
 {% endfor %}
 {% if is_paginated %}
 <nav aria-label="Page navigation">

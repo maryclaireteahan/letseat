@@ -13,6 +13,7 @@ class Category(models.Model):
     """
     The categories to be assigned to the recipes
     """
+
     CATEGORY_CHOICES = [
     (1, "Breakfast"),
     (2, "Lunch"),

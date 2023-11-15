@@ -4,24 +4,22 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 {% endblock css %}
 {% block content %}
+<h2 class = "h2-single-recipe">{{ recipe.title }}</h2>
 
-<h2 class = "h2-recipes">Recipes</h2>
-
-<div class = "recipes">
-    <div class ="img-div-recipes">
-        <img class = "img-recipes" src="" alt="">
-        {% if 'placeholder' in recipe.featured_image.url %}
-        <img class="img-recipes"
+<div class="single-recipe">
+<div class = "img-and-ingredients">
+    <div class ="img-div-single-recipe">
+        <img class="img-single-recipe"
             src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
-        {% else %}
-        <img class="img-recipes" src=" {{ recipe.featured_image.url }}">
-        {% endif %}
     </div>
-    <h3 class = "h3-recipe">{{ recipe.title }}</h3>
-    <div class = "button-div-recipe">
-        <button class = "button-recipes">Select</button>
+    <div class="ingredients">
+        {{ recipe.ingredients }}
     </div>
 </div>
+<div class="instructions">
+</div>
+<div class="comments">
+</div>
 
-
+</div>
 {%endblock%}
