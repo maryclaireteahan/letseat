@@ -84,6 +84,7 @@
     margin-bottom: 0;
     align-content: flex-start;
     align-items: center;
+    padding-top:5em;
 }
  /*Index-------------------------------------Index-----------------------------------Index---------------------------------------------------------------------------------------*/
 
@@ -282,26 +283,41 @@ div {
     display: flex;
     justify-content: center;
     height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
 }
 
 .img-div-single-recipe{
-
+    width: 70%;
+    height: 100%;
+    padding: 1em 0;
 }
 
 .img-single-recipe {
     height: 100%;
     width: 100%;
+    padding: 1em 0;
 }
 
 .ingredients {
     font-size: .75em;
     height: fit-content;
     width: fit-content;
+    padding:1em;
+
 }
 
 /*instructions DIV*/
+.div-instructions {
+    padding: 1em;
+    width: 100%;
+}
+
 .instructions {
     width: 100%;
+    font-size: .75em;
+    padding:1em;
 }
 
 /*comments DIV*/
