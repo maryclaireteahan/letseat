@@ -321,8 +321,47 @@ div {
 }
 
 /*comments DIV*/
+.div-comments{
+    padding: 1em;
+    width: 100%;
+}
+
+/*comments that have have been approved and are on display*/
+.comment-posted {
+    width: 100%;
+    font-size: .75em;
+    padding:1em;
+    display:flex;
+}
+
 .comments {
     width: 100%;
+
+}
+
+.comment {
+    padding: 10px;
+}
+
+.comment-name {
+
+}
+
+.comment-date {
+
+}
+
+/*comments awaiting approval*/
+.comment-pending {
+
+}
+
+/*comment form*/
+.form-comment {
+    margin-top: 1.3em;
+}
+
+.button-comment {
 
 }
 

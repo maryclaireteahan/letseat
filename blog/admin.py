@@ -21,7 +21,7 @@ Register Comment model and CommentAdmin class to admin site
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('name', 'body', 'post', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')
-    search_fields = ['name', 'email', 'body']
+    search_fields = ('name', 'email', 'body')
     actions = ['approve_comments']
     
     def approve_comments(self, request, queryset):
