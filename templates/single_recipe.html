@@ -59,8 +59,8 @@
                         {{ comment.name }}
                         <span class="comment-date">
                             <!-- The comment's created date goes here -->
-                            {{ comment.created_on }}
-                        </span> wrote:
+                        </span> wrote: <br>
+                        {{ comment.created_on }}
                     </p>
                     <!-- The body of the comment goes before the | -->
                     {{ comment.body | linebreaks }}
