@@ -8,30 +8,30 @@
 <h2 class = "h2-single-recipe">{{ recipe.title }}</h2>
 
 <div class="single-recipe">
-    <div class="like">
-        <strong>
-            {% if user.is_authenticated %}
-            <form class="form-like" action="{% url 'recipe_like' recipe.slug %}" method="POST">
-                {% csrf_token %}
-                {% if liked %}
-                <button type="submit" name="blogpost_id" value="{{recipe.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
+    <div class="number-comments-and-likes">
+        <div class="recipe-likes">
+                {% if user.is_authenticated %}
+                <form class="form-like" action="{% url 'recipe_like' recipe.slug %}" method="POST">
+                    {% csrf_token %}
+                    {% if liked %}
+                    <button type="submit" name="blogpost_id" value="{{recipe.slug}}" class="number-likes"><i class="fas fa-heart"></i></button>
+                    {% else %}
+                    <button type="submit" name="blogpost_id" value="{{recipe.slug}}" class="number-likes"><i class="far fa-heart"></i></button>
+                    {% endif %}
+                </form>
                 {% else %}
-                <button type="submit" name="blogpost_id" value="{{recipe.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
+                <span class="number-likes"><i class="far fa-heart"></i></span>
                 {% endif %}
-            </form>
-            {% else %}
-            <span class="text-secondary"><i class="far fa-heart"></i></span>
-            {% endif %}
-        <!-- The number of likes goes before the closing strong tag -->
-        <span class="text-secondary">{{ recipe.number_of_likes }} </span>
-        </strong>
-    </div>
-    <div class="col-1">
-        {% with comments.count as total_comments %}
-        <strong class="text-secondary"><i class="far fa-comments"></i>
-            <!-- Our total_comments variable goes before the closing strong tag -->
-            {{ total_comments }}</strong>
-        {% endwith %}
+            <!-- The number of likes goes before the closing strong tag -->
+            {{ recipe.number_of_likes }}
+        </div>
+        <div class="recipe-comments">
+            {% with comments.count as total_comments %}
+            <i class="far fa-comments"></i>
+                <!-- Our total_comments variable goes before the closing strong tag -->
+                {{ total_comments }}
+            {% endwith %}
+        </div>
     </div>
     <div class = "img-and-ingredients">
         <div class ="img-div-single-recipe">
@@ -50,10 +50,10 @@
     <div class="div-comments">
         <div class="comment-posted">
             <h3>Comments:</h3>
-            <div class="comments">
+            <div class="all-comments">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
-                <div class="comment">
+                <div class="single-comment">
                     <p class="comment-name">
                         <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                         {{ comment.name }}
@@ -77,7 +77,7 @@
         {% if user.is_authenticated %}
 
         <h3>Leave a comment:</h3>
-        <p>Posting as: {{ user.username }}</p>
+        <p class="posting-as">Posting as: {{ user.username }}</p>
         <form method="post" class="form-comment">
             {{ comment_form | crispy }}
             {% csrf_token %}
