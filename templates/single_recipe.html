@@ -39,12 +39,12 @@
                 src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
         </div>
         <div class="ingredients">
-            {{ recipe.ingredients }}
+            {{ recipe.ingredients | safe }}
         </div>
     </div>
     <div class="div-instructions">
         <div class="instructions">
-            {{ recipe.instructions }}
+            {{ recipe.instructions | safe }}
         </div>
     </div>
     <div class="div-comments">
