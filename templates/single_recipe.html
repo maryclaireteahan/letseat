@@ -33,20 +33,22 @@
             {% endwith %}
         </div>
     </div>
-    <div class = "img-and-ingredients">
-        <div class ="img-div-single-recipe">
-            <img class="img-single-recipe"
-                src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+    <div class="img-and-ingredients-container">
+        <div class = "img-and-ingredients">
+            <div class ="img-div-single-recipe">
+                <img class="img-single-recipe"
+                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+            </div>
+            <div class="ingredients">
+                {{ recipe.ingredients | safe }}
+            </div>
         </div>
-        <div class="ingredients">
-            {{ recipe.ingredients | safe }}
+        <div class="div-instructions">
+            <div class="instructions">
+                {{ recipe.instructions | safe }}
+            </div>
         </div>
-    </div>
-    <div class="div-instructions">
-        <div class="instructions">
-            {{ recipe.instructions | safe }}
-        </div>
-    </div>
+    </div>    
     <div class="div-comments">
         <div class="comment-posted">
             <h3>Comments:</h3>
