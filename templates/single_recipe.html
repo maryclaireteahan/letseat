@@ -66,6 +66,12 @@
                     </p>
                     <!-- The body of the comment goes before the | -->
                     {{ comment.body | linebreaks }}
+                    {% if request.user == comment.user %}
+                    <div class="edit-delete">
+                        <a href="">Edit/ </a>
+                        <a href="">Delete</a>
+                    </div>
+                    {% endif %}
                 </div>
                 <!-- Our for loop ends here -->
                 {% endfor %}

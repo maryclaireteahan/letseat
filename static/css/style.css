@@ -430,6 +430,14 @@ div {
 
 }
 
+.edit-delete {
+    width: fit-content;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
 /*comments awaiting approval*/
 .comment-pending {
     display: flex;
