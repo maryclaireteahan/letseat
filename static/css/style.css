@@ -95,7 +95,7 @@ p {
 div {
     background-color: blueviolet;
     height: 5em;
-    width: 5em;
+    width: 100%;
     border: 2px solid #3a3a3a;
 
 }
@@ -484,14 +484,203 @@ div {
 
  /*Login-----------------------------------Login---------------------------------Login--------------------------------------------------------------------------------------*/
 
+ .signin-and-button-div {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em;
+    margin: 1em;
+}
+
+.signin-div {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+}
+
+.signin-h3-div {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+
+.signin-h3-div h3 {
+    width: fit-content
+}
+
+.signin-p-div {
+    display: flex;
+    justify-content: center;
+    height: fit-content;}
+
+.signin-p-div p {
+    height: fit-content
+}
+
+.signin-form-and-button {
+    height: fit-content;
+
+}
+
+.signin-form-div{
+    height: fit-content;
+
+}
+
+
+.signin-form {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signin-form p {
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+.signin-form ul {
+    padding: 1em 2em;
+    padding-bottom: 0;
+}
+
+.signin-form ul li {
+    padding-bottom: 1em;
+}
+.signin-button {
+    height: fit-content;
+    margin-bottom: 1em;
+
+}
 
  /*Logout-----------------------------------Logout---------------------------------Logout--------------------------------------------------------------------------------------*/
 
+.signout-and-button-div {
+    display: flex;
+    width: 70%;
+    height: 50vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
 
+.signout-div {
+    height: fit-content
+}
+
+.signout-h3-div {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+
+.signout-h3-div h3 {
+    width: fit-content
+}
+
+.signout-p-div {
+    display: flex;
+    justify-content: center;
+    height: fit-content;}
+
+.signout-p-div p {
+    height: fit-content
+}
+
+.signout-button-div {
+    height: fit-content;
+    width: fit-content;
+}
+
+.signout-button {
+
+}
 /*Sign up-----------------------------------Sign up---------------------------------Sign up--------------------------------------------------------------------------------------*/
 
+.signup-and-button-div {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em;
+    margin: 1em;
+}
+
+.signup-div {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+}
+
+.signup-h3-div {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+
+.signup-h3-div h3 {
+    width: fit-content
+}
+
+.signup-p-div {
+    display: flex;
+    justify-content: center;
+    height: fit-content;}
+
+.signup-p-div p {
+    height: fit-content
+}
+
+.signup-form-and-button {
+    height: fit-content;
+
+}
+
+.signup-form-div{
+    height: fit-content;
+
+}
 
 
+.signup-form {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-form p {
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+.signup-form ul {
+    padding: 1em 2em;
+    padding-bottom: 0;
+}
+
+.signup-form ul li {
+    padding-bottom: 1em;
+}
+.signup-button {
+    height: fit-content;
+    margin-bottom: 1em;
+
+}
+
+.errorlist li {
+    font-weight:bold
+}
  /*Footer------------------------------------Footer----------------------------------Footer---------------------------------------------------------------------------------------*/
  footer {
     background-color: darkcyan;
