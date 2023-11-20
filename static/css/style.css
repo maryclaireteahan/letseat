@@ -1,81 +1,92 @@
-
- /* Asterisk wildcard selector to override default styles added by the browser */
- * {
-     padding: 0;
-     margin: 0;
-     box-sizing: border-box;
-     font-weight: 700;
- }
-
- /* General styles */
- body {
-     min-height: 100vh;
-     display: flex;
-     flex-direction: column;
-     /* Generic project styles */
-     color: #3a3a3a;
-     font-family: 'Oxygen', sans-serif;
-     margin-bottom: 0;
-     padding-bottom: 0;
- }
-
- header {
-     border-top: 1px solid #3a3a3a;
- }
-
- header h1 {
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-weight: 700;
- }
+}
 
- /* Navbar styles with dropdown toggle */
- nav {
-     background-color: seashell;
-     width: 100%;
-     left: 0;
-     padding: 0 1rem;
-     display: none;
-     top: 100%;
-     bottom: 90%;
- }
+/* General styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Generic project styles */
+    color: #3a3a3a;
+    font-family: 'Oxygen', sans-serif;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
 
- /* Nav toggle */
- #nav-toggle:checked~nav {
-     display: block;
- }
+/* Navbar styles with dropdown toggle */
+nav {
+    background-color: seashell;
+    width: fit-content;
+    display: none;
+}
 
- #nav-toggle {
-     display: none;
- }
+nav ul {
+    list-style-type: none;
+    display: flex;
+    width: fit-content;
+    padding: 1em;
+    flex-direction: column;
+    align-items: flex-end;
+}
+/* Nav toggle */
+.nav-toggle-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+}
 
- .nav-toggle-label {
-     font-size: 2rem;
- }
+#nav-toggle:checked~nav {
+    display: block;
+}
 
- #menu a:hover {
-     border-bottom: 1px solid #3a3a3a;
- }
+#nav-toggle {
+    display: none;
+}
 
- /*Header------------------------------------Header----------------------------------Header---------------------------------------------------------------------------------------*/
- header {
-     background-color: seashell;
-     position: fixed;
-     padding: 0 2px;
-     margin-bottom: 0;
-     z-index: 99;
-     width: 100%;
-     display: flex;
-     justify-content: space-between;
-     align-items: baseline;
-     text-decoration: none;
-     box-shadow: 0 2px 2px #3a3a3a;
- }
+.nav-toggle-label {
+    font-size: 2rem;
+}
 
- header a {
-     text-decoration: none;
-     color: inherit;
- }
+#menu a:hover {
+    border-bottom: 1px solid #3a3a3a;
+}
 
- main {
+/*Header------------------------------------Header----------------------------------Header---------------------------------------------------------------------------------------*/
+header {
+    background-color: seashell;
+    position: fixed;
+    padding: 0 2px;
+    margin-bottom: 0;
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    text-decoration: none;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #3a3a3a;
+}
+
+header h1 {
+    font-weight: 700;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
@@ -84,9 +95,10 @@
     margin-bottom: 0;
     align-content: flex-start;
     align-items: center;
-    padding-top:4em;
+    padding-top: 4em;
 }
- /*Index-------------------------------------Index-----------------------------------Index---------------------------------------------------------------------------------------*/
+
+/*Index-------------------------------------Index-----------------------------------Index---------------------------------------------------------------------------------------*/
 
 p {
     padding: 1em;
@@ -106,7 +118,7 @@ div {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 8em;
+    margin-top: 5em;
     margin-bottom: 5em;
 }
 
@@ -118,6 +130,7 @@ div {
     align-items: center;
     justify-content: center;
 }
+
 #cover-text-hero {
     width: 6em;
     height: 3em;
@@ -137,15 +150,13 @@ div {
     padding: 1em;
 }
 
-.h2-about-me {
-
-}
+.h2-about-me {}
 
 .p-about-me {
     padding-top: 1em;
 }
 
-.h2-top-picks{
+.h2-top-picks {
     text-align: center;
     margin-top: 2em
 }
@@ -168,13 +179,12 @@ div {
     justify-content: center;
 }
 
-.img-top-picks{
+.img-top-picks {
     height: 100%;
     width: 100%;
 }
 
-.h3-top-picks {
-}
+.h3-top-picks {}
 
 .button-div-top-picks {
     height: auto;
@@ -192,7 +202,7 @@ div {
 
 
 
-.h2-recipes{
+.h2-recipes {
     text-align: center;
     margin-top: 2em
 }
@@ -216,13 +226,12 @@ div {
     justify-content: center;
 }
 
-.img-recipes{
+.img-recipes {
     height: 100%;
     width: 100%;
 }
 
-.h3-recipes {
-}
+.h3-recipes {}
 
 .button-div-recipes {
     height: auto;
@@ -238,7 +247,7 @@ div {
     padding-right: 5px;
 }
 
-.recipes-row{
+.recipes-row {
     height: auto;
     display: flex;
     flex-direction: row;
@@ -249,24 +258,30 @@ div {
     scrollbar-width: thin;
     scrollbar-color: #888888 #f4f4f4;
 }
+
 .recipes-row::-webkit-scrollbar {
-    width: 10px; /* Width of the scrollbar */
-  }
-  
-  .recipes-row::-webkit-scrollbar-track {
-    background: purple; /* Background color of the scrollbar track */
-  }
-  
-  .recipes-row::-webkit-scrollbar-thumb {
-    background-color: darkmagenta; /* Color of the scrollbar thumb */
-    border-radius: 5px; /* Round the corners of the thumb */
+    width: 10px;
+    /* Width of the scrollbar */
+}
+
+.recipes-row::-webkit-scrollbar-track {
+    background: purple;
+    /* Background color of the scrollbar track */
+}
+
+.recipes-row::-webkit-scrollbar-thumb {
+    background-color: darkmagenta;
+    /* Color of the scrollbar thumb */
+    border-radius: 5px;
+    /* Round the corners of the thumb */
     box-shadow: 0 2px 2px #3a3a3a;
 }
- /*Single Recipe-----------------------------------Single Recipe---------------------------------Single Recipe--------------------------------------------------------------------------------------*/
 
- .single-recipe {
-    height:100%;
-    Width:100%;
+/*Single Recipe-----------------------------------Single Recipe---------------------------------Single Recipe--------------------------------------------------------------------------------------*/
+
+.single-recipe {
+    height: 100%;
+    Width: 100%;
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
@@ -277,11 +292,9 @@ div {
     justify-content: center;
 }
 
- .h2-single-recipe {
+.h2-single-recipe {}
 
-}
-
-.number-comments-and-likes{
+.number-comments-and-likes {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -291,7 +304,7 @@ div {
 }
 
 .recipe-likes {
-    display:flex;
+    display: flex;
     flex-direction: row;
     height: fit-content;
     border: 0;
@@ -340,7 +353,7 @@ div {
     flex-direction: column;
 }
 
-.img-and-ingredients{
+.img-and-ingredients {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -350,7 +363,7 @@ div {
     padding: 1em;
 }
 
-.img-div-single-recipe{
+.img-div-single-recipe {
     width: 70%;
     height: 100%;
     padding: 1em 0;
@@ -366,7 +379,7 @@ div {
     font-size: 1em;
     height: fit-content;
     width: fit-content;
-    padding:1em;
+    padding: 1em;
 }
 
 /*instructions DIV*/
@@ -379,18 +392,18 @@ div {
 .instructions {
     width: 100%;
     font-size: 1em;
-    padding:1em;
+    padding: 1em;
     height: fit-content;
 }
 
 /*comments DIV*/
-.div-comments{
+.div-comments {
     padding: 1em;
     width: 100%;
 }
 
 /*comments that have have been approved and are on display*/
-.div-comments{
+.div-comments {
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -407,13 +420,13 @@ div {
 }
 
 .posting-as {
-    padding:0;
+    padding: 0;
 }
 
 .all-comments {
     max-width: 60vh;
     height: fit-content;
-    width:fit-content;
+    width: fit-content;
 }
 
 .single-comment {
@@ -422,13 +435,9 @@ div {
     height: fit-content;
 }
 
-.comment-name {
+.comment-name {}
 
-}
-
-.comment-date {
-
-}
+.comment-date {}
 
 .edit-delete {
     width: fit-content;
@@ -458,7 +467,8 @@ div {
     font-size: 1em;
     width: fit-content;
     align-content: center;
-    align-items: center;}
+    align-items: center;
+}
 
 /*comment form*/
 .form-comment {
@@ -471,20 +481,18 @@ div {
 }
 
 .form-group label {
-    display:none;
+    display: none;
 }
 
 .textarea {
     width: 20em;
 }
 
-.button-comment {
+.button-comment {}
 
-}
+/*Login-----------------------------------Login---------------------------------Login--------------------------------------------------------------------------------------*/
 
- /*Login-----------------------------------Login---------------------------------Login--------------------------------------------------------------------------------------*/
-
- .signin-and-button-div {
+.signin-and-button-div {
     display: flex;
     width: 70%;
     height: 100%;
@@ -516,7 +524,8 @@ div {
 .signin-p-div {
     display: flex;
     justify-content: center;
-    height: fit-content;}
+    height: fit-content;
+}
 
 .signin-p-div p {
     height: fit-content
@@ -527,7 +536,7 @@ div {
 
 }
 
-.signin-form-div{
+.signin-form-div {
     height: fit-content;
 
 }
@@ -553,13 +562,14 @@ div {
 .signin-form ul li {
     padding-bottom: 1em;
 }
+
 .signin-button {
     height: fit-content;
     margin-bottom: 1em;
 
 }
 
- /*Logout-----------------------------------Logout---------------------------------Logout--------------------------------------------------------------------------------------*/
+/*Logout-----------------------------------Logout---------------------------------Logout--------------------------------------------------------------------------------------*/
 
 .signout-and-button-div {
     display: flex;
@@ -587,7 +597,8 @@ div {
 .signout-p-div {
     display: flex;
     justify-content: center;
-    height: fit-content;}
+    height: fit-content;
+}
 
 .signout-p-div p {
     height: fit-content
@@ -598,9 +609,8 @@ div {
     width: fit-content;
 }
 
-.signout-button {
+.signout-button {}
 
-}
 /*Sign up-----------------------------------Sign up---------------------------------Sign up--------------------------------------------------------------------------------------*/
 
 .signup-and-button-div {
@@ -635,7 +645,8 @@ div {
 .signup-p-div {
     display: flex;
     justify-content: center;
-    height: fit-content;}
+    height: fit-content;
+}
 
 .signup-p-div p {
     height: fit-content
@@ -646,7 +657,7 @@ div {
 
 }
 
-.signup-form-div{
+.signup-form-div {
     height: fit-content;
 
 }
@@ -672,6 +683,7 @@ div {
 .signup-form ul li {
     padding-bottom: 1em;
 }
+
 .signup-button {
     height: fit-content;
     margin-bottom: 1em;
@@ -679,10 +691,11 @@ div {
 }
 
 .errorlist li {
-    font-weight:bold
+    font-weight: bold
 }
- /*Footer------------------------------------Footer----------------------------------Footer---------------------------------------------------------------------------------------*/
- footer {
+
+/*Footer------------------------------------Footer----------------------------------Footer---------------------------------------------------------------------------------------*/
+footer {
     background-color: darkcyan;
     padding-top: 0;
     margin-top: 0;
@@ -705,21 +718,14 @@ div {
 
 
 
- /* Media query: large or landscape phones (576px and up) -----------------------------------------------576px----------------------------------------------------------------------- */
- @media screen and (min-width: 576px) {
+/* Media query: large or landscape phones (576px and up) -----------------------------------------------576px----------------------------------------------------------------------- */
+@media screen and (min-width: 576px) {}
 
- }
+/* Media query: tablets and larger (768px and up) ------------------------------------------------------768px----------------------------------------------------------------------- */
+@media screen and (min-width: 768px) {}
 
- /* Media query: tablets and larger (768px and up) ------------------------------------------------------768px----------------------------------------------------------------------- */
- @media screen and (min-width: 768px) {
+/* Large devices (laptops and desktops, 992px and up) -----------------------------------------------992px---------------------------------------------------------------------------- */
+@media screen and (min-width: 992px) {}
 
- }
-
- /* Large devices (laptops and desktops, 992px and up) -----------------------------------------------992px---------------------------------------------------------------------------- */
- @media screen and (min-width: 992px) {
-       
- }
-
- /* Large devices (laptops and desktops, 1200px and up) -----------------------------------------------1200--------------------------------------------------------------------------- */
- @media screen and (min-width: 1200px) {
- }
+/* Large devices (laptops and desktops, 1200px and up) -----------------------------------------------1200--------------------------------------------------------------------------- */
+@media screen and (min-width: 1200px) {}

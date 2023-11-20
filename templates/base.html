@@ -29,24 +29,28 @@
         <a href="{% url 'home' %}">
             <h1 id="logo">Let's Eat</h1>
         </a>
-        <input type="checkbox" id="nav-toggle" name="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-label"><i class="fa-solid fa-bars"
-                style="color: #3a3a3a;"></i></label>
-        <nav>
-            <ul id="menu">
-                <li><a href="{% url 'home' %}" class="active" aria-label="Go to Home page">Home</a></li>
-                <li><a href="{% url 'recipes' %}" aria-label="Go to Recipe page">Recipes</a></li>
-                {% if user.is_authenticated %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                </li>
-                {% else %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_signup' %}">Sign up/</a><a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                </li>
-                {% endif %}
-            </ul>
-        </nav>
+        <div class="nav-toggle-div">
+            <input type="checkbox" id="nav-toggle" name="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label"><i class="fa-solid fa-bars"
+                    style="color: #3a3a3a;"></i></label>
+            <nav>
+                <div class="nav-toggle-div">
+                    <ul id="menu">
+                        <li><a href="{% url 'home' %}" class="active" aria-label="Go to Home page">Home</a></li>
+                        <li><a href="{% url 'recipes' %}" aria-label="Go to Recipe page">Recipes</a></li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_signup' %}">Sign up/</a><a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
     <main>
         {% block content %}
@@ -71,5 +75,6 @@
             </li>
         </ul>
     </footer>
+    <script src="https://kit.fontawesome.com/e225a8453d.js" crossorigin="anonymous"></script>
 </body>
 </html>
