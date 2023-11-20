@@ -438,6 +438,20 @@ div {
     height: fit-content;
 }
 
+.delete-comment-container {
+    width: fit-content;
+    height: fit-content;
+}
+
+.buttons-container {
+    height: fit-content;
+}
+
+.cancel-delete {
+    height: fit-content;
+
+}
+
 /*comments awaiting approval*/
 .comment-pending {
     display: flex;
