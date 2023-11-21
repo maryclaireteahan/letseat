@@ -71,10 +71,9 @@ class RecipeDetail(View):
             },
         )
                
- 
     
 @login_required
-def commentUpdate(request, id):  
+def commentEdit(request, id):  
     comment_instance = get_object_or_404(Comment, id=id)
     form = CommentForm(initial={'Comment': Comment.body})
     if comment_instance.user == request.user:
@@ -87,7 +86,7 @@ def commentUpdate(request, id):
                     return redirect('/recipes')  
                 except Exception as e: 
                     pass    
-        return render(request,'comment_update.html',{'form':form})  
+        return render(request,'comment_edit.html',{'form':form})  
     else:
     # Redirect or show a message indicating the user doesn't have permission to edit
         return HttpResponse("You do not have permission to edit this comment.")
@@ -160,3 +159,38 @@ class RecipeCreate(LoginRequiredMixin, View):
             },
         )
         
+        
+
+@login_required
+def recipeEdit(request, id):  
+    recipe_instance = get_object_or_404(Recipe, id=id)
+    form = RecipeForm(initial={'Recipe': Recipe.body})
+    if request.user.is_authenticated and request.user.is_superuser:
+        if request.method == "POST":  
+            form = RecipeForm(request.POST, instance=recipe_instance)  
+            if form.is_valid():  
+                try:  
+                    form.save() 
+                    return redirect('/recipes')  
+                except Exception as e: 
+                    pass    
+        return render(request,'admin_recipe_edit.html',{'form':form})  
+    else:
+    # Redirect or show a message indicating the user doesn't have permission to edit
+        return HttpResponse("You do not have permission to edit this recipe.")
+
+@login_required
+def recipeDelete(request, id):
+    recipe_instance = get_object_or_404(Recipe, id=id)
+
+    if request.user.is_authenticated and request.user.is_superuser:
+        if request.method == 'POST':
+            recipe_instance.delete()
+            return redirect('/recipes')  # Redirect to appropriate page after deletion
+        else:
+            # Optionally, handle confirmation in a template
+            return render(request, 'admin_recipe_delete.html', {'recipe_instance': recipe_instance})
+    else:
+        # Redirect or show a message indicating the user doesn't have permission to delete
+        return HttpResponse("You do not have permission to delete this recipe.")
+

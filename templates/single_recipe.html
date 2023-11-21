@@ -49,6 +49,12 @@
             </div>
         </div>
     </div>    
+{% if user.is_authenticated and user.is_superuser %}
+<div class="edit-delete">
+    <a href="/recipe_edit/{{ recipe.id }}">Edit/ </a>
+    <a href="/recipe_delete/{{ recipe.id }}">Delete</a>
+</div>
+{% endif %}
     <div class="div-comments">
         <div class="comment-posted">
             <h3>Comments:</h3>
@@ -68,7 +74,7 @@
                     {{ comment.body | linebreaks }}
                     {% if comment.user == request.user %}
                     <div class="edit-delete">
-                        <a href="/comment_update/{{ comment.id }}">Edit/ </a>
+                        <a href="/comment_edit/{{ comment.id }}">Edit/ </a>
                         <a href="/comment_delete/{{ comment.id }}">Delete</a>
                     </div>
                     {% endif %}

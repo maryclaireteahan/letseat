@@ -5,12 +5,12 @@
 {% endblock css %}
 {% block content %}
 <div class="card-body">
-    <h4>Update Comment</h4>
-    <form method="post">
+    <h4>Edit Comment</h4>
+    <form method="post" class="form-edit">
         {% csrf_token %}
         {{form.as_p}}
-        <a type="button" class="btn btn-danger" href="{%url 'recipes' %}">Cancel</a>
-        <button type="submit" href="{%url 'recipes' %}" class="btn btn-success">Update</button>
+        <button type="submit" href="{%url 'recipes' %}" class="edit-button">Edit</button>
+        <a type="button" class="cancel-button" href="{%url 'recipes' %}"><button>Cancel</button></a>
     </form>
 </div>
 {% endblock %}

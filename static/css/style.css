@@ -99,7 +99,7 @@ main {
     margin-bottom: 0;
     align-content: flex-start;
     align-items: center;
-    padding-top: 4em;
+    padding-top: 5em;
 }
 
 /*Index-------------------------------------Index-----------------------------------Index---------------------------------------------------------------------------------------*/
@@ -493,7 +493,9 @@ p {
     display: none ;
 }
 
-
+.helptext {
+    display: none;
+}
 .textarea {
     width: 20em;
 }
