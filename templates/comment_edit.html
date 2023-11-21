@@ -9,7 +9,7 @@
     <form method="post" class="form-edit">
         {% csrf_token %}
         {{form.as_p}}
-        <button type="submit" href="{%url 'recipes' %}" class="edit-button">Edit</button>
+        <button type="submit" href="{%url 'recipes' %}" class="edit-button">Save</button>
         <a type="button" class="cancel-button" href="{%url 'recipes' %}"><button>Cancel</button></a>
     </form>
 </div>
