@@ -466,6 +466,10 @@ p {
 
 }
 
+.form-recipe {
+    height: fit-content;
+}
+
 /*comments awaiting approval*/
 .comment-pending {
     display: flex;
@@ -485,9 +489,10 @@ p {
     width: fit-content;
 }
 
-.form-group label {
-    display: none;
+.form-comment .form-group label{
+    display: none ;
 }
+
 
 .textarea {
     width: 20em;

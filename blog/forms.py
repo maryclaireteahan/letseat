@@ -9,7 +9,8 @@ class CommentForm(forms.ModelForm):
 class RecipeForm(forms.ModelForm):
     class Meta:
         model=Recipe
-        fields = ('title', 'author', 'ingredients', 'instructions', 'featured_image', 'image_alt', 'category')
+        fields = ['title', 'author', 'ingredients', 'instructions', 'featured_image', 'image_alt', 'category', 'status', ]
+        
         
 
 

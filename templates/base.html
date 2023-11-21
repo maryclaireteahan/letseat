@@ -47,6 +47,12 @@
                             <a class="nav-link" href="{% url 'account_signup' %}">Sign up/</a><a class="nav-link" href="{% url 'account_login' %}">Login</a>
                         </li>
                         {% endif %}
+                        {% if user.is_authenticated and user.is_superuser %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'recipe_create' %}">Add Recipe</a>
+                        </li>                    
+                        {% else %}
+                        {% endif %}
                     </ul>
                 </div>
             </nav>

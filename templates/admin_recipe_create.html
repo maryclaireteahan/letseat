@@ -6,29 +6,10 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<section id="my-contact">
-    <form id="add-recipe-admin" method="POST" action="https://formdump.codeinstitute.net">
-        <h2> Create Recipe </h2>
-        <div> <label for="first-name">First Name:</label>
-            <input type="text" placeholder="Your First Name" name="first-name" id="first-name"
-                class="text-input" required>
-        </div>
-        <br>
-        <div> <label for="last-name">Last Name:</label>
-            <input type="text" placeholder="Your Last Name" name="last-name" id="last-name" class="text-input"
-                required>
-        </div>
-        <br>
-        <div> <label for="email-address">Email Address:</label>
-            <input type="email" placeholder="Your Email" name="email-address" id="email-address"
-                class="text-input" required>
-        </div>
-        <br>
-        <div> <label for="message">Send a message:</label>
-            <textarea placeholder="Your Message" name="message" id="message" class="text-input-box" required
-                rows="10" cols="40"></textarea>
-        </div>
-        <div> <button type="submit" class="send-button">Send</button></div>
-    </form>
-
+<p class="posting-as">Posting as: {{ user.username }}</p>
+<form method="post" class="form-recipe">
+    {{ recipe_form | crispy }}
+    {% csrf_token %}
+    <button type="submit" class="button-comment">Submit</button>
+</form>
 {%endblock%}

@@ -1,12 +1,12 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import generic, View
 from requests import post
 from .models import Recipe, Category, Comment
 from django.http import HttpResponseRedirect
-from .forms import CommentForm
+from .forms import CommentForm, RecipeForm
 
 class RecipeHome(generic.ListView):
     model = Recipe
@@ -70,26 +70,8 @@ class RecipeDetail(View):
                 'comment_form': CommentForm()
             },
         )
-        
-        
-class CategoryListView(generic.ListView):
-    model = Category
-    template_name='all_recipes.html'
-    context_object_name = 'categories'
-    
-    
-
-class RecipeLike(View):
-    def post(self, request, slug):
-        recipe = get_object_or_404(Recipe, slug=slug)
-        
-        if recipe.likes.filter(id=request.user.id).exists():
-            recipe.likes.remove(request.user)
-        else:
-            recipe.likes.add(request.user)
-        
-        return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
-            
+               
+ 
     
 @login_required
 def commentUpdate(request, id):  
@@ -124,3 +106,57 @@ def commentDelete(request, id):
     else:
         # Redirect or show a message indicating the user doesn't have permission to delete
         return HttpResponse("You do not have permission to delete this comment.")
+
+
+
+class CategoryListView(generic.ListView):
+    model = Category
+    template_name='all_recipes.html'
+    context_object_name = 'categories'
+
+
+
+class RecipeLike(View):
+    def post(self, request, slug):
+        recipe = get_object_or_404(Recipe, slug=slug)
+        
+        if recipe.likes.filter(id=request.user.id).exists():
+            recipe.likes.remove(request.user)
+        else:
+            recipe.likes.add(request.user)
+        
+        return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+    
+    
+
+class RecipeCreate(LoginRequiredMixin, View):
+    
+    def get(self, request):
+        form = RecipeForm()
+        return render(request, 'admin_recipe_create.html', {'recipe_form': form})
+    
+    
+    def post(self, request, *args, **kwargs):
+
+        recipe_form = RecipeForm(data=request.POST)
+        
+        if recipe_form.is_valid():
+            recipe = recipe_form.save(commit=False)
+            recipe.slug = recipe.title.replace(" ", "-").lower()
+            recipe.email = 'admin'
+            recipe.name = 'admin'
+            recipe.user = request.user
+            recipe.save()
+            return HttpResponseRedirect(reverse('recipe_detail', args=[recipe.slug]))
+
+        else:
+            recipe_form = RecipeForm()
+ 
+        return render (
+            request,
+            'admin_recipe_create.html',
+            {
+                'recipe_form': RecipeForm()
+            },
+        )
+        
