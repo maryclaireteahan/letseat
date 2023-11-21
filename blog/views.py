@@ -164,7 +164,7 @@ class RecipeCreate(LoginRequiredMixin, View):
 @login_required
 def recipeEdit(request, id):  
     recipe_instance = get_object_or_404(Recipe, id=id)
-    form = RecipeForm(initial={'Recipe': Recipe.body})
+    form = RecipeForm(instance=recipe_instance)
     if request.user.is_authenticated and request.user.is_superuser:
         if request.method == "POST":  
             form = RecipeForm(request.POST, instance=recipe_instance)  

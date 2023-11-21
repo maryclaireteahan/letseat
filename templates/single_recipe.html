@@ -51,8 +51,8 @@
     </div>    
 {% if user.is_authenticated and user.is_superuser %}
 <div class="edit-delete">
-    <a href="/recipe_edit/{{ recipe.id }}">Edit/ </a>
-    <a href="/recipe_delete/{{ recipe.id }}">Delete</a>
+    <a href="/admin_recipe_edit/{{ recipe.id }}">Edit/ </a>
+    <a href="/admin_recipe_delete/{{ recipe.id }}">Delete</a>
 </div>
 {% endif %}
     <div class="div-comments">
