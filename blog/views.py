@@ -75,7 +75,7 @@ class RecipeDetail(View):
 @login_required
 def commentEdit(request, id):  
     comment_instance = get_object_or_404(Comment, id=id)
-    form = CommentForm(initial={'Comment': Comment.body})
+    form = CommentForm(instance=comment_instance)
     if comment_instance.user == request.user:
 
         if request.method == "POST":  
