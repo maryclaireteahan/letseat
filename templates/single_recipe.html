@@ -78,11 +78,6 @@
                 {% endfor %}
             </div>
         </div>
-        {% if commented %}
-        <div class="comment-pending" role="alert">
-            Your comment is awaiting approval
-        </div>
-        {% else %}
         {% if user.is_authenticated %}
 
         <h3>Leave a comment:</h3>
@@ -92,7 +87,6 @@
             {% csrf_token %}
             <button type="submit" class="button-comment">Submit</button>
         </form>
-        {% endif %}
         {% endif %}
     </div>
 
