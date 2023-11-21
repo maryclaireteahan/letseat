@@ -18,13 +18,9 @@ Register Comment model and CommentAdmin class to admin site
 """
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'body', 'post', 'created_on', 'approved')
-    list_filter = ('approved', 'created_on')
+    list_display = ('name', 'body', 'post', 'created_on')
+    list_filter = ( 'created_on', )
     search_fields = ('name', 'email', 'body')
-    actions = ['approve_comments']
-    
-    def approve_comments(self, request, queryset):
-        queryset.update(approved=True)
 
 """ 
 Register Category model and CategoryAdmin class to admin site
