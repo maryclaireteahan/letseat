@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     /* Generic project styles */
-    color: #3a3a3a;
+    color: #677C86;
     font-family: 'Oxygen', sans-serif;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -24,7 +24,7 @@ body {
 }
 /* Navbar styles with dropdown toggle */
 nav {
-    background-color: seashell;
+    background-color: #C6F1E7;
     width: fit-content;
     display: none;
 }
@@ -36,7 +36,7 @@ nav ul {
     padding: 1em;
     flex-direction: column;
     align-items: flex-end;
-    box-shadow: 0 2px 2px #3a3a3a;
+    box-shadow: 0 2px 2px #677C86;
 
 }
 /* Nav toggle */
@@ -61,12 +61,12 @@ nav ul {
 }
 
 #menu a:hover {
-    border-bottom: 1px solid #3a3a3a;
+    border-bottom: 1px solid #677C86;
 }
 
 /*Header------------------------------------Header----------------------------------Header---------------------------------------------------------------------------------------*/
 header {
-    background-color: seashell;
+    background-color: #C6F1E7;
     position: fixed;
     padding: 0 2px;
     margin-bottom: 0;
@@ -94,7 +94,7 @@ main {
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
-    background-color: rgb(155, 239, 239);
+    background-color: #6FABB0;
     padding-bottom: 0;
     margin-bottom: 0;
     align-content: flex-start;
@@ -133,7 +133,7 @@ p {
     width: 7em;
     height: 5em;
     background-color: rgba(149, 198, 198, 0.9);
-    color: seashell;
+    color: #C6F1E7;
     font-size: 160%;
     border-radius: 5px;
     display: flex;
@@ -197,7 +197,7 @@ p {
 
 .button-top-picks {
     padding-left: 5px;
-    background-color: seashell;
+    background-color: #C6F1E7;
     border-radius: 5px;
     padding-right: 5px;
 }
@@ -226,11 +226,14 @@ p {
     height: 85%;
     display: flex;
     justify-content: center;
+    border-radius: 1em;
 }
 
 .img-recipes {
     height: 100%;
     width: 100%;
+    border-radius: .5em;
+
 }
 
 .h3-recipes {}
@@ -244,7 +247,7 @@ p {
 
 .button-recipes {
     padding-left: 5px;
-    background-color: seashell;
+    background-color: #C6F1E7;
     border-radius: 5px;
     padding-right: 5px;
 }
@@ -267,16 +270,16 @@ p {
 }
 
 .recipes-row::-webkit-scrollbar-track {
-    background: purple;
+    background: #72abaf;
     /* Background color of the scrollbar track */
 }
 
 .recipes-row::-webkit-scrollbar-thumb {
-    background-color: darkmagenta;
+    background-color: #6FABB0;
     /* Color of the scrollbar thumb */
     border-radius: 5px;
     /* Round the corners of the thumb */
-    box-shadow: 0 2px 2px #3a3a3a;
+    box-shadow: 0 2px 2px #677C86;
 }
 
 /*Single Recipe-----------------------------------Single Recipe---------------------------------Single Recipe--------------------------------------------------------------------------------------*/
@@ -698,7 +701,7 @@ p {
 
 /*Footer------------------------------------Footer----------------------------------Footer---------------------------------------------------------------------------------------*/
 footer {
-    background-color: darkcyan;
+    background-color: #6FABB0;
     padding-top: 0;
     margin-top: 0;
 }
@@ -715,7 +718,7 @@ footer {
 #social-networks i {
     font-size: 160%;
     padding: 5%;
-    color: #3a3a3a;
+    color: #677C86;
 }
 
 
