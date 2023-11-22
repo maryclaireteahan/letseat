@@ -3,31 +3,31 @@
 {% load i18n %}
 {% load account socialaccount %}
 
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% block head_title %}{% trans "Login" %}{% endblock %}
 
 {% block content %}
 
-<div class="signin-and-button-div">
-    <div class="signin-div">
-        <div class="signin-h3-div">
-            <h3>{% trans "Sign In" %}</h3>
+<div class="login-and-button-div">
+    <div class="login-div">
+        <div class="login-h3-div">
+            <h3>{% trans "Login" %}</h3>
         </div>    
-        <div class="signin-p-div">
+        <div class="login-p-div">
             <p>{% blocktrans %}Welcome back to Let's Eat! To leave a comment or like a post, please log in. If
                 you
                 have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
                 first.{% endblocktrans %}</p>
         </div>
     </div>
-    <div class="signin-form-and-button">
-        <div class="signin-form-and-button">
-            <form class="signin-form" method="POST" action="{% url 'account_login' %}">
+    <div class="login-form-and-button">
+        <div class="login-form-and-button">
+            <form class="login-form" method="POST" action="{% url 'account_login' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
-                <button class="signin-button" type="submit">{% trans "Sign In" %}</button>
+                <button class="login-button" type="submit">{% trans "Login" %}</button>
             </form>
         </div>
     </div>
