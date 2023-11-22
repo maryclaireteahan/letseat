@@ -598,7 +598,7 @@ p {
 
 /*Logout-----------------------------------Logout---------------------------------Logout--------------------------------------------------------------------------------------*/
 
-.logout-and-button-div {
+.logout-and-button-container {
     display: flex;
     width: 70%;
     height: 50vh;
@@ -607,31 +607,31 @@ p {
     justify-content: space-around;
 }
 
-.logout-div {
+.logout-container {
     height: fit-content
 }
 
-.logout-h3-div {
+.logout-h3-container {
     display: flex;
     justify-content: center;
     height: fit-content;
 }
 
-.logout-h3-div h3 {
+.logout-h3-container h3 {
     width: fit-content
 }
 
-.logout-p-div {
+.logout-p-container {
     display: flex;
     justify-content: center;
     height: fit-content;
 }
 
-.logout-p-div p {
+.logout-p-container p {
     height: fit-content
 }
 
-.logout-button-div {
+.logout-button-container {
     height: fit-content;
     width: fit-content;
 }
