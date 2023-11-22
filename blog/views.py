@@ -18,6 +18,7 @@ class RecipeList(generic.ListView):
     template_name = 'all_recipes.html'
     paginate_by = 6
 
+
 class RecipeDetail(View):
     
     def get(self, request, slug, *args, **kwargs):
@@ -37,7 +38,7 @@ class RecipeDetail(View):
         
         return render (request,'single_recipe.html',context)
         
-        
+           
     def post(self, request, slug, *args, **kwargs):
         queryset= Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
@@ -137,7 +138,7 @@ class RecipeCreate(LoginRequiredMixin, View):
     
     def post(self, request, *args, **kwargs):
 
-        recipe_form = RecipeForm(data=request.POST)
+        recipe_form = RecipeForm(request.POST, request.FILES)  # Include request.FILES for file data
         
         if recipe_form.is_valid():
             recipe = recipe_form.save(commit=False)
@@ -164,7 +165,7 @@ class RecipeCreate(LoginRequiredMixin, View):
 @login_required
 def recipeEdit(request, id):  
     recipe_instance = get_object_or_404(Recipe, id=id)
-    form = RecipeForm(instance=recipe_instance)
+    form = RecipeForm(request.POST or None, request.FILES or None, instance=recipe_instance)
     if request.user.is_authenticated and request.user.is_superuser:
         if request.method == "POST":  
             form = RecipeForm(request.POST, instance=recipe_instance)  

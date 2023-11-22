@@ -71,10 +71,12 @@ class Recipe(models.Model):
         return self.likes.count()
 
 
-""" 
-Database model for commenting on recipe posts
-"""
+
 class Comment(models.Model):
+    
+    """ 
+    Database model for commenting on recipe posts
+    """  
     
     post = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=80)

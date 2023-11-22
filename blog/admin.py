@@ -12,6 +12,7 @@ class RecipeAdmin(SummernoteModelAdmin):
     summernote_fields = ('ingredients','instructions')
     list_display = ('title', 'slug', 'status', 'created_on')
     search_fields = ['title', 'content']
+
     
 """ 
 Register Comment model and CommentAdmin class to admin site

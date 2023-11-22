@@ -6,9 +6,11 @@
 {% block content %}
 <div class="card-body">
     <h4>Edit Recipe</h4>
-    <form method="post" class="form-edit">
+    <form method="post" class="form-edit" enctype="multipart/form-data">
         {% csrf_token %}
         {{form.as_p}}
+        <img src="{{ recipe_form.instance.featured_image.url }}">
+
         <button type="submit" href="{%url 'recipes' %}" class="edit-button">Save</button>
         <a type="button" class="cancel-button" href="{%url 'recipes' %}"><button>Cancel</button></a>
     </form>
