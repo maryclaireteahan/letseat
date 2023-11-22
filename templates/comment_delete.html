@@ -9,9 +9,9 @@
     <form method="post">
         {% csrf_token %}
         {{form.as_p}}
-    <div class="buttons-container">
-            <a href="{%url 'recipes' %}"><button type="button"class="cancel-delete">Cancel</button></a>
-            <button type="submit" href="{%url 'recipes' %}" class="cancel-delete">Delete</button>
+    <div class="delete-comment-buttons-container">
+            <a href="{%url 'recipes' %}"><button type="button"class="delete-comment-cancel-delete">Cancel</button></a>
+            <button type="submit" href="{%url 'recipes' %}" class="delete-comment-cancel-delete">Delete</button>
     </div>
     </form>
 </div>

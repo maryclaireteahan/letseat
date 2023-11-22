@@ -8,26 +8,26 @@
 <h2 class = "h2-single-recipe">{{ recipe.title }}</h2>
 
 <div class="single-recipe">
-    <div class="number-comments-and-likes">
+    <div class="comments-and-likes-count-container">
         <div class="recipe-likes">
                 {% if user.is_authenticated %}
                 <form class="form-like" action="{% url 'recipe_like' recipe.slug %}" method="POST">
                     {% csrf_token %}
                     {% if liked %}
-                    <button type="submit" name="blogpost_id" value="{{recipe.slug}}" class="number-likes"><i class="fas fa-heart"></i></button>
+                    <button type="submit" name="blogpost_id" value="{{recipe.slug}}" class="likes-count"><i class="fas fa-heart"></i></button>
                     {% else %}
-                    <button type="submit" name="blogpost_id" value="{{recipe.slug}}" class="number-likes"><i class="far fa-heart"></i></button>
+                    <button type="submit" name="blogpost_id" value="{{recipe.slug}}" class="likes-count"><i class="far fa-heart"></i></button>
                     {% endif %}
                 </form>
                 {% else %}
-                <span class="number-likes"><i class="far fa-heart"></i></span>
+                <span class="likes-count"><i class="far fa-heart"></i></span>
                 {% endif %}
             <!-- The number of likes goes before the closing strong tag -->
             {{ recipe.number_of_likes }}
         </div>
         <div class="recipe-comments">
             {% with comments.count as total_comments %}
-            <i class="far fa-comments"></i>
+            <i class="far fa-comments number-comments"></i>
                 <!-- Our total_comments variable goes before the closing strong tag -->
                 {{ total_comments }}
             {% endwith %}
@@ -35,48 +35,44 @@
     </div>
     <div class="img-and-ingredients-container">
         <div class = "img-and-ingredients">
-            <div class ="img-div-single-recipe">
+            <div class ="single-recipe-img-container">
                 {% if 'placeholder' in recipe.featured_image.url %}
-                <img class="img-recipes" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                <img class="img-single-recipes" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
                 {% else %}
-                <img class="img-recipes" src="{{ recipe.featured_image.url }}">
+                <img class="img-single-recipes" src="{{ recipe.featured_image.url }}">
                 {% endif %}
             </div>
             <div class="ingredients">
                 {{ recipe.ingredients | safe }}
             </div>
         </div>
-        <div class="div-instructions">
+    </div>   
+    <div class="instructions-container">
             <div class="instructions">
                 {{ recipe.instructions | safe }}
             </div>
-        </div>
-    </div>    
+    </div> 
 {% if user.is_authenticated and user.is_superuser %}
-<div class="edit-delete">
+<div class="edit-delete-recipe">
     <a href="/admin_recipe_edit/{{ recipe.id }}">Edit/ </a>
     <a href="/admin_recipe_delete/{{ recipe.id }}">Delete</a>
 </div>
 {% endif %}
-    <div class="div-comments">
-        <div class="comment-posted">
+    <div class="comments-container">
+        <div class="posted-comments-container">
             <h3>Comments:</h3>
-            <div class="all-comments">
-                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+            <div class="posted-comments">
                 {% for comment in comments %}
                 <div class="single-comment">
                     <p class="comment-name">
-                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                         {{ comment.name }}
                         <span class="comment-date">
-                            <!-- The comment's created date goes here -->
                         </span> wrote: <br>
                         {{ comment.created_on }}
                     </p>
-                    <!-- The body of the comment goes before the | -->
                     {{ comment.body | linebreaks }}
                     {% if comment.user == request.user %}
-                    <div class="edit-delete">
+                    <div class="edit-delete-comment">
                         <a href="/comment_edit/{{ comment.id }}">Edit/ </a>
                         <a href="/comment_delete/{{ comment.id }}">Delete</a>
                     </div>
@@ -94,7 +90,7 @@
         <form method="post" class="form-comment">
             {{ comment_form | crispy }}
             {% csrf_token %}
-            <button type="submit" class="button-comment">Submit</button>
+            <button type="submit" class="comment-button">Submit</button>
         </form>
         {% endif %}
     </div>

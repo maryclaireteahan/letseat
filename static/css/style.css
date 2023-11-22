@@ -284,7 +284,9 @@ p {
     box-shadow: 0 2px 2px #677C86;
 }
 
-/*Single Recipe-----------------------------------Single Recipe---------------------------------Single Recipe--------------------------------------------------------------------------------------*/
+/*single_recipe-----------------------------------single_recipe---------------------------------single_recipe--------------------------------------------------------------------------------------*/
+
+.h2-single-recipe {}
 
 .single-recipe {
     height: 100%;
@@ -299,15 +301,14 @@ p {
     justify-content: center;
 }
 
-.h2-single-recipe {}
+/*comments and like icons container------------*/
 
-.number-comments-and-likes {
+.comments-and-likes-count-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     height: fit-content;
     border: 0;
-
 }
 
 .recipe-likes {
@@ -317,23 +318,15 @@ p {
     border: 0;
     justify-content: space-evenly;
     align-items: center;
-
 }
 
-.btn-like {
-    background-color: unset;
-    border: 0;
-
-}
-
-.number-likes {
+.likes-count {
     display: flex;
     flex-direction: row;
     height: fit-content;
     background-color: unset;
     box-shadow: 0;
     border: 0;
-
 }
 
 .recipe-comments {
@@ -341,7 +334,6 @@ p {
     border: 0;
     justify-content: space-evenly;
     align-items: center;
-
 }
 
 .number-comments {
@@ -351,7 +343,7 @@ p {
     border: 0;
 }
 
-/*img-and-ingredients DIV*/
+/*img-and-ingredients container--------------*/
 .img-and-ingredients-container {
     height: fit-content;
     width: 100%;
@@ -369,7 +361,7 @@ p {
     padding: 1em;
 }
 
-.img-div-single-recipe {
+.single-recipe-img-container {
     width: 70%;
     height: 100%;
     padding: 1em 0;
@@ -379,6 +371,7 @@ p {
     height: 100%;
     width: 100%;
     padding: 1em 0;
+    border-radius: .5em;
 }
 
 .ingredients {
@@ -388,8 +381,8 @@ p {
     padding: 1em;
 }
 
-/*instructions DIV*/
-.div-instructions {
+/*instructions container-----------------*/
+.instructions-container {
     padding: 1em;
     width: 100%;
     height: fit-content;
@@ -402,20 +395,24 @@ p {
     height: fit-content;
 }
 
-/*comments DIV*/
-.div-comments {
+.edit-delete-recipe {
+    width: fit-content;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: fit-content;
+}
+/*comments container-----------------------*/
+
+.comments-container {
     padding: 1em;
     width: 100%;
-}
-
-/*comments that have have been approved and are on display*/
-.div-comments {
     height: fit-content;
     display: flex;
     flex-direction: column;
 }
 
-.comment-posted {
+.posted-comments-container {
     width: 100%;
     font-size: .75em;
     padding: 1em;
@@ -425,11 +422,8 @@ p {
     flex-direction: column;
 }
 
-.posting-as {
-    padding: 0;
-}
 
-.all-comments {
+.posted-comments {
     max-width: 60vh;
     height: fit-content;
     width: fit-content;
@@ -445,7 +439,7 @@ p {
 
 .comment-date {}
 
-.edit-delete {
+.edit-delete-comment {
     width: fit-content;
     display: flex;
     align-content: center;
@@ -453,23 +447,10 @@ p {
     height: fit-content;
 }
 
-.delete-comment-container {
-    width: fit-content;
-    height: fit-content;
+.posting-as {
+    padding: 0;
 }
 
-.buttons-container {
-    height: fit-content;
-}
-
-.cancel-delete {
-    height: fit-content;
-
-}
-
-.form-recipe {
-    height: fit-content;
-}
 
 /*comments awaiting approval*/
 .comment-pending {
@@ -501,8 +482,42 @@ p {
     width: 20em;
 }
 
-.button-comment {}
+.comment-button {}
 
+/*comment_edit-----------------------------------comment_edit---------------------------------comment_edit--------------------------------------------------------------------------------------*/
+
+.edit-comment-container {
+    width: fit-content;
+    height: fit-content;
+}
+
+.edit-comment-buttons-container {
+    height: fit-content;
+}
+
+.edit-comment-save-cancel {
+    height: fit-content;
+}
+
+
+/*comment_delete-----------------------------------comment_delete---------------------------------comment_delete--------------------------------------------------------------------------------------*/
+
+.delete-comment-container {
+    width: fit-content;
+    height: fit-content;
+}
+
+.delete-comment-buttons-container {
+    height: fit-content;
+}
+
+.delete-comment-cancel-delete {
+    height: fit-content;
+}
+
+.form-recipe {
+    height: fit-content;
+}
 /*Login-----------------------------------Login---------------------------------Login--------------------------------------------------------------------------------------*/
 
 .signin-and-button-div {
