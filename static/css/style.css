@@ -7,42 +7,50 @@
     text-decoration: none
 }
 
-a { color: inherit; } 
-
-/* General styles */
+/*base------------------------------------base----------------------------------base---------------------------------------------------------------------------------------*/
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* Generic project styles */
     color: #677C86;
     font-family: 'Oxygen', sans-serif;
     margin-bottom: 0;
     padding-bottom: 0;
 }
 
+
+/*header------------------------------------header--------*/
+header {
+    background-color: #C6F1E7;
+    position: fixed;
+    padding: 0 2px;
+    margin-bottom: 0;
+    z-index: 99;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+    text-decoration: none;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    align-items: flex-start;
+    border-top: 1px solid #3a3a3a;
+}
+
 .logo-header {
     height: 4em;
-
 }
-/* Navbar styles with dropdown toggle */
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
 nav {
     background-color: #C6F1E7;
     width: fit-content;
     display: none;
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    width: fit-content;
-    padding: 1em;
-    flex-direction: column;
-    align-items: flex-end;
-    box-shadow: 0 2px 2px #677C86;
-
-}
-/* Nav toggle */
 .nav-toggle-div {
     display: flex;
     flex-direction: column;
@@ -63,36 +71,21 @@ nav ul {
     padding-top: .5em;
 }
 
+nav ul {
+    list-style-type: none;
+    display: flex;
+    width: fit-content;
+    padding: 1em;
+    flex-direction: column;
+    align-items: flex-end;
+    box-shadow: 0 2px 2px #677C86;
+}
+
 #menu a:hover {
     border-bottom: 1px solid #677C86;
 }
 
-/*Header------------------------------------Header----------------------------------Header---------------------------------------------------------------------------------------*/
-header {
-    background-color: #C6F1E7;
-    position: fixed;
-    padding: 0 2px;
-    margin-bottom: 0;
-    z-index: 99;
-    width: 100%;
-    justify-content: space-between;
-    align-items: baseline;
-    text-decoration: none;
-    box-shadow: 0 2px 2px #3a3a3a;
-    display: flex;
-    align-items: flex-start;
-    border-top: 1px solid #3a3a3a;
-}
-
-header h1 {
-    font-weight: 700;
-}
-
-header a {
-    text-decoration: none;
-    color: inherit;
-}
-
+/*main------------------------------------main--------*/
 main {
     flex: 1 0 auto;
     display: flex;
@@ -105,7 +98,29 @@ main {
     padding-top: 4em;
 }
 
-/*Index-------------------------------------Index-----------------------------------Index---------------------------------------------------------------------------------------*/
+/*footer------------------------------------footer--------*/
+footer {
+    background-color: #6FABB0;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    box-shadow: 0 2px 2px rgb(1, 54, 54);
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #677C86;
+}
+
+/*index-------------------------------------index-----------------------------------index---------------------------------------------------------------------------------------*/
 
 p {
     padding: 1em;
@@ -119,11 +134,10 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-
     background: url("../images/hero.jpg") no-repeat top right/cover;
 }
 
-.hero-img-div {
+.hero-img-container {
     display: flex;
     width: 100%;
     height: 10em;
@@ -143,11 +157,11 @@ p {
     justify-content: center;
 }
 
-#cover-text-hero img {
+.logo-header-index {
     height: 7em;
 }
 
-.div-about-me {
+.about-me-container {
     height: fit-content;
     width: 90%;
     margin-top: 1em;
@@ -157,13 +171,13 @@ p {
     box-shadow: 0 0 1.5em;
 }
 
-.h2-about-me {}
+.about-me-h2 {}
 
-.p-about-me {
+.about-me-p {
     padding-top: 1em;
 }
 
-.h2-top-picks {
+.top-picks-h2 {
     text-align: center;
     margin-top: 2em
 }
@@ -229,6 +243,9 @@ p {
     scrollbar-width: thin;
     scrollbar-color: #888888 #f4f4f4;
 }
+.recipes-row a { 
+    color: inherit; 
+} 
 
 .recipes {
     height: 12em;
@@ -244,8 +261,8 @@ p {
     border-radius: 0.5em;
     box-shadow: 0 0 0.75em;
     padding: 0.5em 0.5em;
-
 }
+
 
 .img-div-recipes {
     width: 100%;
@@ -261,7 +278,7 @@ p {
     border-radius: .5em;
 }
 
-.h3-recipe-div{}
+.h3-recipe-div {}
 
 .h3-recipe {}
 
@@ -640,7 +657,7 @@ p {
 
 /*signup-----------------------------------signup---------------------------------signup-------------------------------------------------------------------------------------*/
 
-.signup-and-button-div {
+.signup-and-button-container {
     display: flex;
     width: 70%;
     height: 100%;
@@ -651,7 +668,7 @@ p {
     margin: 1em;
 }
 
-.signup-div {
+.signup-message-container {
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -659,36 +676,33 @@ p {
     height: fit-content;
 }
 
-.signup-h3-div {
+.signup-message-h3-container {
     display: flex;
     justify-content: center;
     height: fit-content;
 }
 
-.signup-h3-div h3 {
+.signup-h3-container h3 {
     width: fit-content
 }
 
-.signup-p-div {
+.signup-p-container {
     display: flex;
     justify-content: center;
     height: fit-content;
 }
 
-.signup-p-div p {
+.signup-p-container p {
     height: fit-content
+}
+
+.signup-form-and-button-container {
+        height: fit-content;
 }
 
 .signup-form-and-button {
     height: fit-content;
-
 }
-
-.signup-form-div {
-    height: fit-content;
-
-}
-
 
 .signup-form {
     height: fit-content;
@@ -714,33 +728,10 @@ p {
 .signup-button {
     height: fit-content;
     margin-bottom: 1em;
-
 }
 
 .errorlist li {
     font-weight: bold
-}
-
-/*Footer------------------------------------Footer----------------------------------Footer---------------------------------------------------------------------------------------*/
-footer {
-    background-color: #6FABB0;
-    padding-top: 0;
-    margin-top: 0;
-}
-
-#social-networks {
-    text-align: center;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-    box-shadow: 0 2px 2px rgb(1, 54, 54);
-}
-
-#social-networks i {
-    font-size: 160%;
-    padding: 5%;
-    color: #677C86;
 }
 
 

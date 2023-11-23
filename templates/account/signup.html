@@ -5,17 +5,17 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<div class="signup-and-button-div">
-    <div class="signup-div">
-        <div class="signup-h3-div">
+<div class="signup-and-button-container">
+    <div class="signup-message-container">
+        <div class="signup-message-h3-container">
             <h3>{% trans "Sign Up" %}</h3>
         </div>
-        <div class="signup-p-div">
+        <div class="signup-p-container">
             <p>{% blocktrans %}Welcome back to the Let's Eat! blog. Do you already have an account? Then please <a
                     class="link" href="{{ login_url }}">sign in</a> instead.{% endblocktrans %}</p>
         </div>
     </div>
-    <div class="signup-form-and-button">
+    <div class="signup-form-and-button-container">
         <div class="signup-form-and-button">
             <form class="signup-form" id="signup_form" method="post" action="{% url 'account_signup' %}">
                 {% csrf_token %}
