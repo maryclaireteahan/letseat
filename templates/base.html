@@ -59,18 +59,19 @@
         </div>
     </header>
     <main>
+        {% for message in messages %}
         <div class="message-row-container">
             <div class="message-row">
                 <div class="message">
-                    {% for message in messages %}
                     <div>
                         {{ message | safe }}
                         <button class="message-button">X</button>
                     </div>
-                    {% endfor %}
+                    
                 </div>
             </div>
         </div>
+        {% endfor %}
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
