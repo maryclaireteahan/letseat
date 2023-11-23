@@ -516,6 +516,14 @@ p {
 }
 /*admin_recipe_create-----------------------------------admin_recipe_create---------------------------------admin_recipe_create-------------------------------------------------------------------------------------*/
 .create-recipe-form-container{
+    border-radius: 5px;
+    display: flex;
+    background-color: #f1e9d6;
+    padding: 1em;
+    color: #363535;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0;
 }
 
 .create-recipe-form-button {
@@ -526,12 +534,26 @@ p {
     box-shadow: 0 0 1.5em #252424;
     color: #363535;
     background-color: #f1e9d6;
+    text-decoration: none;
+}
+
+.create-recipe-form-button a {
+    text-decoration: none;
+    color: inherit;
 }
 .create-recipe-form-button:hover {
     background-color: #BCB4A0;
 }
 /*admin_recipe_edit-----------------------------------admin_recipe_edit---------------------------------admin_recipe_edit-------------------------------------------------------------------------------------*/
 .edit-recipe-form-container{
+    border-radius: 5px;
+    display: flex;
+    background-color: #f1e9d6;
+    padding: 1em;
+    color: #363535;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0;
 }
 
 .edit-recipe-form-button {
