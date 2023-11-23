@@ -305,7 +305,8 @@ p {
     text-align: center;
     margin-top: 2em;
     color: #f1e9d6;
-    text-shadow: 0 0 .5em #010101;}
+    text-shadow: 0 0 .5em #010101;
+}
 
 .single-recipe {
     height: 100%;
@@ -394,6 +395,13 @@ p {
     border-radius: .5em;
 }
 
+.ingredients-h3 {    
+    text-align: center;
+    margin-bottom: 1em;
+    color: #f1e9d6;
+    text-shadow: 0 0 .5em #010101;
+}
+
 .ingredients {
     width: 100%;
     font-size: .75em;
@@ -413,6 +421,13 @@ p {
     padding: 1em;
     width: 100%;
     height: fit-content;
+}
+
+.instructions-h3{
+    text-align: center;
+    margin-bottom: 1em;
+    color: #f1e9d6;
+    text-shadow: 0 0 .5em #010101;
 }
 
 .instructions {
