@@ -4,7 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     font-weight: 700;
-    text-decoration: none
+    color: #252424
 }
 
 /*base------------------------------------base----------------------------------base---------------------------------------------------------------------------------------*/
@@ -566,6 +566,7 @@ p {
     flex-direction: column;
     align-items: center;
     margin: 1em 0;
+    box-shadow: 0 0 1.5em #252424;
 }
 
 .create-recipe-form-button {
@@ -659,6 +660,9 @@ p {
     justify-content: space-around;
     padding: 1em;
     margin: 1em;
+    background-color: #f1e9d6;
+    border-radius: 5px;
+    box-shadow: 0 0 1.5em #252424;
 }
 
 .login-container {
