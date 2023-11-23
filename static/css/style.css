@@ -689,11 +689,11 @@ p {
     height: fit-content
 }
 
-.login-form-and-button {
-    height: fit-content;
+.login-form-and-button-container{
 }
 
-.login-form-div {
+
+.login-form-and-button {
     height: fit-content;
 }
 
@@ -718,19 +718,28 @@ p {
     padding-bottom: 1em;
 }
 
-.login-button {
+.login-form-button-container{
+
+}
+
+.login-form-button {
     height: fit-content;
-    margin-bottom: 1em;
-    padding: 1em;
+    margin: 1em 0;
+    padding: 0.5em;
     border-radius: 0.5em;
-    box-shadow: 0 0 1.5em #252424;
+    box-shadow: 0 0 .5em #252424;
     color: #363535;
     background-color: #f1e9d6;
 }
 
-.login-button:hover {
+.login-form-button a {
+    text-decoration: none;
+    color: inherit;
+}
+.login-form-button:hover {
     background-color: #BCB4A0;
 }
+
 
 /*Logout-----------------------------------Logout---------------------------------Logout--------------------------------------------------------------------------------------*/
 
