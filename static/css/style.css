@@ -161,6 +161,12 @@ p {
     height: 7em;
 }
 
+.about-me-and-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .about-me-container {
     height: fit-content;
     width: 90%;
@@ -171,13 +177,8 @@ p {
     box-shadow: 0 0 1.5em #252424;
 }
 
-.about-me-and-button-container {
-    height: fit-content;
-}
-
 .about-me-h2 {
     color: #363535;
-
 }
 
 .about-me-p {
@@ -185,8 +186,19 @@ p {
     color: #363535
 }
 
-.discover-recipes {}
+.discover-recipes-button {
+    border-radius: 0.5em;
+    box-shadow: 0 0 1.5em #252424;
+    margin: 3em;
+    padding: 2em;
+    font-size: large;
+    color: #363535;
+    background-color: #f1e9d6;
+}
 
+.discover-recipes-button:hover {
+    background-color: #BCB4A0;
+}
 /*all_recipes-------------------------------------all_recipes-----------------------------------all_recipes---------------------------------------------------------------------------------------*/
 
 .recipes-h2 {
@@ -465,8 +477,19 @@ p {
     width: 20em;
 }
 
-.comment-button {}
+.comment-button {
+    height: fit-content;
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 1.5em #252424;
+    color: #363535;
+    background-color: #f1e9d6;
+}
 
+.comment-button:hover {
+    background-color: #BCB4A0;
+}
 /*comment_edit-----------------------------------comment_edit---------------------------------comment_edit--------------------------------------------------------------------------------------*/
 
 .edit-comment-container {
@@ -576,7 +599,15 @@ p {
 .login-button {
     height: fit-content;
     margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 1.5em #252424;
+    color: #363535;
+    background-color: #f1e9d6;
+}
 
+.login-button:hover {
+    background-color: #BCB4A0;
 }
 
 /*Logout-----------------------------------Logout---------------------------------Logout--------------------------------------------------------------------------------------*/
@@ -619,8 +650,19 @@ p {
     width: fit-content;
 }
 
-.logout-button {}
+.logout-button {
+    height: fit-content;
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 1.5em #252424;
+    color: #363535;
+    background-color: #f1e9d6;
+}
 
+.logout-button:hover {
+    background-color: #BCB4A0;
+}
 /*signup-----------------------------------signup---------------------------------signup-------------------------------------------------------------------------------------*/
 
 .signup-and-button-container {
@@ -694,6 +736,15 @@ p {
 .signup-button {
     height: fit-content;
     margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 1.5em #252424;
+    color: #363535;
+    background-color: #f1e9d6;
+}
+
+.signup-button:hover {
+    background-color: #BCB4A0;
 }
 
 .errorlist li {
