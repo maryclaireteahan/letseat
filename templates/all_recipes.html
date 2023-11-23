@@ -5,7 +5,7 @@
 {% endblock css %}
 {% block content %}
 
-<h2 class="h2-recipes">Recipes</h2>
+<h2 class="recipes-h2">Recipes</h2>
 {% for category in categories %}
     <h3 class="category">{{ category.name }}</h3>
     <div class="recipes-row">
@@ -13,15 +13,15 @@
         {% if recipe.status == 1 %}
         <a href="{% url 'single_recipe' recipe.slug %}">
             <div class="recipes">
-            <div class="img-div-recipes">
+            <div class="recipes-img-container">
                 {% if 'placeholder' in recipe.featured_image.url %}
-                <img class="img-recipes" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                <img class="recipes-img" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
                 {% else %}
-                <img class="img-recipes" src="{{ recipe.featured_image.url }}">
+                <img class="recipes-img" src="{{ recipe.featured_image.url }}">
                 {% endif %}
             </div>
-            <div class="h3-recipe-div">
-            <h4 class="h3-recipe">{{ recipe.title }}</h4>
+            <div class="recipe-h3-container">
+            <h4 class="recipe-h3">{{ recipe.title }}</h4>
             </div>
         </div></a>
         {% endif %}
