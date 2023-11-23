@@ -117,7 +117,7 @@ footer {
 #social-networks i {
     font-size: 160%;
     padding: 5%;
-    color: #677C86;
+    color: #363535;
 }
 
 /*index-------------------------------------index-----------------------------------index---------------------------------------------------------------------------------------*/
@@ -149,7 +149,7 @@ p {
     width: 7em;
     height: 5em;
     background-color: rgba(149, 198, 198, 0.9);
-    color: #C6F1E7;
+    color: #363535;
     font-size: 160%;
     border-radius: 5px;
     display: flex;
@@ -168,13 +168,19 @@ p {
     padding: 1em;
     background-color: #f1e9d6;
     border-radius: 0.5em;
-    box-shadow: 0 0 1.5em;
+    box-shadow: 0 0 1.5em #252424;
 }
 
-.about-me-h2 {}
+.about-me-and-button-container {}
+
+.about-me-h2 {
+    color: #363535;
+
+}
 
 .about-me-p {
     padding-top: 1em;
+    color: #363535
 }
 
 .discover-recipes {}
@@ -261,7 +267,7 @@ p {
 
 /*single_recipe-----------------------------------single_recipe---------------------------------single_recipe--------------------------------------------------------------------------------------*/
 
-.single-recipe-2 {}
+.single-recipe-h2 {}
 
 .single-recipe {
     height: 100%;
