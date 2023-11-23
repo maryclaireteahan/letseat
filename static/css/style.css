@@ -203,11 +203,15 @@ p {
 
 .recipes-h2 {
     text-align: center;
-    margin-top: 2em
+    margin-top: 2em;
+    color: #f1e9d6;
 }
 
 .category {
+    color: #f1e9d6;
     text-transform: capitalize;
+    margin: 1em;
+
 }
 
 .recipes-row {
