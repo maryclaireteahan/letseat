@@ -301,7 +301,11 @@ p {
 
 /*single_recipe-----------------------------------single_recipe---------------------------------single_recipe--------------------------------------------------------------------------------------*/
 
-.single-recipe-h2 {}
+.single-recipe-h2 {
+    text-align: center;
+    margin-top: 2em;
+    color: #f1e9d6;
+    text-shadow: 0 0 .5em #010101;}
 
 .single-recipe {
     height: 100%;
@@ -391,10 +395,17 @@ p {
 }
 
 .ingredients {
-    font-size: 1em;
-    height: fit-content;
-    width: fit-content;
+    width: 100%;
+    font-size: .75em;
     padding: 1em;
+    display: flex;
+    flex-wrap: nowrap;
+    height: fit-content;
+    flex-direction: column;
+    background-color: #f1e9d6;
+    box-shadow: 0 0 0.25em #252424;
+    border-radius: .5em;
+    margin-bottom: 1em;
 }
 
 /*instructions container-----------------*/
@@ -406,9 +417,21 @@ p {
 
 .instructions {
     width: 100%;
-    font-size: 1em;
-    padding: 1em;
+    padding: 2em;
+    display: flex;
+    flex-wrap: nowrap;
     height: fit-content;
+    flex-direction: column;
+    background-color: #f1e9d6;
+    box-shadow: 0 0 0.25em #252424;
+    border-radius: .5em;
+    margin-bottom: 1em;
+    font-size: small;
+    line-height: 2em;
+}
+
+.instructions ol li{
+    margin-bottom: 1em
 }
 
 .edit-delete-recipe {

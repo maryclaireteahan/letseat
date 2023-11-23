@@ -5,7 +5,7 @@
 {% endblock css %}
 {% block content %}
 {% load crispy_forms_tags %}
-<h2 class = "single-recipe-h2">{{ recipe.title }}</h2>
+<h2 class ="single-recipe-h2">{{ recipe.title }}</h2>
 
 <div class="single-recipe">
     <div class="comments-and-likes-count-container">
@@ -42,12 +42,14 @@
                 <img class="single-recipe-img " src="{{ recipe.featured_image.url }}">
                 {% endif %}
             </div>
+            <h3 class="ingredients-h3">Ingredients:</h3>
             <div class="ingredients">
                 {{ recipe.ingredients | safe }}
             </div>
         </div>
     </div>   
     <div class="instructions-container">
+            <h3 class="instructions-h3">Instructions:</h3>
             <div class="instructions">
                 {{ recipe.instructions | safe }}
             </div>
