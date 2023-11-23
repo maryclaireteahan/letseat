@@ -518,14 +518,35 @@ p {
 .create-recipe-form-container{
 }
 
-.create-recipe-form-button{
+.create-recipe-form-button {
+    height: fit-content;
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 1.5em #252424;
+    color: #363535;
+    background-color: #f1e9d6;
 }
 
+.create-recipe-form-button:hover {
+    background-color: #BCB4A0;
+}
 /*admin_recipe_edit-----------------------------------admin_recipe_edit---------------------------------admin_recipe_edit-------------------------------------------------------------------------------------*/
 .edit-recipe-form-container{
 }
 
-.edit-recipe-form-button{
+.edit-recipe-form-button {
+    height: fit-content;
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 1.5em #252424;
+    color: #363535;
+    background-color: #f1e9d6;
+}
+
+.edit-recipe-form-button:hover {
+    background-color: #BCB4A0;
 }
 /*admin_recipe_delete-----------------------------------admin_recipe_delete---------------------------------admin_recipe_delete-------------------------------------------------------------------------------------*/
 
@@ -579,7 +600,6 @@ p {
     height: fit-content;
 
 }
-
 
 .login-form {
     height: fit-content;

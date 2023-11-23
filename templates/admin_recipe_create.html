@@ -13,7 +13,9 @@
         {{ recipe_form | crispy }}
         <img src="{{ recipe_form.instance.featured_image.url }}">
         <button type="submit" href="{%url 'recipes' %}" class="create-recipe-form-button">submit</button>
-        <a type="button" class="create-recipe-form-button" href="{%url 'recipes' %}"><button>Cancel</button></a>
+        <a  href="{%url 'recipes' %}">
+            <button class="create-recipe-form-button">Cancel</button>
+        </a>
     </form>
 </div>
 {%endblock%}
