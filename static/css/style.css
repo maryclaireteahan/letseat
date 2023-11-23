@@ -470,11 +470,10 @@ p {
 }
 
 .comment-button {
-    height: fit-content;
-    margin-bottom: 1em;
-    padding: 1em;
+    margin: 1em 0;
+    padding: 0.5em;
     border-radius: 0.5em;
-    box-shadow: 0 0 1.5em #252424;
+    box-shadow: 0 0 0.25em #252424;
     color: #363535;
     background-color: #f1e9d6;
 }
@@ -515,6 +514,21 @@ p {
 .form-recipe {
     height: fit-content;
 }
+/*admin_recipe_create-----------------------------------admin_recipe_create---------------------------------admin_recipe_create-------------------------------------------------------------------------------------*/
+.create-recipe-form-container{
+}
+
+.create-recipe-form-button{
+}
+
+/*admin_recipe_edit-----------------------------------admin_recipe_edit---------------------------------admin_recipe_edit-------------------------------------------------------------------------------------*/
+.edit-recipe-form-container{
+}
+
+.edit-recipe-form-button{
+}
+/*admin_recipe_delete-----------------------------------admin_recipe_delete---------------------------------admin_recipe_delete-------------------------------------------------------------------------------------*/
+
 /*Login-----------------------------------Login---------------------------------Login--------------------------------------------------------------------------------------*/
 
 .login-and-button-div {

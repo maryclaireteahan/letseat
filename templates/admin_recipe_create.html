@@ -5,14 +5,15 @@
 {% endblock css %}
 {% block content %}
 {% load crispy_forms_tags %}
-
-<p class="posting-as">Posting as: {{ user.username }}</p>
-
-<form method="post" class="form-recipe" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ recipe_form | crispy }}
-    <img src="{{ recipe_form.instance.featured_image.url }}">
-
-    <button type="submit" class="button-comment">Submit</button>
-</form>
+<div class="create-recipe-form-container">
+    <h4>Add Recipe</h4>
+    <p class="posting-as">Posting as: {{ user.username }}</p>
+    <form method="post" class="form-recipe" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ recipe_form | crispy }}
+        <img src="{{ recipe_form.instance.featured_image.url }}">
+        <button type="submit" href="{%url 'recipes' %}" class="create-recipe-form-button">submit</button>
+        <a type="button" class="create-recipe-form-button" href="{%url 'recipes' %}"><button>Cancel</button></a>
+    </form>
+</div>
 {%endblock%}
