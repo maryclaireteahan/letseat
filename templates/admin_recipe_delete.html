@@ -10,8 +10,8 @@
         {% csrf_token %}
         {{form.as_p}}
     <div class="buttons-container">
-        <button type="submit" href="{%url 'recipes' %}" class="cancel-delete">Delete</button>
-        <a href="{%url 'recipes' %}"><button type="button"class="cancel-delete">Cancel</button></a>
+        <button type="submit" href="{%url 'recipes' %}" class="delete-recipe-form-button">Delete</button>
+        <button class="delete-recipe-form-button" ><a href="{%url 'home' %}">Cancel</a></button>
     </div>
     </form>
 </div>
