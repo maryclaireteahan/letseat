@@ -650,7 +650,7 @@ p {
 }
 /*Login-----------------------------------Login---------------------------------Login--------------------------------------------------------------------------------------*/
 
-.login-and-button-div {
+.login-and-button-container {
     display: flex;
     width: 70%;
     height: 100%;
@@ -661,7 +661,7 @@ p {
     margin: 1em;
 }
 
-.login-div {
+.login-container {
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -669,34 +669,32 @@ p {
     height: fit-content;
 }
 
-.login-h3-div {
+.login-h3-container {
     display: flex;
     justify-content: center;
     height: fit-content;
 }
 
-.login-h3-div h3 {
+.login-h3-container h3 {
     width: fit-content
 }
 
-.login-p-div {
+.login-p-container {
     display: flex;
     justify-content: center;
     height: fit-content;
 }
 
-.login-p-div p {
+.login-p-container p {
     height: fit-content
 }
 
 .login-form-and-button {
     height: fit-content;
-
 }
 
 .login-form-div {
     height: fit-content;
-
 }
 
 .login-form {
@@ -771,6 +769,9 @@ p {
     height: fit-content
 }
 
+.logout-form-and-button-container{
+
+}
 
 .logout-form-button {
     height: fit-content;

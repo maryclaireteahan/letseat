@@ -14,7 +14,7 @@
             <p>{% trans 'Are you sure you want to log out?' %}</p>
         </div>
     </div>
-    <div class="logout-form-container">
+    <div class="logout-form-and-button-container">
         <form method="post" action="{% url 'account_logout' %}">
             {% csrf_token %}
             {% if redirect_field_value %}
