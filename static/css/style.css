@@ -261,7 +261,13 @@ p {
 
 .recipe-h4-container {}
 
-.recipe-h4 {}
+.recipe-h4 {
+    font-size: calc(1.1vw + 1.1vh + 1.1vmin);
+    outline: none;
+    padding: 5px 2px;
+    width: 120px;
+    overflow: hidden;
+}
 
 .recipes-row::-webkit-scrollbar {
     width: 10px;
