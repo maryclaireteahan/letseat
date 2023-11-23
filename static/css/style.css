@@ -574,7 +574,37 @@ p {
     background-color: #BCB4A0;
 }
 /*admin_recipe_delete-----------------------------------admin_recipe_delete---------------------------------admin_recipe_delete-------------------------------------------------------------------------------------*/
+.delete-recipe-form-container{
+    border-radius: 5px;
+    display: flex;
+    background-color: #f1e9d6;
+    padding: 1em;
+    color: #363535;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0;
+}
 
+.delete-recipe-form-button-container{
+}
+
+.delete-recipe-form-button {
+    height: fit-content;
+    margin: 1em 0;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 1.5em #252424;
+    color: #363535;
+    background-color: #f1e9d6;
+}
+
+.delete-recipe-form-button a {
+    text-decoration: none;
+    color: inherit;
+}
+.delete-recipe-form-button:hover {
+    background-color: #BCB4A0;
+}
 /*Login-----------------------------------Login---------------------------------Login--------------------------------------------------------------------------------------*/
 
 .login-and-button-div {
