@@ -84,14 +84,15 @@
             </div>
         </div>
         {% if user.is_authenticated %}
-
-        <h3>Leave a comment:</h3>
-        <p class="posting-as">Posting as: {{ user.username }}</p>
-        <form method="post" class="form-comment">
-            {{ comment_form | crispy }}
-            {% csrf_token %}
-            <button type="submit" class="comment-button">Submit</button>
-        </form>
+        <div class="leave-comment-container">
+            <h3>Leave a comment:</h3>
+            <p class="posting-as">Posting as: {{ user.username }}</p>
+            <form method="post" class="form-comment">
+                {{ comment_form | crispy }}
+                {% csrf_token %}
+                <button type="submit" class="comment-button">Submit</button>
+            </form>
+        </div>
         {% endif %}
     </div>
 

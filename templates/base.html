@@ -29,12 +29,12 @@
         <a href="{% url 'home' %}">
             <img src="{% static 'images/logo/logo_transparent.png' %}"alt="" class="logo-header">
         </a>
-        <div class="nav-toggle-div">
+        <div class="nav-toggle-container">
             <input type="checkbox" id="nav-toggle" name="nav-toggle">
             <label for="nav-toggle" class="nav-toggle-label"><i class="fa-solid fa-bars"
                     style="color: #3a3a3a;"></i></label>
             <nav>
-                <div class="nav-toggle-div">
+                <div class="nav-toggle-container">
                     <ul id="menu">
                         <li><a href="{% url 'home' %}" class="active" aria-label="Go to Home page">Home</a></li>
                         <li><a href="{% url 'recipes' %}" aria-label="Go to Recipe page">Recipes</a></li>

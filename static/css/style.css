@@ -21,7 +21,7 @@ body {
 
 /*header------------------------------------header--------*/
 header {
-    background-color: #C6F1E7;
+    background-color: #6FABB0;
     position: fixed;
     padding: 0 2px;
     margin-bottom: 0;
@@ -46,16 +46,17 @@ header a {
 }
 
 nav {
-    background-color: #C6F1E7;
+    background-color: #f1e9d6;
     width: fit-content;
     display: none;
 }
 
-.nav-toggle-div {
+.nav-toggle-container {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     width: fit-content;
+    background-color: #6FABB0;
 }
 
 #nav-toggle:checked~nav {
@@ -78,7 +79,6 @@ nav ul {
     padding: 1em;
     flex-direction: column;
     align-items: flex-end;
-    box-shadow: 0 2px 2px #677C86;
 }
 
 #menu a:hover {
@@ -90,7 +90,7 @@ main {
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
-    background-color: #363535;
+    background-color: #636262;
     padding-bottom: 0;
     margin-bottom: 0;
     align-content: flex-start;
@@ -205,12 +205,15 @@ p {
     text-align: center;
     margin-top: 2em;
     color: #f1e9d6;
+    text-shadow: 0 0 .5em #010101;
 }
 
 .category {
     color: #f1e9d6;
     text-transform: capitalize;
     margin: 1em;
+    text-shadow: 0 0 .5em #010101;
+
 }
 
 .recipes-row {
@@ -228,6 +231,8 @@ p {
     color: inherit; 
     text-transform: capitalize;
     text-decoration: none;
+    text-shadow: 0 0 .5em #010101;
+
 } 
 
 .recipes {
@@ -245,6 +250,8 @@ p {
     box-shadow: 0 0 0.75em;
     padding: 0.5em 0.5em;
     text-align: center;
+    border:thin #252424 solid;
+
 }
 
 
@@ -253,13 +260,14 @@ p {
     display: flex;
     justify-content: center;
     border-radius: 1em;
-    height: 60%
+    height: 60%;
 }
 
 .recipes-img {
     height: 100%;
     width: 100%;
     border-radius: .5em;
+    border:thin #252424 solid;
 }
 
 .recipe-h4-container {}
@@ -301,7 +309,6 @@ p {
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
-    background-color: rgb(155, 239, 239);
     padding-bottom: 0;
     margin-bottom: 0;
     align-items: flex-start;
@@ -411,6 +418,10 @@ p {
     align-items: center;
     height: fit-content;
 }
+
+.edit-delete-recipe a {
+
+}
 /*comments container-----------------------*/
 
 .comments-container {
@@ -429,6 +440,10 @@ p {
     flex-wrap: nowrap;
     height: fit-content;
     flex-direction: column;
+    background-color: #f1e9d6;
+    box-shadow: 0 0 0.25em #252424;
+    border-radius: .5em;
+    margin-bottom: 1em;
 }
 
 
@@ -436,17 +451,31 @@ p {
     max-width: 60vh;
     height: fit-content;
     width: fit-content;
+    background-color: #f1e9d6;
+    border-radius: .5em;
+
 }
 
 .single-comment {
     padding: 10px;
     width: 50vh;
     height: fit-content;
+    box-shadow: 0 0 0.25em #252424;
+    border: thin #252424 solid;
+    margin: 1em;
+    border-radius: .5em;
 }
 
 .comment-name {}
 
 .comment-date {}
+
+.comment-name~p {
+    margin:1em;
+    box-shadow: 0 0 0.25em #252424;
+    border: thin #252424 solid;
+}
+
 
 .edit-delete-comment {
     width: fit-content;
@@ -457,12 +486,22 @@ p {
 }
 
 .posting-as {
-    padding: 2em;
 }
 
 /*comment form*/
+.leave-comment-container{
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
 .form-comment {
-    margin-top: 1.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form-comment div {
