@@ -171,7 +171,9 @@ p {
     box-shadow: 0 0 1.5em #252424;
 }
 
-.about-me-and-button-container {}
+.about-me-and-button-container {
+    height: fit-content;
+}
 
 .about-me-h2 {
     color: #363535;
