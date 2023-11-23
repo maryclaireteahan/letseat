@@ -27,47 +27,5 @@
     <p class ="about-me-p">Don't forget to check out "My Top Picks" below! Discover a curated selection of recipes that have garnered praise and admiration—a collection tailored to offer you a taste of the best "Let's Eat" has to offer. Together, let's embark on this flavorful journey—one delicious recipe at a time!</p>
     </div>
 
-<h2 class = "top-picks-h2">My Top Picks</h2>
-<div class = "top-picks">
-    <div class ="img-div-top-picks">
-        {% if "placeholder" in recipe.featured_image.url %}
-        <img class="img-top-picks"
-            src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
-        {% else %}
-        <img class="img-top-picks" src=" {{ recipe.featured_image.url }}">
-        {% endif %}
-    </div>
-    <h3 class = "h3-top-picks">placeholder{{ recipe.title }}</h3>
-    <div class = "button-div-top-picks">
-        <button class = "button-top-picks">Select</button>
-    </div>
-</div>
-<div class = "top-picks">
-    <div class ="img-div-top-picks">
-        {% if "placeholder" in recipe.featured_image.url %}
-        <img class="img-top-picks"
-            src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
-        {% else %}
-        <img class="img-top-picks" src=" {{ recipe.featured_image.url }}">
-        {% endif %}
-    </div>
-    <h3 class = "h3-top-picks">{{ recipe.title }}</h3>
-    <div class = "button-div-top-picks">
-        <button class = "button-top-picks"><a href="#">Select</a></button>
-    </div>
-</div>
-<div class = "top-picks">
-    <div class ="img-div-top-picks">
-        {% if "placeholder" in post.featured_image.url %}
-        <img class="img-top-picks"
-            src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
-        {% else %}
-        <img class="img-top-picks" src=" {{ post.featured_image.url }}">
-        {% endif %}
-    </div>
-    <h3 class = "h3-top-picks">{{ recipe.title }}</h3>
-    <div class = "button-div-top-picks">
-        <button class = "button-top-picks">Select</button>
-    </div>
-</div>
+
 {%endblock%}
