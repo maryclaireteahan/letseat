@@ -8,34 +8,34 @@
 <h2 class ="single-recipe-h2">{{ recipe.title }}</h2>
 
 <div class="single-recipe">
-    <div class="comments-and-likes-count-container">
-        <div class="recipe-likes">
-                {% if user.is_authenticated %}
-                <form class="form-like" action="{% url 'recipe_like' recipe.slug %}" method="POST">
-                    {% csrf_token %}
-                    {% if liked %}
-                    <button type="submit" name="blogpost_id" value="{{recipe.slug}}" class="likes-count"><i class="fas fa-heart"></i></button>
-                    {% else %}
-                    <button type="submit" name="blogpost_id" value="{{recipe.slug}}" class="likes-count"><i class="far fa-heart"></i></button>
-                    {% endif %}
-                </form>
-                {% else %}
-                <span class="likes-count"><i class="far fa-heart"></i></span>
-                {% endif %}
-            <!-- The number of likes goes before the closing strong tag -->
-            {{ recipe.number_of_likes }}
-        </div>
-        <div class="recipe-comments">
-            {% with comments.count as total_comments %}
-            <i class="far fa-comments number-comments"></i>
-                <!-- Our total_comments variable goes before the closing strong tag -->
-                {{ total_comments }}
-            {% endwith %}
-        </div>
-    </div>
-    <div class="img-and-ingredients-container">
+    <div class="img-and-ingredients-container">   
         <div class = "img-and-ingredients">
-            <div class ="single-recipe-img-container">
+            <div class ="single-recipe-img-container">         
+                <div class="comments-and-likes-count-container">
+                    <div class="recipe-likes">
+                            {% if user.is_authenticated %}
+                            <form class="form-like" action="{% url 'recipe_like' recipe.slug %}" method="POST">
+                                {% csrf_token %}
+                                {% if liked %}
+                                <button type="submit" name="blogpost_id" value="{{recipe.slug}}" class="likes-count"><i class="fas fa-heart"></i></button>
+                                {% else %}
+                                <button type="submit" name="blogpost_id" value="{{recipe.slug}}" class="likes-count"><i class="far fa-heart"></i></button>
+                                {% endif %}
+                            </form>
+                            {% else %}
+                            <span class="likes-count"><i class="far fa-heart"></i></span>
+                            {% endif %}
+                        <!-- The number of likes goes before the closing strong tag -->
+                        {{ recipe.number_of_likes }}
+                    </div>
+                    <div class="recipe-comments">
+                        {% with comments.count as total_comments %}
+                        <i class="far fa-comments number-comments"></i>
+                            <!-- Our total_comments variable goes before the closing strong tag -->
+                            {{ total_comments }}
+                        {% endwith %}
+                    </div>
+                </div>
                 {% if 'placeholder' in recipe.featured_image.url %}
                 <img class="single-recipe-img " src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
                 {% else %}
