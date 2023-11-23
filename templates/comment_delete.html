@@ -4,14 +4,14 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 {% endblock css %}
 {% block content %}
-<div class="delete-comment-container">
-    <h4>Are you sure you want to delete your comment?</h4>
+<div class="delete-comment-form-container">
+    <h4>Are you sure you want to delete your coment?</h4>
     <form method="post">
         {% csrf_token %}
         {{form.as_p}}
-    <div class="delete-comment-buttons-container">
-            <a href="{%url 'recipes' %}"><button type="button"class="delete-comment-cancel-delete">Cancel</button></a>
-            <button type="submit" href="{%url 'recipes' %}" class="delete-comment-cancel-delete">Delete</button>
+    <div class="delete-comment-form-button-container">
+        <button type="submit" href="{%url 'recipes' %}" class="delete-comment-form-button">Delete</button>
+        <button class="delete-comment-form-button" ><a href="{%url 'home' %}">Cancel</a></button>
     </div>
     </form>
 </div>

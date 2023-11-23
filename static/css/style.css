@@ -498,19 +498,38 @@ p {
 
 /*comment_delete-----------------------------------comment_delete---------------------------------comment_delete--------------------------------------------------------------------------------------*/
 
-.delete-comment-container {
-    width: fit-content;
-    height: fit-content;
+.delete-comment-form-container{
+    border-radius: 5px;
+    display: flex;
+    background-color: #f1e9d6;
+    padding: 1em;
+    color: #363535;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0;
+    width: 70%;
 }
 
-.delete-comment-buttons-container {
-    height: fit-content;
+.delete-comment-form-button-container{
 }
 
-.delete-comment-cancel-delete {
+.delete-comment-form-button {
     height: fit-content;
+    margin: 1em 0;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 .5em #252424;
+    color: #363535;
+    background-color: #f1e9d6;
 }
 
+.delete-comment-form-button a {
+    text-decoration: none;
+    color: inherit;
+}
+.delete-comment-form-button:hover {
+    background-color: #BCB4A0;
+}
 .form-recipe {
     height: fit-content;
 }
