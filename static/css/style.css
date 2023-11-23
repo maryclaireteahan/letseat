@@ -201,7 +201,7 @@ p {
 }
 /*all_recipes-------------------------------------all_recipes-----------------------------------all_recipes---------------------------------------------------------------------------------------*/
 
-.recipes-h2 {
+.recipes-h1 {
     text-align: center;
     margin-top: 2em;
     color: #f1e9d6;
@@ -211,7 +211,6 @@ p {
     color: #f1e9d6;
     text-transform: capitalize;
     margin: 1em;
-
 }
 
 .recipes-row {
