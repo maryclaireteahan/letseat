@@ -341,10 +341,15 @@ p {
     align-items: center;
     width: 2em;
     justify-content: space-evenly;
+    color: #f1e9d6;
 }
 
-.form-like {}
+.form-like {
+}
 
+.fa-heart {
+    color: #f1e9d6;
+}
 .likes-count {
     display: flex;
     flex-direction: row;
@@ -359,6 +364,11 @@ p {
     border: 0;
     justify-content: space-evenly;
     align-items: center;
+    color: #f1e9d6;
+}
+
+.fa-comments {
+    color: #f1e9d6;
 }
 
 .number-comments {
@@ -398,8 +408,9 @@ p {
 .single-recipe-img {
     height: 100%;
     width: 100%;
-    padding: 1em 0;
-    border-radius: .5em;
+    border-radius: .25em;
+    border:thin #252424 solid;
+    margin-top: .5em;
 }
 
 .ingredients-h3 {    
