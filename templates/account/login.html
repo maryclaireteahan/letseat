@@ -19,7 +19,7 @@
                 first.{% endblocktrans %}</p>
         </div>
     </div>
-    <div class="login-form-and-button">
+    <div class="login-form-and-button-container">
         <div class="login-form-and-button">
             <form class="login-form" method="POST" action="{% url 'account_login' %}">
                 {% csrf_token %}
@@ -27,7 +27,10 @@
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
-                <button class="login-button" type="submit">{% trans "Login" %}</button>
+            <div class="login-form-button-container">
+                <button type="submit" href="{%url 'recipes' %}" class="login-form-button">{% trans 'Log In' %}</button>
+                <button class="login-form-button" ><a href="{%url 'home' %}">{% trans 'Cancel' %}</a></button>
+            </div>            
             </form>
         </div>
     </div>
