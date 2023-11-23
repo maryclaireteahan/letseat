@@ -534,7 +534,6 @@ p {
     box-shadow: 0 0 1.5em #252424;
     color: #363535;
     background-color: #f1e9d6;
-    text-decoration: none;
 }
 
 .create-recipe-form-button a {
@@ -704,17 +703,23 @@ p {
 
 .logout-button {
     height: fit-content;
-    margin-bottom: 1em;
-    padding: 1em;
+    margin: 1em 0;
+    padding: 0.5em;
     border-radius: 0.5em;
     box-shadow: 0 0 1.5em #252424;
     color: #363535;
     background-color: #f1e9d6;
 }
 
+.logout-button a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .logout-button:hover {
     background-color: #BCB4A0;
 }
+
 /*signup-----------------------------------signup---------------------------------signup-------------------------------------------------------------------------------------*/
 
 .signup-and-button-container {
