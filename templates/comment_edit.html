@@ -6,7 +6,7 @@
 {% block content %}
 <div class="edit-comment-form-container">
     <h4>Edit Comment</h4>
-    <form method="post" class="form-edit">
+    <form method="post" class="edit-comment-form">
         {% csrf_token %}
         {{form.as_p}}
         <button type="submit" href="{%url 'recipes' %}" class="edit-comment-form-button">Save</button>

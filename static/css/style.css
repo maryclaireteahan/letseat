@@ -484,14 +484,20 @@ p {
 /*comment_edit-----------------------------------comment_edit---------------------------------comment_edit--------------------------------------------------------------------------------------*/
 
 .edit-comment-form-container{
-    border-radius: 5px;
     display: flex;
-    background-color: #f1e9d6;
-    padding: 1em;
-    color: #363535;
+    width: 70%;
+    height: 100%;
     flex-direction: column;
     align-items: center;
-    margin: 1em 0;
+    justify-content: space-around;
+    padding: 1em;
+    margin: 1em;
+    background-color: #f1e9d6;
+    border-radius: 5px;
+    box-shadow: 0 0 1.5em #010101;
+}
+
+.edit-comment-form {
 }
 
 .edit-comment-form p label {
@@ -531,6 +537,8 @@ p {
     align-items: center;
     margin: 1em 0;
     width: 70%;
+    box-shadow: 0 0 1.5em #010101;
+
 }
 
 .delete-comment-form-button-container{
@@ -566,7 +574,7 @@ p {
     flex-direction: column;
     align-items: center;
     margin: 1em 0;
-    box-shadow: 0 0 1.5em #252424;
+    box-shadow: 0 0 1.5em #010101;
 }
 
 .create-recipe-form-button {
@@ -596,6 +604,8 @@ p {
     flex-direction: column;
     align-items: center;
     margin: 1em 0;
+    box-shadow: 0 0 1.5em #010101;
+
 }
 
 .edit-recipe-form-button {
@@ -662,7 +672,7 @@ p {
     margin: 1em;
     background-color: #f1e9d6;
     border-radius: 5px;
-    box-shadow: 0 0 1.5em #252424;
+    box-shadow: 0 0 1.5em #010101;
 }
 
 .login-container {
@@ -748,14 +758,17 @@ p {
 /*Logout-----------------------------------Logout---------------------------------Logout--------------------------------------------------------------------------------------*/
 
 .logout-and-button-container {
-    border-radius: 5px;
     display: flex;
-    background-color: #f1e9d6;
-    padding: 1em;
-    color: #363535;
+    width: 70%;
+    height: 100%;
     flex-direction: column;
     align-items: center;
-    margin: 1em 0;
+    justify-content: space-around;
+    padding: 1em;
+    margin: 1em;
+    background-color: #f1e9d6;
+    border-radius: 5px;
+    box-shadow: 0 0 1.5em #010101;
 }
 
 .logout-container {
