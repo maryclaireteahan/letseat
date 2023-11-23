@@ -583,6 +583,7 @@ p {
     flex-direction: column;
     align-items: center;
     margin: 1em 0;
+    width: 70%;
 }
 
 .delete-recipe-form-button-container{
@@ -593,7 +594,7 @@ p {
     margin: 1em 0;
     padding: 0.5em;
     border-radius: 0.5em;
-    box-shadow: 0 0 1.5em #252424;
+    box-shadow: 0 0 .5em #252424;
     color: #363535;
     background-color: #f1e9d6;
 }
