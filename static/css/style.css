@@ -315,6 +315,8 @@ p {
     align-items: center;
 }
 
+.form-like {}
+
 .likes-count {
     display: flex;
     flex-direction: row;
@@ -362,7 +364,7 @@ p {
     padding: 1em 0;
 }
 
-.img-single-recipe {
+.single-recipe-img {
     height: 100%;
     width: 100%;
     padding: 1em 0;
@@ -443,17 +445,7 @@ p {
 }
 
 .posting-as {
-    padding: 0;
-}
-
-
-/*comments awaiting approval*/
-.comment-pending {
-    display: flex;
-    font-size: 1em;
-    width: fit-content;
-    align-content: center;
-    align-items: center;
+    padding: 2em;
 }
 
 /*comment form*/

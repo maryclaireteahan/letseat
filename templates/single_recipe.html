@@ -37,9 +37,9 @@
         <div class = "img-and-ingredients">
             <div class ="single-recipe-img-container">
                 {% if 'placeholder' in recipe.featured_image.url %}
-                <img class="img-single-recipes" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                <img class="single-recipe-img " src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
                 {% else %}
-                <img class="img-single-recipes" src="{{ recipe.featured_image.url }}">
+                <img class="single-recipe-img " src="{{ recipe.featured_image.url }}">
                 {% endif %}
             </div>
             <div class="ingredients">
