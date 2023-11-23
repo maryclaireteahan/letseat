@@ -85,6 +85,26 @@ nav ul {
     border-bottom: 1px solid #677C86;
 }
 
+/*message------------------------------------message--------*/
+
+.message-row-container{
+    margin-top: 4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(149, 198, 198, 0.5);
+    padding-top: 1em;
+}
+.message-row {
+
+}
+.message {
+
+}
+.message-button {
+
+}
+
 /*main------------------------------------main--------*/
 main {
     flex: 1 0 auto;
@@ -232,7 +252,6 @@ p {
     text-transform: capitalize;
     text-decoration: none;
     text-shadow: 0 0 .5em #010101;
-
 } 
 
 .recipes {
