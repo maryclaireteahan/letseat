@@ -223,6 +223,8 @@ p {
 }
 .recipes-row a { 
     color: inherit; 
+    text-transform: capitalize;
+    text-decoration: none;
 } 
 
 .recipes {
@@ -239,6 +241,7 @@ p {
     border-radius: 0.5em;
     box-shadow: 0 0 0.75em;
     padding: 0.5em 0.5em;
+    text-align: center;
 }
 
 
