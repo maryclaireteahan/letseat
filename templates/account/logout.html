@@ -14,15 +14,17 @@
             <p>{% trans 'Are you sure you want to log out?' %}</p>
         </div>
     </div>
-    <div class="logout-button-container">
-            <form method="post" action="{% url 'account_logout' %}">
-                {% csrf_token %}
-                {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                {% endif %}
-                <button class="logout-button" type="submit">{% trans 'Log Out' %}</button>
-                <button class="logout-button" ><a href="{%url 'home' %}">{% trans 'Cancel' %}</a></button>
-             </form>
+    <div class="logout-form-container">
+        <form method="post" action="{% url 'account_logout' %}">
+            {% csrf_token %}
+            {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+            <div class="logout-form-button-container">
+                <button type="submit" href="{%url 'recipes' %}" class="logout-form-button">{% trans 'Log Out' %}</button>
+                <button class="logout-form-button" ><a href="{%url 'home' %}">{% trans 'Cancel' %}</a></button>
+            </div>
+            </form>
     </div>
 </div>
 {% endblock %}

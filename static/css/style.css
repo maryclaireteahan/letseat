@@ -483,19 +483,42 @@ p {
 }
 /*comment_edit-----------------------------------comment_edit---------------------------------comment_edit--------------------------------------------------------------------------------------*/
 
-.edit-comment-container {
-    width: fit-content;
-    height: fit-content;
+.edit-comment-form-container{
+    border-radius: 5px;
+    display: flex;
+    background-color: #f1e9d6;
+    padding: 1em;
+    color: #363535;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0;
 }
 
-.edit-comment-buttons-container {
-    height: fit-content;
+.edit-comment-form p label {
+    display: none;
 }
 
-.edit-comment-save-cancel {
+.edit-comment-form p textarea {
+    width:100%
+}
+.edit-comment-form-button {
     height: fit-content;
+    margin: 1em 0;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 .5em #252424;
+    color: #363535;
+    background-color: #f1e9d6;
 }
 
+.edit-comment-form-button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.edit-comment-form-button:hover {
+    background-color: #BCB4A0;
+}
 /*comment_delete-----------------------------------comment_delete---------------------------------comment_delete--------------------------------------------------------------------------------------*/
 
 .delete-comment-form-container{
@@ -714,12 +737,14 @@ p {
 /*Logout-----------------------------------Logout---------------------------------Logout--------------------------------------------------------------------------------------*/
 
 .logout-and-button-container {
+    border-radius: 5px;
     display: flex;
-    width: 70%;
-    height: 50vh;
+    background-color: #f1e9d6;
+    padding: 1em;
+    color: #363535;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    margin: 1em 0;
 }
 
 .logout-container {
@@ -746,27 +771,22 @@ p {
     height: fit-content
 }
 
-.logout-button-container {
-    height: fit-content;
-    width: fit-content;
-}
 
-.logout-button {
+.logout-form-button {
     height: fit-content;
     margin: 1em 0;
     padding: 0.5em;
     border-radius: 0.5em;
-    box-shadow: 0 0 1.5em #252424;
+    box-shadow: 0 0 .5em #252424;
     color: #363535;
     background-color: #f1e9d6;
 }
 
-.logout-button a {
+.logout-form-button a {
     text-decoration: none;
     color: inherit;
 }
-
-.logout-button:hover {
+.logout-form-button:hover {
     background-color: #BCB4A0;
 }
 
