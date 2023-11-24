@@ -95,33 +95,31 @@ nav ul {
 }
 
 #message-row {
-    background-color: #fff;
+    background-color: rgba(241,233,214, .9);
     border: 1px solid #ccc;
     padding: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
 }
 
-#message {
-    margin-bottom: 10px;
-}
-
-#message-button {
+.close-btn {
+    padding: 0.25em;
     background: none;
-    border: none;
+    border: thin #363535 solid;
     color: #888;
     cursor: pointer;
-    float: right;
-    font-size: 1.5em;
+    /* float: right; */
+    /* font-size: 1.5em; */
     margin: 0 0.5em;
     margin-right: 0;
     line-height: 1;
+    width: fit-content;
+    border-radius: 5px;
 }
 
-
-    .close-btn {
-        font-size: 25px;
-        width: 100px;
-    }
 /*main------------------------------------main--------*/
 main {
     flex: 1 0 auto;
