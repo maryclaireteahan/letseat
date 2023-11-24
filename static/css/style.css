@@ -229,7 +229,7 @@ p {
     font-size: large;
     color: #363535;
     background-color: #f1e9d6;
-    
+    cursor: pointer;
 }
 
 .discover-recipes-button:hover {
@@ -616,6 +616,7 @@ p {
     box-shadow: 0 0 0.25em #252424;
     color: #363535;
     background-color: #f1e9d6;
+    cursor: pointer;
 }
 
 .comment-button:hover {
@@ -660,6 +661,7 @@ p {
 .edit-comment-form-button a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 .edit-comment-form-button:hover {
@@ -697,6 +699,7 @@ p {
 .delete-comment-form-button a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 .delete-comment-form-button:hover {
     background-color: #BCB4A0;
@@ -730,6 +733,7 @@ p {
 .create-recipe-form-button a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 .create-recipe-form-button:hover {
     background-color: #BCB4A0;
@@ -761,6 +765,7 @@ p {
 .edit-recipe-form-button a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 .edit-recipe-form-button:hover {
@@ -795,6 +800,7 @@ p {
 .delete-recipe-form-button a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 .delete-recipe-form-button:hover {
     background-color: #BCB4A0;
@@ -884,6 +890,7 @@ p {
     box-shadow: 0 0 .5em #252424;
     color: #363535;
     background-color: #f1e9d6;
+    cursor: pointer;
 }
 
 .login-form-button a {
@@ -947,6 +954,7 @@ p {
     box-shadow: 0 0 .5em #252424;
     color: #363535;
     background-color: #f1e9d6;
+    cursor: pointer;
 }
 
 .logout-form-button a {
@@ -1035,6 +1043,7 @@ p {
     box-shadow: 0 0 1.5em #252424;
     color: #363535;
     background-color: #f1e9d6;
+    cursor: pointer;
 }
 
 .signup-button:hover {
