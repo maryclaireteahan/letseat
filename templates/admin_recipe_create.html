@@ -12,8 +12,10 @@
         {% csrf_token %}
         {{ recipe_form | crispy }}
         <img src="{{ recipe_form.instance.featured_image.url }}">
-        <button type="submit" href="{%url 'recipes' %}" class="create-recipe-form-button">submit</button>
-        <button class="create-recipe-form-button" ><a href="{%url 'home' %}">Cancel</a></button>
+        <div class="create-recipe-form-button-container">
+            <button type="submit" href="{%url 'recipes' %}" class="create-recipe-form-button">Submit</button>
+            <button class="create-recipe-form-button" ><a href="{%url 'home' %}">Cancel</a></button>
+        </div>  
     </form>
 </div>
-{%endblock%}
+{% endblock %}

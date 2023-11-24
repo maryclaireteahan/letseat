@@ -647,7 +647,7 @@ p {
 }
 .edit-comment-form-button {
     height: fit-content;
-    margin: 1em 0;
+    margin: 1em;
     padding: 0.5em;
     border-radius: 0.5em;
     box-shadow: 0 0 .5em #252424;
@@ -685,7 +685,7 @@ p {
 
 .delete-comment-form-button {
     height: fit-content;
-    margin: 1em 0;
+    margin: 1em;
     padding: 0.5em;
     border-radius: 0.5em;
     box-shadow: 0 0 .5em #252424;
@@ -715,9 +715,15 @@ p {
     box-shadow: 0 0 1.5em #010101;
 }
 
+.create-recipe-form-button-container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
 .create-recipe-form-button {
     height: fit-content;
-    margin: 1em 0;
+    margin: 1em;
     padding: 0.5em;
     border-radius: 0.5em;
     box-shadow: 0 0 1.5em #252424;
@@ -753,7 +759,7 @@ p {
 
 .edit-recipe-form-button {
     height: fit-content;
-    margin: 1em 0;
+    margin: 1em;
     padding: 0.5em;
     border-radius: 0.5em;
     box-shadow: 0 0 1.5em #252424;
@@ -785,11 +791,12 @@ p {
 }
 
 .delete-recipe-form-button-container{
+    align-self: center;
 }
 
 .delete-recipe-form-button {
     height: fit-content;
-    margin: 1em 0;
+    margin: 1em;
     padding: 0.5em;
     border-radius: 0.5em;
     box-shadow: 0 0 .5em #252424;
@@ -884,7 +891,7 @@ p {
 
 .login-form-button {
     height: fit-content;
-    margin: 1em 0;
+    margin: 1em;
     padding: 0.5em;
     border-radius: 0.5em;
     box-shadow: 0 0 .5em #252424;
@@ -948,7 +955,7 @@ p {
 
 .logout-form-button {
     height: fit-content;
-    margin: 1em 0;
+    margin: 1em;
     padding: 0.5em;
     border-radius: 0.5em;
     box-shadow: 0 0 .5em #252424;
@@ -976,6 +983,9 @@ p {
     justify-content: space-around;
     padding: 1em;
     margin: 1em;
+    background-color: #f1e9d6;
+    border-radius: 5px;
+    box-shadow: 0 0 1.5em #010101;
 }
 
 .signup-message-container {
@@ -1018,7 +1028,7 @@ p {
     height: fit-content;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .signup-form p {
@@ -1035,9 +1045,14 @@ p {
     padding-bottom: 1em;
 }
 
-.signup-button {
+.signup-form-button-container {
+    align-self: center;
+
+}
+
+.signup-form-button {
     height: fit-content;
-    margin-bottom: 1em;
+    margin: 1em;
     padding: 1em;
     border-radius: 0.5em;
     box-shadow: 0 0 1.5em #252424;
@@ -1046,8 +1061,13 @@ p {
     cursor: pointer;
 }
 
-.signup-button:hover {
+.signup-form-button:hover {
     background-color: #BCB4A0;
+}
+
+.signup-form-button a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .errorlist li {
