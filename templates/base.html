@@ -17,9 +17,6 @@
     <!--Title-->
     <title>Let's Eat!</title>
     <!--Favicon-->
-    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 
@@ -58,14 +55,14 @@
             </nav>
         </div>
     </header>
-    <main>
+    <main id="main">
         {% for message in messages %}
-        <div class="message-row-container">
-            <div class="message-row">
-                <div class="message">
+        <div id="message-row-container">
+            <div id="message-row">
+                <div id="message">
                     <div>
                         {{ message | safe }}
-                        <button class="message-button">X</button>
+                        <button id="message-button"></button>
                     </div>
                     
                 </div>
@@ -95,6 +92,6 @@
         </ul>
     </footer>
     <script src="https://kit.fontawesome.com/e225a8453d.js" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="static/js/script.js"></script>
 </body>
 </html>

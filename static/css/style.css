@@ -88,24 +88,24 @@ nav ul {
 /*message------------------------------------message--------*/
 
 /* Add this CSS to your style.css file */
-.message-row-container {
+#message-row-container {
     position: fixed;
     margin-top: .25em;
     z-index: 1000;
 }
 
-.message-row {
+#message-row {
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.message {
+#message {
     margin-bottom: 10px;
 }
 
-.message-button {
+#message-button {
     background: none;
     border: none;
     color: #888;
@@ -116,6 +116,12 @@ nav ul {
     margin-right: 0;
     line-height: 1;
 }
+
+
+    .close-btn {
+        font-size: 25px;
+        width: 100px;
+    }
 /*main------------------------------------main--------*/
 main {
     flex: 1 0 auto;
