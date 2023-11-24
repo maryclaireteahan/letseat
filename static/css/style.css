@@ -701,9 +701,7 @@ p {
 .delete-comment-form-button:hover {
     background-color: #BCB4A0;
 }
-.form-recipe {
-    height: fit-content;
-}
+
 /*admin_recipe_create-----------------------------------admin_recipe_create---------------------------------admin_recipe_create-------------------------------------------------------------------------------------*/
 .create-recipe-form-container{
     border-radius: 5px;
@@ -734,6 +732,10 @@ p {
 }
 .create-recipe-form-button:hover {
     background-color: #BCB4A0;
+}
+
+.form-recipe {
+    height: fit-content;
 }
 /*admin_recipe_edit-----------------------------------admin_recipe_edit---------------------------------admin_recipe_edit-------------------------------------------------------------------------------------*/
 .edit-recipe-form-container{
@@ -779,6 +781,7 @@ p {
     align-items: center;
     margin: 1em 0;
     width: 70%;
+    box-shadow: 0 0 1.5em #010101;
 }
 
 .delete-recipe-form-button-container{
