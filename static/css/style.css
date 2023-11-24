@@ -645,6 +645,13 @@ p {
 .edit-comment-form p textarea {
     width:100%
 }
+
+.edit-comment-form-button-container{
+    display:flex;
+    justify-content: center;   
+} 
+
+
 .edit-comment-form-button {
     height: fit-content;
     margin: 1em;
@@ -755,6 +762,11 @@ p {
     margin: 1em 0;
     box-shadow: 0 0 1.5em #010101;
 
+}
+.edit-recipe-form-button-container{
+    align-self: center;
+    display: flex;
+    justify-content: center;
 }
 
 .edit-recipe-form-button {

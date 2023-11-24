@@ -9,8 +9,10 @@
     <form method="post" class="edit-comment-form">
         {% csrf_token %}
         {{form.as_p}}
-        <button type="submit" href="{%url 'recipes' %}" class="edit-comment-form-button">Save</button>
-        <button class="edit-comment-form-button" ><a href="{%url 'home' %}">Cancel</a></button>
+        <div class="edit-comment-form-button-container">
+            <button type="submit" href="{%url 'recipes' %}" class="edit-comment-form-button">Submit</button>
+            <button class="edit-comment-form-button" ><a href="{%url 'home' %}">Cancel</a></button>
+        </div> 
     </form>
 </div>
 {% endblock %}
