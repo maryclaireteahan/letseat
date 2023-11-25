@@ -346,7 +346,7 @@ p {
 
 /*single_recipe-----------------------------------single_recipe---------------------------------single_recipe--------------------------------------------------------------------------------------*/
 
-.single-recipe-h2 {
+.single-recipe-h1 {
     text-align: center;
     margin-top: 2em;
     color: #f1e9d6;
@@ -458,7 +458,7 @@ p {
     margin-top: .5em;
 }
 
-.ingredients-h3 {    
+.ingredients-h2 {    
     text-align: center;
     margin-bottom: 1em;
     color: #f1e9d6;
@@ -486,7 +486,7 @@ p {
     height: fit-content;
 }
 
-.instructions-h3{
+.instructions-h2{
     text-align: center;
     margin-bottom: 1em;
     color: #f1e9d6;
