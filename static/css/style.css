@@ -348,11 +348,24 @@ p {
 
 .single-recipe-h1 {
     text-align: center;
-    margin-top: 2em;
+    margin-top: 1em;
     color: #f1e9d6;
     text-shadow: 0 0 .5em #010101;
+    padding: 1em 1em 0 1em;
 }
 
+.edit-delete-recipe {
+    width: fit-content;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: fit-content;
+    margin: 1em 1em 0 1em;
+}
+
+.edit-delete-recipe a {
+
+}
 .single-recipe {
     height: 100%;
     Width: 100%;
@@ -460,14 +473,14 @@ p {
 
 .ingredients-h2 {    
     text-align: center;
-    margin-bottom: 1em;
+    margin: 1em;
     color: #f1e9d6;
     text-shadow: 0 0 .5em #010101;
 }
 
 .ingredients {
     width: 100%;
-    font-size: .75em;
+    font-size: small;
     padding: 1em;
     display: flex;
     flex-wrap: nowrap;
@@ -512,17 +525,7 @@ p {
     margin-bottom: 1em
 }
 
-.edit-delete-recipe {
-    width: fit-content;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    height: fit-content;
-}
 
-.edit-delete-recipe a {
-
-}
 /*comments container-----------------------*/
 
 .comments-container {
@@ -774,10 +777,23 @@ p {
     color: #363535;
     flex-direction: column;
     align-items: center;
-    margin: 1em 0;
+    margin: 2em 1em;
     box-shadow: 0 0 1.5em #010101;
-
+    width: 90%;
 }
+
+.form-edit {
+    padding: 1em;
+}
+
+#id_ingredients {
+    width: 90%;
+}
+
+#id_instructions {
+    width: 90%;
+}
+
 .edit-recipe-form-button-container{
     align-self: center;
     display: flex;
@@ -1122,6 +1138,60 @@ p {
 
     .recipe-h4 {
     font-size: 20px;
+    }
+
+    /*single_recipe-----------------------------------single_recipe---------------------------------single_recipe--------------------------------------------------------------------------------------*/
+
+    .single-recipe-h1 {
+        font-size: xxx-large;
+    }   
+
+    .edit-delete-recipe {
+        font-size: larger;
+    }
+
+    .fa-regular, .far {
+        font-size: x-large;
+    }
+
+    .ingredients {
+        width: 70%;
+        font-size: larger;
+    }
+
+    .ingredients-h2 {
+        font-size: xx-large;
+    }
+
+    .instructions {
+        font-size: large;
+    }
+
+    .instructions-h2 {
+        font-size: xx-large;
+    }
+
+    .comments-container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .posted-comments-container {
+        width: 40%;
+        font-size: medium;
+    }
+
+    .leave-comment-container {
+        font-size: x-large;
+    }
+
+    .textarea {
+        height: 15em;
+        width: 30em;
+    }
+    .comment-button {
+        font-size: large;
     }
 }
 /* Large devices (laptops and desktops, 1200px and up) -----------------------------------------------1200--------------------------------------------------------------------------- */
