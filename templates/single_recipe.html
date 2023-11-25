@@ -1,102 +1,108 @@
-{% extends "base.html" %}
-{% load static %}
-{% block css %}    
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
-{% endblock css %}
-{% block content %}
-{% load crispy_forms_tags %}
-<h1 class ="single-recipe-h1">{{ recipe.title }}</h1>
-
-<div class="single-recipe">
-    <div class="img-and-ingredients-container">   
-        <div class = "img-and-ingredients">
-            <div class ="single-recipe-img-container">         
-                <div class="comments-and-likes-count-container">
-                    <div class="recipe-likes">
-                            {% if user.is_authenticated %}
-                            <form class="form-like" action="{% url 'recipe_like' recipe.slug %}" method="POST">
-                                {% csrf_token %}
-                                {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{recipe.slug}}" class="likes-count"><i class="fas fa-heart"></i></button>
-                                {% else %}
-                                <button type="submit" name="blogpost_id" value="{{recipe.slug}}" class="likes-count"><i class="far fa-heart"></i></button>
-                                {% endif %}
-                            </form>
-                            {% else %}
-                            <span class="likes-count"><i class="far fa-heart"></i></span>
-                            {% endif %}
-                        <!-- The number of likes goes before the closing strong tag -->
-                        {{ recipe.number_of_likes }}
-                    </div>
-                    <div class="recipe-comments">
-                        {% with comments.count as total_comments %}
-                        <i class="far fa-comments number-comments"></i>
-                            <!-- Our total_comments variable goes before the closing strong tag -->
-                            {{ total_comments }}
-                        {% endwith %}
-                    </div>
-                </div>
-                {% if 'placeholder' in recipe.featured_image.url %}
-                <img class="single-recipe-img " src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
-                {% else %}
-                <img class="single-recipe-img " src="{{ recipe.featured_image.url }}">
-                {% endif %}
-            </div>
-            <h2 class="ingredients-h2">Ingredients:</h2>
-            <div class="ingredients">
-                {{ recipe.ingredients | safe }}
-            </div>
-        </div>
-    </div>   
-    <div class="instructions-container">
-            <h2 class="instructions-h2">Instructions:</h2>
-            <div class="instructions">
-                {{ recipe.instructions | safe }}
-            </div>
-    </div> 
+{% extends "base.html" %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+{% endblock css %} {% block content %} {% load crispy_forms_tags %}
+<h1 class="single-recipe-h1">{{ recipe.title }}</h1>
 {% if user.is_authenticated and user.is_superuser %}
 <div class="edit-delete-recipe">
-    <a href="/admin_recipe_edit/{{ recipe.id }}">Edit/ </a>
-    <a href="/admin_recipe_delete/{{ recipe.id }}">Delete</a>
+<a href="/admin_recipe_edit/{{ recipe.id }}">Edit/ </a>
+<a href="/admin_recipe_delete/{{ recipe.id }}">Delete</a>
 </div>
 {% endif %}
-    <div class="comments-container">
-        <div class="posted-comments-container">
-            <h3>Comments:</h3>
-            <div class="posted-comments">
-                {% for comment in comments %}
-                <div class="single-comment">
-                    <p class="comment-name">
-                        {{ comment.name }}
-                        <span class="comment-date">
-                        </span> wrote: <br>
-                        {{ comment.created_on }}
-                    </p>
-                    {{ comment.body | linebreaks }}
-                    {% if comment.user == request.user %}
-                    <div class="edit-delete-comment">
-                        <a href="/comment_edit/{{ comment.id }}">Edit/ </a>
-                        <a href="/comment_delete/{{ comment.id }}">Delete</a>
-                    </div>
-                    {% endif %}
-                </div>
-                
-                <!-- Our for loop ends here -->
-                {% endfor %}
-            </div>
-        </div>
-        {% if user.is_authenticated %}
-        <div class="leave-comment-container">
-            <h3>Leave a comment:</h3>
-            <p class="posting-as">Posting as: {{ user.username }}</p>
-            <form method="post" class="form-comment">
-                {{ comment_form | crispy }}
-                {% csrf_token %}
-                <button type="submit" class="comment-button">Submit</button>
+<div class="single-recipe">
+  <div class="img-and-ingredients-container">
+    <div class="img-and-ingredients">
+      <div class="single-recipe-img-container">
+        <div class="comments-and-likes-count-container">
+          <div class="recipe-likes">
+            {% if user.is_authenticated %}
+            <form
+              class="form-like"
+              action="{% url 'recipe_like' recipe.slug %}"
+              method="POST"
+            >
+              {% csrf_token %} {% if liked %}
+              <button
+                type="submit"
+                name="blogpost_id"
+                value="{{recipe.slug}}"
+                class="likes-count"
+              >
+                <i class="fas fa-heart"></i>
+              </button>
+              {% else %}
+              <button
+                type="submit"
+                name="blogpost_id"
+                value="{{recipe.slug}}"
+                class="likes-count"
+              >
+                <i class="far fa-heart"></i>
+              </button>
+              {% endif %}
             </form>
+            {% else %}
+            <span class="likes-count"><i class="far fa-heart"></i></span>
+            {% endif %}
+            <!-- The number of likes goes before the closing strong tag -->
+            {{ recipe.number_of_likes }}
+          </div>
+          <div class="recipe-comments">
+            {% with comments.count as total_comments %}
+            <i class="far fa-comments number-comments"></i>
+            <!-- Our total_comments variable goes before the closing strong tag -->
+            {{ total_comments }} {% endwith %}
+          </div>
         </div>
+        {% if 'placeholder' in recipe.featured_image.url %}
+        <img
+          class="single-recipe-img"
+          src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
+        />
+        {% else %}
+        <img class="single-recipe-img" src="{{ recipe.featured_image.url }}" />
         {% endif %}
+      </div>
+      <h2 class="ingredients-h2">Ingredients:</h2>
+      <div class="ingredients">{{ recipe.ingredients | safe }}</div>
     </div>
+  </div>
+  <div class="instructions-container">
+    <h2 class="instructions-h2">Instructions:</h2>
+    <div class="instructions">{{ recipe.instructions | safe }}</div>
+  </div>
+  <div class="comments-container">
+    <div class="posted-comments-container">
+      <h3>Comments:</h3>
+      <div class="posted-comments">
+        {% for comment in comments %}
+        <div class="single-comment">
+          <p class="comment-name">
+            {{ comment.name }}
+            <span class="comment-date"> </span> wrote: <br />
+            {{ comment.created_on }}
+          </p>
+          {{ comment.body | linebreaks }} {% if comment.user == request.user %}
+          <div class="edit-delete-comment">
+            <a href="/comment_edit/{{ comment.id }}">Edit/ </a>
+            <a href="/comment_delete/{{ comment.id }}">Delete</a>
+          </div>
+          {% endif %}
+        </div>
 
+        <!-- Our for loop ends here -->
+        {% endfor %}
+      </div>
+    </div>
+    {% if user.is_authenticated %}
+    <div class="leave-comment-container">
+      <h3>Leave a comment:</h3>
+      <p class="posting-as">Posting as: {{ user.username }}</p>
+      <form method="post" class="form-comment">
+        {{ comment_form | crispy }} {% csrf_token %}
+        <button type="submit" class="comment-button">Submit</button>
+      </form>
+    </div>
+    {% endif %}
+  </div>
 </div>
 {%endblock%}
