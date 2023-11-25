@@ -4,11 +4,12 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 {% endblock css %}
 {% block content %}
+<h1 class="edit-recipe-h1">Edit Recipe</h1>
 <div class="edit-recipe-form-container">
-    <h4>Edit Recipe</h4>
-    <form method="post" class="form-edit" enctype="multipart/form-data">
+    <p class="posting-as">Posting as: {{ user.username }}</p>
+    <form method="post" class="form-edit-recipe" enctype="multipart/form-data">
         {% csrf_token %}
-        {{form.as_p}}
+        {{form}}
         <img src="{{ recipe_form.instance.featured_image.url }}">
         <div class="edit-recipe-form-button-container">
             <button type="submit" href="{%url 'recipes' %}" class="edit-recipe-form-button">Submit</button>

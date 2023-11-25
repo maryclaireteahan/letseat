@@ -248,10 +248,7 @@ p {
     margin-top: 2em;
     color: #f1e9d6;
     text-shadow: 0 0 .5em #010101;
-
 }
-
-
 
 .category {
     padding: 0.5em;
@@ -283,8 +280,8 @@ p {
 } 
 
 .recipes {
-    height: 12em;
-    width: 10em;
+    height: 15em;
+    width: 13em;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -315,14 +312,16 @@ p {
     border:thin #252424 solid;
 }
 
-.recipe-h4-container {}
+.recipe-h4-container {
+    max-height: 10%;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .recipe-h4 {
-    font-size: calc(1.1vw + 1.1vh + 1.1vmin);
-    outline: none;
-    padding: 5px 2px;
-    width: 120px;
-    overflow: hidden;
+    width: 100%;
 }
 
 .recipes-row::-webkit-scrollbar {
@@ -352,6 +351,7 @@ p {
     color: #f1e9d6;
     text-shadow: 0 0 .5em #010101;
     padding: 1em 1em 0 1em;
+    text-transform: capitalize;
 }
 
 .edit-delete-recipe {
@@ -403,6 +403,7 @@ p {
 }
 
 .form-like {
+     margin: 0.5em;
 }
 
 .fa-heart {
@@ -418,15 +419,18 @@ p {
 }
 
 .recipe-comments {
+    display: flex;
     height: fit-content;
     border: 0;
-    justify-content: space-evenly;
     align-items: center;
     color: #f1e9d6;
+    margin-left: 1em;
+    flex-direction: row;    
 }
 
 .fa-comments {
     color: #f1e9d6;
+    margin: 0.5em;
 }
 
 .number-comments {
@@ -728,6 +732,12 @@ p {
 }
 
 /*admin_recipe_create-----------------------------------admin_recipe_create---------------------------------admin_recipe_create-------------------------------------------------------------------------------------*/
+.add-recipe-h1 {
+    text-align: center;
+    margin-top: 2em;
+    color: #f1e9d6;
+    text-shadow: 0 0 .5em #010101;
+}
 .create-recipe-form-container{
     border-radius: 5px;
     display: flex;
@@ -736,10 +746,14 @@ p {
     color: #363535;
     flex-direction: column;
     align-items: center;
-    margin: 1em 0;
+    margin: 2em 1em;
     box-shadow: 0 0 1.5em #010101;
+    width: 90%;
 }
 
+.form-create-recipe {
+    padding: 1em;
+}
 .create-recipe-form-button-container {
     display: flex;
     justify-content: center;
@@ -765,10 +779,15 @@ p {
     background-color: #BCB4A0;
 }
 
-.form-recipe {
-    height: fit-content;
-}
+
 /*admin_recipe_edit-----------------------------------admin_recipe_edit---------------------------------admin_recipe_edit-------------------------------------------------------------------------------------*/
+.edit-recipe-h1 {
+    text-align: center;
+    margin-top: 2em;
+    color: #f1e9d6;
+    text-shadow: 0 0 .5em #010101;
+}
+
 .edit-recipe-form-container{
     border-radius: 5px;
     display: flex;
@@ -782,8 +801,10 @@ p {
     width: 90%;
 }
 
-.form-edit {
+.form-edit-recipe {
     padding: 1em;
+    display: flex;
+    flex-direction: column;
 }
 
 #id_ingredients {
@@ -1136,8 +1157,16 @@ p {
 
     /*all_recipes-------------------------------------all_recipes-----------------------------------all_recipes---------------------------------------------------------------------------------------*/
 
+    .recipes-h1 {
+        font-size: xxx-large;
+    }
+
+    .category {   
+        font-size: xx-large;
+    }
+
     .recipe-h4 {
-    font-size: 20px;
+        font-size: larger;
     }
 
     /*single_recipe-----------------------------------single_recipe---------------------------------single_recipe--------------------------------------------------------------------------------------*/
@@ -1186,11 +1215,65 @@ p {
         font-size: x-large;
     }
 
-    .textarea {
+    textarea {
         height: 15em;
         width: 30em;
     }
     .comment-button {
+        font-size: large;
+    }
+
+    /*admin_recipe_create-----------------------------------admin_recipe_create---------------------------------admin_recipe_create-------------------------------------------------------------------------------------*/
+
+    .add-recipe-h1 {
+        font-size: xxx-large;
+    }
+
+    .form-create-recipe {
+        width:100%;
+        font-size: larger;
+    }
+
+    .form-group div input{
+        width: 90%;
+        font-size: large;
+    }
+
+    .form-control-file {
+        font-size: large;
+    }
+
+    select {
+        font-size: large;
+    }
+
+    .create-recipe-form-button {
+        font-size: large;
+    }
+
+    /*admin_recipe_edit-----------------------------------admin_recipe_edit---------------------------------admin_recipe_edit-------------------------------------------------------------------------------------*/
+
+    .edit-recipe-h1 {
+        font-size: xxx-large;
+    }
+
+    .form-edit-recipe {
+        width:100%;
+        font-size: larger;
+    }
+
+    .form-edit-recipe p input{
+        width: 90%;
+        font-size: large;
+    }
+
+    
+    .form-edit-recipe p {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .edit-recipe-form-button {
         font-size: large;
     }
 }
