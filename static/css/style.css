@@ -204,6 +204,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 2em;
 }
 
 .about-me-container {
@@ -534,14 +535,17 @@ p {
 
 .comments-container {
     padding: 1em;
-    width: 100%;
+    width: fit-content;
     height: fit-content;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: center;
+    align-items: center;    
+    justify-content: center;
 }
 
 .posted-comments-container {
-    width: 100%;
+    width: fit-content;
     font-size: .75em;
     padding: 1em;
     display: flex;
@@ -551,12 +555,11 @@ p {
     background-color: #f1e9d6;
     box-shadow: 0 0 0.25em #252424;
     border-radius: .5em;
-    margin-bottom: 1em;
+    margin: 2em;
 }
 
 
 .posted-comments {
-    max-width: 60vh;
     height: fit-content;
     width: fit-content;
     background-color: #f1e9d6;
@@ -566,7 +569,6 @@ p {
 
 .single-comment {
     padding: 10px;
-    width: 50vh;
     height: fit-content;
     box-shadow: 0 0 0.25em #252424;
     border: thin #252424 solid;
@@ -598,13 +600,14 @@ p {
 
 /*comment form*/
 .leave-comment-container{
-    margin-top: 1em;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     align-content: center;
     flex-direction: column;
+    width: fit-content;
+    margin: 2em;
 }
 .form-comment {
     display: flex;
@@ -624,7 +627,7 @@ p {
 .helptext {
     display: none;
 }
-.textarea {
+textarea {
     width: 20em;
 }
 
@@ -651,7 +654,7 @@ p {
     align-items: center;
     justify-content: space-around;
     padding: 1em;
-    margin: 1em;
+    margin: 5em;
     background-color: #f1e9d6;
     border-radius: 5px;
     box-shadow: 0 0 1.5em #010101;
@@ -703,7 +706,7 @@ p {
     color: #363535;
     flex-direction: column;
     align-items: center;
-    margin: 1em 0;
+    margin: 5em;
     width: 70%;
     box-shadow: 0 0 1.5em #010101;
 
@@ -754,6 +757,11 @@ p {
 .form-create-recipe {
     padding: 1em;
 }
+
+.form-create-recipe .form-group div input {
+    width: 90%;
+}
+
 .create-recipe-form-button-container {
     display: flex;
     justify-content: center;
@@ -807,6 +815,14 @@ p {
     flex-direction: column;
 }
 
+.form-edit-recipe input {
+    width: 90%;
+}
+
+.form-edit-recipe select {
+    width: 40%;
+}
+
 #id_ingredients {
     width: 90%;
 }
@@ -849,7 +865,7 @@ p {
     color: #363535;
     flex-direction: column;
     align-items: center;
-    margin: 1em 0;
+    margin: 5em 0;
     width: 70%;
     box-shadow: 0 0 1.5em #010101;
 }
@@ -876,7 +892,7 @@ p {
 .delete-recipe-form-button:hover {
     background-color: #BCB4A0;
 }
-/*Login-----------------------------------Login---------------------------------Login--------------------------------------------------------------------------------------*/
+/*login-----------------------------------login---------------------------------login--------------------------------------------------------------------------------------*/
 
 .login-and-button-container {
     display: flex;
@@ -886,7 +902,7 @@ p {
     align-items: center;
     justify-content: space-around;
     padding: 1em;
-    margin: 1em;
+    margin: 5em;
     background-color: #f1e9d6;
     border-radius: 5px;
     box-shadow: 0 0 1.5em #010101;
@@ -973,7 +989,7 @@ p {
 }
 
 
-/*Logout-----------------------------------Logout---------------------------------Logout--------------------------------------------------------------------------------------*/
+/*logout-----------------------------------logout---------------------------------logout--------------------------------------------------------------------------------------*/
 
 .logout-and-button-container {
     display: flex;
@@ -983,7 +999,7 @@ p {
     align-items: center;
     justify-content: space-around;
     padding: 1em;
-    margin: 1em;
+    margin: 5em;
     background-color: #f1e9d6;
     border-radius: 5px;
     box-shadow: 0 0 1.5em #010101;
@@ -1046,7 +1062,7 @@ p {
     align-items: center;
     justify-content: space-around;
     padding: 1em;
-    margin: 1em;
+    margin: 5em;
     background-color: #f1e9d6;
     border-radius: 5px;
     box-shadow: 0 0 1.5em #010101;
@@ -1144,16 +1160,57 @@ p {
 @media screen and (min-width: 576px) {}
 
 /* Media query: tablets and larger (768px and up) ------------------------------------------------------768px----------------------------------------------------------------------- */
-@media screen and (min-width: 768px) {}
-
-/* Large devices (laptops and desktops, 992px and up) -----------------------------------------------992px---------------------------------------------------------------------------- */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
 
     /*header------------------------------------header--------*/
     
     nav ul {
-        font-size: 20px;
+        font-size: x-large;
     }
+
+    /*comment_edit-----------------------------------comment_edit---------------------------------comment_edit--------------------------------------------------------------------------------------*/
+
+    .edit-comment-form-container {
+    width: auto;
+    }
+
+    .edit-comment-form p textarea {
+    width: 30em;
+    }
+
+    /*login-----------------------------------login---------------------------------login--------------------------------------------------------------------------------------*/
+
+    .login-and-button-container {
+        font-size: x-large;
+    }
+
+    .login-form p input {
+        font-size:large;
+    }
+
+    /*logout-----------------------------------logout---------------------------------logout--------------------------------------------------------------------------------------*/
+
+    .logout-and-button-container {
+        font-size: x-large;
+    }
+
+    .logout-form p input {
+        font-size:large;
+    }
+
+    /*signup-----------------------------------signup---------------------------------signup--------------------------------------------------------------------------------------*/
+
+    .signup-and-button-container {
+        font-size: x-large;
+    }
+
+    .signup-form p input {
+        font-size:large;
+    }
+}
+
+/* Large devices (laptops and desktops, 992px and up) -----------------------------------------------992px---------------------------------------------------------------------------- */
+@media screen and (min-width: 992px) {
 
     /*all_recipes-------------------------------------all_recipes-----------------------------------all_recipes---------------------------------------------------------------------------------------*/
 
@@ -1207,7 +1264,6 @@ p {
     }
 
     .posted-comments-container {
-        width: 40%;
         font-size: medium;
     }
 
@@ -1219,6 +1275,7 @@ p {
         height: 15em;
         width: 30em;
     }
+    
     .comment-button {
         font-size: large;
     }
@@ -1262,11 +1319,14 @@ p {
         font-size: larger;
     }
 
-    .form-edit-recipe p input{
+    .form-edit-recipe select {
+    width: 15%;
+    }
+
+    .form-edit-recipe input{
         width: 90%;
         font-size: large;
     }
-
     
     .form-edit-recipe p {
         display: flex;
@@ -1276,6 +1336,13 @@ p {
     .edit-recipe-form-button {
         font-size: large;
     }
+
+    /*admin_recipe_delete-----------------------------------admin_recipe_delete---------------------------------admin_recipe_delete-------------------------------------------------------------------------------------*/
+
+    .delete-recipe-form-container {
+        width: 60%;
+    }
+
 }
 /* Large devices (laptops and desktops, 1200px and up) -----------------------------------------------1200--------------------------------------------------------------------------- */
 @media screen and (min-width: 1200px) {}

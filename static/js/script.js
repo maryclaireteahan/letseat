@@ -16,6 +16,7 @@ if (messageRow instanceof Element) {
 } else {
   console.error('messageRow is not a valid DOM element');
 }
+
 /**
  * Function is run when button is clicked. 
  * It removes the Rules div.
@@ -24,3 +25,4 @@ function closeBtnClick(event) {
     main.removeChild(messageRowContainer);
 }
 closeBtn.addEventListener("click", closeBtnClick);
+
