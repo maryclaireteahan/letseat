@@ -4,7 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     font-weight: 700;
-    color: #252424
+    color: #252424;
 }
 
 /*base------------------------------------base----------------------------------base---------------------------------------------------------------------------------------*/
@@ -37,7 +37,7 @@ header {
 }
 
 .logo-header {
-    height: 4em;
+    height: 4.5em;
 }
 
 header a {
@@ -70,6 +70,10 @@ nav {
 .nav-toggle-label {
     font-size: 2rem;
     padding-top: .5em;
+}
+
+.nav-toggle-label i {
+margin-right: .5em;
 }
 
 nav ul {
@@ -181,7 +185,7 @@ p {
 }
 
 #cover-text-hero {
-    width: 7em;
+    width: 8em;
     height: 5em;
     background-color: rgba(149, 198, 198, 0.9);
     color: #363535;
@@ -210,6 +214,8 @@ p {
     background-color: #f1e9d6;
     border-radius: 0.5em;
     box-shadow: 0 0 1.5em #252424;
+    line-height: 2em;
+
 }
 
 .about-me-h2 {
@@ -242,13 +248,21 @@ p {
     margin-top: 2em;
     color: #f1e9d6;
     text-shadow: 0 0 .5em #010101;
+
 }
 
+
+
 .category {
+    padding: 0.5em;
     color: #f1e9d6;
     text-transform: capitalize;
     margin: 1em;
-    text-shadow: 0 0 .5em #010101;
+    text-shadow: 0 0 0.5em #010101;
+    width: 90%;
+    display: flex;
+    border-bottom: thick #363535 solid;
+    border-radius: 0 0.5em;
 }
 
 .recipes-row {
@@ -320,6 +334,7 @@ p {
 .recipes-row::-webkit-scrollbar-track {
     background: #d1c8b3;
     border-radius: 5px;
+    width:95%
 }
 
 .recipes-row::-webkit-scrollbar-thumb {
@@ -1095,7 +1110,19 @@ p {
 @media screen and (min-width: 768px) {}
 
 /* Large devices (laptops and desktops, 992px and up) -----------------------------------------------992px---------------------------------------------------------------------------- */
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
 
+    /*header------------------------------------header--------*/
+    
+    nav ul {
+        font-size: 20px;
+    }
+
+    /*all_recipes-------------------------------------all_recipes-----------------------------------all_recipes---------------------------------------------------------------------------------------*/
+
+    .recipe-h4 {
+    font-size: 20px;
+    }
+}
 /* Large devices (laptops and desktops, 1200px and up) -----------------------------------------------1200--------------------------------------------------------------------------- */
 @media screen and (min-width: 1200px) {}
