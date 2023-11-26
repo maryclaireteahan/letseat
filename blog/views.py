@@ -73,6 +73,9 @@ class RecipeDetail(View):
     
 @login_required
 def commentEdit(request, id):  
+    """ 
+    View for allowing users to edit comments on the frontend
+    """
     comment_instance = get_object_or_404(Comment, id=id)
     form = CommentForm(instance=comment_instance)
     if comment_instance.user == request.user:
@@ -92,6 +95,9 @@ def commentEdit(request, id):
 
 @login_required
 def commentDelete(request, id):
+    """ 
+    View for allowing user to delete their own comments on the frontend
+    """
     comment_instance = get_object_or_404(Comment, id=id)
 
     if comment_instance.user == request.user:
@@ -108,6 +114,9 @@ def commentDelete(request, id):
 
 
 class CategoryListView(generic.ListView):
+    """ 
+    View for grouping recipes into their own categories
+    """
     model = Category
     template_name='all_recipes.html'
     context_object_name = 'categories'
@@ -115,6 +124,9 @@ class CategoryListView(generic.ListView):
 
 
 class RecipeLike(View):
+    """ 
+    View for allowing user to like recipes on the frontend
+    """
     def post(self, request, slug):
         recipe = get_object_or_404(Recipe, slug=slug)
         
@@ -128,7 +140,9 @@ class RecipeLike(View):
     
 
 class RecipeCreate(LoginRequiredMixin, View):
-    
+    """ 
+    View for allowing superusers to create recipes on the frontend
+    """
     def get(self, request):
         form = RecipeForm()
         return render(request, 'admin_recipe_create.html', {'recipe_form': form})
@@ -162,6 +176,9 @@ class RecipeCreate(LoginRequiredMixin, View):
 
 @login_required
 def recipeEdit(request, id):  
+    """ 
+    View for allowing superusers to edit recipes on the frontend
+    """
     recipe_instance = get_object_or_404(Recipe, id=id)
     form = RecipeForm(request.POST or None, request.FILES or None, instance=recipe_instance)
     if request.user.is_authenticated and request.user.is_superuser:
@@ -180,6 +197,9 @@ def recipeEdit(request, id):
 
 @login_required
 def recipeDelete(request, id):
+    """ 
+    View for allowing superusers to delete recipes on the frontend
+    """
     recipe_instance = get_object_or_404(Recipe, id=id)
 
     if request.user.is_authenticated and request.user.is_superuser:
