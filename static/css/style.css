@@ -128,7 +128,14 @@ main {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-  background-color: #aa736b;
+  background-image: linear-gradient(
+    to right top,
+    #aa736b,
+    #a08461,
+    #8b956e,
+    #75a38d,
+    #6fabb0
+  );
   padding-bottom: 0;
   margin-bottom: 0;
   align-content: flex-start;
@@ -272,6 +279,7 @@ p {
   /* Scrollbar style for Firefox */
   scrollbar-width: thin;
   scrollbar-color: #888888 #f4f4f4;
+  margin-bottom: 1em;
 }
 
 .recipes-row a {
@@ -381,14 +389,12 @@ p {
 
 .comments-and-likes-count-container {
   display: flex;
-  flex-direction: row;
   height: fit-content;
   border: 0;
-  align-content: center;
   width: 5em;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  flex-direction: column-reverse;
+  justify-content: center;
 }
 
 .recipe-likes {
