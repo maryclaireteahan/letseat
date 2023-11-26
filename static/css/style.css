@@ -388,6 +388,7 @@ p {
   width: 5em;
   align-items: center;
   justify-content: space-evenly;
+  flex-direction: column-reverse;
 }
 
 .recipe-likes {
@@ -1157,7 +1158,7 @@ textarea {
   /*index-------------------------------------index--------*/
 
   .logo-header-index {
-    height: 7em;
+    height: 9em;
   }
 }
 

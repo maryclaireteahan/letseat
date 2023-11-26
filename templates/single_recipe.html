@@ -101,6 +101,8 @@
         {{ comment_form | crispy }} {% csrf_token %}
         <button type="submit" class="comment-button">Submit</button>
       </form>
+      {% else %}
+      <h3>Log in to leave a comment.</h3>
     </div>
     {% endif %}
   </div>
