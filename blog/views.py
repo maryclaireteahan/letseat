@@ -9,10 +9,16 @@ from django.http import HttpResponseRedirect
 from .forms import CommentForm, RecipeForm
 
 class RecipeHome(generic.ListView):
+    """
+    View for recipe homepage 
+    """
     model = Recipe
     template_name = 'index.html'
     
 class RecipeList(generic.ListView):
+    """
+    View for recipe list page 
+    """
     model = Recipe
     queryset= Recipe.objects.order_by('-created_on')
     template_name = 'all_recipes.html'
