@@ -8,30 +8,32 @@ from .models import Recipe, Category, Comment
 from django.http import HttpResponseRedirect
 from .forms import CommentForm, RecipeForm
 
+
 class RecipeHome(generic.ListView):
     """
-    View for recipe homepage 
+    View for recipe homepage
     """
     model = Recipe
     template_name = 'index.html'
-    
+
+
 class RecipeList(generic.ListView):
     """
-    View for recipe list page 
+    View for recipe list page
     """
     model = Recipe
-    queryset= Recipe.objects.order_by('-created_on')
+    queryset = Recipe.objects.order_by('-created_on')
     template_name = 'all_recipes.html'
     paginate_by = 6
 
 
 class RecipeDetail(View):
     """
-    View for individual recipe page 
+    View for individual recipe page
     """
     def get(self, request, slug, *args, **kwargs):
         """
-        Initial view individual recipe page 
+        Initial view individual recipe page
         """
         recipe = get_object_or_404(Recipe, slug=slug)
         comments = recipe.comments.order_by('-created_on')
@@ -45,22 +47,21 @@ class RecipeDetail(View):
         }
         if recipe.likes.filter(id=self.request.user.id).exists():
             liked = True
-        
-        return render (request,'single_recipe.html',context)
-        
-           
+
+        return render(request, 'single_recipe.html', context)
+
     def post(self, request, slug, *args, **kwargs):
         """
-        View for commenting and liking individual recipe page 
+        View for commenting and liking individual recipe page
         """
         recipe = get_object_or_404(Recipe, slug=slug)
         comments = recipe.comments.order_by('-created_on')
         liked = False
         if recipe.likes.filter(id=self.request.user.id).exists():
             liked = True
-        
+
         comment_form = CommentForm(data=request.POST)
-        
+
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment_form.instance.email = request.user.email
@@ -70,8 +71,8 @@ class RecipeDetail(View):
             comment.save()
         else:
             comment_form = CommentForm()
-        
-        return render (
+
+        return render(
             request,
             'single_recipe.html',
             {
@@ -82,33 +83,33 @@ class RecipeDetail(View):
                 'comment_form': CommentForm()
             },
         )
-               
-    
+
+
 @login_required
-def commentEdit(request, id):  
-    """ 
+def commentEdit(request, id):
+    """
     View for allowing users to edit comments on the frontend
     """
     comment_instance = get_object_or_404(Comment, id=id)
     form = CommentForm(instance=comment_instance)
     if comment_instance.user == request.user:
 
-        if request.method == "POST":  
-            form = CommentForm(request.POST, instance=comment_instance)  
-            if form.is_valid():  
-                try:  
-                    form.save() 
-                    return redirect('/recipes')  
-                except Exception as e: 
-                    pass    
-        return render(request,'comment_edit.html',{'form':form})  
+        if request.method == "POST":
+            form = CommentForm(request.POST, instance=comment_instance)
+            if form.is_valid():
+                try:
+                    form.save()
+                    return redirect('/recipes')
+                except Exception as e:
+                    pass
+        return render(request, 'comment_edit.html', {'form' :form})
     else:
-    # Redirect or show a message indicating the user doesn't have permission to edit
         return HttpResponse("You do not have permission to edit this comment.")
+
 
 @login_required
 def commentDelete(request, id):
-    """ 
+    """
     View for allowing user to delete their own comments on the frontend
     """
     comment_instance = get_object_or_404(Comment, id=id)
@@ -116,55 +117,48 @@ def commentDelete(request, id):
     if comment_instance.user == request.user:
         if request.method == 'POST':
             comment_instance.delete()
-            return redirect('/recipes')  # Redirect to appropriate page after deletion
+            return redirect('/recipes')
         else:
-            # Optionally, handle confirmation in a template
-            return render(request, 'comment_delete.html', {'comment_instance': comment_instance})
+            return render(request, 'comment_delete.html',
+                          {'comment_instance': comment_instance})
     else:
-        # Redirect or show a message indicating the user doesn't have permission to delete
-        return HttpResponse("You do not have permission to delete this comment.")
-
+        return HttpResponse(
+            "You do not have permission to delete this comment.")
 
 
 class CategoryListView(generic.ListView):
-    """ 
+    """
     View for grouping recipes into their own categories
     """
     model = Category
-    template_name='all_recipes.html'
+    template_name = 'all_recipes.html'
     context_object_name = 'categories'
 
 
-
 class RecipeLike(View):
-    """ 
+    """
     View for allowing user to like recipes on the frontend
     """
     def post(self, request, slug):
         recipe = get_object_or_404(Recipe, slug=slug)
-        
         if recipe.likes.filter(id=request.user.id).exists():
             recipe.likes.remove(request.user)
         else:
             recipe.likes.add(request.user)
-        
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
-    
-    
+
 
 class RecipeCreate(LoginRequiredMixin, View):
-    """ 
+    """
     View for allowing superusers to create recipes on the frontend
     """
     def get(self, request):
         form = RecipeForm()
-        return render(request, 'admin_recipe_create.html', {'recipe_form': form})
-    
-    
-    def post(self, request, *args, **kwargs):
+        return render(request, 'admin_recipe_create.html',
+                      {'recipe_form': form})
 
-        recipe_form = RecipeForm(request.POST, request.FILES)  # Include request.FILES for file data
-        
+    def post(self, request, *args, **kwargs):
+        recipe_form = RecipeForm(request.POST, request.FILES)
         if recipe_form.is_valid():
             recipe = recipe_form.save(commit=False)
             recipe.slug = recipe.title.replace(" ", "-").lower()
@@ -172,57 +166,54 @@ class RecipeCreate(LoginRequiredMixin, View):
             recipe.name = 'admin'
             recipe.user = request.user
             recipe.save()
-            return HttpResponseRedirect(reverse('recipe_detail', args=[recipe.slug]))
-
+            return HttpResponseRedirect(reverse('recipe_detail',
+                                                args=[recipe.slug]))
         else:
             recipe_form = RecipeForm()
- 
-        return render (
+        return render(
             request,
             'admin_recipe_create.html',
             {
                 'recipe_form': RecipeForm()
             },
         )
-        
-        
+
 
 @login_required
-def recipeEdit(request, id):  
-    """ 
+def recipeEdit(request, id):
+    """
     View for allowing superusers to edit recipes on the frontend
     """
     recipe_instance = get_object_or_404(Recipe, id=id)
-    form = RecipeForm(request.POST or None, request.FILES or None, instance=recipe_instance)
+    form = RecipeForm(request.POST or None,
+                      request.FILES or None, instance=recipe_instance)
     if request.user.is_authenticated and request.user.is_superuser:
-        if request.method == "POST":  
-            form = RecipeForm(request.POST, instance=recipe_instance)  
-            if form.is_valid():  
-                try:  
-                    form.save() 
-                    return redirect('/recipes')  
-                except Exception as e: 
-                    pass    
-        return render(request,'admin_recipe_edit.html',{'form':form})  
+        if request.method == "POST":
+            form = RecipeForm(request.POST, instance=recipe_instance)
+            if form.is_valid():
+                try:
+                    form.save()
+                    return redirect('/recipes')
+                except Exception as e:
+                    pass
+        return render(request, 'admin_recipe_edit.html', {'form':form})
     else:
-    # Redirect or show a message indicating the user doesn't have permission to edit
         return HttpResponse("You do not have permission to edit this recipe.")
+
 
 @login_required
 def recipeDelete(request, id):
-    """ 
+    """
     View for allowing superusers to delete recipes on the frontend
     """
     recipe_instance = get_object_or_404(Recipe, id=id)
-
     if request.user.is_authenticated and request.user.is_superuser:
         if request.method == 'POST':
             recipe_instance.delete()
-            return redirect('/recipes')  # Redirect to appropriate page after deletion
+            return redirect('/recipes')
         else:
-            # Optionally, handle confirmation in a template
-            return render(request, 'admin_recipe_delete.html', {'recipe_instance': recipe_instance})
+            return render(request, 'admin_recipe_delete.html',
+                          {'recipe_instance': recipe_instance})
     else:
-        # Redirect or show a message indicating the user doesn't have permission to delete
-        return HttpResponse("You do not have permission to delete this recipe.")
-
+        return HttpResponse(
+            "You do not have permission to delete this recipe.")
