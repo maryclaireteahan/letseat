@@ -179,7 +179,6 @@ p {
   justify-content: center;
   align-items: center;
   height: 20em;
-  background: url("{% static images/hero.jpg %}") no-repeat top right/cover;
 }
 
 .hero-img-container {
