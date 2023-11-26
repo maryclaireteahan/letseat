@@ -1,10 +1,6 @@
 let main = document.getElementById("main");
 let messageRowContainer = document.getElementById("message-row-container");
 let messageRow = document.getElementById("message-row");
-let message = document.getElementById("message");
-let messageButton = document.getElementById("message-button");
-
-
 
 //Create the button
 let closeBtn = document.createElement("button");
