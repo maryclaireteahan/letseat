@@ -64,7 +64,9 @@
         {% endif %}
       </div>
       <h2 class="ingredients-h2">Ingredients:</h2>
-      <div class="ingredients">{{ recipe.ingredients | safe }}</div>
+      <div class="ingredients">
+        {{ recipe.ingredients | safe }}
+      </div>
     </div>
   </div>
   <div class="instructions-container">
@@ -79,7 +81,7 @@
         <div class="single-comment">
           <p class="comment-name">
             {{ comment.name }}
-            <span class="comment-date"> </span> wrote: <br />
+            <span class="comment-date"> </span> wrote: <br>
             {{ comment.created_on }}
           </p>
           {{ comment.body | linebreaks }} {% if comment.user == request.user %}
