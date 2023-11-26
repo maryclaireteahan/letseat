@@ -14,7 +14,7 @@ class RecipeHome(generic.ListView):
     
 class RecipeList(generic.ListView):
     model = Recipe
-    queryset= Recipe.objects.filter(status=1).order_by('-created_on')
+    queryset= Recipe.objects.order_by('-created_on')
     template_name = 'all_recipes.html'
     paginate_by = 6
 
@@ -22,8 +22,7 @@ class RecipeList(generic.ListView):
 class RecipeDetail(View):
     
     def get(self, request, slug, *args, **kwargs):
-        queryset= Recipe.objects.filter(status=1)
-        recipe = get_object_or_404(queryset, slug=slug)
+        recipe = get_object_or_404(Recipe, slug=slug)
         comments = recipe.comments.order_by('-created_on')
         liked = False
         context = {
@@ -40,8 +39,7 @@ class RecipeDetail(View):
         
            
     def post(self, request, slug, *args, **kwargs):
-        queryset= Recipe.objects.filter(status=1)
-        recipe = get_object_or_404(queryset, slug=slug)
+        recipe = get_object_or_404(Recipe, slug=slug)
         comments = recipe.comments.order_by('-created_on')
         liked = False
         if recipe.likes.filter(id=self.request.user.id).exists():

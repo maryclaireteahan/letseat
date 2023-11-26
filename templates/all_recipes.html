@@ -10,7 +10,6 @@
 <h2 class="category">{{ category.name }}</h2>
 <div class="recipes-row">
     {% for recipe in category.recipe_set.all %}
-    {% if recipe.status == 1 %}
     <a href="{% url 'single_recipe' recipe.slug %}">
         <div class="recipes">
         <div class="recipes-img-container">
@@ -24,7 +23,6 @@
         <h4 class="recipe-h4">{{ recipe.title }}</h4>
         </div>
     </div></a>
-        {% endif %}
         {% endfor %}
     </div>
 {% endfor %}
