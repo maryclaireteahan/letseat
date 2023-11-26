@@ -242,6 +242,7 @@ p {
   color: #363535;
   background-color: #f1e9d6;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .discover-recipes-button:hover {
