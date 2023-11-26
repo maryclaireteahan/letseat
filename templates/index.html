@@ -4,7 +4,8 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 {% endblock css %}
 {% block content %}
-<div id="hero" style="background: url('{% static 'images/hero.jpg' %}') no-repeat top right/cover;">
+<style> #hero { background: url("{% static 'images/hero.jpg' %}") no-repeat top right/cover; } </style>
+<div id="hero" style= "background: url("{% static 'images/hero.jpg' %}") no-repeat top right/cover; ">
     <div class = "hero-img-and-logo-container">
         <div id="cover-text-hero">
             <img src="{% static 'images/logo/logo_transparent.png' %}" alt="" class="logo-header-index">
