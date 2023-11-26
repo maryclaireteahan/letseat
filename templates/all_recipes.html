@@ -14,9 +14,9 @@
         <div class="recipes">
         <div class="recipes-img-container">
             {% if 'placeholder' in recipe.featured_image.url %}
-            <img class="recipes-img" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+            <img class="recipes-img" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="placeholder, no image available">
             {% else %}
-            <img class="recipes-img" src="{{ recipe.featured_image.url }}">
+            <img class="recipes-img" src="{{ recipe.featured_image.url }}" alt="{{ recipe.image_alt.url }}">
             {% endif %}
         </div>
         <div class="recipe-h4-container">

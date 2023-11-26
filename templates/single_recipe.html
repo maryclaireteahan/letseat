@@ -57,9 +57,10 @@
         <img
           class="single-recipe-img"
           src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
+          alt="placeholder, no image available"
         />
         {% else %}
-        <img class="single-recipe-img" src="{{ recipe.featured_image.url }}" />
+        <img class="single-recipe-img" src="{{ recipe.featured_image.url }}"  alt="{{ recipe.image_alt.url }}" />
         {% endif %}
       </div>
       <h2 class="ingredients-h2">Ingredients:</h2>
