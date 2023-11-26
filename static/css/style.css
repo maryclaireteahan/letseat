@@ -422,7 +422,6 @@ p {
   flex-direction: row;
   height: fit-content;
   background-color: unset;
-  box-shadow: 0;
   border: 0;
 }
 
@@ -544,6 +543,7 @@ p {
   align-self: center;
   align-items: center;
   justify-content: center;
+  flex-direction: column-reverse;
 }
 
 .posted-comments-container {
