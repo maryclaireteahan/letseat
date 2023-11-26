@@ -39,7 +39,7 @@ Database model for creating recipe posts
 class Recipe(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts', limit_choices_to={'is_superuser': True} )
     updated_on = models.DateTimeField(auto_now=True)
     ingredients = models.TextField(max_length=20000, null=True, blank=True)
     instructions= models.TextField(max_length=20000, null=True, blank=True)
@@ -48,7 +48,7 @@ class Recipe(models.Model):
     excerpt = models.TextField(blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, blank=True)    
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1) 
 
     """
     Order posts from newest to oldest
