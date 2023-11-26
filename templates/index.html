@@ -5,13 +5,13 @@
 {% endblock css %}
 {% block content %}
 <style> #hero { background: url("{% static 'images/hero.jpg' %}") no-repeat top right/cover; } </style>
-<section id="hero">
+<div id="hero">
     <div class = "hero-img-and-logo-container">
         <div id="cover-text-hero">
             <img src="{% static 'images/logo/logo_transparent.png' %}"alt="" class="logo-header-index">
         </div>
     </div>
-</section>
+</div>
 <div class="about-me-and-button-container">
     <div class="about-me-container">
         <h2 class="about-me-h2">About Me</h2>
@@ -27,9 +27,7 @@
         
         <p class ="about-me-p">Discover a curated selection of recipes that have garnered praise and admiration—a collection tailored to offer you a taste of the best "Let's Eat" has to offer. Together, let's embark on this flavorful journey—one delicious recipe at a time!</p>
         </div>
-        <a href="{%url 'recipes' %}">
-            <button type="button" class="discover-recipes-button">Discover Recipes</button>
-        </a>
+        <button type="button" href="{%url 'recipes' %}" class="discover-recipes-button">Discover Recipes</button>
     </div>
 </div>
 {%endblock%}
