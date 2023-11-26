@@ -781,9 +781,6 @@ textarea {
   box-shadow: 0 0 1.5em #252424;
   color: #363535;
   background-color: #f1e9d6;
-}
-
-.create-recipe-form-button a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
@@ -851,9 +848,6 @@ textarea {
   box-shadow: 0 0 1.5em #252424;
   color: #363535;
   background-color: #f1e9d6;
-}
-
-.edit-recipe-form-button a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
@@ -890,9 +884,6 @@ textarea {
   box-shadow: 0 0 0.5em #252424;
   color: #363535;
   background-color: #f1e9d6;
-}
-
-.delete-recipe-form-button a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;

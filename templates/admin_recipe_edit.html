@@ -12,7 +12,7 @@
         {{form}}
         <img src="{{ recipe_form.instance.featured_image.url }}">
         <div class="edit-recipe-form-button-container">
-            <a href="{%url 'recipes' %}" class="edit-recipe-form-button">Submit</a>
+            <a type="submit" href="{%url 'recipes' %}" class="edit-recipe-form-button">Submit</a>
             <a class="edit-recipe-form-button" href="{%url 'home' %}">Cancel</a>
         </div>  
     </form>
