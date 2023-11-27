@@ -17,9 +17,11 @@
         </div> 
     </form>
 </div>
+{% for comment in comments %}
 {% if comment.user != request.user %}
 <div id="404" style="background: url('{% static 'images/404.jpg' %}') no-repeat top right/cover;">
                 <a href="{%url 'home' %}">Go to Home</a>
 </div>
 {% endif %}
+{% endfor %}
 {% endblock %}
