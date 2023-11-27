@@ -9,13 +9,11 @@ closeBtn.innerHTML = "X";
 
 if (messageRow instanceof Element) {
   messageRow.appendChild(closeBtn);
-} else {
-  console.error('messageRow is not a valid DOM element');
 }
 
 /**
  * Function is run when button is clicked. 
- * It removes the Rules div.
+ * It removes the alert.
  */
 function closeBtnClick(event) {
     main.removeChild(messageRowContainer);
