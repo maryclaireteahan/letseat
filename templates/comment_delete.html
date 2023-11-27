@@ -4,8 +4,10 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 {% endblock css %}
 {% block content %}
+<!--Delete Comment Form Container-->
 <div class="delete-comment-form-container">
     <h4>Are you sure you want to delete your coment?</h4>
+    <!--Delete Comment Form-->
     <form method="post">
         {% csrf_token %}
         {{form.as_p}}
