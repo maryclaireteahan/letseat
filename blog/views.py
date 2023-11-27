@@ -103,9 +103,7 @@ def commentEdit(request, id):
                 except Exception as e:
                     pass
         return render(request, 'comment_edit.html', {'form' :form})
-    else:
-        return HttpResponse("You do not have permission to edit this comment.")
-
+    
 
 @login_required
 def commentDelete(request, id):
@@ -121,9 +119,6 @@ def commentDelete(request, id):
         else:
             return render(request, 'comment_delete.html',
                           {'comment_instance': comment_instance})
-    else:
-        return HttpResponse(
-            "You do not have permission to delete this comment.")
 
 
 class CategoryListView(generic.ListView):
@@ -212,4 +207,3 @@ def recipeDelete(request, id):
         else:
             return render(request, 'admin_recipe_delete.html',
                           {'recipe_instance': recipe_instance})
-   
