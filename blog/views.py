@@ -104,7 +104,7 @@ def commentEdit(request, id):
                     pass
         return render(request, 'comment_edit.html', {'form' :form})
     else:
-        return HttpResponse("You do not have permission to edit this comment.")
+        return render('404.html')
 
 
 @login_required
