@@ -24,4 +24,4 @@ urlpatterns = [
          name='recipe_delete'),
 ]
 
-handler404 = 'letseat.views.commentEdit'
+handler404 = 'letseat.views.error_404'
