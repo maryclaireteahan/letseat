@@ -7,6 +7,7 @@ from requests import post
 from .models import Recipe, Category, Comment
 from django.http import HttpResponseRedirect
 from .forms import CommentForm, RecipeForm
+from django.http import HttpResponseForbidden
 
 
 class RecipeHome(generic.ListView):
@@ -91,6 +92,9 @@ def commentEdit(request, id):
     View for allowing users to edit comments on the frontend
     """
     comment_instance = get_object_or_404(Comment, id=id)
+    if comment_instance.user != request.user:
+        return HttpResponseForbidden(render(request, '403.html'))
+
     form = CommentForm(instance=comment_instance)
     if comment_instance.user == request.user:
 
@@ -111,6 +115,8 @@ def commentDelete(request, id):
     View for allowing user to delete their own comments on the frontend
     """
     comment_instance = get_object_or_404(Comment, id=id)
+    if comment_instance.user != request.user:
+        return HttpResponseForbidden(render(request, '403.html'))
 
     if comment_instance.user == request.user:
         if request.method == 'POST':
@@ -180,6 +186,9 @@ def recipeEdit(request, id):
     View for allowing superusers to edit recipes on the frontend
     """
     recipe_instance = get_object_or_404(Recipe, id=id)
+    if recipe_instance.user != request.user:
+        return HttpResponseForbidden(render(request, '403.html'))
+    
     form = RecipeForm(request.POST or None,
                       request.FILES or None, instance=recipe_instance)
     if request.user.is_authenticated and request.user.is_superuser:
@@ -200,6 +209,9 @@ def recipeDelete(request, id):
     View for allowing superusers to delete recipes on the frontend
     """
     recipe_instance = get_object_or_404(Recipe, id=id)
+    if recipe_instance.user != request.user:
+        return HttpResponseForbidden(render(request, '403.html'))
+    
     if request.user.is_authenticated and request.user.is_superuser:
         if request.method == 'POST':
             recipe_instance.delete()
