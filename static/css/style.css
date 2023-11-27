@@ -105,17 +105,13 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 5px;
 }
 
 .close-btn {
   padding: 0.25em;
   background: none;
-  border: thin #363535 solid;
-  color: #888;
+  color: black;
   cursor: pointer;
-  /* float: right; */
-  /* font-size: 1.5em; */
   margin: 0 0.5em;
   margin-right: 0;
   line-height: 1;
