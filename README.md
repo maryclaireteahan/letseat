@@ -39,7 +39,7 @@ Let's Eat is a fully responsive full-stack website that I have built using the D
 9. [Credits](#credits)
 10. [Acknowledgements](#acknowledgements)
 
-## Design & Planning:
+<!-- ## Design & Planning:
 
 ### User Stories
 #### First time visitor
@@ -58,7 +58,7 @@ Let's Eat is a fully responsive full-stack website that I have built using the D
 - As a site owner, I want to be able to create, update and delete posts so that I can control my website content
 - As a site owner, I want to be able to approve or delete comments so that I can filter out objectionable comments
 -As a site owner, I want to be able to access all subscribed emails so that I could send new information related to my website
-- As a site owner, I want to be able to delete users so that I can receive several benefits such as: manage my data, reduce liability & resource optimization 
+- As a site owner, I want to be able to delete users so that I can receive several benefits such as: manage my data, reduce liability & resource optimization  -->
 
 
 ### Wireframes
@@ -101,7 +101,7 @@ Below are the wireframes for the site that I created using balsamiq. As I was de
 </details>
 
 
-### Agile Methodology
+<!-- ### Agile Methodology
 The Agile Methodology was used to plan this project. I found it hard to work parallel on agile and on my coding as I was team of 1 and was aware of the changes so I found that to be confusing. I had to add a few things at the end of my project in github repository. I did learn more towards the end of the project about the use of the agile develepment, and why it's important and usefull to keep track of the whole process and to implement as much as you can. 
 I've used Github and the Project Board with use of the Kanban board.
 
@@ -133,60 +133,49 @@ Each user story is labeled either as 'must-have', 'should-have' or 'could-have'd
 
 <details><summary>User story detail</summary>
 <img src="readme_img/test/user_story_detail.png">
-</details>
+</details> -->
 
 ### Typography
-I chose to use "Dosis" font family beacuse it's easily readable on both small and large screens, making it a great option for websites and digital interfaces. It's clean with moder apperance. As a backdrop font I've used 'Sans-serif'.
+Google Fonts were used to import Oxygen font into styles.css.  It was chosen as it is a simple, font with a strong clear feel that doesn't distract from the content.
 
 ### Colour Scheme
-For this website, I decide to keep the main color scheme very simple.Text was either  white or black with background of certain cards and the footer beeing light red/orange color while the rest of the background is white.
-I kept consistant colours for buttons and links on the website. All buttons have hover effect of "Robin egg blue" except 'Delete & Update' button which are standard red and blue colored.
+For this website, I chose a hero image and based the color palette off of that. There is a contrast between the dark fonts and light backgrounds in order to keep the site accessible.
   
 <details><summary>Color palette</summary>
-<img src="readme_img/page_screen/palete.png">
+<img src="readme/documentation/color/palette1.png">
+<img src="readme/documentation/color/palette2.png">
+<img src="readme/documentation/color/palette3.png">
 </details>
 
 
-### DataBase Diagram
+<!-- ### DataBase Diagram
 Below is the database diagram that I created using LucidCharts.
 
 <details><summary>DataBase diagram</summary>
 <img src="readme_img/wireframes/dtb.jpeg">
-</details>
+</details>  -->
 
 ## Features:
 
 ### Navigation Bar
-- The Navigation bar sits at the very top of each page, and it's sticky navbar which means when page is longer and user has to scroll down the navbar will stay on top of the page all the time! The logo is at the left side and the navigation links are in the middle with login/signup buttons on the right.
-- Logo is clickable and redirects user back to the home page
-- When logged in new link is displayed to the user: "Profile" ,and login/signup button is replaced with Logout button. Also user name is displayed next to the logo.
-- The Navbar background is white with opacity set to 75%.
-- On large to xx-large screens the navigation bar is in the center of the page and is sized by the bootstrap class.
-- The active page (page that the user is currently on) is displayed in coloured text, this makes it stand out much more and is clear to the user which page they are on.
-- When on medium to small screens the navigation menu changes to burger menu which shows all the nav links when clicked on.
-  
+- The navigation bar has a consistent look and placement on all three pages of the website supporting easy navigation.  It includes a simple Logo, and the menu options: Home page, Recipes page, Login page, Signup page and Logout page and is responsive on multiple screen sizes. The menu options are hidden until a burger icon is clicked which then brings up the menu options.
+
 <details><summary>Navbar</summary>
-<img src="readme_img/test/navbar_login.png">
+<img src="readme/documentation/features/base/header.png">
+<img src="readme/documentation/features/base/header_items.png">
 </details>
 
-<details><summary>Navbar medium screens</summary>
-<img src="readme_img/test/navbar_mob.png">
-</details>
 
 ### Footer
-- The footer is found at the bottom of every page and is responsive for tablet and mobile too in its orange color.
-- It displays the logo in the left corner, social links (Youtube, Facebook, Twitter & Youtube) are in the middle of the footer and, the Subscription field is on the right side of the footer.
-- When any of the icons are clicked the social media site opens on a separate tab, this way the user still has the main website open, also by clicking on thelogo the user is redirected to the home page.
-- Copyright text sits at the bottom of the footer
+- The footer is featured on all five pages and is identical on each page making it easy to use.  It contains links to Adrienne's social media accounts, facebook, twitter, youtube, instagram and linkedin. The links are represented by favicon images of those sites' own logos.
   
 <details><summary>Footer</summary>
-<img src="readme_img/test/footer.png">
+<img src="readme/documentation/features/base/footer.png">
 </details>
 
 ### Index Page
-- The home page has a dark hero image with text gradually displaying and deleting indicating site purpose
-- Bellow hero image there are two sections which describe the owner of the page and his reach to the community with icons and numbers
-- map?
+- This section of text introduces the user to the blogger, Mary, and gives them a sense of what to expect if they continue reading the blog. The user is enticed to with a "Discover Recipes" button to move to the recipes page.
+
 <details><summary>Index Hero</summary>
 <img src="readme/documentation/features/index/hero.png">
 </details>
@@ -196,11 +185,7 @@ Below is the database diagram that I created using LucidCharts.
 
 
 ### Recipes page
-- On this page the user have option to use "search bar" to find specific posts or he can scroll down to search for post that he would like to get more information about it
-- If input on search box is not empty the user will be redirected to the new page which will eaither displayed match post or display message to the user 
-- Posts are displayed in 2 columns with 3 posts per row, each post contains of: image, author, date, indicator of likes and comments and title and brief description 
-- Posts card are scaling up as the user hovers over them and clickable title and ecerpt are transforming to capitalize letter
-- When clicked on title/excerpt user is redirected to another page which will give a user more information about the post
+- This section of text gives the user five categories of recipes to browse, Breakfast, Lunch, Dinner, Dessert and Snack. The recipes are presented horizontally with use of a scrollbar if there are enough recipes that they don't fit the width of the screen size. Each recipe has a name and image, either of which can be clicked to reidirect to the recipe page.
 
 <details><summary>Recipe Categories</summary>
 <img src="readme/documentation/features/all_recipes/categories1.png">
@@ -212,14 +197,8 @@ Below is the database diagram that I created using LucidCharts.
 </details>
 
   
-### Single recipe page
-- On this page, the user can have a brief description of the certain post that he clicked on and get all relevant information about it
-- Bellow post section register user can like/unlike post
-- User can leave comment
-- After the user posts his comment he will be prompted with the message that says "comment is waiting for approval"
-- If user has already left comment he has option to either update his comment or delete it by simply clicking either of displayed buttons
-- By clickin "Delete" button user will be asked to confirm his choice, if he do so success message will be displayed to the user and comment would be deleted
-- By clicking "Update" the user will be redirected to the new page which will allow him to update his comment
+### Single Recipe page
+- This user is redirected to this section after selecting the recipe in the previous page. If the user is an admin they will see an option to edit or delete the recipe. The user will see the same image as the previous page, the ingredients and instructions. Underneath this is the comment section. Is the user has logged in they will be able to leave a comment as well as edit or delete it once posted, they will not be able to make any changes to other users' comments. If a user is not logged in they cannot leave a comment however they can read other users' comments
 
 <details><summary>Single Recipe Like and Comment Icons</summary>
 <img src="readme/documentation/features/single_recipe/likes_comment_icons.png">
@@ -231,9 +210,8 @@ Below is the database diagram that I created using LucidCharts.
 <img src="readme/documentation/features/single_recipe/edit_delete_not_authorised.png">
 </details>
 
-### Edit comment page
-- On this page one form field is displayed to the user with current comment that he wish to update
-- Bellow the form there is submit button, which will confirm user new comment by providing success message to the user and redirecting to the previous page
+### Edit Comment page
+- On this page the logged in user will see a textarea which contains the comment they had already left and on which they clicked edit. The user with be able to make changes to their comment and resubmit it. 
 
 <details><summary>Edit comment page</summary>
 <img src="readme/documentation/features/comment_edit/original_comment.png">
@@ -243,13 +221,8 @@ Below is the database diagram that I created using LucidCharts.
 <img src="readme/documentation/features/comment_edit/edited_comment.png">
 </details>
 
-### Delete comment page
-- Profile page has 2 sections
-- The first section on the left of the screen displays current information about the user which he provided upon registration
-- The second section is a standard django form which allows the user to change information about him and to add "bio" and profile image if he wants to
-- Bellow the form there is a link to reset/change his password. When a user clicks on it he will be directed to the page with further instructions.
-- Bellow reset/change passwords there are 2 buttons to either "Update" or " Delete" the user account, if a user clicks on the delete button separate model will pop out for the user to confirm deleting his account. 
-- If user click on update button, updated information would be shown on his profile card with success message
+### Delete Comment page
+- The user will be redirected to this page when they click delete on their comment in order to make sure they want to delete the comment. The user will be asked if they are sure and they can either hit delete or cancel. Delete will delete the comment comepletely. Cancel will redirect to the home screen
 
 <details><summary>Delete comment page</summary>
 <img src="readme/documentation/features/comment_delete/original_comment.png">
@@ -258,10 +231,7 @@ Below is the database diagram that I created using LucidCharts.
 </details>
 
 ### Create recipe page
-- Use can only get to this page by inputing something on the search bar in the post page
-- This page will either display a post that user has searched or it will provide a user with message that there is no post under that search
-- Page behaves just like post page where user can open searched posts with click on the title of the post
-- There is back link that will redirect user to the previous page
+- Only user admin has access to this page. The user admin will be required to fill out each field before they can submit the recipe which will publish immediately.
 
 <details><summary>Create recipe page</summary>
 <img src="readme/documentation/features/admin_recipe_create/create_recipe.png">
@@ -274,10 +244,7 @@ Below is the database diagram that I created using LucidCharts.
 </details>
 
 ### Edit recipe page
-- Use can only get to this page by inputing something on the search bar in the post page
-- This page will either display a post that user has searched or it will provide a user with message that there is no post under that search
-- Page behaves just like post page where user can open searched posts with click on the title of the post
-- There is back link that will redirect user to the previous page
+- On this page the logged in user admin will see textareas in the same format as the creat recipe form which contains the recipe content they had already submitted and on which they clicked edit. The user with be able to make changes to their recipe and resubmit it. 
 
 <details><summary>Edit recipe page</summary>
 <img src="readme/documentation/features/admin_recipe_edit/edit_recipe.png">
@@ -289,10 +256,7 @@ Below is the database diagram that I created using LucidCharts.
 <img src="readme/documentation/features/admin_recipe_edit/require_category.png"></details>
 
 ### Delete recipe page
-- Use can only get to this page by inputing something on the search bar in the post page
-- This page will either display a post that user has searched or it will provide a user with message that there is no post under that search
-- Page behaves just like post page where user can open searched posts with click on the title of the post
-- There is back link that will redirect user to the previous page
+- The user will be redirected to this page when they click delete on their recipe in order to make sure they want to delete the comment. The user will be asked if they are sure and they can either hit delete or cancel. Delete will delete the recipe comepletely. Cancel will redirect to the home screen
 
 <details><summary>Delete recipe page</summary>
 <img src="readme/documentation/features/admin_recipe_delete/test_recipe.png">
@@ -302,7 +266,7 @@ Below is the database diagram that I created using LucidCharts.
 
 ### Login page
 - Login page is a basic django allauth form that has 2 input fields for username and password with sign in the button below it
-- A User also have description links to either signup for the website if he doesnt have an account or to reset his password which will redirect a user either to the "Password change page" or "Sign up" page
+- A User will also have description links to either signup for the website if he doesnt have an account which will redirect a user the "Sign up" page
 
 <details><summary>Login page</summary>
 <img src="readme/documentation/features/login/login.png">
@@ -314,8 +278,7 @@ Below is the database diagram that I created using LucidCharts.
 </details>
 
 ### Logout page
-- Login page is a basic django allauth form that has 2 input fields for username and password with sign in the button below it
-- A User also have description links to either signup for the website if he doesnt have an account or to reset his password which will redirect a user either to the "Password change page" or "Sign up" page
+- The user will be redirected to this page when they click logout. The user will be asked if they are sure they want to logout and they can either hit logout or cancel. Logout will log the user out. Cancel will redirect to the home screen
 
 <details><summary>Logout page</summary>
 <img src="readme/documentation/features/logout/logout.png">
@@ -324,7 +287,7 @@ Below is the database diagram that I created using LucidCharts.
 
 ### Signup page
 - The signup page is also a standard django form with all required fields for a user to input
-- User must input all information (username, first name, last name, email and password) 
+- User must input all information (username, email (optional) and password) 
 - After inputting all the fields and clicking sign-up button user will be automatically logged in and redirected to the home page.
 
 <details><summary>Sign up page</summary>
@@ -344,9 +307,9 @@ Below is the database diagram that I created using LucidCharts.
 </details>
 
 - There are 3 features that I would like to implement in the next iteration that would improve user experience and attract more traffic to my website
-- Create a gallery page
-- Allow users to create their posts (CRUD)
-- Create a booking system for adventures
+- Give users the option to reply to other users' comments
+- Allow users to reset their passwords
+- Add a top picks section where the user admin can update their top picks of their recipes weekly
 
 
 ## Technologies Used
@@ -365,7 +328,7 @@ Below is the database diagram that I created using LucidCharts.
 - [ElephantSQL](https://www.elephantsql.com/) was used to store the database.
 - - -
 
-## Libraries
+<!-- ## Libraries
 - asgiref - A standard Python library to allow for asynchronous web apps and servers to communicate with each other.
 - cloudinary - A Python package allowing integration between the application and Cloudinary.
 - coverage - is a third-party package that helps developers measure code coverage in their Python codebase.
@@ -385,7 +348,7 @@ Below is the database diagram that I created using LucidCharts.
 - Pillow - A Python Imaging Library adds image processing capabilities
 - requests-oauthlib - A Python package for OAuthlib authentication support for Requests.
 - sqlparse - A non-validating SQL parser for Python.
-
+ -->
 ## Testing
 The testing section can be found [here](TESTING.md).
 
@@ -400,6 +363,8 @@ The testing section can be found [here](TESTING.md).
 | Ingredients and Instructions weren't required fields so recipe could be uploaded without them | Removed null and blank = True and gave a defualt value for both |
 | Recipes uploaded without a category weren't rendering as the view requires a category | Removed null and blank = True and gave a defualt value for it |
 | Every user was able to edit and delete recipes | Added condition that user must be a superuser in order to edit or delete recipies |
+| Every user was able to edit and delete anyone's comment | Added condition that edit/delete option only appeared under the comments of the current site user |
+| Site would not deploy to heroku | Removed unused import CAB from |
 
 ### Unresolved bugs and issues
 | **Bug** | **Fix** |
@@ -445,25 +410,14 @@ This website is deployed to Heroku from a GitHub repository, the following steps
 - - -
 
 ## Credits
-- [Stack Overflow](https://stackoverflow.com/) is probably a developer's best resource, this provided me with many answers to my questions.
-  Examples of code I found on slack that helped me with coding:
-    'def __init__(self, *args, **kwargs):
-        super(FormUser, self).__init__(*args, **kwargs)
-        for field in ["username", "email", "password1", "password2"]:
-            self.fields[field].help_text = None'
-  Also found similar solution on how to combine 2 forms into 1 (in my case User & Profile form)
+- [Stack Overflow](https://stackoverflow.com/) 
 - [W3schools](https://www.w3schools.com/) this was great for looking up forgotten **CSS** syntax and how to use it.
-- [Unsplash](https://unsplash.com/) all images were taken from Unsplash.
 - [CodeInstitute](https://learn.codeinstitute.net/) for their walkthrough project, which guided me with website build especially for publishing posts, comments and likes section which I code along with the video with few adjustments
-- [AllTrails](https://www.alltrails.com/) for providing me some text and useful information for my posts
+- [BBC Good Food](https://www.bbcgoodfood.com/) for providing me some text and useful information for my posts
 - [youtube](https://www.youtube.com/) videos from **codemy**, **netninja**, **veryacademy**, **djangolessons** and **ProgrammingWithJosh** channels for guidance and examples on how to create blog and improve website. I watch videos and tried to recreate some features accross my website such as 'search-box' & 'subscription', specific links could be found here
-[codemy](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&ab_channel=Codemy.com)
-[netninja](https://www.youtube.com/watch?v=n-FTlQ7Djqc&list=PL4cUxeGkcC9ib4HsrXEYpQnTOTZE1x0uc&ab_channel=TheNetNinja)
-[veryacademy](https://www.youtube.com/watch?v=k_RY1og4Zj0&list=PLOLrQ9Pn6cawWd-5UZM6CIm0uqFXeBcTd&ab_channel=VeryAcademy)
-[techwithtime](https://www.youtube.com/watch?v=Z4D3M-NSN58&list=PLzMcBGfZo4-kQkZp-j9PNyKq7Yw5VYjq9&ab_channel=TechWithTim)
-[ProgrammingWithJosh](https://www.youtube.com/watch?v=rHux0gMZ3Eg&ab_channel=ProgrammingwithMosh)
+- [veryacademy](https://www.youtube.com/watch?v=k_RY1og4Zj0&list=PLOLrQ9Pn6cawWd-5UZM6CIm0uqFXeBcTd&ab_channel=VeryAcademy)
 - [Allauth](https://django-allauth.readthedocs.io/en/latest/) for their documentation which was helpfull in creating user authentication
-- [Logoapp](https://logo.com/) for providing me with tools to easier generate my idea and create logo
+- [Shopify](https://www.shopify.com/) for providing me with tools to easier generate my idea and create logo
 - [Djangoforbeginners](https://djangoforbeginners.com/) for providing useful information abut basic concepts and setup for django
 - [DEV community](https://dev.to/) for helping me to setup email with django
 - [Traversy media](https://www.traversymedia.com/) for providing me with the code for dissapering hero text
