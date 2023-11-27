@@ -7,6 +7,7 @@ from requests import post
 from .models import Recipe, Category, Comment
 from django.http import HttpResponseRedirect
 from .forms import CommentForm, RecipeForm
+from django.http import Http404
 
 
 class RecipeHome(generic.ListView):
@@ -104,7 +105,7 @@ def commentEdit(request, id):
                     pass
         return render(request, 'comment_edit.html', {'form' :form})
     else:
-        return HttpResponse("You do not have permission to edit this comment.")
+        raise Http404()
 
 
 @login_required
@@ -122,9 +123,7 @@ def commentDelete(request, id):
             return render(request, 'comment_delete.html',
                           {'comment_instance': comment_instance})
     else:
-        return HttpResponse(
-            "You do not have permission to delete this comment.")
-
+        raise Http404()
 
 class CategoryListView(generic.ListView):
     """
@@ -198,7 +197,7 @@ def recipeEdit(request, id):
                     pass
         return render(request, 'admin_recipe_edit.html', {'form':form})
     else:
-        return HttpResponse("You do not have permission to edit this recipe.")
+        raise Http404()
 
 
 @login_required
@@ -215,5 +214,4 @@ def recipeDelete(request, id):
             return render(request, 'admin_recipe_delete.html',
                           {'recipe_instance': recipe_instance})
     else:
-        return HttpResponse(
-            "You do not have permission to delete this recipe.")
+        raise Http404()
