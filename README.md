@@ -1,6 +1,4 @@
-# Take a hike
-
-Take a hike is a I created this website to promote an adventure style of life and to give users the opportunity to explore local areas and mountains with us.
+# Let's Eat
 
 Let's Eat is a fully responsive full-stack website that I have built using the Django Full Stack framework for my Portfolio Project 4. This website gives the user the ability to browse recipies based on their category, comment on and like them.
   
@@ -66,61 +64,43 @@ Let's Eat is a fully responsive full-stack website that I have built using the D
 ### Wireframes
 Below are the wireframes for the site that I created using balsamiq. As I was developing my website I was using agile approach and adding/updating my website/elements so for that reason some wireframes are not matching my final product.
 #### Desktop
-<details><summary>Home page</summary>
-<img src="readme_img/wireframes/bals_home.png">
+<details><summary>Index</summary>
+<img src="readme/documentation/wireframes/index.png">
 </details>
 
-<details><summary>Post page</summary>
-<img src="readme_img/wireframes/bals_post.png">
+<details><summary>Recipe Categories</summary>
+<img src="readme/documentation/wireframes/all_recipes.png">
 </details>
 
-<details><summary>Single post page</summary>
-<img src="readme_img/wireframes/bals_single.png">
+<details><summary>Single Recipe</summary>
+<img src="readme/documentation/wireframes/single_recipe.png">
 </details>
 
-<details><summary>Profile page</summary>
-<img src="readme_img/wireframes/bals_profile.png">
+<details><summary>Edit Comment page</summary>
+<img src="readme/documentation/wireframes/comment_edit.png">
 </details>
 
-<details><summary>Signup page</summary>
-<img src="readme_img/wireframes/bals_sign.png">
+<details><summary>Delete Comment and Delete Recipe</summary>
+<img src="readme/documentation/wireframes/delete.png">
 </details>
 
-#### Mobile
-<details><summary>Home page</summary>
-<img src="readme_img/wireframes/bals_m_home.png">
+<details><summary>Create and Edit Recipe</summary>
+<img src="readme/documentation/wireframes/add_edit_recipe.png">
 </details>
 
-<details><summary>Posts page</summary>
-<img src="readme_img/wireframes/bals_m_post.png">
+<details><summary>Login page</summary>
+<img src="readme/documentation/wireframes/login.png">
 </details>
 
-<details><summary>Single post page & navigation menu</summary>
-<img src="readme_img/wireframes/bals_m_single.png">
+<details><summary>Logout page</summary>
+<img src="readme/documentation/wireframes/logout.png">
 </details>
 
-<details><summary>Profile</summary>
-<img src="readme_img/wireframes/bals_m_profile.png">
+<details><summary>Sign up page</summary>
+<img src="readme/documentation/wireframes/signup.png">
 </details>
 
-<details><summary>Sign up</summary>
-<img src="readme_img/wireframes/bals_m_signup.png">
-</details>
 
-<details><summary>Login</summary>
-<img src="readme_img/wireframes/login_b.png">
-</details>
-
-<details><summary>Edit comment</summary>
-<img src="readme_img/wireframes/edit_comm_b.png">
-</details>
-<details><summary>Reset password</summary>
-<img src="readme_img/wireframes/reset_passw_b.png">
-</details>
-<details><summary>New password</summary>
-<img src="readme_img/wireframes/update_pass_b.png">
-</details>
-  
 ### Agile Methodology
 The Agile Methodology was used to plan this project. I found it hard to work parallel on agile and on my coding as I was team of 1 and was aware of the changes so I found that to be confusing. I had to add a few things at the end of my project in github repository. I did learn more towards the end of the project about the use of the agile develepment, and why it's important and usefull to keep track of the whole process and to implement as much as you can. 
 I've used Github and the Project Board with use of the Kanban board.
@@ -207,8 +187,11 @@ Below is the database diagram that I created using LucidCharts.
 - The home page has a dark hero image with text gradually displaying and deleting indicating site purpose
 - Bellow hero image there are two sections which describe the owner of the page and his reach to the community with icons and numbers
 - map?
-<details><summary>Index page</summary>
-<img src="readme/documentation/pages/index/">
+<details><summary>Index Hero</summary>
+<img src="readme/documentation/features/index/hero.png">
+</details>
+<details><summary>Index Button</summary>
+<img src="readme/documentation/features/index/discover_recipes.png">
 </details>
 
 
@@ -219,8 +202,13 @@ Below is the database diagram that I created using LucidCharts.
 - Posts card are scaling up as the user hovers over them and clickable title and ecerpt are transforming to capitalize letter
 - When clicked on title/excerpt user is redirected to another page which will give a user more information about the post
 
-<details><summary>Recipes page</summary>
-<img src="readme_img/test/post_page.png">
+<details><summary>Recipe Categories</summary>
+<img src="readme/documentation/features/all_recipes/categories1.png">
+<img src="readme/documentation/features/all_recipes/categories2.png">
+<img src="readme/documentation/features/all_recipes/categories3.png">
+</details>
+<details><summary>Recipe Categories Scrollbar</summary>
+<img src="readme/documentation/features/all_recipes/scrollbar.png">
 </details>
 
   
@@ -232,14 +220,27 @@ Below is the database diagram that I created using LucidCharts.
 - If user has already left comment he has option to either update his comment or delete it by simply clicking either of displayed buttons
 - By clickin "Delete" button user will be asked to confirm his choice, if he do so success message will be displayed to the user and comment would be deleted
 - By clicking "Update" the user will be redirected to the new page which will allow him to update his comment
- 
+
+<details><summary>Single Recipe Like and Comment Icons</summary>
+<img src="readme/documentation/features/single_recipe/likes_comment_icons.png">
+</details><details><summary>Single Recipe Comments</summary>
+<img src="readme/documentation/features/single_recipe/comment_logged_out.png">
+<img src="readme/documentation/features/single_recipe/comment_logged_in.png">
+<img src="readme/documentation/features/single_recipe/comments.png">
+<img src="readme/documentation/features/single_recipe/edit_delete_authorised.png">
+<img src="readme/documentation/features/single_recipe/edit_delete_not_authorised.png">
+</details>
 
 ### Edit comment page
 - On this page one form field is displayed to the user with current comment that he wish to update
 - Bellow the form there is submit button, which will confirm user new comment by providing success message to the user and redirecting to the previous page
 
 <details><summary>Edit comment page</summary>
-<img src="readme_img/test/update_cmnt.png">
+<img src="readme/documentation/features/comment_edit/original_comment.png">
+<img src="readme/documentation/features/comment_edit/edit_box_original_comment.png">
+<img src="readme/documentation/features/comment_edit/require_edit.png">
+<img src="readme/documentation/features/comment_edit/edit_box_edited_comment.png">
+<img src="readme/documentation/features/comment_edit/edited_comment.png">
 </details>
 
 ### Delete comment page
@@ -251,7 +252,9 @@ Below is the database diagram that I created using LucidCharts.
 - If user click on update button, updated information would be shown on his profile card with success message
 
 <details><summary>Delete comment page</summary>
-<img src="readme_img/test/profile.png">
+<img src="readme/documentation/features/comment_delete/original_comment.png">
+<img src="readme/documentation/features/comment_delete/delete_comment.png">
+<img src="readme/documentation/features/comment_delete/comment_deleted.png">
 </details>
 
 ### Create recipe page
@@ -261,7 +264,13 @@ Below is the database diagram that I created using LucidCharts.
 - There is back link that will redirect user to the previous page
 
 <details><summary>Create recipe page</summary>
-<img src="readme_img/test/searched_post.png">
+<img src="readme/documentation/features/admin_recipe_create/create_recipe.png">
+<img src="readme/documentation/features/admin_recipe_create/require_title.png">
+<img src="readme/documentation/features/admin_recipe_create/require_author.png">
+<img src="readme/documentation/features/admin_recipe_create/require_ingredients.png">
+<img src="readme/documentation/features/admin_recipe_create/require_instructions.png">
+<img src="readme/documentation/features/admin_recipe_create/require_image_alt.png">
+<img src="readme/documentation/features/admin_recipe_create/require_category.png">
 </details>
 
 ### Edit recipe page
@@ -271,8 +280,13 @@ Below is the database diagram that I created using LucidCharts.
 - There is back link that will redirect user to the previous page
 
 <details><summary>Edit recipe page</summary>
-<img src="readme_img/test/searched_post.png">
-</details>
+<img src="readme/documentation/features/admin_recipe_edit/edit_recipe.png">
+<img src="readme/documentation/features/admin_recipe_edit/require_title.png">
+<img src="readme/documentation/features/admin_recipe_edit/require_author.png">
+<img src="readme/documentation/features/admin_recipe_edit/require_ingredients.png">
+<img src="readme/documentation/features/admin_recipe_edit/require_instructions.png">
+<img src="readme/documentation/features/admin_recipe_edit/require_image_alt.png">
+<img src="readme/documentation/features/admin_recipe_edit/require_category.png"></details>
 
 ### Delete recipe page
 - Use can only get to this page by inputing something on the search bar in the post page
@@ -281,7 +295,9 @@ Below is the database diagram that I created using LucidCharts.
 - There is back link that will redirect user to the previous page
 
 <details><summary>Delete recipe page</summary>
-<img src="readme_img/test/searched_post.png">
+<img src="readme/documentation/features/admin_recipe_delete/test_recipe.png">
+<img src="readme/documentation/features/admin_recipe_delete/delete_test_recipe.png">
+<img src="readme/documentation/features/admin_recipe_delete/test_recipe_deleted.png">
 </details>
 
 ### Login page
@@ -289,7 +305,12 @@ Below is the database diagram that I created using LucidCharts.
 - A User also have description links to either signup for the website if he doesnt have an account or to reset his password which will redirect a user either to the "Password change page" or "Sign up" page
 
 <details><summary>Login page</summary>
-<img src="readme_img/test/login.png">
+<img src="readme/documentation/features/login/login.png">
+<img src="readme/documentation/features/login/no_username.png">
+<img src="readme/documentation/features/login/no_password.png">
+<img src="readme/documentation/features/login/wrong_username.png">
+<img src="readme/documentation/features/login/wrong_password.png">
+<img src="readme/documentation/features/login/sucessful_login.png">
 </details>
 
 ### Logout page
@@ -297,7 +318,8 @@ Below is the database diagram that I created using LucidCharts.
 - A User also have description links to either signup for the website if he doesnt have an account or to reset his password which will redirect a user either to the "Password change page" or "Sign up" page
 
 <details><summary>Logout page</summary>
-<img src="readme_img/test/login.png">
+<img src="readme/documentation/features/logout/logout.png">
+<img src="readme/documentation/features/logout/logged_out.png">
 </details>
 
 ### Signup page
@@ -306,7 +328,13 @@ Below is the database diagram that I created using LucidCharts.
 - After inputting all the fields and clicking sign-up button user will be automatically logged in and redirected to the home page.
 
 <details><summary>Sign up page</summary>
-<img src="readme_img/test/signup.png">
+<img src="readme/documentation/features/signup/signup.png">
+<img src="readme/documentation/features/signup/require_username.png">
+<img src="readme/documentation/features/signup/require_password.png">
+<img src="readme/documentation/features/signup/require_password_again.png">
+<img src="readme/documentation/features/signup/password_errors1.png">
+<img src="readme/documentation/features/signup/password_errors2.png">
+<img src="readme/documentation/features/signup/sucessful_signup.png">
 </details>
 
 
@@ -328,15 +356,13 @@ Below is the database diagram that I created using LucidCharts.
 - [CSS](https://en.wikipedia.org/wiki/CSS)  was used to style the site.
 - [Django](https://www.djangoproject.com/) was the framework that was used.
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language)), django is a python framework.
-- [Bootstrap](https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)) was also used to style the site.
-- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used for interactiveness.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used for interactiveness with the messages.
 - [Gitpod](https://www.gitpod.io/about) was used to create this site and then push everything to github.
 - [Heroku](https://en.wikipedia.org/wiki/Heroku) is used to host this site.
 - [Github](https://en.wikipedia.org/wiki/GitHub) was used to store the code.
 - [Git](https://en.wikipedia.org/wiki/Git) was used for version control.
 - [Cloudinary](https://cloudinary.com/) was used to store the images.
 - [ElephantSQL](https://www.elephantsql.com/) was used to store the database.
-- [Grammarly](https://app.grammarly.com/) was used to check typography.
 - - -
 
 ## Libraries
@@ -366,7 +392,7 @@ The testing section can be found [here](TESTING.md).
 ## Bugs
 | **Bug** | **Fix** |
 | ----------- | ----------- |
-| On home page hero image was not loading| Created new file path directly to Cloudinary |
+| On home page hero image was not rendering on deployed site| Created new file path directly to Cloudinary |
 | Post page was not displaying| Change path in urls.py to post/ |
 | Admin page have no style | Set DEBUG to True|
 | Locally reset password email not working| Implemented if else statemEnt for DEVELOPMENT in settings.py for email part|
