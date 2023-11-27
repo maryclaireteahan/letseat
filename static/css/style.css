@@ -1039,9 +1039,6 @@ textarea {
   color: #363535;
   background-color: #f1e9d6;
   cursor: pointer;
-}
-
-.logout-form-button a {
   text-decoration: none;
   color: inherit;
 }
