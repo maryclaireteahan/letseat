@@ -4,8 +4,10 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 {% endblock css %}
 {% block content %}
+<!--Edit Comment Feature-->
 <div class="edit-comment-form-container">
     <h4>Edit Comment</h4>
+    <!--Comment Form-->
     <form method="post" class="edit-comment-form">
         {% csrf_token %}
         {{form.as_p}}
