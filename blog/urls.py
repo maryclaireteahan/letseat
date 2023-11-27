@@ -1,13 +1,13 @@
 from . import views
 from django.urls import path
-from django.urls import path, handler404
 
 urlpatterns = [
     path('', views.RecipeHome.as_view(), name='home'),
     path('recipes/', views.CategoryListView.as_view(),
          name='recipes'),
-    path("<slug:slug>/", views.RecipeDetail.as_view(),
-         name="single_recipe"),
+    path('recipes/<slug:slug>/',
+        views.RecipeDetail.as_view(), name='single_recipe'
+        ),
     path('like/<slug:slug>', views.RecipeLike.as_view(),
          name='recipe_like'),
     path('recipe/<slug:slug>/', views.RecipeDetail.as_view(),
@@ -23,5 +23,3 @@ urlpatterns = [
     path('admin_recipe_delete/<int:id>', views.recipeDelete,
          name='recipe_delete'),
 ]
-
-handler404 = 'letseat.views.error_404'
