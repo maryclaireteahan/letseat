@@ -39,30 +39,30 @@ Let's Eat is a fully responsive full-stack website that I have built using the D
 9. [Credits](#credits)
 10. [Acknowledgements](#acknowledgements)
 
-<!-- ## Design & Planning:
+## Design & Planning:
 
 ### User Stories
-#### First time visitor
-- As a first-time visitor, I want to understand the purpose of the website and easily navigate through
-- As a first-time visitor, I want to be able to view the posts so that I would get quick access to relevant information and get a better understanding of the content
-- As a first-time visitor, I want to be able to see likes and comments for the posts to get some feedback from other users
-- As a first-time visitor, I want to be able to register an account to have more access to the website
-- As a first-time visitor, I want to be able to search posts by title name so I could get quick access to the relevant one
-- As a first-time visitor, I want to be able to subscribe to the blog so I could get relevant information about future blog posts
-#### Registred user
-- As a registered user I want to be able to leave comments for posts so that I can engage with other users and, leave feedback about certain posts
-- As a registered user I can update or delete my comments so that have more control over my content in case of errors, and to have better engagemant with other users
-- As a registered user I want to be able to like/unlike posts so that I can support certain posts without providing comment
-- As a registered user I want to be able to update my profile information so that I could change my first name, last name, email and password and add a profile picture, bio
-#### Site owner
-- As a site owner, I want to be able to create, update and delete posts so that I can control my website content
-- As a site owner, I want to be able to approve or delete comments so that I can filter out objectionable comments
--As a site owner, I want to be able to access all subscribed emails so that I could send new information related to my website
-- As a site owner, I want to be able to delete users so that I can receive several benefits such as: manage my data, reduce liability & resource optimization  -->
+
+#### Site User
+- As a Site User, I can view a list of recipes so that I can choose one to read
+- As a Site User, I can click on a recipe post so that I can read the full recipe
+- As a Site User, I can click a like button so that I can like a recipe and then unlike if needed
+- As a Site User, I can post a comment on a recipe post so that I can interact with the site's community
+- As a Site User, I can sign up to be a member/ login as an existing member so that I can be a part of the site's community and receive updates
+- As a Site User, I can see how many likes a post has received so that I can see what recipes are most popular
+- As a Site User, I can see who commented what under each post so that I can see what the Site Users think of specific recipes and how they might change them
+- As a Site User, I can edit or delete my comment so that if I made a spelling error or changed my mind about what I said I can edit or delete it
+
+#### Site Admin
+- As a Site Admin, I can see how many likes a post has received so that I can see what recipes are most popular
+- As a Site Admin, I can see who commented what under each post so that I can see what the Site Users think of specific recipes and how they might change them
+- As a Site Admin, I can create, edit and delete recipe posts so that I can be in control of what content is shown to Site Users
+- As a Site Admin, I can assign a category to the recipe post so that Site Users will be able to find recipes specific to what they need
 
 
 ### Wireframes
 Below are the wireframes for the site that I created using balsamiq. As I was developing my website I was using agile approach and adding/updating my website/elements so for that reason some wireframes are not matching my final product.
+
 #### Desktop
 <details><summary>Index</summary>
 <img src="readme/documentation/wireframes/index.png">
@@ -101,39 +101,40 @@ Below are the wireframes for the site that I created using balsamiq. As I was de
 </details>
 
 
-<!-- ### Agile Methodology
-The Agile Methodology was used to plan this project. I found it hard to work parallel on agile and on my coding as I was team of 1 and was aware of the changes so I found that to be confusing. I had to add a few things at the end of my project in github repository. I did learn more towards the end of the project about the use of the agile develepment, and why it's important and usefull to keep track of the whole process and to implement as much as you can. 
+### Agile Methodology
+I used the Agile Methodology to plan this project. I found it difficult to follow the project plan alongside coding. Often when I was coding an issue would arise that I hadn't foreseen would and I would have to deal with that which may then lead to a brand new feature. That then would lead me to another unplanned feature. It was difficult to stay following the plan as a result. I do recognise now, the importance of following the plan and, if a new feature presents itself, taking the time to review the plan and adjust if necessary.
 I've used Github and the Project Board with use of the Kanban board.
 
-I devided project board into 3 sections:
+I divided the project board into 3 sections:
 
   -  To-Do- (All the User stories were initially entered in the 'To Do' column)
   -  In Progress- (then during development story they were moved into the 'In Progress' column)
   -  Done- (and then finally they get moved into 'Done' once the development completes)
 
 <details><summary>Project board</summary>
-<img src="readme_img/test/project_board.png">
+<img src="readme/documentation/user_story/project_board.png">
 </details>
 
-- I've planned 5 itterations for this project. Four were completed as planned and fifth one is for future development of the webiste, which is described more in feature features in this document
+- I've planned 5 milestones for this project. Each milestone features issues that are completed as well as open issues that may be implemented in future development.
 
 <details><summary>Milestones</summary>
-<img src="readme_img/test/milestone.png">
+<img src="readme/documentation/user_story/milestones.png">
 </details>
 
-- Each milestone consist of user stories, which are displayed either open or closed depends on the progress.
-Each user story is labeled either as 'must-have', 'should-have' or 'could-have'depending of the needs of the project with estimated story points attached.
+- Each milestone consist of user stories, which are displayed either open or closed depending on the progress.
+- I have implemented the MoSCoW method to prioritise my user stories. each user story either has "Must Have" "Should Have" "Could Have" "Won't Have"
 
 <details><summary>Milestone detail</summary>
-<img src="readme_img/test/mls_det.png">
+<img src="readme/documentation/user_story/milestone_detail1.png">
+<img src="readme/documentation/user_story/milestone_detail2.png">
 </details>
 
-- Each user story have acceptance criteria and tasks that needed to be done to accomplish  that criteria
+- Each user story have acceptance criteria and tasks that needed to be done to accomplish that criteria as well as fixed bugs if relevant
  
 
 <details><summary>User story detail</summary>
-<img src="readme_img/test/user_story_detail.png">
-</details> -->
+<img src="readme/documentation/user_story/user_story_detail.png">
+</details>
 
 ### Typography
 Google Fonts were used to import Oxygen font into styles.css.  It was chosen as it is a simple, font with a strong clear feel that doesn't distract from the content.
