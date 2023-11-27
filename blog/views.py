@@ -181,12 +181,12 @@ class RecipeCreate(LoginRequiredMixin, View):
 
 
 @login_required
-def recipeEdit(request, id):
+def recipeEdit(request, id, user):
     """
     View for allowing superusers to edit recipes on the frontend
     """
     recipe_instance = get_object_or_404(Recipe, id=id)
-    if recipe_instance.user != request.user:
+    if not user.is_authenticated:
         return HttpResponseForbidden(render(request, '403.html'))
     
     form = RecipeForm(request.POST or None,
@@ -204,12 +204,13 @@ def recipeEdit(request, id):
 
 
 @login_required
-def recipeDelete(request, id):
+def recipeDelete(request, id, user):
     """
     View for allowing superusers to delete recipes on the frontend
     """
     recipe_instance = get_object_or_404(Recipe, id=id)
-    if recipe_instance.user != request.user:
+    if not user.is_authenticated:
+
         return HttpResponseForbidden(render(request, '403.html'))
     
     if request.user.is_authenticated and request.user.is_superuser:
