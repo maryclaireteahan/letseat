@@ -8,11 +8,14 @@
 <a href="/admin_recipe_delete/{{ recipe.id }}">Delete</a>
 </div>
 {% endif %}
+<!--Single Recipe Container-->
 <div class="single-recipe">
   <div class="img-and-ingredients-container">
     <div class="img-and-ingredients">
       <div class="single-recipe-img-container">
+        <!--Comments and Likes-->
         <div class="comments-and-likes-count-container">
+          <!--Likes Icon-->
           <div class="recipe-likes">
             {% if user.is_authenticated %}
             <form
@@ -43,13 +46,12 @@
             {% else %}
             <span class="likes-count"><i class="far fa-heart"></i></span>
             {% endif %}
-            <!-- The number of likes goes before the closing strong tag -->
             {{ recipe.number_of_likes }}
           </div>
+          <!--Comments Icon-->
           <div class="recipe-comments">
             {% with comments.count as total_comments %}
             <i class="far fa-comments number-comments"></i>
-            <!-- Our total_comments variable goes before the closing strong tag -->
             {{ total_comments }} {% endwith %}
           </div>
         </div>
@@ -63,18 +65,21 @@
         <img class="single-recipe-img" src="{{ recipe.featured_image.url }}"  alt="{{ recipe.image_alt.url }}" />
         {% endif %}
       </div>
+      <!--Ingredients-->
       <h2 class="ingredients-h2">Ingredients:</h2>
       <div class="ingredients">
         {{ recipe.ingredients | safe }}
       </div>
     </div>
   </div>
+  <!--Instructions-->
   <div class="instructions-container">
     <h2 class="instructions-h2">Instructions:</h2>
     <div class="instructions">
       {{ recipe.instructions | safe }}
     </div>
   </div>
+  <!--Comments-->
   <div class="comments-container">
     <div class="posted-comments-container">
       <h3>Comments:</h3>
@@ -93,12 +98,11 @@
           </div>
           {% endif %}
         </div>
-
-        <!-- Our for loop ends here -->
         {% endfor %}
       </div>
     </div>
     {% if user.is_authenticated %}
+    <!--Leave a Comment-->
     <div class="leave-comment-container">
       <h3>Leave a comment:</h3>
       <p class="posting-as">Posting as: {{ user.username }}</p>
