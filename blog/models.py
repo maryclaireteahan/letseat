@@ -42,10 +42,10 @@ class Recipe(models.Model):
                                related_name='blog_posts',
                                limit_choices_to={'is_superuser': True})
     updated_on = models.DateTimeField(auto_now=True)
-    ingredients = models.TextField(max_length=20000, null=True, blank=True)
-    instructions = models.TextField(max_length=20000, null=True, blank=True)
+    ingredients = models.TextField(max_length=20000, default='ingredients')
+    instructions = models.TextField(max_length=20000, default='instructions')
     featured_image = CloudinaryField('image', default='placeholder')
-    image_alt = models.CharField(max_length=100, null=True, blank=True)
+    image_alt = models.CharField(max_length=100, default='image alt')
     excerpt = models.TextField(blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
