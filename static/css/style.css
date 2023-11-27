@@ -98,7 +98,7 @@ nav ul {
 }
 
 #message-row {
-  background-color: rgba(160, 132, 80, 0.8);
+  background-color: rgba(160, 132, 80, 0.95);
   border: 1px solid #ccc;
   padding: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -114,9 +114,9 @@ nav ul {
   cursor: pointer;
   margin: 0 0.5em;
   margin-right: 0;
-  line-height: 1;
   width: fit-content;
-  border-radius: 5px;
+  border: thin rgba(160, 132, 80, 0.9) solid;
+  box-shadow: none;
 }
 
 /*main------------------------------------main--------*/
@@ -1158,6 +1158,10 @@ textarea {
 
   .logo-header-index {
     height: 9em;
+  }
+
+  #message-row-container {
+    width: 70%;
   }
 }
 
