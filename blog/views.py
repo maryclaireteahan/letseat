@@ -7,7 +7,6 @@ from requests import post
 from .models import Recipe, Category, Comment
 from django.http import HttpResponseRedirect
 from .forms import CommentForm, RecipeForm
-from django.http import HttpResponseForbidden
 
 
 class RecipeHome(generic.ListView):
@@ -92,9 +91,6 @@ def commentEdit(request, id):
     View for allowing users to edit comments on the frontend
     """
     comment_instance = get_object_or_404(Comment, id=id)
-    if comment_instance.user != request.user:
-        return HttpResponseForbidden(render(request, '403.html'))
-
     form = CommentForm(instance=comment_instance)
     if comment_instance.user == request.user:
 
@@ -107,7 +103,9 @@ def commentEdit(request, id):
                 except Exception as e:
                     pass
         return render(request, 'comment_edit.html', {'form' :form})
-    
+    else:
+        return HttpResponse("You do not have permission to edit this comment.")
+
 
 @login_required
 def commentDelete(request, id):
@@ -115,8 +113,6 @@ def commentDelete(request, id):
     View for allowing user to delete their own comments on the frontend
     """
     comment_instance = get_object_or_404(Comment, id=id)
-    if comment_instance.user != request.user:
-        return HttpResponseForbidden(render(request, '403.html'))
 
     if comment_instance.user == request.user:
         if request.method == 'POST':
@@ -125,6 +121,9 @@ def commentDelete(request, id):
         else:
             return render(request, 'comment_delete.html',
                           {'comment_instance': comment_instance})
+    else:
+        return HttpResponse(
+            "You do not have permission to delete this comment.")
 
 
 class CategoryListView(generic.ListView):
@@ -181,14 +180,11 @@ class RecipeCreate(LoginRequiredMixin, View):
 
 
 @login_required
-def recipeEdit(request, id, user):
+def recipeEdit(request, id):
     """
     View for allowing superusers to edit recipes on the frontend
     """
     recipe_instance = get_object_or_404(Recipe, id=id)
-    if not user.is_authenticated:
-        return HttpResponseForbidden(render(request, '403.html'))
-    
     form = RecipeForm(request.POST or None,
                       request.FILES or None, instance=recipe_instance)
     if request.user.is_authenticated and request.user.is_superuser:
@@ -201,18 +197,16 @@ def recipeEdit(request, id, user):
                 except Exception as e:
                     pass
         return render(request, 'admin_recipe_edit.html', {'form':form})
+    else:
+        return HttpResponse("You do not have permission to edit this recipe.")
 
 
 @login_required
-def recipeDelete(request, id, user):
+def recipeDelete(request, id):
     """
     View for allowing superusers to delete recipes on the frontend
     """
     recipe_instance = get_object_or_404(Recipe, id=id)
-    if not user.is_authenticated:
-
-        return HttpResponseForbidden(render(request, '403.html'))
-    
     if request.user.is_authenticated and request.user.is_superuser:
         if request.method == 'POST':
             recipe_instance.delete()
@@ -220,3 +214,6 @@ def recipeDelete(request, id, user):
         else:
             return render(request, 'admin_recipe_delete.html',
                           {'recipe_instance': recipe_instance})
+    else:
+        return HttpResponse(
+            "You do not have permission to delete this recipe.")
