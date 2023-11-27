@@ -1356,4 +1356,7 @@ textarea {
 }
 /* Large devices (laptops and desktops, 1200px and up) -----------------------------------------------1200--------------------------------------------------------------------------- */
 @media screen and (min-width: 1200px) {
+  body {
+    font-size: xx-large;
+  }
 }
