@@ -1,5 +1,6 @@
 from . import views
 from django.urls import path
+from django.urls import path, handler404
 
 urlpatterns = [
     path('', views.RecipeHome.as_view(), name='home'),
@@ -22,3 +23,5 @@ urlpatterns = [
     path('admin_recipe_delete/<int:id>', views.recipeDelete,
          name='recipe_delete'),
 ]
+
+handler404 = 'letseat.views.commentEdit'

@@ -104,7 +104,7 @@ def commentEdit(request, id):
                     pass
         return render(request, 'comment_edit.html', {'form' :form})
     else:
-        return render('404.html')
+        return render(request, '404.html')
 
 
 @login_required
