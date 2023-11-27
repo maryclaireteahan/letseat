@@ -4,6 +4,8 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 {% endblock css %}
 {% block content %}
+{% for comment in comments %}
+{% if comment.user == request.user %}
 <!--Edit Comment Feature-->
 <div class="edit-comment-form-container">
     <h4>Edit Comment</h4>
@@ -17,8 +19,7 @@
         </div> 
     </form>
 </div>
-{% for comment in comments %}
-{% if comment.user != request.user %}
+{% {% elif comment.user != request.user %}
 <div id="404" style="background: url('{% static 'images/404.jpg' %}') no-repeat top right/cover;">
                 <a href="{%url 'home' %}">Go to Home</a>
 </div>
