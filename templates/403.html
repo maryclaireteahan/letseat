@@ -1,5 +1,7 @@
 {% load static %}
-
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+{% endblock css %} 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +10,8 @@
     <title>403</title>
 </head>
 <body>
-<div id="forbidden-container">   <div id="forbidden" style="background: url('{% static 'images/403.png' %}') no-repeat top right/cover;"></div>
+  <div> <h1>FORBIDDEN</h1>
+        <a href="{% url 'home' %}"> Go Home</a>
 </div> 
 </body>
 </html>
