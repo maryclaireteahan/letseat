@@ -5,8 +5,10 @@
 {% endblock css %}
 {% block content %}
 <h1 class="edit-recipe-h1">Edit Recipe</h1>
+<!--Edit Recipe Form Container-->
 <div class="edit-recipe-form-container">
     <p class="posting-as">Posting as: {{ user.username }}</p>
+    <!--Edit Recipe Form Container-->
     <form method="post" class="form-edit-recipe" enctype="multipart/form-data">
         {% csrf_token %}
         {{form}}

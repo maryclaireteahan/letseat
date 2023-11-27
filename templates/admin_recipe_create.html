@@ -6,8 +6,10 @@
 {% block content %}
 {% load crispy_forms_tags %}
 <h1 class="add-recipe-h1">Add Recipe</h1>
+<!--Create Recipe Form Container-->
 <div class="create-recipe-form-container">
     <p class="posting-as">Posting as: {{ user.username }}</p>
+    <!--Create Recipe Form-->
     <form method="post" class="form-create-recipe" enctype="multipart/form-data">
         {% csrf_token %}
         {{ recipe_form | crispy }}
