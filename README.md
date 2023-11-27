@@ -392,31 +392,26 @@ The testing section can be found [here](TESTING.md).
 ## Bugs
 | **Bug** | **Fix** |
 | ----------- | ----------- |
-| On home page hero image was not rendering on deployed site| Created new file path directly to Cloudinary |
-| Post page was not displaying| Change path in urls.py to post/ |
-| Admin page have no style | Set DEBUG to True|
-| Locally reset password email not working| Implemented if else statemEnt for DEVELOPMENT in settings.py for email part|
-| No css style on Heroku | Before every deployment set debug to false and run "python3 manage.py collectstatic" |
-| Deployment issue on Heroku multiple times error "etag" & error collectstatic | Deleted all Cloudinary files and pushed code again |
-| Password reset & password confirm templates not rendering, displayed django templates | Renamed templates from django documentation |
-| After signing up user was not logged in automatically | Changed registration function and added extra code to store data from user and use it to login automatically |
-| Profile model information was not updating with the user model on the profile page| Combined 2 forms into 1 function |
-| The user image was not uploading| Added code in the form = 'enctype="multipart/form-data"'|
-| No css styles on heroku| Add ',' in settings.py 'STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]'|
-| No css styles on heroku| Deleted all static files in Cloduinary|
-| No searched posts displayed on search page | replaced {% if post in posts %} with {% if posts %} statemant and placed it outside div |
-| Profile picture/ form was not saving properly | Deleted 'username' from form fields in forms.py as I took it out from the template earlier so my form was not validating properly as it was searhing for that username |
+| On index page hero image was not rendering on deployed site | Added the image in an img tag using static tags |
+| Alert messages were displaying but without an x the remove the alert | Added static tags to the script tag in the base.html in order to load the javascript for the alerts |
+| Admin page have no style | Set DEBUG to True| 
+| Cancel button on edit pages wouldn't work unless I filled in required fields | Changed cancel button to a tag |
+| No css style on Heroku | Before every deployment set debug to false and clear the cache |
+| Ingredients and Instructions weren't required fields so recipe could be uploaded without them | Removed null and blank = True and gave a defualt value for both |
+| Recipes uploaded without a category weren't rendering as the view requires a category | Removed null and blank = True and gave a defualt value for it |
+| Every user was able to edit and delete recipes | Added condition that user must be a superuser in order to edit or delete recipies |
 
 ### Unresolved bugs and issues
 | **Bug** | **Fix** |
 | ----------- | ----------- |
-| Post image must be certain size in order to match other posts box sizes | X |
-| Uploaded user picture can looked stretch depends on the upload height and width | X |
-| Google map with hiking locations shows error message that "Page can't load Google maps correctly", the map and cluster locations are working though | X |
-| In dev tools in console I'm getting 2 errors. First is for self clossing messages accross webstie, and second one is for dissapering text on the index page, both are workin as expected | X |
+| Ingredients and Instructions do not render in the form of a list even when typed as such in the textareas | X |
+| Occaisionally when checking responsiveness in Dev Tools the Index page width shrinks causing white space on the right side of the screen.  | X |
+| The order of the categories is random and not as listed in models.py | X |
+| In dev tools in console I'm getting and error that messageRow is not a valid DOM element however it disappears when the alert message for logging in and out appears. | X |
 
 <details><summary>Console issues</summary>
-<img src="readme_img/test/issues.png">
+<img src="readme/documentation/console/error.png">
+<img src="readme/documentation/console/no_error.png>
 </details>
 
 ## Deployment
@@ -476,9 +471,8 @@ This website is deployed to Heroku from a GitHub repository, the following steps
 - [Balsamic](https://balsamiq.com/wireframes/) was used to create wireframes
 
 ## Acknowledgements:
-- I would like to thank my mentor Narander Singh for all his help throughout the project and guidance in general
-- I would like to thank Code Institutes Slack Community, and tutor support as this helped me so much when I got stuck on part of my project
-- I would also like to thank our cohort facilitator Irene Neville, for answering any course-related questions I asked and for providing us with weekly guidance information about the project
-- Last but not least I would like to thank fellow colleague Mark Fenton for helping me with debugging my code and general advices
+- I would like to thank my mentor Lauren-Nicole for all her support and guidance during this project 
+- I would also like to thank our cohort facilitator Marko Tot, for sending me useful links as well as giving me one to one support when I was struggling particularly with the models.
+- I would like to thank Hennadi and Mehatab who also helped me a lot when I was struggling with my models.
 
-[Back to the top](#take-a-hike)
+[Back to the top](#let's-eat)
