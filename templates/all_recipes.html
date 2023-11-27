@@ -7,10 +7,13 @@
 
 <h1 class="recipes-h1">Recipes</h1>
 {% for category in categories %}
+<!--Recipe Category-->
 <h2 class="category">{{ category.name }}</h2>
+<!--Recipes Row-->
 <div class="recipes-row">
     {% for recipe in category.recipe_set.all %}
     <a href="{% url 'single_recipe' recipe.slug %}">
+        <!--Single Recipe-->
         <div class="recipes">
         <div class="recipes-img-container">
             {% if 'placeholder' in recipe.featured_image.url %}
