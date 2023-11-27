@@ -1359,4 +1359,8 @@ textarea {
   body {
     font-size: xx-large;
   }
+
+  nav ul {
+    font-size: xx-large;
+  }
 }
