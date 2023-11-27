@@ -1041,6 +1041,8 @@ textarea {
   cursor: pointer;
   text-decoration: none;
   color: inherit;
+  font-size: 0.75em;
+  border: thin black solid;
 }
 
 .logout-form-button:hover {
