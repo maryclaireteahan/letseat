@@ -156,28 +156,18 @@ The result for each page are listed bellow:
 
 |Page |Screenshot | Notes  | 
 |:---:|:----------------------:|---|
-| Home (Landing) |  Second test: ![HTML Validation - Home](documentation/images/v-html-home.png) |First test: **Warning**: The type attribute is unnecessary for JavaScript resources. - Removed from script.|
-| Sing Up | ![HTML Validation - Singup](documentation/images/v-html-signup.png)  |
-| Sing In | ![HTML Validation - Singin](documentation/images/v-html-signin.png)  |
-| Sing Out | ![HTML Validation - Singout](documentation/images/v-html-signout.png) ![HTML Validation - Singout](documentation/images/v-html-signout-id.png) | The error message was ignored, because the the `aria-controls` identifies an element in the same document whose contents are controlled by the current element.  |
-| Reset Password |  Second test: ![HTML Validation - Password Reset](documentation/images/v-html-password-reset.png)  |First test: Error: Attribute mt-2 not allowed on element p at this point. - Add the missed `class=" "`.|
-| Reset Password Done |  ![HTML Validation - Password Reset Done](documentation/images/v-html-password-reset-done.png) |
-| Home (Main Feed - Logged in) |  ![HTML Validation - Main Feed](documentation/images/v-html-main-feed.png) |
-| Following |  First test: ![HTML Validation - Following Feed](documentation/images/v-html-following-1.png) Second test ![HTML Validation - Following Feed](documentation/images/v-html-following-2.png) |"Picture uploaded" was added as an alt attribute to uploaded image by user. |
-| Post Detail | ![HTML Validation - Post Detail](documentation/images/v-html-post-detail.png)  |
-| Edit post |  ![HTML Validation - Edit Post](documentation/images/v-html-post-edit.png) |
-| Delete post |  ![HTML Validation - Delete Post](documentation/images/v-html-post-delete.png) |
-| Edit comment | ![HTML Validation - Edit Comment](documentation/images/v-html-comment-edit.png)  |
-| Delete comment | ![HTML Validation - Delete Comment](documentation/images/v-html-comment-delete.png)  |
-| Users | First test: ![HTML Validation - Users](documentation/images/v-html-users-1.png) Second test: ![HTML Validation - Users](documentation/images/v-html-users-2.png) |The escape `&amp;` was added.
-| Search |  First test: ![HTML Validation - Search](documentation/images/v-html-search.png) Second test: ![HTML Validation - ](documentation/images/v-html-search-2.png)| The escape `&amp;` was added.
-| Profile |  First test: ![HTML Validation - Profile](documentation/images/v-html-profile.png) Second test: ![HTML Validation - Profile](documentation/images/v-html-profile-2.png) |`<h3/>` written in the right place.|
-| Profile Update |  ![HTML Validation - Profile Update](documentation/images/v-html-profile-update.png) |
-| Change Password | First test: ![HTML Validation - Change Password](documentation/images/v-html-password-change-error.png) Second test: ![HTML Validation - Change Password](documentation/images/v-html-password-change.png) | Div was removed. |
-| Followers | ![HTML Validation - Followers](documentation/images/v-html-followers.png)  |
-| Error 403 |  ![HTML Validation - Error 403](documentation/images/v-html-error-403.png) |
-| Error 404 | ![HTML Validation - Error 404](documentation/images/v-html-error-404.png)  |
-| Error 500 | ![HTML Validation - Error 500](documentation/images/v-html-error-500.png)  |
+| Index | <img src="readme/documentation/validation/html/index.png"> |
+| All Recipes | <img src="readme/documentation/validation/html/index.png"> |
+| Single Recipe | <img src="readme/documentation/validation/html/single_recipe.png"> |
+| Edit Comment | <img src="readme/documentation/validation/html/comment_edit.png"> |
+| Delete Comment | <img src="readme/documentation/validation/html/comment_delete.png"> |
+| Add Recipe | <img src="readme/documentation/validation/html//admin_recipe_create.png> |
+| Edit Recipe | <img src="readme/documentation/validation/html/admin_recipe_edit.png"> |
+| Delete Recipe | <img src="readme/documentation/validation/html/admin_recipe_delete.png"> |
+| Signup | <img src="readme/documentation/validation/html/signup.png"> |
+| Login | <img src="readme/documentation/validation/html/login.png"> |
+| Logout | <img src="readme/documentation/validation/html/logout.png"> |
+| 404 | <img src="readme/documentation/validation/html/404.png"> |
 
 - - - 
 
