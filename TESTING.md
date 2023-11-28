@@ -243,54 +243,24 @@ As a Site User, I want to be able to:
 
 | User Stories |  Notes|
 | --- | --- | 
-| understand what the site is for and how to navigate the site, so I can decide wheter or not to sign up. | Pass |
-| register for an account, so that I can create my profile and explore the website. |  Pass |
-| easily navigate the site, so that I can access what I need at the click of a button. | Pass |
-
-*Must Have*
-
-| User Stories |  Notes|
-| --- |  --- |
-| log in to my account, so that I can access the website. |Pass |
-| log out of my account, so that I can end my session | Pass |
-| have my own profile, so that I can be found from my friends. |Pass |
-| edit my profile, so that I can update or personalize it. | Pass |
-| read the new posts, so that I can keep up to date |  Pass |
-| create, edit, delete and view my posts, so that I can have control of my content | Pass |
-| know the date and time a post was created, so that I can know how new or old the post is | Pass |
-| post pictures, so that I can share moments or toughts | Pass |
-| like or dislike other people's posts, so that I can let them know I enjoyed their posts | Pass |
-| follow others users, so that I can view their posts on my following feed | Pass |
-| unfollow other users, so that I can remove their post from my feed | Pass |
-| be followed, so that I can know that other users read my posts  | Pass |
-| view the number of likes on each post, so that I can see which is the most popular or viral  | Pass |
-| add a profile picture so that I will be recognized from other users  | Pass |
-| see a users list, so that I can find others users to follow them | Pass |
-| search for an user, so that I can find a specific user to follow him | Pass |
-
+| view a list of recipes so that I can choose one to read. | Pass |
+| click on a recipe post so that I can read the full recipe. |  Pass |
+| see how many likes a post has received so that I can see what recipes are most popular. | Pass |
+| see who commented what under each post so that I can see what the Site Users think of specific recipes and how they might change them. | Pass |
 
 *Should Have*
 
 | User Stories |  Notes|
 | --- | --- | 
-| comment on other people's posts, so that I can be involved in the conversation |  Pass |
-| read the comments of posts, so that I can know the thoughts from others users and follow them  | Pass |
-| like other people's comments on posts, so that I can let them know I enjoyed their comment   | Pass |
-| edit or delete my comments on other people's posts, so that I can edit or remove comments I no longer want published | Pass |
-| delete other people's comments on my own posts, so that I can remove unwanted commments   | Pass |
-| be notified when other users comment or like my posts or follow/unfollow me, so that I can check it | Pass |
-| read the feed only from following users, so that I don't waste my time with unwanted posts | Pass |
-| access a list from followers, so that I can find others users to follow them  | Pass |
-
+| sign up to be a member/ login as an existing member so that I can be a part of the site's community. |  Pass |
+| click a like button so that I can like a recipe and then unlike if needed. | Pass |
 
 *Could Have*
 
 | User Stories |  Notes|
 | --- | --- | 
-| reply comments, so that I can interate with others users | Pass |
-| reset my password, so that I can regain access to my account | Pass |
-| change password, so that I feel more secure | Pass |
-| add a background picture so that I will show what I like to other users | Pass |
+| post a comment on a recipe post so that I can interact with the site's community. | Pass |
+| edit or delete my comment so that if I made a spelling error or changed my mind about what I said I can edit or delete it. | Pass |
 
 
 ### **Site Admin**
@@ -303,8 +273,11 @@ As an administrator for the site I want to be able to:
 
 | User Stories |  Notes|
 | --- | --- | 
-| remove any content from any user that could be offensive, so that I can moderate the all content| Pass |
-| have own profil, so that I can have user experience| Pass |
+| create, edit and delete recipe posts so that I can be in control of what content is shown to Site Users. | Pass |
+| assign a category to the recipe post so that Site Users will be able to find recipes specific to what they need. | Pass |
+| see who commented what under each post so that I can see what the Site Users think of specific recipes and how they might change them. | Pass |
+| see how many likes a post has received so that I can see what recipes are most popular. | Pass |
+
 
 </details>
 
@@ -325,7 +298,7 @@ The features were manually tested as defensive programming during the developmen
 
 | Page | User Action | Expected Result| Notes |
 | --- | --- | --- | --- |
-|  **Home Page**   |  |  | |
+| **Index**   |  |  | |
 | Landing | Click on Logo | Redirection to Home page | Pass |
 | | Click on Sign Up button  | Redirection to Sign Up page | Pass |
 | | Click on Sign In button | Redirection to Sign In page | Pass |
@@ -335,21 +308,16 @@ The features were manually tested as defensive programming during the developmen
 | | Enter valid password (twice) | Field will only accept password format | Pass |
 | | Click Sign Up button on sign up page  | Redirects user to feed and displays message | Pass |
 | | Click on Sign In link | Redirection to Sign In page | Pass |
-| **Sing In** |  |  |  |
+| **Log In** |  |  |  |
 | | Enter valid email address | Field will only accept email address format or valid username | Pass |
 | | Enter valid password | Field will only accept password format | Pass |
 | | Click Login button on login page | Redirects user to main feed and displays message | Pass |
 | | Click Forgot Password | Redirects user to password reset page | Pass |
 | | Click on Sign Up link | Redirection to Sign Up page | Pass |
-| **Sing Out** |  |  |  |
+| **Log Out** |  |  |  |
 | | click on dropdown menu, then sign out | Redirects to sign out page | Pass |
 | | Click to confirm to sign out  | Redirects to landing page and displays message with the sign out confirmation | Pass |
-| **Password Reset**|  |  |  |
-| | Enter valid email address and click Reset Password button| Request confirmation | Pass |
-| | Receive email with link to reset password | The link to reset the password is valid | Pass |
-| | Click on the reset password link | Redirects user to change his password | Pass |
-| | Attempt to use the reset password link twice | The link won't be accepted | Pass |
-| **Main Feed** |  |  |  |
+| **All Recipes** |  |  |  |
 | | Create a post only with text as content | New post only with text is created | Pass |
 | | Create a post only with picture | User is prompted to type something into the content field before sending | Pass |
 | | Create a post with text and picture | New post with text and picture is created | Pass |
@@ -363,26 +331,13 @@ The features were manually tested as defensive programming during the developmen
 | | Click edit icon on own post | User is redirected to post edit page | Pass   |
 | | Click delete icon on own post | User is redirected to post delete confirmation page | Pass  |
 | | Click on the pagination | Change the pages correctly | Pass |
-| **Following Feed** |  |  |  |
-| | Display only post from users who are being followed | User reads only posts of the users he follows | Pass |
-| | The user is not following anyone and click on Following | Message to try follow other users | Pass |
-| | Click on a post | User will be redirected to the post detail page | Pass |
-| | Click on the username on a post | User will be redirected to the post author's profile | Pass |
-| | Click the like button on a post | Like button will fill with colour and the like count will increase by 1, Post author receives a notification letting them know someone has liked their post | Pass  |
-| | Click the like button on a post already liked by the user | Like button will become clear in the middle like count will decrease by 1 | Pass |
-| | Click the dislike button on a post | Dislike button will fill with colour and the dislike count will increase by 1 | Pass  |
-| | Click the dislike button on a post already liked by the user | Dislike button will become clear in the middle dislike count will decrease by 1 | Pass   |
-| | Click edit icon on own post | User is redirected to post edit page | Pass  |
-| | Click delete icon on own post | User is redirected to post delete confirmation page | Pass  |
-| | Attempt to delete a post as admin | Admin is redirected to delete page | Pass |
-| | Click on the pagination | Change the pages correctly | Pass |
-| **Edit Post** | | | | 
+| **Edit Recipe** | | | | 
 | | Fill in post form and click submit | Original post can be edited | Pass | 
 | | Click on the Back To Post button | User will be redirected to the original post | Pass | 
-| **Delete Post** | | | | 
+| **Delete Recipe** | | | | 
 | | Click on the Delete button | Post will be permanently deleted | Pass | 
 | | Click on the Back To Post button | User will be redirected to the original post | Pass | 
-| **Comments on Post Detail** | | | | 
+| **Comments on Recipe** | | | | 
 | | Comment a post | New comment is created, the post author is notificated | Pass |
 | | Click send on new comment form without adding content | User is prompted to enter something into the field before sending | Pass |
 | | Click the like button on a comment | Like button will fill with colour and the like count will increase by 1, Post author receives a notification letting them know someone has liked their post | Pass  |
@@ -401,57 +356,12 @@ The features were manually tested as defensive programming during the developmen
 | **Edit Comment** | | | | 
 | | Fill in comment form and click submit | Original comment will be edited | Pass | 
 | | Click on the Back To Post button | User will be redirected to the original post | Pass | 
-| **Reply on Post Detail** | | | | 
-| | Reply a comment | New reply is created, the comment author is notificated | Pass |
-| | Click delete icon on own reply | User is redirected to  delete page | Pass | 
-| | Attempt to delete a post as admin | Admin is redirected to  delete page | Pass |
-| **Delete Comment or Reply** | | | | 
+| **Delete Comment** | | | | 
 | | Click on the Delete button | Comment or reply will be permanently deleted | Pass | 
 | | Click on the Back button | User will be redirected to the original post | Pass | 
-| **Own Profile** | | | | 
-| | Click on Profile button in dropdown menu | User will be redirected to their Profile page | Pass | 
-| | Click on the Edit icon | User will be redirected to the edit profile page | Pass | 
-| | Click on the Back To Feed button | User will be redirected to main feed | Pass | 
-| | Click on followers | User will be redirected to followers list page | Pass | 
-| | Click on a post | User will be redirected to the individual post page | Pass | 
-| | Click edit icon on own post | User is redirected to post edit page | Pass | 
-| | Click delete icon on own post | User is redirected to post delete confirmation page | Pass | 
-| | Click on the pagination | Change the pages correctly | Pass |
-| **Update Profile** | | | | 
-| | Attempt to update the data (Name, bio, location, birthdate, profil and background pictures) | The information are saved correctly | Pass | 
-| | User didn't upload pictures | Default pictures are used | Pass |
-| | Click on change password | User will be redirected to change password page | Pass | 
-| | Brute forcing the URL to edit another user's profile | Redirects user to error page | Pass |
-| **Change Password** | | | | 
-| | Attempt to change password, type the old password and the new twice | The password is changed successfully | Pass | 
-| **Other Profile** | | | | 
-| | Click on the follow button | User will follow current profile they're on and button will change to say unfollow, profile owner receives a notification letting them know someone has followed them and followers count will increase by 1 | Pass |  
-| | Click on the unfollow button | User will unfollow current profile they're on and button will change to say follow, followers count will decrease by 1 | Pass | 
-| | Click on followers | User will be redirected to followers list page | Pass |  
-| | Click on the back button | User will be redirected to their feed | Pass | 
-| | Click on a post | User will be redirected to the  post detail page | Pass | 
-| | Click on the pagination | Change the pages correctly | Pass |
-| **Followers Page** | | | | 
-| | Click on user's name | User will be redirected to  user's profile | Pass |
-| | Click on the pagination | Change the pages correctly | Pass |
-| **Search Page** | | | | 
-| | Type text into search form into nav and click the search icon | User is directed to a page with a list of  users containing his search query | Pass | If there are no users and/or posts containing the query the page will let the user know there was no results in either or both for their query |
-| | Search for a non-existing user | Message  no User was found and to try again | Pass |
-| | Click search icon with empty input | Redirects to users list | Pass |
-| | Click on user's name | User will be redirected to  user's profile | Pass | 
-| | Click on the pagination | Change the pages correctly | Pass |
-| **Users Page** | | | | 
-| | Click on user's name | User will be redirected to  user's profile | Pass |
-| | Click on the pagination | Change the pages correctly | Pass |
-| **Notifications** | | | | 
-| | Click on like notification | User will be redirected to post detail from the liked post, the counter decrease by 1 | Pass |
-| | Click on following notification | User will be redirected to  user's profile who started following him, the counter decrease by 1 | Pass |
-| | Click on comment notification | User will be redirected to post detail from the comment, the counter decrease by 1 | Pass |
-| | Click on reply notification | User will be redirected to post detail from the comment, the counter decrease by 1 | Pass |
-| | Click on X | The notification will be closed, the counter decrease by 1 | Pass |
-|**Error Pages** | | | | 
+| **Error Pages** | | | | 
 | | Click on Home button | User will be redirected to his feed | Pass | 
-|**Footer** | | | | 
+| **Footer** | | | | 
 | | Click on Linkedin Icon | Redirects to LinkedIn from the creator of this application | Pass |
 | | Click on GitHub Icon | Redirects to GitHub repository | Pass |
 | | Click on "Lucimeri Andretta" link | Redirects to GitHub from the creator of this application | Pass |
@@ -459,31 +369,5 @@ The features were manually tested as defensive programming during the developmen
 </details>
 
 - - -
-
-## AUTOMATED TESTING
-
-<details>
-<summary>👇</summary>
-
-The Django's Built-in Unit Testing Framework was used to test the application functionality on the project without errors.
-To perform the test the following step was used:
-- In the terminal type the command:
-
-```bash
-python3 manage.py test
-```
-
-
-- - -
-
-## TEST CASE
-
-A test case were written to proof the post feature and the delete post. A creation of a temporary database was needed.
-Ran 2 tests without issues.
-
-![Teste Case](documentation/images/test-case.png)
-
-
-</details>
 
 Return back to the [README.md](README.md) file.
