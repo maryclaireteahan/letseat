@@ -369,6 +369,7 @@ p {
   align-items: center;
   height: fit-content;
   margin: 1em 1em 0 1em;
+  flex-direction: column;
 }
 
 .edit-delete-recipe a {
@@ -1361,6 +1362,6 @@ textarea {
   }
 
   nav ul {
-    font-size: xx-large;
+    font-size: x-large;
   }
 }
