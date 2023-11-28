@@ -377,7 +377,7 @@ The testing section can be found [here](TESTING.md).
 
 <details><summary>Console issues</summary>
 <img src="readme/documentation/console/error.png">
-<img src="readme/documentation/console/no_error.png>
+<img src="readme/documentation/console/no_error.png">
 </details">
 
 ##  Deployment & Local Development
