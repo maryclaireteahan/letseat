@@ -115,59 +115,56 @@
 ### HTML Validation
 The [W3C Markup Validation Service](https://validator.w3.org/) was used to validate the HTML of the website.
 Only profile page, I had to copy and paste code as I couldn't test as url page. Any error that is shown in validation test is cause of the Django templates. One particular that is shown accrosss website is **username** as username is displayed on navigation bar upon user login.
- <details><summary>Home page</summary>
-<img src="readme_img/validation/Index.validator.png">
+ <details><summary>Index page</summary>
+<img src="readme/documentation/validation/html/index.png">
 </details>
 
-<details><summary>Post page</summary>
-<img src="readme_img/validation/posts.validator.png">
+<details><summary>All Recipes page</summary>
+<img src="readme/documentation/validation/html/all_recipes.png">
 </details>
 
-<details><summary>Single post page</summary>
-<img src="readme_img/validation/single_post.validator.png">
+<details><summary>Single Recipe page</summary>
+<img src="readme/documentation/validation/html/single_recipe.png">
 </details>
 
-<details><summary>Profile page</summary>
-<img src="readme_img/validation/profile.validator.png">
+<details><summary>Edit Comment page</summary>
+<img src="readme/documentation/validation/html/comment_edit.png">
+</details>
+
+<details><summary>Delete Comment page</summary>
+<img src="readme/documentation/validation/html/comment_delete.png">
+</details>
+
+<details><summary>Add Recipe page</summary>
+<img src="readme/documentation/validation/html/admin_recipe_create.png">
+</details>
+
+<details><summary>Edit Recipe page</summary>
+<img src="readme/documentation/validation/html/admin_recipe_edit.png">
+</details>
+
+<details><summary>Delete Recipe page</summary>
+<img src="readme/documentation/validation/html/admin_recipe_delete.png">
 </details>
 
 <details><summary>Signup page</summary>
-<img src="readme_img/validation/signup.validator.png">
+<img src="readme/documentation/validation/html/signup.png">
 </details>
 
 <details><summary>Login page</summary>
-<img src="readme_img/validation/login.validator.png">
+<img src="readme/documentation/validation/html/login.png">
 </details>
 
 <details><summary>Logout page</summary>
-<img src="readme_img/validation/logout.validator.png">
+<img src="readme/documentation/validation/html/logout.png">
 </details>
 
-<details><summary>Search page</summary>
-<img src="readme_img/validation/search.validator.png">
-</details>
-
-<details><summary>Password reset</summary>
-<img src="readme_img/validation/password.reset.val.png">
-</details>
-
-<details><summary>Password reset done</summary>
-<img src="readme_img/validation/password_reset_done.validator.png">
-</details>
-
-<details><summary>Password reset complete</summary>
-<img src="readme_img/validation/password_reset_complete.validator.png">
-</details>
-
-<details><summary>Update comment</summary>
-<img src="readme_img/validation/update_validation.png">
-</details>
 
 ### CSS Validation 
 [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) was used for validating the CSS stylesheet. CSS file was tested by manually copying the CSS codes into the manual input option.
 
 <details><summary>CSS Validation</summary>
-<img src="readme_img/validation/css.validator.png">
+<img src="readme/documentation/validation/css/style.png">
 </details>
 
 
@@ -175,30 +172,30 @@ Only profile page, I had to copy and paste code as I couldn't test as url page. 
 [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/) was used to check that the Python code meets PEP8 standards.
 
 <details><summary>Admin</summary>
-<img src="readme_img/validation/admin.pep.png">
+<img src="readme/documentation/validation/python/admin.png">
 </details>
 
 <details><summary>Forms</summary>
-<img src="readme_img/validation/forms.pep.png">
+<img src="readme/documentation/validation/python/forms.png">
 </details>
 
 <details><summary>Views</summary>
-<img src="readme_img/validation/views.pep.png">
+<img src="readme/documentation/validation/python/views.png">
 </details>
 
 <details><summary>Urls</summary>
-<img src="readme_img/validation/urls_py.png">
+<img src="readme/documentation/validation/python/urls.png">
 </details>
 
 <details><summary>Models</summary>
-<img src="readme_img/validation/models.pep.png">
+<img src="readme/documentation/validation/python/models.png">
 </details>
 
 ### JavaScript Validation
 
 <details><summary>JS</summary>
-<img src="readme_img/validation/jshint.png"></details>
-JSHint Static Code Analysis Tool for JavaScript was used to validate the Javascript file. There was 1 warning for a variable named 'new' and 1 undefined variable. As that code was copied from other websites, I didn't change it as it would affect the code itself. No other errors or warnings are shown.
+<img src="readme/documentation/validation/javascript/script.png"></details>
+
 
 ## Manual Testing
 
