@@ -151,30 +151,36 @@ class RecipeCreate(LoginRequiredMixin, View):
     View for allowing superusers to create recipes on the frontend
     """
     def get(self, request):
-        form = RecipeForm()
-        return render(request, 'admin_recipe_create.html',
-                      {'recipe_form': form})
-
-    def post(self, request, *args, **kwargs):
-        recipe_form = RecipeForm(request.POST, request.FILES)
-        if recipe_form.is_valid():
-            recipe = recipe_form.save(commit=False)
-            recipe.slug = recipe.title.replace(" ", "-").lower()
-            recipe.email = 'admin'
-            recipe.name = 'admin'
-            recipe.user = request.user
-            recipe.save()
-            return HttpResponseRedirect(reverse('recipe_detail',
-                                                args=[recipe.slug]))
+        if request.user.is_authenticated and request.user.is_superuser:
+            form = RecipeForm()
+            return render(request, 'admin_recipe_create.html',
+                      {'recipe_form': form}) 
         else:
-            recipe_form = RecipeForm()
-        return render(
-            request,
-            'admin_recipe_create.html',
-            {
-                'recipe_form': RecipeForm()
-            },
-        )
+            return render(request, '404.html', status=404)
+        
+    def post(self, request, *args, **kwargs):
+        if request.user.is_authenticated and request.user.is_superuser:
+            recipe_form = RecipeForm(request.POST, request.FILES)
+            if recipe_form.is_valid():
+                recipe = recipe_form.save(commit=False)
+                recipe.slug = recipe.title.replace(" ", "-").lower()
+                recipe.email = 'admin'
+                recipe.name = 'admin'
+                recipe.user = request.user
+                recipe.save()
+                return HttpResponseRedirect(reverse('recipe_detail',
+                                                    args=[recipe.slug]))
+            else:
+                recipe_form = RecipeForm()
+            return render(
+                request,
+                'admin_recipe_create.html',
+                {
+                    'recipe_form': RecipeForm()
+                },
+            )
+        else:
+            return render(request, '404.html', status=404)
 
 
 @login_required
