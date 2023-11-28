@@ -375,11 +375,10 @@ The testing section can be found [here](TESTING.md).
 | The order of the categories is random and not as listed in models.py | X |
 | In dev tools in console I'm getting and error that messageRow is not a valid DOM element however it disappears when the alert message for logging in and out appears. | X |
 
-<summary>Console issues</summary>
-<details>
+<details><summary>Console issues</summary>
 <img src="readme/documentation/console/error.png">
 <img src="readme/documentation/console/no_error.png">
-</details">
+</details>
 
 ##  Deployment & Local Development
 - - -
