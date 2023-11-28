@@ -378,7 +378,7 @@ The testing section can be found [here](TESTING.md).
 <details><summary>Console issues</summary>
 <img src="readme/documentation/console/error.png">
 <img src="readme/documentation/console/no_error.png>
-</details>
+</details">
 
 ##  Deployment & Local Development
 👩‍💻
@@ -386,7 +386,7 @@ The testing section can be found [here](TESTING.md).
 <details>
 <summary>👇</summary>
 
-The live deployment application can be found on [Heroku](https://titbit-network.herokuapp.com/).
+The live deployment application can be found on [Heroku](https://maryclaireteahan-letseat-0b5910f8e882.herokuapp.com/).
 
 
 ###   Local Development
@@ -395,19 +395,23 @@ The live deployment application can be found on [Heroku](https://titbit-network.
 
 To clone the repository:
 
+- Go to the [letseat](https://github.com/maryclaireteahan/letseat) repository on GitHub 
+- Click the "Code" button to the right of the screen, click HTTPs and copy the link there
+- Open a GitBash terminal and navigate to the directory where you want to locate the clone
+- On the command line, type "git clone" then paste in the copied url and press the Enter key to begin the clone process
+- git add .
+- git commit -m "Initial commit"
+- git push
+
 1. Log in (or sign up) to GitHub.
 
-2. Go to the repository for this project, [Titbit](https://github.com/luandretta/network).
+2. Go to the [letseat](https://github.com/maryclaireteahan/letseat) repository on GitHub .
 
-3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+3. Click the "Code" button to the right of the screen, click HTTPs and copy the link there.
 
-4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+4. Open a GitBash terminal and navigate to the directory where you want to locate the clone.
 
-5. Type the following command in the terminal (after the git clone you will need to paste the link you copied in step 3 above):
-
-    ```bash
-    git clone https://github.com/luandretta/network
-    ```
+5. On the command line, type "git clone" then paste in the copied url and press the Enter key to begin the clone process
 
 6. Set up a virtual environment (this step is not required if you are using the Code Institute Template in GitPod as this will already be set up for you).
 
@@ -415,6 +419,15 @@ To clone the repository:
 
     ```bash
     pip3 install -r requirements.txt
+    ```
+8. ```
+    git add
+    ``` 
+9.  ```
+    git commit -m "Initial commit"
+    ```
+10. ```
+    git push
     ```
 
 
