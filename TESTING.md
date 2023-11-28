@@ -204,15 +204,15 @@ The [Code Institute Python Linter](https://pep8ci.herokuapp.com)was used to vali
 | --- | ------ |:---:|
 | settings.py |  <img src="readme/documentation/validation/python/letseat/settings.png">  | Pass - Line too long due to AUTH_PASSWORD_VALIDATORS|
 | urls.py (main) |  <img src="readme/documentation/validation/python/letseat/urls.png">  | Pass |
-| views.py | <img src="readme/documentation/validation/python/letseat/views.png>  | Pass |
+| views.py | <img src="readme/documentation/validation/python/letseat/views.png">  | Pass |
 
 
 #### Blog app
 
 | File | Screenshot  | Notes|
 | --- | --- | --- |
-| admin.py | <img src="readme/documentation/validation/python/blog/admin.png>   | Pass |
-| forms.py | <img src="readme/documentation/validation/python/blog/forms.png>   | Pass |
+| admin.py | <img src="readme/documentation/validation/python/blog/admin.png">   | Pass |
+| forms.py | <img src="readme/documentation/validation/python/blog/forms.png">   | Pass |
 | models.py | <img src="readme/documentation/validation/python/blog/models.png">   | Pass |
 | urls.py |  <img src="readme/documentation/validation/python/blog/urls.png">  | Pass |
 | views.py | <img src="readme/documentation/validation/python/blog/views.png">   | Pass |
