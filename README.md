@@ -382,10 +382,8 @@ The testing section can be found [here](TESTING.md).
 </details">
 
 ##  Deployment & Local Development
-👩‍💻
 - - -
 <details>
-<summary>👇</summary>
 
 The live deployment application can be found on [Heroku](https://maryclaireteahan-letseat-0b5910f8e882.herokuapp.com/).
 
@@ -504,17 +502,17 @@ Either:
 
 Or:
 - In the Terminal/CLI, connect to Heroku using this command: 
-```bash
+```
 heroku login -i
 ```
 
 - Set the remote for Heroku: 
-```bash
+```
 heroku git:remote -a app_name #(replace *app_name* with your app name)
 ```
 
 - After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
-```bash
+```
 git push heroku main
 ```
 The project should now be connected and deployed to Heroku!
@@ -545,24 +543,24 @@ os.environ.setdefault("DEBUG", "True")
 
 Once the project is cloned or forked, in order to run it locally, you'll need to follow these steps:
 - Start the Django app: 
-```bash
+```
 python3 manage.py runserver
 ```
 - Stop the app once it's loaded: `CTRL+C` or `⌘+C` (Mac)
 - Make any necessary migrations:
-```bash
+```
 python3 manage.py makemigrations
 ```
 - Migrate the data to the database:
-```bash
+```
 python3 manage.py migrate
 ```
 - Create a superuser:
-```bash
+```
 python3 manage.py createsuperuser
 ```
 - Run the Django app:
-```bash
+```
 python3 manage.py runserver
 ```
 
