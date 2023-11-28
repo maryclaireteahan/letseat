@@ -380,35 +380,182 @@ The testing section can be found [here](TESTING.md).
 <img src="readme/documentation/console/no_error.png>
 </details>
 
-## Deployment
-This website is deployed to Heroku from a GitHub repository, the following steps were taken:
-
-#### Creating Repository on GitHub
-- First make sure you are signed into [Github](https://github.com/) and go to the code institutes template, which can be found [here](https://github.com/Code-Institute-Org/gitpod-full-template).
-- Then click on **use this template** and select **Create a new repository** from the drop-down. Enter the name for the repository and click **Create repository from template**.
-- Once the repository was created, I clicked the green **gitpod** button to create a workspace in gitpod so that I could write the code for the site.
-
-#### Creating an app on Heroku
-- After creating the repository on GitHub, head over to [heroku](https://www.heroku.com/) and sign in.
-- On the home page, click **New** and **Create new app** from the drop down.
-- Give the app a name(this must be unique) and select a **region** I chose **Europe** as I am in Europe, Then click **Create app**.
-
-#### Create a database On ElephantSQL
-- Log into the [ElephantSQL](https://www.elephantsql.com/) website and click **Create new Instance**
-- Enter a **Name** and keep the plan as **Tiny Turtle Free**, then **tags** field can be left blank, Select a region closest to you, I selected **EU-West-1(Ireland)** as I'm in Ireland. Then click **Review** and afterward click **create an instance**.
-- On The Dashboard click on your database instance name.
-- You will see the details for your database instance, in the URL section click on the copy icon to copy the database URL.
-- Head over to gitpod and create a **Database URL** environment variable in your env.py file and set it equal to the copied URL.
-
-#### Deploying to Heroku.
-- Head back over to [heroku](https://www.heroku.com/) and click on your **app** and then go to the **Settings tab**
-- On the **settings page** scroll down to the **config vars** section and enter the **DATABASE_URL** which you will set equal to the elephantSQL URL, create **Secret key** this can be anything,
-**CLOUDINARY_URL** this will be set to your cloudinary url and finally **Port** which will be set to 8000.
-- Then scroll to the top and go to the **deploy tab** and go down to the **Deployment method** section and select **Github** and then sign into your account.
-- Below that in the **search for a repository to connect to** search box enter the name of your repository that you created on **GitHub** and click **connect**
-- Once it has been connected scroll down to the **Manual Deploy** and click **Deploy branch** when it has deployed you will see a **view app** button below and this will bring you to your newly deployed app.
-- Please note that when deploying manually you will have to deploy after each change you make to your repository.
+##  Deployment & Local Development
+👩‍💻
 - - -
+<details>
+<summary>👇</summary>
+
+The live deployment application can be found on [Heroku](https://titbit-network.herokuapp.com/).
+
+
+###   Local Development
+
+#### How to Clone
+
+To clone the repository:
+
+1. Log in (or sign up) to GitHub.
+
+2. Go to the repository for this project, [Titbit](https://github.com/luandretta/network).
+
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+
+5. Type the following command in the terminal (after the git clone you will need to paste the link you copied in step 3 above):
+
+    ```bash
+    git clone https://github.com/luandretta/network
+    ```
+
+6. Set up a virtual environment (this step is not required if you are using the Code Institute Template in GitPod as this will already be set up for you).
+
+7. Install the packages from the requirements.txt file by running the following command in the Terminal:
+
+    ```bash
+    pip3 install -r requirements.txt
+    ```
+
+
+### ElephantSQL Database
+
+This project uses [ElephantSQL](https://www.elephantsql.com) for the PostgreSQL Database.
+
+To obtain your own Postgres Database, sign-up with your GitHub account, then follow these steps:
+- Click **Create New Instance** to start a new database.
+- Provide a name (this is commonly the name of the project: tribe).
+- Select the **Tiny Turtle (Free)** plan.
+- You can leave the **Tags** blank.
+- Select the **Region** and **Data Center** closest to you.
+- Once created, click on the new database name, where you can view the database URL and Password.
+
+
+### Cloudinary API
+
+This project uses the [Cloudinary API](https://cloudinary.com) to store media assets online, due to the fact that Heroku doesn't persist this type of data.
+
+To obtain your own Cloudinary API key, create an account and log in.
+- For *Primary interest*, you can choose *Programmable Media for image and video API*.
+- Optional: *edit your assigned cloud name to something more memorable*.
+- On your Cloudinary Dashboard, you can copy your **API Environment Variable**.
+- Be sure to remove the `CLOUDINARY_URL=` as part of the API **value**; this is the **key**.
+
+
+### Heroku Deployment
+
+This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+
+Deployment steps are as follows, after account setup:
+
+- Select **New** in the top-right corner of your Heroku Dashboard, and select **Create new app** from the dropdown menu.
+- Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select **Create App**.
+- From the new app **Settings**, click **Reveal Config Vars**, and set your environment variables.
+
+| Key | Value |
+| --- | --- |
+| `CLOUDINARY_URL` | Insert your own Cloudinary API key here |
+| `DATABASE_URL` | Insert your own ElephantSQL database URL here |
+| `DISABLE_COLLECTSTATIC` | 1 (*this is temporary, and can be removed for the final deployment*) |
+| `SECRET_KEY` | This can be any Django random secret key |
+| `EMAIL_USER` | Insert your e-mail (a gmail was used) |
+| `EMAIL_HOST_PASSWORD` | Insert the app password |
+
+
+
+Heroku needs two additional files in order to deploy properly.
+- requirements.txt
+- Procfile
+
+You can install this project's **requirements** (where applicable) using:
+```bash
+pip3 install -r requirements.txt
+```
+
+If you have your own packages that have been installed, then the requirements file needs updated using:
+```bash
+pip3 freeze --local > requirements.txt
+```
+
+The **Procfile** can be created with the following command:
+```bash
+echo web: gunicorn app_name.wsgi > Procfile
+```
+- *replace **app_name** with the name of your primary Django app name; the folder where settings.py is located*
+
+For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
+
+Either:
+- Select **Automatic Deployment** from the Heroku app.
+
+Or:
+- In the Terminal/CLI, connect to Heroku using this command: 
+```bash
+heroku login -i
+```
+
+- Set the remote for Heroku: 
+```bash
+heroku git:remote -a app_name #(replace *app_name* with your app name)
+```
+
+- After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
+```bash
+git push heroku main
+```
+The project should now be connected and deployed to Heroku!
+
+
+### Local Deployment
+
+This project can be cloned or forked in order to make a local copy on your own system.
+
+For either method, you will need to install any applicable packages found within the *requirements.txt* file.
+- `pip3 install -r requirements.txt`.
+
+You will need to create a new file called `env.py` at the root-level,
+and include the same environment variables listed above from the Heroku deployment steps.
+
+Sample `env.py` file:
+
+```python
+import os
+
+os.environ.setdefault("CLOUDINARY_URL", "insert your own Cloudinary API key here")
+os.environ.setdefault("DATABASE_URL", "insert your own ElephantSQL database URL here")
+os.environ.setdefault("SECRET_KEY", "this can be any random secret key")
+
+# local environment only (do not include these in production/deployment!)
+os.environ.setdefault("DEBUG", "True")
+```
+
+Once the project is cloned or forked, in order to run it locally, you'll need to follow these steps:
+- Start the Django app: 
+```bash
+python3 manage.py runserver
+```
+- Stop the app once it's loaded: `CTRL+C` or `⌘+C` (Mac)
+- Make any necessary migrations:
+```bash
+python3 manage.py makemigrations
+```
+- Migrate the data to the database:
+```bash
+python3 manage.py migrate
+```
+- Create a superuser:
+```bash
+python3 manage.py createsuperuser
+```
+- Run the Django app:
+```bash
+python3 manage.py runserver
+```
+
+</details>
+
+- - -
+
 
 ## Credits
 - [Stack Overflow](https://stackoverflow.com/) 
