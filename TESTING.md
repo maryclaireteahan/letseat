@@ -27,14 +27,14 @@ The deployed application was tested on multiple devices to check for responsiven
 
 It works as expected according to the wireframes and no issue was found.
 
-![Responsiveness](documentation/images/responsiveness.jpg)
+![Responsiveness](<img src="readme/documentation/responsiveness/amiresponsive.png">)
 
 |Device| Screenshot | 
 |:---|:---: |
-| Desktop |  ![Desktop](documentation/images/desktop.png)  |
-| Laptop  |  ![Laptop](documentation/images/laptop.png)  |
-| Tablet  |  ![Tablet](documentation/images/ipad.png)  |
-| Mobile  |  ![Mobile](documentation/images/iphone.png)  |
+| Desktop |  <img src="readme/documentation/responsiveness/sizes/12oo.png">  |
+| Laptop  |  <img src="readme/documentation/responsiveness/sizes/992.png">  |
+| Tablet  |  <img src="readme/documentation/responsiveness/sizes/768.png">  |
+| Mobile  |  <img src="readme/documentation/responsiveness/sizes/576.png"> |
 
 </details>
 
@@ -50,9 +50,9 @@ The deployed project was tested on multiple browsers to check for compatibility 
 
 |Browser | Screenshot | 
 |:---:|:---: |
-| Chrome | ![Chrome](documentation/images/chrome.png)  |
-| Edge  | ![Edge](documentation/images/edge.png)  |
-| Internet Explorer - Mobile |  ![Internet Explorer](documentation/images/explorer.jpg)  |
+| Chrome | <img src="readme/documentation/browser/chrome.png"> |
+| Edge  | <img src="readme/documentation/browser/edge.png"> |
+| Firefox |  <img src="readme/documentation/browser/firefox.png"> |
 
 </details>
 
@@ -190,9 +190,7 @@ The [JShint Validator](https://jshint.com/) was used to validate the JavaScript 
 | --- | --- | --- |
 | script.js | <img src="readme/documentation/validation/javascript/script.png"> | No Errors |
 
-
 - - - 
-
 
 ### PYTHON
 

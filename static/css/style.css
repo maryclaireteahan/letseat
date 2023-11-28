@@ -478,8 +478,7 @@ p {
 }
 
 .single-recipe-img-container {
-  width: 70%;
-  height: 100%;
+  width: 60%;
   padding: 1em 0;
   display: flex;
   flex-direction: column;
@@ -487,8 +486,7 @@ p {
 }
 
 .single-recipe-img {
-  height: 100%;
-  width: 100%;
+  width: 55%;
   border-radius: 0.25em;
   border: thin #252424 solid;
   margin-top: 0.5em;
@@ -915,8 +913,7 @@ textarea {
 
 .login-and-button-container {
   display: flex;
-  width: 70%;
-  height: 100%;
+  width: 40%;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -1284,7 +1281,6 @@ textarea {
   }
 
   .comments-container {
-    flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
   }
@@ -1373,5 +1369,8 @@ textarea {
 @media screen and (min-width: 1200px) {
   body {
     font-size: x-large;
+  }
+  .comments-container {
+    flex-direction: row;
   }
 }
