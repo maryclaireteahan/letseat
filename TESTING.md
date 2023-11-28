@@ -27,13 +27,33 @@
 
 #### Desktop Results:
 <details><summary>Desktop</summary>
-<img src="readme_img/validation/mobile_performance.png">
+<img src="readme/documentation/performance/desktop/index.png">
+<img src="readme/documentation/performance/desktop/all_recipes.png">
+<img src="readme/documentation/performance/desktop/single_recipe.png">
+<img src="readme/documentation/performance/desktop/comment_edit.png">
+<img src="readme/documentation/performance/desktop/comment_delete.png">
+<img src="readme/documentation/performance/desktop/admin_recipe_create.png">
+<img src="readme/documentation/performance/desktop/admin_recipe_edit.png">
+<img src="readme/documentation/performance/desktop/admin_recipe_delete.png">
+<img src="readme/documentation/performance/desktop/signup.png">
+<img src="readme/documentation/performance/desktop/login.png">
+<img src="readme/documentation/performance/desktop/logout.png">
 </details>
 
 
 #### Mobile Results:
 <details><summary>Mobile</summary>
-<img src="readme_img/validation/mobile_performance.png">
+<img src="readme/documentation/performance/mobile/index.png">
+<img src="readme/documentation/performance/mobile/all_recipes.png">
+<img src="readme/documentation/performance/mobile/single_recipe.png">
+<img src="readme/documentation/performance/mobile/comment_edit.png">
+<img src="readme/documentation/performance/mobile/comment_delete.png">
+<img src="readme/documentation/performance/mobile/admin_recipe_create.png">
+<img src="readme/documentation/performance/mobile/admin_recipe_edit.png">
+<img src="readme/documentation/performance/mobile/admin_recipe_delete.png">
+<img src="readme/documentation/performance/mobile/signup.png">
+<img src="readme/documentation/performance/mobile/login.png">
+<img src="readme/documentation/performance/mobile/logout.png">
 </details>
 
 ## Browser Compatibility
