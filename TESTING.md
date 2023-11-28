@@ -266,41 +266,21 @@ In addition to the other tests, I have conducted a manual checklist for differen
 | &check; | Subscribe input field is displayed
 
 <details><summary>Footer</summary>
-<img src="readme_img/test/footer.png">
+<img src="readme/documentation/features/base/footer.png">
 </details>
 
-| Status | **Subscribe field**
-|:-------:|:--------|
-| &check; | No input not allowed
-| &check; | Only standard email characters allowed
-| &check; | After submitting confirmation message is displayed to the user
-| &check; | User received subscription email to the email address he provided
-
-<details><summary>Subscribe empty</summary>
-<img src="readme_img/test/subscribe.png">
-</details>
-
-<details><summary>Subscribe wrong</summary>
-<img src="readme_img/test/correct_subs.png">
-</details>
-
-<details><summary>Subscribe message</summary>
-<img src="readme_img/test/subscr.png">
-</details>
-
-| Status | **Home Page**
+| Status | **Index Page**
 |:-------:|:--------|
 | &check; | Users receive basic knowledge about the website
 
-<details><summary>Home page</summary>
-<img src="readme_img/page_screen/home1.png">
+<details><summary>Index Hero</summary>
+<img src="readme/documentation/features/index/hero.png">
+</details>
+<details><summary>Index Button</summary>
+<img src="readme/documentation/features/index/discover_recipes.png">
 </details>
 
-<details><summary>Home page</summary>
-<img src="readme_img/page_screen/home2.png">
-</details>
-
-| Status | **Post Page**
+| Status | **Recipes Page**
 |:-------:|:--------|
 | &check; | Shows the blog posts paginated by 6 posts
 | &check; | Next and previous buttons at the bottom of the page works as expected and leads user to next or prevoius page 
@@ -308,29 +288,17 @@ In addition to the other tests, I have conducted a manual checklist for differen
 | &check; | Clicking on the title user gets redirected to the single post page
 | &check; | Search input field is displayed to user
 
-<details><summary>Post page</summary>
-<img src="readme_img/test/post_pagination.png">
+<details><summary>Recipe Categories</summary>
+<img src="readme/documentation/features/all_recipes/categories1.png">
+<img src="readme/documentation/features/all_recipes/categories2.png">
+<img src="readme/documentation/features/all_recipes/categories3.png">
+</details>
+<details><summary>Recipe Categories Scrollbar</summary>
+<img src="readme/documentation/features/all_recipes/scrollbar.png">
 </details>
 
-| Status | **Search field & page**
-|:-------:|:--------|
-| &check; | No input is not allowed
-| &check; | Search not matched to the post - user is redirected to the search page with message indicating that there is no match to searched words
-| &check; | Search matches the post - user is redirected to the search page with match post displayed to the user
 
-<details><summary>Search - no input</summary>
-<img src="readme_img/test/search_wrong.png">
-</details>
-
-<details><summary>Search page no match results</summary>
-<img src="readme_img/test/no_match_posts.png">
-</details>
-
-<details><summary>Search page match result</summary>
-<img src="readme_img/test/searched_post.png">
-</details>
-
-| Status | **Single post Page**
+| Status | **Single Recipe Page**
 |:-------:|:--------|
 | &check; | Shows the full content of the post
 | &check; | Shows a list of comments posted so far
@@ -351,21 +319,17 @@ In addition to the other tests, I have conducted a manual checklist for differen
 | &check; | Clicking on "Update" button new template is beeing shown to the user with box to update his comment
 | &check; | Confirming his updated comment message is displayed to the user and his updated comment
 
-<details><summary>Post page</summary>
-<img src="readme_img/page_screen/post_pg.png">
-</details>
+<details><summary>Single Recipe Like and Comment Icons</summary>
+<img src="readme/documentation/features/single_recipe/likes_comment_icons.png"></details>
 
 <details><summary>Comments</summary>
-<img src="readme_img/test/whole_cmnt.png">
-</details>
-
-<details><summary>Approve comments</summary>
-<img src="readme_img/test/approval.png">
-</details>
+<img src="readme/documentation/features/single_recipe/comment_logged_out.png">
+<img src="readme/documentation/features/single_recipe/comment_logged_in.png"></details>
 
 <details><summary>CRUD Comments</summary>
-<img src="readme_img/test/comments_crud.png">
-</details>
+<img src="readme/documentation/features/single_recipe/comments.png">
+<img src="readme/documentation/features/single_recipe/edit_delete_authorised.png">
+<img src="readme/documentation/features/single_recipe/edit_delete_not_authorised.png"></details>
 
 <details><summary>Update comments</summary>
 <img src="readme_img/test/edit_comment.png">
@@ -376,92 +340,20 @@ In addition to the other tests, I have conducted a manual checklist for differen
 </details>
 
 
-| Status | **Profile page**
-|:-------:|:--------|
-| &check; | User information is displayed to the user
-| &check; | Input fields are provided for the user to change his details
-| &check; | Extra fields for Bio and Image are provided
-| &check; | Two buttons for update and delete profile are displayed 
-
-<details><summary>Profile page</summary>
-<img src="readme_img/test/profile.png">
-</details>
-
-| Status | **Profile page Update**
-|:-------:|:--------|
-| &check; | Changing any fields, or adding a picture upon clicking on the 'Update' button new information is displayed to the user
-| &check; | Confirmation message is shown to the user
-
-<details><summary>Profile page update</summary>
-<img src="readme_img/test/update_profile.png">
-</details>
-
-| Status | **Profile delete**
-|:-------:|:--------|
-| &check; | Clicking the 'Delete' button, the modal is displayed to the user to confirm his actions
-| &check; | Clicking 'Cancel' in the modal the user is redirected to the Profile page
-| &check; | Clicking 'Delete' in the modal the user is redirected to the Home page
-| &check; | Confirmation message is shown to the user
-
-<details><summary>Profile page delete</summary>
-<img src="readme_img/test/modal_account.png">
-</details>
-
-<details><summary>Profile page delete</summary>
-<img src="readme_img/test/deleted_acc.png">
-</details>
-
 | Status | **Login page**
 |:-------:|:--------|
 | &check; | No input not allowed
 | &check; | Messages displayed to the user in case of the username or password is not matching the information in databese
 | &check; | Clickin on 'Forgot password' link redirects user to password reset page
 
-<details><summary>Incorrect password/username</summary>
-<img src="readme_img/test/incorrect password.png">
-</details>
+<details><summary>Login</summary>
+<img src="readme/documentation/features/login/login.png">
+<img src="readme/documentation/features/login/no_username.png">
+<img src="readme/documentation/features/login/no_password.png">
+<img src="readme/documentation/features/login/wrong_username.png">
+<img src="readme/documentation/features/login/wrong_password.png">
+<img src="readme/documentation/features/login/sucessful_login.png"></details>
 
-
-| Status | **Password change route**
-|:-------:|:--------|
-| &check; | Input field is displayed on the password change page for the user to provide an email to recover the password
-| &check; | No input is not allowed
-| &check; | Allowed only standard email input 
-| &check; | 'Send me instructions' button work as expected
-| &check; | After submitting user is redirected to new conformation page
-| &check; | If the email matches the registered username clickable link is provided in the inbox for the user
-| &check; | If the email doesn't match the registered username message is displayed to ignore that email, if not registered with the Take a hike website
-| &check; | Link redirects to input new password page
-| &check; | New password must pass all standard criteria
-| &check; | After submitting a new password new page with conformation is displayed to the user with a link to sign in to the website
-
-<details><summary>Forgot password link</summary>
-<img src="readme_img/test/forgot_password.png">
-</details>
-
-<details><summary>Forgot password</summary>
-<img src="readme_img/test/highlight.png">
-</details>
-
-<details><summary>Check email</summary>
-<img src="readme_img/test/check_email.png">
-</details>
-
-<details><summary>New password</summary>
-<img src="readme_img/test/new_password.png">
-</details>
-
-<details><summary>Too short password</summary>
-<img src="readme_img/test/too_short_pass.png">
-</details>
-
-<details><summary>Not matching password</summary>
-<img src="readme_img/test/no_match_pass.png">
-</details>
-
-<details><summary>Confirmation news password</summary>
-<img src="readme_img/test/reset_complete.png">
-</details>
 
 | Status | **Logout**
 |:-------:|:--------|
@@ -473,8 +365,8 @@ In addition to the other tests, I have conducted a manual checklist for differen
 </details>
 
 <details><summary>Logout message</summary>
-<img src="readme_img/test/message-lgo.png">
-</details>
+<img src="readme/documentation/features/logout/logout.png">
+<img src="readme/documentation/features/logout/logged_out.png"></details>
 
 
 | Status | **Sign up**
@@ -486,15 +378,13 @@ In addition to the other tests, I have conducted a manual checklist for differen
 | &check; | Prompt message is displayed to the user indicating that he has successfully signed up
 
 <details><summary>Signup</summary>
-<img src="readme/documentation/">
-</details>
-
-<details><summary>Signup form validation</summary>
-<img src="readme_img/test/signup_form_v.png">
-</details>
-
-<details><summary>Login message</summary>
-<img src="readme_img/test/login_msg.png">
+<img src="readme/documentation/features/signup/signup.png">
+<img src="readme/documentation/features/signup/require_username.png">
+<img src="readme/documentation/features/signup/require_password.png">
+<img src="readme/documentation/features/signup/require_password_again.png">
+<img src="readme/documentation/features/signup/password_errors1.png">
+<img src="readme/documentation/features/signup/password_errors2.png">
+<img src="readme/documentation/features/signup/sucessful_signup.png">
 </details>
 
 | Status | **Back link**

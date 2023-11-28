@@ -104,8 +104,7 @@ def commentEdit(request, id):
                     pass
         return render(request, 'comment_edit.html', {'form' :form})
     else:
-        return HttpResponse("You do not have permission to edit this comment.")
-
+        return render(request, '404.html', status=404)
 
 @login_required
 def commentDelete(request, id):
@@ -122,8 +121,7 @@ def commentDelete(request, id):
             return render(request, 'comment_delete.html',
                           {'comment_instance': comment_instance})
     else:
-        return HttpResponse(
-            "You do not have permission to delete this comment.")
+        return render(request, '404.html', status=404)
 
 
 class CategoryListView(generic.ListView):
@@ -152,10 +150,15 @@ class RecipeCreate(LoginRequiredMixin, View):
     """
     View for allowing superusers to create recipes on the frontend
     """
+    
     def get(self, request):
-        form = RecipeForm()
-        return render(request, 'admin_recipe_create.html',
-                      {'recipe_form': form})
+        if self != self.is_superuser:
+            return render(request, '404.html', status=404)
+        else:
+            form = RecipeForm()
+            return render(request, 'admin_recipe_create.html',
+                        {'recipe_form': form})
+
 
     def post(self, request, *args, **kwargs):
         recipe_form = RecipeForm(request.POST, request.FILES)
@@ -178,7 +181,6 @@ class RecipeCreate(LoginRequiredMixin, View):
             },
         )
 
-
 @login_required
 def recipeEdit(request, id):
     """
@@ -198,8 +200,7 @@ def recipeEdit(request, id):
                     pass
         return render(request, 'admin_recipe_edit.html', {'form':form})
     else:
-        return HttpResponse("You do not have permission to edit this recipe.")
-
+        return render(request, '404.html', status=404)
 
 @login_required
 def recipeDelete(request, id):
@@ -215,5 +216,4 @@ def recipeDelete(request, id):
             return render(request, 'admin_recipe_delete.html',
                           {'recipe_instance': recipe_instance})
     else:
-        return HttpResponse(
-            "You do not have permission to delete this recipe.")
+        return render(request, '404.html', status=404)
