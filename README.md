@@ -40,6 +40,7 @@ Let's Eat is a fully responsive full-stack website that I have built using the D
 10. [Acknowledgements](#acknowledgements)
 
 ## Design & Planning:
+<details>
 
 ### User Stories
 
@@ -135,11 +136,21 @@ I divided the project board into 3 sections:
 <details><summary>User story detail</summary>
 <img src="readme/documentation/user_story/user_story_detail.png">
 </details>
+</details>
+</details>
+
+- - -
 
 ### Typography
+<details>
+
 Google Fonts were used to import Oxygen font into styles.css.  It was chosen as it is a simple, font with a strong clear feel that doesn't distract from the content.
+</details>
+- - -
 
 ### Colour Scheme
+<details>
+
 For this website, I chose a hero image and based the color palette off of that. There is a contrast between the dark fonts and light backgrounds in order to keep the site accessible.
   
 <details><summary>Color palette</summary>
@@ -147,7 +158,8 @@ For this website, I chose a hero image and based the color palette off of that. 
 <img src="readme/documentation/color/palette2.png">
 <img src="readme/documentation/color/palette3.png">
 </details>
-
+</details>
+- - -
 
 <!-- ### DataBase Diagram
 Below is the database diagram that I created using LucidCharts.
@@ -155,8 +167,10 @@ Below is the database diagram that I created using LucidCharts.
 <details><summary>DataBase diagram</summary>
 <img src="readme_img/wireframes/dtb.jpeg">
 </details>  -->
+- - -
 
 ## Features:
+<details>
 
 ### Navigation Bar
 - The navigation bar has a consistent look and placement on all three pages of the website supporting easy navigation.  It includes a simple Logo, and the menu options: Home page, Recipes page, Login page, Signup page and Logout page and is responsive on multiple screen sizes. The menu options are hidden until a burger icon is clicked which then brings up the menu options.
@@ -301,8 +315,12 @@ Below is the database diagram that I created using LucidCharts.
 <img src="readme/documentation/features/signup/sucessful_signup.png">
 </details>
 
+</details>
+
 
 ## Future Features
+<details>
+
 <details><summary>Future features</summary>
 <img src="readme_img/page_screen/future.png">
 </details>
@@ -311,9 +329,12 @@ Below is the database diagram that I created using LucidCharts.
 - Give users the option to reply to other users' comments
 - Allow users to reset their passwords
 - Add a top picks section where the user admin can update their top picks of their recipes weekly
-
+</details>
+- - -
 
 ## Technologies Used
+<details>
+
 - [Balsamiq](https://en.wikipedia.org/wiki/Balsamiq) was used to create the wireframes.
 - [LucidChart](https://www.lucidchart.com/pages/) was used to design the database schema.
 - [HTML](https://en.wikipedia.org/wiki/HTML) was used for the mark up.
@@ -327,9 +348,13 @@ Below is the database diagram that I created using LucidCharts.
 - [Git](https://en.wikipedia.org/wiki/Git) was used for version control.
 - [Cloudinary](https://cloudinary.com/) was used to store the images.
 - [ElephantSQL](https://www.elephantsql.com/) was used to store the database.
+</details>
+
 - - -
 
 <!-- ## Libraries
+<details>
+
 - asgiref - A standard Python library to allow for asynchronous web apps and servers to communicate with each other.
 - cloudinary - A Python package allowing integration between the application and Cloudinary.
 - coverage - is a third-party package that helps developers measure code coverage in their Python codebase.
@@ -349,11 +374,18 @@ Below is the database diagram that I created using LucidCharts.
 - Pillow - A Python Imaging Library adds image processing capabilities
 - requests-oauthlib - A Python package for OAuthlib authentication support for Requests.
 - sqlparse - A non-validating SQL parser for Python.
+</details>
+
  -->
 ## Testing
+<details>
+
 The testing section can be found [here](TESTING.md).
+</details>
 
 ## Bugs
+<details>
+
 | **Bug** | **Fix** |
 | ----------- | ----------- |
 | On index page hero image was not rendering on deployed site | Added the image in an img tag using static tags |
@@ -375,9 +407,6 @@ The testing section can be found [here](TESTING.md).
 | The order of the categories is random and not as listed in models.py | X |
 | In dev tools in console I'm getting and error that messageRow is not a valid DOM element however it disappears when the alert message for logging in and out appears. | X |
 
-<details><summary>Console issues</summary>
-<img src="readme/documentation/console/error.png">
-<img src="readme/documentation/console/no_error.png">
 </details>
 
 ##  Deployment & Local Development
@@ -479,17 +508,17 @@ Heroku needs two additional files in order to deploy properly.
 - Procfile
 
 You can install this project's **requirements** (where applicable) using:
-```bash
+```
 pip3 install -r requirements.txt
 ```
 
 If you have your own packages that have been installed, then the requirements file needs updated using:
-```bash
+```
 pip3 freeze --local > requirements.txt
 ```
 
 The **Procfile** can be created with the following command:
-```bash
+```
 echo web: gunicorn app_name.wsgi > Procfile
 ```
 - *replace **app_name** with the name of your primary Django app name; the folder where settings.py is located*
@@ -569,6 +598,8 @@ python3 manage.py runserver
 
 
 ## Credits
+<details>
+
 - [Stack Overflow](https://stackoverflow.com/) 
 - [W3schools](https://www.w3schools.com/) this was great for looking up forgotten **CSS** syntax and how to use it.
 - [CodeInstitute](https://learn.codeinstitute.net/) for their walkthrough project, which guided me with website build especially for publishing posts, comments and likes section which I code along with the video with few adjustments
@@ -582,10 +613,14 @@ python3 manage.py runserver
 - [Traversy media](https://www.traversymedia.com/) for providing me with the code for dissapering hero text
 - [Lucidchart](https://lucid.app/) for providing me with tools to create my database system
 - [Balsamic](https://balsamiq.com/wireframes/) was used to create wireframes
+</details>
 
 ## Acknowledgements:
+<details>
+
 - I would like to thank my mentor Lauren-Nicole for all her support and guidance during this project 
 - I would also like to thank our cohort facilitator Marko Tot, for sending me useful links as well as giving me one to one support when I was struggling particularly with the models.
 - I would like to thank Hennadi and Mehatab who also helped me a lot when I was struggling with my models.
+</details>
 
 [Back to the top](#let's-eat)
