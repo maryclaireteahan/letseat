@@ -151,7 +151,7 @@ class RecipeCreate(LoginRequiredMixin, View):
     View for allowing superusers to create recipes on the frontend
     """
     def get(self, request):
-        if request.user.is_authenticated and request.user.is_superuser:
+        if request.user.is_superuser:
             form = RecipeForm()
             return render(request, 'admin_recipe_create.html',
                       {'recipe_form': form}) 
@@ -159,7 +159,7 @@ class RecipeCreate(LoginRequiredMixin, View):
             return render(request, '404.html', status=404)
         
     def post(self, request, *args, **kwargs):
-        if request.user.is_authenticated and request.user.is_superuser:
+        if request.user.is_superuser:
             recipe_form = RecipeForm(request.POST, request.FILES)
             if recipe_form.is_valid():
                 recipe = recipe_form.save(commit=False)

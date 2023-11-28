@@ -5,18 +5,9 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 {% endblock css %} 
 {% block content %}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404</title>
-</head>
 <body>
-  <div> <h1>404</h1>
-        <a href="{% url 'home' %}"> Go Home</a>
-</div> 
-</body>
-</html>
+  <div class="error"> 
+    <h1>404</h1>
+    <a href="{% url 'home' %}"> Go Home</a>
+</div> s
 {% endblock %} 
