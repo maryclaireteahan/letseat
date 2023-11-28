@@ -72,38 +72,41 @@
 |  Images work |  Yes  |  Yes  |  Yes  | Yes   | Yes   | Yes   |   |
 | Forms work  |  Yes  |  Yes  | Yes   | Yes   | Yes   | Yes   |   |
 
-<details><summary>Smaller screens Home</summary>
-<img src="readme_img/responsive/small_scr_home.png">
+<details><summary>Smaller screens Index</summary>
+<img src="readme/documentation/responsiveness/smaller_screen_index.png">
 </details>
-<details><summary>Smaller screens Posts</summary>
-<img src="readme_img/responsive/small_scr_post.png">
+<details><summary>Smaller screens All Recipes</summary>
+<img src="readme/documentation/responsiveness/smaller_screen_recipes.png">
 </details>
-<details><summary>Smaller screens Post</summary>
-<img src="readme_img/responsive/single_post_sm.png">
+<details><summary>Smaller screens Single Recipe</summary>
+<img src="readme/documentation/responsiveness/smaller_screen_single_recipe.png">
 </details>
-<details><summary>Smaller screens Profile</summary>
-<img src="readme_img/responsive/profile_sm_scr.png">
+<details><summary>Smaller screens Comments</summary>
+<img src="readme/documentation/responsiveness/smaller_screen_comments.png">
 </details>
-<details><summary>Smaller screens Logout</summary>
-<img src="readme_img/responsive/singout_sm.png">
+<details><summary>Smaller screens Edit Comment</summary>
+<img src="readme/documentation/responsiveness/smaller_screen_comment_edit.png">
+</details>
+<details><summary>Smaller screens Delete Comment</summary>
+<img src="readme/documentation/responsiveness/smaller_screen_comment_delete.png">
+</details>
+<details><summary>Medium screens Create Recipe</summary>
+<img src="readme/documentation/responsiveness/smaller_screen_recipe_create.png">
+</details>
+<details><summary>Smaller screens Edit Recipe</summary>
+<img src="readme/documentation/responsiveness/smaller_screen_recipe_edit.png">
+</details>
+<details><summary>Smaller screens Delete Recipe</summary>
+<img src="readme/documentation/responsiveness/smaller_screen_recipe_delete.png">
+</details>
+<details><summary>Smaller screens Signup</summary>
+<img src="readme/documentation/responsiveness/signup.png">
 </details>
 <details><summary>Smaller screens Login</summary>
-<img src="readme_img/responsive/small_scr_login.png">
+<img src="readme/documentation/responsiveness/login.png">
 </details>
-<details><summary>Medium screens Home</summary>
-<img src="readme_img/responsive/home_md_scr.png">
-</details>
-<details><summary>Smaller screens Posts</summary>
-<img src="readme_img/responsive/posts_md_scr.png">
-</details>
-<details><summary>Smaller screns Post</summary>
-<img src="readme_img/responsive/post_md_scr.png">
-</details>
-<details><summary>Smaller screns Comments</summary>
-<img src="readme_img/responsive/comments_md_scr.png">
-</details>
-<details><summary>Smaller screns Profile</summary>
-<img src="readme_img/responsive/profile_md.png">
+<details><summary>Smaller screens Logout</summary>
+<img src="readme/documentation/responsiveness/logout.png">
 </details>
 
 
