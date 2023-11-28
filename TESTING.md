@@ -486,7 +486,7 @@ In addition to the other tests, I have conducted a manual checklist for differen
 | &check; | Prompt message is displayed to the user indicating that he has successfully signed up
 
 <details><summary>Signup</summary>
-<img src="readme_img/test/signup.png">
+<img src="readme/documentation/">
 </details>
 
 <details><summary>Signup form validation</summary>

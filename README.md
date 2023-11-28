@@ -379,7 +379,6 @@ Below is the database diagram that I created using LucidCharts.
 
 ## Testing
 <details>
-- - -
 
 The testing section can be found [here](TESTING.md).
 </details>
