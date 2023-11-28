@@ -106,6 +106,7 @@ def commentEdit(request, id):
     else:
         return render(request, '404.html', status=404)
 
+
 @login_required
 def commentDelete(request, id):
     """
@@ -154,10 +155,10 @@ class RecipeCreate(LoginRequiredMixin, View):
         if request.user.is_superuser:
             form = RecipeForm()
             return render(request, 'admin_recipe_create.html',
-                      {'recipe_form': form}) 
+                          {'recipe_form': form})
         else:
             return render(request, '404.html', status=404)
-        
+
     def post(self, request, *args, **kwargs):
         if request.user.is_superuser:
             recipe_form = RecipeForm(request.POST, request.FILES)
@@ -203,6 +204,7 @@ def recipeEdit(request, id):
         return render(request, 'admin_recipe_edit.html', {'form':form})
     else:
         return render(request, '404.html', status=404)
+
 
 @login_required
 def recipeDelete(request, id):
