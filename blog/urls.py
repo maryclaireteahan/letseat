@@ -22,4 +22,3 @@ urlpatterns = [
     path('admin_recipe_delete/<int:id>', views.recipeDelete,
          name='recipe_delete'),
 ]
-

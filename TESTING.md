@@ -1,396 +1,517 @@
-# Let's Eat - Testing
+# TESTING
 
-[Return to the README](README.md)
+For a proper conclusion to this project several tests were performed.
 
-## Table of Contents
-- [Performance](#performance)
-  - [Google's Lighthouse Performance](#googles-lighthouse-performance)
-- [Browser Compatibility](#browser-compatibility)
-- [Responsiveness](#responsiveness)
-  - [Smaller screens](#smaller-screens)
-  - [Medium screens](#medium-screens)
-- [Code Validation](#code-validation)
-  - [HTML Validation](#html-validation)
-  - [CSS Validation](#css-validation)
-  - [PEP8 Validation](#pep8-python)
-  - [Javascript Validation](#javascript-validation)
-- [Testing](#testing)
-  - [Manual Testing](#manual-testing-bdd)
-  - [Automated Testing](#automated-testing)
-  - [Features Testing](#features-testing)
+## 🚀 TABLE OF CONTENTS
 
-## Performance
+* [RESPONSIVENESS TESTING](#responsiveness-testing)
+* [BROWSER COMPABILITY TESTING](#browser-compability-testing)
+* [BUGS RESOLVED AND UNRESOLVED](#bugs-resolved-and-unresolved)
+* [LIGHTHOUSE TESTING OUTCOMES](#lighthouse-testing-outcomes)
+* [CODE VALIDATION](#code-validation)
+* [USER STORIES TESTING](#user-stories-testing)
+* [FEATURES TESTING](#features-testing)
+* [AUTOMATED TESTING](#automated-testing)
+* [TEST CASE](#test-case)
 
-### Google's Lighthouse Performance
+Return back to the [README.md](README.md) file.
 
-[Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to test the performance of the website.
+- - -
 
-#### Desktop Results:
-<details><summary>Desktop</summary>
-<img src="readme/documentation/performance/desktop/index.png">
-<img src="readme/documentation/performance/desktop/all_recipes.png">
-<img src="readme/documentation/performance/desktop/single_recipe.png">
-<img src="readme/documentation/performance/desktop/comment_edit.png">
-<img src="readme/documentation/performance/desktop/comment_delete.png">
-<img src="readme/documentation/performance/desktop/admin_recipe_create.png">
-<img src="readme/documentation/performance/desktop/admin_recipe_edit.png">
-<img src="readme/documentation/performance/desktop/admin_recipe_delete.png">
-<img src="readme/documentation/performance/desktop/signup.png">
-<img src="readme/documentation/performance/desktop/login.png">
-<img src="readme/documentation/performance/desktop/logout.png">
+## RESPONSIVENESS TESTING
+
+<details>
+<summary>👇</summary>
+
+The deployed application was tested on multiple devices to check for responsiveness issues. The bootstrap classes were used to be as responsive as possible and there was no need to add media queries.
+
+It works as expected according to the wireframes and no issue was found.
+
+![Responsiveness](documentation/images/responsiveness.jpg)
+
+|Device| Screenshot | 
+|:---|:---: |
+| Desktop |  ![Desktop](documentation/images/desktop.png)  |
+| Laptop  |  ![Laptop](documentation/images/laptop.png)  |
+| Tablet  |  ![Tablet](documentation/images/ipad.png)  |
+| Mobile  |  ![Mobile](documentation/images/iphone.png)  |
+
 </details>
 
+- - -
 
-#### Mobile Results:
-<details><summary>Mobile</summary>
-<img src="readme/documentation/performance/mobile/index.png">
-<img src="readme/documentation/performance/mobile/all_recipes.png">
-<img src="readme/documentation/performance/mobile/single_recipe.png">
-<img src="readme/documentation/performance/mobile/comment_edit.png">
-<img src="readme/documentation/performance/mobile/comment_delete.png">
-<img src="readme/documentation/performance/mobile/admin_recipe_create.png">
-<img src="readme/documentation/performance/mobile/admin_recipe_edit.png">
-<img src="readme/documentation/performance/mobile/admin_recipe_delete.png">
-<img src="readme/documentation/performance/mobile/signup.png">
-<img src="readme/documentation/performance/mobile/login.png">
-<img src="readme/documentation/performance/mobile/logout.png">
+## BROWSER COMPABILITY TESTING
+
+
+<details>
+<summary>👇</summary>
+
+The deployed project was tested on multiple browsers to check for compatibility issues and works as expected.
+
+|Browser | Screenshot | 
+|:---:|:---: |
+| Chrome | ![Chrome](documentation/images/chrome.png)  |
+| Edge  | ![Edge](documentation/images/edge.png)  |
+| Internet Explorer - Mobile |  ![Internet Explorer](documentation/images/explorer.jpg)  |
+
 </details>
 
-## Browser Compatibility
-|  Browser | Links  | Pages  | Responsivnes  | Form fields  |
-| ------------ | ------------ | ------------ | ------------ | ------------ |
-| Mozila  | Works as expected| Loading pages no issue  |  Responsivness works as expected |  Works as expected |
-|  Chrome | Works as expected  |  Loading pages no issue | Responsivness works as expected  | Works as expected  |
-|  Edge |  Works as expected | Loading pages no issue  | Responsivness works as expected  |  Works as expected |
+- - -
 
-## Responsiveness
-|   | Iphone SE  | Galaxy A51   | iPhone12  | iPad mini  | desktop 1024px  |  desktop > 1200px | notes  |
-| ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-|  site is responsive >= 700px |  n/a | n/a  |  n/a | Good  | Good  | Good  |   |
-| site is responsive < 700px  |  Good | Good  | Good  |  n/a | n/a  |  n/a |   |
-| Links/URLs work  | Yes  | Yes   | Yes   |  Yes  | Yes   | Yes   |   |
-|  Images work |  Yes  |  Yes  |  Yes  | Yes   | Yes   | Yes   |   |
-| Forms work  |  Yes  |  Yes  | Yes   | Yes   | Yes   | Yes   |   |
+## BUGS RESOLVED AND UNRESOLVED 
 
-<details><summary>Smaller screens Index</summary>
-<img src="readme/documentation/responsiveness/smaller_screen_index.png">
-</details>
-<details><summary>Smaller screens All Recipes</summary>
-<img src="readme/documentation/responsiveness/smaller_screen_recipes.png">
-</details>
-<details><summary>Smaller screens Single Recipe</summary>
-<img src="readme/documentation/responsiveness/smaller_screen_single_recipe.png">
-</details>
-<details><summary>Smaller screens Comments</summary>
-<img src="readme/documentation/responsiveness/smaller_screen_comments.png">
-</details>
-<details><summary>Smaller screens Edit Comment</summary>
-<img src="readme/documentation/responsiveness/smaller_screen_comment_edit.png">
-</details>
-<details><summary>Smaller screens Delete Comment</summary>
-<img src="readme/documentation/responsiveness/smaller_screen_comment_delete.png">
-</details>
-<details><summary>Medium screens Create Recipe</summary>
-<img src="readme/documentation/responsiveness/smaller_screen_recipe_create.png">
-</details>
-<details><summary>Smaller screens Edit Recipe</summary>
-<img src="readme/documentation/responsiveness/smaller_screen_recipe_edit.png">
-</details>
-<details><summary>Smaller screens Delete Recipe</summary>
-<img src="readme/documentation/responsiveness/smaller_screen_recipe_delete.png">
-</details>
-<details><summary>Smaller screens Signup</summary>
-<img src="readme/documentation/responsiveness/signup.png">
-</details>
-<details><summary>Smaller screens Login</summary>
-<img src="readme/documentation/responsiveness/login.png">
-</details>
-<details><summary>Smaller screens Logout</summary>
-<img src="readme/documentation/responsiveness/logout.png">
+☠️ The issues listed in the table below were indentified during the development of the project.
+
+<details>
+<summary>👇</summary>
+
+|N.| Issue |  Action | Status | 
+|:---|:--- |:--- |:--- |
+|01| Table django_session don't exists | Command: python manage.py migrate sessions | Closed | 
+|02 | After migration to codeanywhere, Error: pg_config executable not found | install psycopg2-binary | Closed |
+|03 | After migration to codeanywhere, the app didn't run | Create virtual enviroment | Closed |
+|04 | Sticky footer overlapping content | Remove class fixed-sm-bottom; add display: flex, direction: column and min-height:100vh to body and margin-top:auto to footer | Closed |
+|05 | Bullets in nav list | Edit default in CSS nav ul {list-style-type: none;} | Closed |
+|06 | Dropdown menu doesn't display own profile | Change the user.profile.pk to request.user.profile.pk | Closed | 
+|07 | Profile_pic doesn't display correctly | Edit templates, change bootstrap classes | Closed |
+|08 | Admin couldn't delete post or comment from other users | Edit the template and view adding request.user.is_superuser | Closed |
+|09 | Inpunt form doesn't clean after submit | Add class form-control | Closed |
+|10 | Default profile_pic doesn't display | Add boolean to templates | Closed |
+|11 | Reply comment icon button doesn't work. Parent_id was not found. | Remove '' from argument in the function.  | Closed |
+|12 | Default profile picture doesn't be displayed at followers_list. | Edit the template followers_list with boolean | Closed | 
+|13 | ConnectionRefusedError at /accounts/password/reset/ | Google and Gitpod don't see eye-to-eye and will not send emails from a Google SMPT account. Use outlook account to send email to reset password, but got Error 500 at Heroku, then changed to a new google account, turn on the 2-Step Verification and use the App Password.| Closed |
+|14 | Skip collestactic at Heroky during deployment | Run the command `python manage.py collectstatic` then deploy the project again. | Closed|
+|15 | Couldn't test the application using a free version of Elephant as a database | Create a temporary database to test the application | Closed |
+|16 | Post and Comment form doesn't clear after it's submitted | Call the empty form after save the content posted | Closed |
+|17 | After changed the password redirects to change password page | Add a path with reverse_lazy to overwrite django allauth | Closed |
+|18 | Post author couldn't delete comments in own post | Edit view and template adding if request.user == post.author. | Closed |
+|19 | The table of contents on the README.md an TESTING.md doesn't work due to emojis in titles. | Remove all emojis from titles. | Closed|
+|20 | NameError: name 'settings' is not defined | Remove the static from urls | Closed |
+|21 | Pagination from Search and Users doesn't work correctly | Add `&amp` due to paramenters.| Closed |
+| 22 | Video of the testing exceeds GitHub's file size limit and push was rejected | Delete video, `git reset --soft` was used to reset the last three commits, new commit was done with the changes, then the code was pushed to GitHub successfully | Closed | 
+
+There are no remaining bugs.
+
 </details>
 
+- - -
 
-## Code Validation
+## LIGHTHOUSE TESTING OUTCOMES
 
-### HTML Validation
-The [W3C Markup Validation Service](https://validator.w3.org/) was used to validate the HTML of the website.
-Only profile page, I had to copy and paste code as I couldn't test as url page. Any error that is shown in validation test is cause of the Django templates. One particular that is shown accrosss website is **username** as username is displayed on navigation bar upon user login.
- <details><summary>Index page</summary>
-<img src="readme/documentation/validation/html/index.png">
+<details>
+<summary>👇</summary>
+
+The deployed project was tested using the Lighthouse Audit tool to check for any major issues. The results for each page are listed bellow.
+
+Notes:
+
+* **Best Practices**: Displays images with incorrect aspect ratio - this will happen due to the uploading of photos by the user.
+
+* Some tests were made using DevTool with Google Chrome, but it was very slow and other tests were made with Microsoft Edge, where the language was German. (Leistung = Performance, Barrierefreiheit = Accessibility)
+
+|Page | Screenshot | 
+|:---:|:---: |
+|Index Desktop |<img src="readme/documentation/performance/desktop/index.png">|
+|Index Mobile |<img src="readme/documentation/performance/mobile/index.png">|
+|All Recipes Desktop |<img src="readme/documentation/performance/desktop/all_recipes.png">|
+|All Recipes Mobile |<img src="readme/documentation/performance/mobile/all_recipes.png">|
+|Single Recipe Desktop |<img src="readme/documentation/performance/desktop/single_recipe.png">|
+|Single Recipe Mobile |<img src="readme/documentation/performance/mobile/single_recipe.png">|
+|Delete Comment Desktop |<img src="readme/documentation/performance/desktop/comment_delete.png">|
+|Delete Comment Mobile |<img src="readme/documentation/performance/mobile/comment_delete.png">|
+|Edit Comment Desktop |<img src="readme/documentation/performance/desktop/comment_edit.png">|
+|Edit Comment Mobile |<img src="readme/documentation/performance/mobile/comment_edit.png">|
+|Add Recipe Desktop |<img src="readme/documentation/performance/desktop/admin_recipe_create.png">|
+|Add Recipe Mobile |<img src="readme/documentation/performance/mobile/admin_recipe_create.png">|
+|Edit Recipe Desktop |<img src="readme/documentation/performance/desktop/admin_recipe_edit.png">|
+|Edit Recipe Mobile |<img src="readme/documentation/performance/mobile/admin_recipe_edit.png">|
+|Delete Recipe Desktop |<img src="readme/documentation/performance/desktop/admin_recipe_delete.png">|
+|Delete Recipe Mobile |<img src="readme/documentation/performance/mobile/admin_recipe_delete.png">|
+|Signup Desktop |<img src="readme/documentation/performance/desktop/signup.png">|
+|Signup Mobile |<img src="readme/documentation/performance/mobile/signup.png">|
+|Login Desktop |<img src="readme/documentation/performance/desktop/login.png">|
+|Login Mobile |<img src="readme/documentation/performance/mobile/login.png">|
+|Logout Desktop |<img src="readme/documentation/performance/desktop/logout.png">|
+|Logout Mobile |<img src="readme/documentation/performance/mobile/logout.png">|
+
 </details>
 
-<details><summary>All Recipes page</summary>
-<img src="readme/documentation/validation/html/all_recipes.png">
+- - -
+
+## CODE VALIDATION
+
+<details>
+<summary>👇</summary>
+
+### HTML
+
+The [HTML W3C Validator](https://validator.w3.org/) to validate all HTML files.
+In order to properly validate the HTML pages with Jinja syntax, the steps are followed for each file:
+
+- Navigate to the deployed application using Google Chrome,
+- Right-click anywhere on the page, and select View Page Source.
+- Copy the entire "compiled" code, without any Jinja syntax., and use the validate by input method.
+
+The result for each page are listed bellow:
+
+|Page |Screenshot | Notes  | 
+|:---:|:----------------------:|---|
+| Home (Landing) |  Second test: ![HTML Validation - Home](documentation/images/v-html-home.png) |First test: **Warning**: The type attribute is unnecessary for JavaScript resources. - Removed from script.|
+| Sing Up | ![HTML Validation - Singup](documentation/images/v-html-signup.png)  |
+| Sing In | ![HTML Validation - Singin](documentation/images/v-html-signin.png)  |
+| Sing Out | ![HTML Validation - Singout](documentation/images/v-html-signout.png) ![HTML Validation - Singout](documentation/images/v-html-signout-id.png) | The error message was ignored, because the the `aria-controls` identifies an element in the same document whose contents are controlled by the current element.  |
+| Reset Password |  Second test: ![HTML Validation - Password Reset](documentation/images/v-html-password-reset.png)  |First test: Error: Attribute mt-2 not allowed on element p at this point. - Add the missed `class=" "`.|
+| Reset Password Done |  ![HTML Validation - Password Reset Done](documentation/images/v-html-password-reset-done.png) |
+| Home (Main Feed - Logged in) |  ![HTML Validation - Main Feed](documentation/images/v-html-main-feed.png) |
+| Following |  First test: ![HTML Validation - Following Feed](documentation/images/v-html-following-1.png) Second test ![HTML Validation - Following Feed](documentation/images/v-html-following-2.png) |"Picture uploaded" was added as an alt attribute to uploaded image by user. |
+| Post Detail | ![HTML Validation - Post Detail](documentation/images/v-html-post-detail.png)  |
+| Edit post |  ![HTML Validation - Edit Post](documentation/images/v-html-post-edit.png) |
+| Delete post |  ![HTML Validation - Delete Post](documentation/images/v-html-post-delete.png) |
+| Edit comment | ![HTML Validation - Edit Comment](documentation/images/v-html-comment-edit.png)  |
+| Delete comment | ![HTML Validation - Delete Comment](documentation/images/v-html-comment-delete.png)  |
+| Users | First test: ![HTML Validation - Users](documentation/images/v-html-users-1.png) Second test: ![HTML Validation - Users](documentation/images/v-html-users-2.png) |The escape `&amp;` was added.
+| Search |  First test: ![HTML Validation - Search](documentation/images/v-html-search.png) Second test: ![HTML Validation - ](documentation/images/v-html-search-2.png)| The escape `&amp;` was added.
+| Profile |  First test: ![HTML Validation - Profile](documentation/images/v-html-profile.png) Second test: ![HTML Validation - Profile](documentation/images/v-html-profile-2.png) |`<h3/>` written in the right place.|
+| Profile Update |  ![HTML Validation - Profile Update](documentation/images/v-html-profile-update.png) |
+| Change Password | First test: ![HTML Validation - Change Password](documentation/images/v-html-password-change-error.png) Second test: ![HTML Validation - Change Password](documentation/images/v-html-password-change.png) | Div was removed. |
+| Followers | ![HTML Validation - Followers](documentation/images/v-html-followers.png)  |
+| Error 403 |  ![HTML Validation - Error 403](documentation/images/v-html-error-403.png) |
+| Error 404 | ![HTML Validation - Error 404](documentation/images/v-html-error-404.png)  |
+| Error 500 | ![HTML Validation - Error 500](documentation/images/v-html-error-500.png)  |
+
+- - - 
+
+
+### CSS
+
+The [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator/) was used to validate the CSS file.
+
+| File | Screenshot | Notes |
+| --- | --- | --- |
+| style.css | ![style.css](documentation/images/v-css.png) | ![style.css warning](documentation/images/v-css-warning.png) |
+
+- - - 
+
+### JAVASCRIPT
+
+The [JShint Validator](https://jshint.com/) was used to validate the JavaScript file.
+
+| File | Screenshot | Notes |
+| --- | --- | --- |
+| titbit.js | ![screenshot](documentation/images/v-javascript.png) | Unused variables: commentReply Toggle, showNotifications and removeNotifications |
+
+
+- - - 
+
+
+### PYTHON
+
+The [Code Institute Python Linter](https://pep8ci.herokuapp.com)was used to validate all Python files.
+
+#### Network project
+
+| File | Screenshot  | Notes|
+| --- | ------ |:---:|
+| settings.py |  ![Settings](documentation/images/v-network-settings.png) | Pass - Line too long due to AUTH_PASSWORD_VALIDATORS|
+| urls.py (main) |  ![Urls](documentation/images/v-network-urls.png) | Pass |
+| views.py | ![Views](documentation/images/v-network-views.png)  | Pass |
+
+
+#### Home app
+
+| File | Screenshot  | Notes|
+| --- | --- | --- |
+| urls.py | ![Urls](documentation/images/v-home-urls.png)  | Pass |
+| views.py | ![Views](documentation/images/v-home-views.png)  | Pass |
+| custom_tags.py |  ![Custom Tags](documentation/images/v-home-custom-tags.png) | Pass |
+
+
+#### Titbit app
+
+| File | Screenshot  | Notes|
+| --- | --- | --- |
+| admin.py | ![Admin](documentation/images/v-titbit-admin.png)  | Pass |
+| forms.py | ![Forms](documentation/images/v-titbit-forms.png)  | Pass |
+| models.py | ![Models](documentation/images/v-titbit-models.png)  | Pass |
+| tests.py |  ![Tests](documentation/images/v-titbit-tests.png)  | Pass |
+| urls.py |  ![Urls](documentation/images/v-titbit-urls.png) | Pass |
+| views.py | ![Views](documentation/images/v-titbit-views.png)  | Pass |
+
 </details>
 
-<details><summary>Single Recipe page</summary>
-<img src="readme/documentation/validation/html/single_recipe.png">
+- - -
+
+## USER STORIES TESTING
+
+<details>
+<summary>👇</summary>
+
+The implemented User Stories were tested during the development of this project and also after it was finished with the below user acceptance testing:
+
+Check out the video with some tests by clicking [here](documentation/video/test.mp4).
+
+There are several screenshots of the features in the [README.md](README.md) file.
+
+
+### New Site Users
+
+- - -
+
+As a first time user of the site, I want to be able to:
+
+*Must Have*
+
+| User Stories |  Notes|
+| --- | --- | 
+| understand what the site is for and how to navigate the site, so I can decide wheter or not to sign up. | Pass |
+| register for an account, so that I can create my profile and explore the website. |  Pass |
+| easily navigate the site, so that I can access what I need at the click of a button. | Pass |
+
+
+
+### **Registered Users**
+
+- - -
+
+As a registered user of the site, I want to be able to:
+
+*Must Have*
+
+| User Stories |  Notes|
+| --- |  --- |
+| log in to my account, so that I can access the website. |Pass |
+| log out of my account, so that I can end my session | Pass |
+| have my own profile, so that I can be found from my friends. |Pass |
+| edit my profile, so that I can update or personalize it. | Pass |
+| read the new posts, so that I can keep up to date |  Pass |
+| create, edit, delete and view my posts, so that I can have control of my content | Pass |
+| know the date and time a post was created, so that I can know how new or old the post is | Pass |
+| post pictures, so that I can share moments or toughts | Pass |
+| like or dislike other people's posts, so that I can let them know I enjoyed their posts | Pass |
+| follow others users, so that I can view their posts on my following feed | Pass |
+| unfollow other users, so that I can remove their post from my feed | Pass |
+| be followed, so that I can know that other users read my posts  | Pass |
+| view the number of likes on each post, so that I can see which is the most popular or viral  | Pass |
+| add a profile picture so that I will be recognized from other users  | Pass |
+| see a users list, so that I can find others users to follow them | Pass |
+| search for an user, so that I can find a specific user to follow him | Pass |
+
+
+*Should Have*
+
+| User Stories |  Notes|
+| --- | --- | 
+| comment on other people's posts, so that I can be involved in the conversation |  Pass |
+| read the comments of posts, so that I can know the thoughts from others users and follow them  | Pass |
+| like other people's comments on posts, so that I can let them know I enjoyed their comment   | Pass |
+| edit or delete my comments on other people's posts, so that I can edit or remove comments I no longer want published | Pass |
+| delete other people's comments on my own posts, so that I can remove unwanted commments   | Pass |
+| be notified when other users comment or like my posts or follow/unfollow me, so that I can check it | Pass |
+| read the feed only from following users, so that I don't waste my time with unwanted posts | Pass |
+| access a list from followers, so that I can find others users to follow them  | Pass |
+
+
+*Could Have*
+
+| User Stories |  Notes|
+| --- | --- | 
+| reply comments, so that I can interate with others users | Pass |
+| reset my password, so that I can regain access to my account | Pass |
+| change password, so that I feel more secure | Pass |
+| add a background picture so that I will show what I like to other users | Pass |
+
+
+### **Admin User**
+
+- - -
+
+As an administrator for the site I want to be able to:
+
+*Must Have*
+
+| User Stories |  Notes|
+| --- | --- | 
+| remove any content from any user that could be offensive, so that I can moderate the all content| Pass |
+| have own profil, so that I can have user experience| Pass |
+
 </details>
 
-<details><summary>Edit Comment page</summary>
-<img src="readme/documentation/validation/html/comment_edit.png">
+- - -
+
+## FEATURES TESTING
+
+<details>
+<summary>👇</summary>
+
+The features were manually tested as defensive programming during the development of this project and also after it was finished with the below user acceptance testing:
+
+
+ Video recorded with testing:
+  
+![Click here to watch](https://github.com/luandretta/network/assets/113333171/bc92614c-b519-40a2-8570-186dfa59dde2)
+
+
+| Page | User Action | Expected Result| Notes |
+| --- | --- | --- | --- |
+|  **Home Page**   |  |  | |
+| Landing | Click on Logo | Redirection to Home page | Pass |
+| | Click on Sign Up button  | Redirection to Sign Up page | Pass |
+| | Click on Sign In button | Redirection to Sign In page | Pass |
+| Logged in | Click on Logo | Redirection to Main Feed | Pass |
+| **Sign Up** |  |  |  |
+| | Enter valid email address | Field will only accept email address format | Pass |
+| | Enter valid password (twice) | Field will only accept password format | Pass |
+| | Click Sign Up button on sign up page  | Redirects user to feed and displays message | Pass |
+| | Click on Sign In link | Redirection to Sign In page | Pass |
+| **Sing In** |  |  |  |
+| | Enter valid email address | Field will only accept email address format or valid username | Pass |
+| | Enter valid password | Field will only accept password format | Pass |
+| | Click Login button on login page | Redirects user to main feed and displays message | Pass |
+| | Click Forgot Password | Redirects user to password reset page | Pass |
+| | Click on Sign Up link | Redirection to Sign Up page | Pass |
+| **Sing Out** |  |  |  |
+| | click on dropdown menu, then sign out | Redirects to sign out page | Pass |
+| | Click to confirm to sign out  | Redirects to landing page and displays message with the sign out confirmation | Pass |
+| **Password Reset**|  |  |  |
+| | Enter valid email address and click Reset Password button| Request confirmation | Pass |
+| | Receive email with link to reset password | The link to reset the password is valid | Pass |
+| | Click on the reset password link | Redirects user to change his password | Pass |
+| | Attempt to use the reset password link twice | The link won't be accepted | Pass |
+| **Main Feed** |  |  |  |
+| | Create a post only with text as content | New post only with text is created | Pass |
+| | Create a post only with picture | User is prompted to type something into the content field before sending | Pass |
+| | Create a post with text and picture | New post with text and picture is created | Pass |
+| | Click send on new post form without adding content | User is prompted to enter something into the field before sending | Pass |
+| | Click on a post | User will be redirected to the post detail page | Pass |
+| | Click on the username on a post | User will be redirected to the post author's profile | Pass |
+| | Click the like button on a post | Like button will fill with colour and the like count will increase by 1, Post author receives a notification letting them know someone has liked their post | Pass  |
+| | Click the like button on a post already liked by the user | Like button will become clear in the middle like count will decrease by 1 | Pass |
+| | Click the dislike button on a post | Dislike button will fill with colour and the dislike count will increase by 1 | Pass  |
+| | Click the dislike button on a post already liked by the user | Dislike button will become clear in the middle dislike count will decrease by 1 | Pass  |
+| | Click edit icon on own post | User is redirected to post edit page | Pass   |
+| | Click delete icon on own post | User is redirected to post delete confirmation page | Pass  |
+| | Click on the pagination | Change the pages correctly | Pass |
+| **Following Feed** |  |  |  |
+| | Display only post from users who are being followed | User reads only posts of the users he follows | Pass |
+| | The user is not following anyone and click on Following | Message to try follow other users | Pass |
+| | Click on a post | User will be redirected to the post detail page | Pass |
+| | Click on the username on a post | User will be redirected to the post author's profile | Pass |
+| | Click the like button on a post | Like button will fill with colour and the like count will increase by 1, Post author receives a notification letting them know someone has liked their post | Pass  |
+| | Click the like button on a post already liked by the user | Like button will become clear in the middle like count will decrease by 1 | Pass |
+| | Click the dislike button on a post | Dislike button will fill with colour and the dislike count will increase by 1 | Pass  |
+| | Click the dislike button on a post already liked by the user | Dislike button will become clear in the middle dislike count will decrease by 1 | Pass   |
+| | Click edit icon on own post | User is redirected to post edit page | Pass  |
+| | Click delete icon on own post | User is redirected to post delete confirmation page | Pass  |
+| | Attempt to delete a post as admin | Admin is redirected to delete page | Pass |
+| | Click on the pagination | Change the pages correctly | Pass |
+| **Edit Post** | | | | 
+| | Fill in post form and click submit | Original post can be edited | Pass | 
+| | Click on the Back To Post button | User will be redirected to the original post | Pass | 
+| **Delete Post** | | | | 
+| | Click on the Delete button | Post will be permanently deleted | Pass | 
+| | Click on the Back To Post button | User will be redirected to the original post | Pass | 
+| **Comments on Post Detail** | | | | 
+| | Comment a post | New comment is created, the post author is notificated | Pass |
+| | Click send on new comment form without adding content | User is prompted to enter something into the field before sending | Pass |
+| | Click the like button on a comment | Like button will fill with colour and the like count will increase by 1, Post author receives a notification letting them know someone has liked their post | Pass  |
+| | Click the like button on a post already liked by the user | Like button will become clear in the middle like count will decrease by 1 | Pass |
+| | Click the dislike button on a post | Dislike button will fill with colour and the dislike count will increase by 1 | Pass  |
+| | Click the dislike button on a post already liked by the user | Dislike button will become clear in the middle dislike count will decrease by 1 | Pass   |
+| | Click edit icon on own comment | User is redirected to comment edit page | Pass  |
+| | Click delete icon on own comment | User is redirected to comment delete confirmation page | Pass  |
+| | Click on the username on a comment | User will be redirected to the comment author's profile | Pass | 
+| | Click on the comment icon | Open a form to reply the comment | Pass | 
+| | Click edit icon on own comment | User is redirected to comment edit page | Pass | 
+| | Click delete icon on own comment | User is redirected to comment delete page | Pass | 
+| | Click on the pagination | Change the pages correctly | Pass |
+| | Attempt to delete a comment as admin | Admin is redirected to  delete page | Pass |
+| | Brute forcing the URL to delete another user's comment if not on your post | Redirects user to error page | Pass | 
+| **Edit Comment** | | | | 
+| | Fill in comment form and click submit | Original comment will be edited | Pass | 
+| | Click on the Back To Post button | User will be redirected to the original post | Pass | 
+| **Reply on Post Detail** | | | | 
+| | Reply a comment | New reply is created, the comment author is notificated | Pass |
+| | Click delete icon on own reply | User is redirected to  delete page | Pass | 
+| | Attempt to delete a post as admin | Admin is redirected to  delete page | Pass |
+| **Delete Comment or Reply** | | | | 
+| | Click on the Delete button | Comment or reply will be permanently deleted | Pass | 
+| | Click on the Back button | User will be redirected to the original post | Pass | 
+| **Own Profile** | | | | 
+| | Click on Profile button in dropdown menu | User will be redirected to their Profile page | Pass | 
+| | Click on the Edit icon | User will be redirected to the edit profile page | Pass | 
+| | Click on the Back To Feed button | User will be redirected to main feed | Pass | 
+| | Click on followers | User will be redirected to followers list page | Pass | 
+| | Click on a post | User will be redirected to the individual post page | Pass | 
+| | Click edit icon on own post | User is redirected to post edit page | Pass | 
+| | Click delete icon on own post | User is redirected to post delete confirmation page | Pass | 
+| | Click on the pagination | Change the pages correctly | Pass |
+| **Update Profile** | | | | 
+| | Attempt to update the data (Name, bio, location, birthdate, profil and background pictures) | The information are saved correctly | Pass | 
+| | User didn't upload pictures | Default pictures are used | Pass |
+| | Click on change password | User will be redirected to change password page | Pass | 
+| | Brute forcing the URL to edit another user's profile | Redirects user to error page | Pass |
+| **Change Password** | | | | 
+| | Attempt to change password, type the old password and the new twice | The password is changed successfully | Pass | 
+| **Other Profile** | | | | 
+| | Click on the follow button | User will follow current profile they're on and button will change to say unfollow, profile owner receives a notification letting them know someone has followed them and followers count will increase by 1 | Pass |  
+| | Click on the unfollow button | User will unfollow current profile they're on and button will change to say follow, followers count will decrease by 1 | Pass | 
+| | Click on followers | User will be redirected to followers list page | Pass |  
+| | Click on the back button | User will be redirected to their feed | Pass | 
+| | Click on a post | User will be redirected to the  post detail page | Pass | 
+| | Click on the pagination | Change the pages correctly | Pass |
+| **Followers Page** | | | | 
+| | Click on user's name | User will be redirected to  user's profile | Pass |
+| | Click on the pagination | Change the pages correctly | Pass |
+| **Search Page** | | | | 
+| | Type text into search form into nav and click the search icon | User is directed to a page with a list of  users containing his search query | Pass | If there are no users and/or posts containing the query the page will let the user know there was no results in either or both for their query |
+| | Search for a non-existing user | Message  no User was found and to try again | Pass |
+| | Click search icon with empty input | Redirects to users list | Pass |
+| | Click on user's name | User will be redirected to  user's profile | Pass | 
+| | Click on the pagination | Change the pages correctly | Pass |
+| **Users Page** | | | | 
+| | Click on user's name | User will be redirected to  user's profile | Pass |
+| | Click on the pagination | Change the pages correctly | Pass |
+| **Notifications** | | | | 
+| | Click on like notification | User will be redirected to post detail from the liked post, the counter decrease by 1 | Pass |
+| | Click on following notification | User will be redirected to  user's profile who started following him, the counter decrease by 1 | Pass |
+| | Click on comment notification | User will be redirected to post detail from the comment, the counter decrease by 1 | Pass |
+| | Click on reply notification | User will be redirected to post detail from the comment, the counter decrease by 1 | Pass |
+| | Click on X | The notification will be closed, the counter decrease by 1 | Pass |
+|**Error Pages** | | | | 
+| | Click on Home button | User will be redirected to his feed | Pass | 
+|**Footer** | | | | 
+| | Click on Linkedin Icon | Redirects to LinkedIn from the creator of this application | Pass |
+| | Click on GitHub Icon | Redirects to GitHub repository | Pass |
+| | Click on "Lucimeri Andretta" link | Redirects to GitHub from the creator of this application | Pass |
+
 </details>
 
-<details><summary>Delete Comment page</summary>
-<img src="readme/documentation/validation/html/comment_delete.png">
+- - -
+
+## AUTOMATED TESTING
+
+<details>
+<summary>👇</summary>
+
+The Django's Built-in Unit Testing Framework was used to test the application functionality on the project without errors.
+To perform the test the following step was used:
+- In the terminal type the command:
+
+```bash
+python3 manage.py test
+```
+
+
+- - -
+
+## TEST CASE
+
+A test case were written to proof the post feature and the delete post. A creation of a temporary database was needed.
+Ran 2 tests without issues.
+
+![Teste Case](documentation/images/test-case.png)
+
+
 </details>
 
-<details><summary>Add Recipe page</summary>
-<img src="readme/documentation/validation/html/admin_recipe_create.png">
-</details>
-
-<details><summary>Edit Recipe page</summary>
-<img src="readme/documentation/validation/html/admin_recipe_edit.png">
-</details>
-
-<details><summary>Delete Recipe page</summary>
-<img src="readme/documentation/validation/html/admin_recipe_delete.png">
-</details>
-
-<details><summary>Signup page</summary>
-<img src="readme/documentation/validation/html/signup.png">
-</details>
-
-<details><summary>Login page</summary>
-<img src="readme/documentation/validation/html/login.png">
-</details>
-
-<details><summary>Logout page</summary>
-<img src="readme/documentation/validation/html/logout.png">
-</details>
-
-
-### CSS Validation 
-[Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) was used for validating the CSS stylesheet. CSS file was tested by manually copying the CSS codes into the manual input option.
-
-<details><summary>CSS Validation</summary>
-<img src="readme/documentation/validation/css/style.png">
-</details>
-
-
-### PEP8 Python
-[PEP8 CI Python Linter](https://pep8ci.herokuapp.com/) was used to check that the Python code meets PEP8 standards.
-
-<details><summary>Admin</summary>
-<img src="readme/documentation/validation/python/admin.png">
-</details>
-
-<details><summary>Forms</summary>
-<img src="readme/documentation/validation/python/forms.png">
-</details>
-
-<details><summary>Views</summary>
-<img src="readme/documentation/validation/python/views.png">
-</details>
-
-<details><summary>Urls</summary>
-<img src="readme/documentation/validation/python/urls.png">
-</details>
-
-<details><summary>Models</summary>
-<img src="readme/documentation/validation/python/models.png">
-</details>
-
-### JavaScript Validation
-
-<details><summary>JS</summary>
-<img src="readme/documentation/validation/javascript/script.png"></details>
-
-
-## Manual Testing
-
-
-User Story |  Test | Pass
---- | --- | :---:
-As a first-time visitor, I want to understand the purpose of the website and easily navigate through | Upon landing on the index page, I can see a big hero navigation bar with 'home' and 'post' links, and below the navigation, there is big hero image displayed with hero text. Without scrolling further I can understand the purpose of this website | &check;
-As a first-time visitor I want to be able to view the posts so that I would get quick access to relevant information and get a better understanding of the content|I can easily navigate to the post page which is shown different posts about different topics/hikes. If I wish to get more information about a certain post I just have to click on the title which will redirect me to the single_post page|&check;
-As a first-time visitor I want to be able to see likes and comments for the posts to get some feedback from other users| I can either see the numbers of likes and comments that are located under each post on the post page if I wish to read comments all I have to do is click on the single post and comments will be displayed on the bottom of the page |&check;
-As a first-time visitor I want to be able to register an account to have more access to the website | In the navigation bar there is a button 'sign up' which will lead me to the signup page on which I have to fill in all information to register for the website | &check;
-As a first-time visitor I want to be able to search posts by title name so I could get quick access to the relevant one | On the post page, there is a search bar in the top right corner, in which I can input a title/word that I'm looking for. If there is a matching word in the current posts that post will be displayed on the new page, and if not message will be displayed indicating that I should search for another word | &check;
-As a first-time visitor I want to be able to subscribe to the blog so I could get relevant information about future blog posts | On the bottom of the website in the left corner of the footer there is an input field with a label that allows me to input my email address and subscribe to newsletter |&check;
-As a registered user I want to be able to leave comments for posts so that I can engage with other users and leave feedback about certain posts | I can click on any post I want to comment on, and that post will be displayed on a separate page. I have to scroll down after the post's description and there is a box in which I can write my comment and submit it |&check;
-As a registered user I can update or delete my comments so that have more control over my content in case of errors, and to have better engagemant with other users | If my comment already exists update and delete button should be displayed under the comment! Clicking on the update new template is displayed to update comment and after confirmation updated comment is displayed. Clicking on delete button modal is shown to the user to confirm his actions. Once deleted that comment no longer exist in the post.  |&check;
-As a registered user I want to be able to like/unlike posts so that I can support certain posts without providing comments | I can click on any post I want to like or unlike, and that post will be displayed on a separate page. I have to scroll down to the end of the description and the like button will be displayed, if I already like the post that button will be colored if not I can simply click on that button and like that post |&check;
-As a registered user I want to be able to update my profile information so that I could change my first name, last name, email, and password and add a profile picture, and bio | After logging in to the website I can click on the profile page in the navbar which will lead me to a profile page. Page is divided into two sections, one is displaying current information for the user and the other gives the user the option to implement CRUD functionality | &check;
-As a site owner, I want to be able to create, update and delete posts so that I can control my website content. |After logging in to the admin panel of the website I can navigate myself to Post model and perform CRUD functionality for the posts| &check;
-As a site owner I want to be able to approve or delete comments so that I can filter out objectionable comments | After logging in to the admin panel of the website I can navigate myself to the Comments model and from there I can pick comments which I want to approve or delete| &check;
-As a site owner I want to be able to access all subscribed emails so that I could send new information related to my website | After logging in to the admin panel of the website I can navigate myself to a Subscribed model which is displayed all subscribed emails | &check;
-As a site owner, I want to be able to delete users so that I can receive several benefits such as: managing my data, reducing liability & resource optimization| After logging in to the admin panel of the website I can navigate myself to Users which is Django all auth model in which are displayed all registered users, from that model I can either update or delete specific users| &check;
-
-## Automated Testing
-
-I have performed some automated tests for views, models and forms. I found it challenging and time consuming to complete all tests although I do understand now concept of testing and why it is important to create test cases for code. Deadline of the project cought up to me to finish this section completly.
-
-<details><summary>Number of tests</summary>s
-<img src="readme_img/test/test.png">
-</details>
-
-<details><summary>Report</summary>
-<img src="readme_img/test/report.png">
-</details>
-
-## Features Testing
-
-In addition to the other tests, I have conducted a manual checklist for different features of the website to make sure that everything is working as intended.
-
-| Status | **Navigation Bar - User Logged Out**
-|:-------:|:--------|
-| &check; | Clicking the navbar logo loads the home page
-| &check; | Navbar shows the nav links for Home, Post, and buttons for Sign up and Sign In
-| &check; | Current page is highlighted for the user
-| &check; | Clicking the Home tab on the navbar loads the home page
-| &check; | Clicking the Post tab on the navbar loads the post page
-| &check; | Clicking the Sign in button on the navbar loads the Sign in page
-| &check; | Clicking the Signup button on the navbar loads the Signup page
-
-<details><summary>Logout navbar</summary>
-<img src="readme_img/test/navbar_logged_out.png">
-</details>
-
-
-| Status | **Navigation Bar - User Logged In**
-|:-------:|:--------|
-| &check; | User name is displayed next to the logo
-| &check; | Navbar shows additional link for Profile
-| &check; | Clicking the Profile tab on the navbar loads the Profile page
-
-<details><summary>Login navbar</summary>
-<img src="readme_img/test/navbar_login.png">
-</details>
-
-
-| Status | **Footer - User Logged Out/In**
-|:-------:|:--------|
-| &check; | Clicking the footer logo loads the home page
-| &check; | Clicking the LinkedIn, Facebook, Youtube, and Instagram icons directs the user to relevant pages
-| &check; | Subscribe input field is displayed
-
-<details><summary>Footer</summary>
-<img src="readme/documentation/features/base/footer.png">
-</details>
-
-| Status | **Index Page**
-|:-------:|:--------|
-| &check; | Users receive basic knowledge about the website
-
-<details><summary>Index Hero</summary>
-<img src="readme/documentation/features/index/hero.png">
-</details>
-<details><summary>Index Button</summary>
-<img src="readme/documentation/features/index/discover_recipes.png">
-</details>
-
-| Status | **Recipes Page**
-|:-------:|:--------|
-| &check; | Shows the blog posts paginated by 6 posts
-| &check; | Next and previous buttons at the bottom of the page works as expected and leads user to next or prevoius page 
-| &check; | Hovering on the title colour change indicating user that is clickable
-| &check; | Clicking on the title user gets redirected to the single post page
-| &check; | Search input field is displayed to user
-
-<details><summary>Recipe Categories</summary>
-<img src="readme/documentation/features/all_recipes/categories1.png">
-<img src="readme/documentation/features/all_recipes/categories2.png">
-<img src="readme/documentation/features/all_recipes/categories3.png">
-</details>
-<details><summary>Recipe Categories Scrollbar</summary>
-<img src="readme/documentation/features/all_recipes/scrollbar.png">
-</details>
-
-
-| Status | **Single Recipe Page**
-|:-------:|:--------|
-| &check; | Shows the full content of the post
-| &check; | Shows a list of comments posted so far
-| &check; | Shows a numbers of likes
-| &check; | If post not liked by user like button is not colored
-| &check; | When clicked like button on the post that user hasn't liked yet button will change color
-| &check; | If post was liked by the user like button is colored
-| &check; | When clicked like button on the post that user has liked already like button will go back to previous state/not colored
-| &check; | If post not liked by user like button is not coloured
-| &check; | Shows a numbers of likes
-| &check; | Comment box is only visible to registered users
-| &check; | Only register user can like post
-| &check; | Only register user can comment post
-| &check; | When post is commented, confirmation message is displayed to the user
-| &check; | Under current user comment two buttons are displayed "Update" &  "Delete"
-| &check; | Clickin on "Delete" button modal is shown to the user to confirm his choice
-| &check; | Confirming and deleting his comment message is displayed to the user and comment has been deleted
-| &check; | Clicking on "Update" button new template is beeing shown to the user with box to update his comment
-| &check; | Confirming his updated comment message is displayed to the user and his updated comment
-
-<details><summary>Single Recipe Like and Comment Icons</summary>
-<img src="readme/documentation/features/single_recipe/likes_comment_icons.png"></details>
-
-<details><summary>Comments</summary>
-<img src="readme/documentation/features/single_recipe/comment_logged_out.png">
-<img src="readme/documentation/features/single_recipe/comment_logged_in.png"></details>
-
-<details><summary>CRUD Comments</summary>
-<img src="readme/documentation/features/single_recipe/comments.png">
-<img src="readme/documentation/features/single_recipe/edit_delete_authorised.png">
-<img src="readme/documentation/features/single_recipe/edit_delete_not_authorised.png"></details>
-
-<details><summary>Update comments</summary>
-<img src="readme_img/test/edit_comment.png">
-</details>
-
-<details><summary>Delete comments</summary>
-<img src="readme_img/test/delete_comment.png">
-</details>
-
-
-| Status | **Login page**
-|:-------:|:--------|
-| &check; | No input not allowed
-| &check; | Messages displayed to the user in case of the username or password is not matching the information in databese
-| &check; | Clickin on 'Forgot password' link redirects user to password reset page
-
-<details><summary>Login</summary>
-<img src="readme/documentation/features/login/login.png">
-<img src="readme/documentation/features/login/no_username.png">
-<img src="readme/documentation/features/login/no_password.png">
-<img src="readme/documentation/features/login/wrong_username.png">
-<img src="readme/documentation/features/login/wrong_password.png">
-<img src="readme/documentation/features/login/sucessful_login.png"></details>
-
-
-| Status | **Logout**
-|:-------:|:--------|
-| &check; | Clicking on logout user is redirected to a new page asking the user to confirm his choice
-| &check; | Clicking 'Sign out' user is redirected to the home page with a confirmation message displayed to the user
-
-<details><summary>Logout</summary>
-<img src="readme_img/test/logout.png">
-</details>
-
-<details><summary>Logout message</summary>
-<img src="readme/documentation/features/logout/logout.png">
-<img src="readme/documentation/features/logout/logged_out.png"></details>
-
-
-| Status | **Sign up**
-|:-------:|:--------|
-| &check; | Clicking on Sign up in the navigation bar new page is displayed to the user with input fields
-| &check; | All input fields must be put in for the user to sign in, standard criteria for email and passwords are present
-| &check; | Relevant messages are displayed to the user if a certain field doesn't match the criteria
-| &check; | Upon signing up, the user is directly logged into the website 
-| &check; | Prompt message is displayed to the user indicating that he has successfully signed up
-
-<details><summary>Signup</summary>
-<img src="readme/documentation/features/signup/signup.png">
-<img src="readme/documentation/features/signup/require_username.png">
-<img src="readme/documentation/features/signup/require_password.png">
-<img src="readme/documentation/features/signup/require_password_again.png">
-<img src="readme/documentation/features/signup/password_errors1.png">
-<img src="readme/documentation/features/signup/password_errors2.png">
-<img src="readme/documentation/features/signup/sucessful_signup.png">
-</details>
-
-| Status | **Back link**
-|:-------:|:--------|
-| &check; | Link is displayed on 2 pages 'Search post' & 'Single post'
-| &check; | Clicking the 'Back' link user is redirected to the previous page
-
-
-*Go back to the [top](#table-of-contents)*
+Return back to the [README.md](README.md) file.
