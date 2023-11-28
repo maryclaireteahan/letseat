@@ -138,7 +138,6 @@ I divided the project board into 3 sections:
 </details>
 </details>
 </details>
-
 - - -
 
 ### Typography
@@ -316,7 +315,7 @@ Below is the database diagram that I created using LucidCharts.
 </details>
 
 </details>
-
+- - -
 
 ## Future Features
 <details>
@@ -349,7 +348,6 @@ Below is the database diagram that I created using LucidCharts.
 - [Cloudinary](https://cloudinary.com/) was used to store the images.
 - [ElephantSQL](https://www.elephantsql.com/) was used to store the database.
 </details>
-
 - - -
 
 <!-- ## Libraries
@@ -377,8 +375,11 @@ Below is the database diagram that I created using LucidCharts.
 </details>
 
  -->
+ - - -
+
 ## Testing
 <details>
+- - -
 
 The testing section can be found [here](TESTING.md).
 </details>
@@ -408,13 +409,12 @@ The testing section can be found [here](TESTING.md).
 | In dev tools in console I'm getting and error that messageRow is not a valid DOM element however it disappears when the alert message for logging in and out appears. | X |
 
 </details>
+- - -
 
 ##  Deployment & Local Development
-- - -
 <details>
 
 The live deployment application can be found on [Heroku](https://maryclaireteahan-letseat-0b5910f8e882.herokuapp.com/).
-
 
 ###   Local Development
 
@@ -447,7 +447,7 @@ To clone the repository:
     ```bash
     pip3 install -r requirements.txt
     ```
-8. ```
+8.  ```
     git add
     ``` 
 9.  ```
@@ -593,7 +593,6 @@ python3 manage.py runserver
 ```
 
 </details>
-
 - - -
 
 
@@ -614,6 +613,7 @@ python3 manage.py runserver
 - [Lucidchart](https://lucid.app/) for providing me with tools to create my database system
 - [Balsamic](https://balsamiq.com/wireframes/) was used to create wireframes
 </details>
+- - -
 
 ## Acknowledgements:
 <details>
@@ -622,5 +622,6 @@ python3 manage.py runserver
 - I would also like to thank our cohort facilitator Marko Tot, for sending me useful links as well as giving me one to one support when I was struggling particularly with the models.
 - I would like to thank Hennadi and Mehatab who also helped me a lot when I was struggling with my models.
 </details>
+- - -
 
 [Back to the top](#let's-eat)
