@@ -156,18 +156,18 @@ The result for each page are listed bellow:
 
 |Page |Screenshot | Notes  | 
 |:---:|:----------------------:|---|
-| Index | <img src="readme/documentation/validation/html/index.png"> |
-| All Recipes | <img src="readme/documentation/validation/html/index.png"> |
-| Single Recipe | <img src="readme/documentation/validation/html/single_recipe.png"> |
-| Edit Comment | <img src="readme/documentation/validation/html/comment_edit.png"> |
-| Delete Comment | <img src="readme/documentation/validation/html/comment_delete.png"> |
-| Add Recipe | <img src="readme/documentation/validation/html//admin_recipe_create.png> |
-| Edit Recipe | <img src="readme/documentation/validation/html/admin_recipe_edit.png"> |
-| Delete Recipe | <img src="readme/documentation/validation/html/admin_recipe_delete.png"> |
-| Signup | <img src="readme/documentation/validation/html/signup.png"> |
-| Login | <img src="readme/documentation/validation/html/login.png"> |
-| Logout | <img src="readme/documentation/validation/html/logout.png"> |
-| 404 | <img src="readme/documentation/validation/html/404.png"> |
+| Index | <img src="readme/documentation/validation/html/index.png"> | No Errors |
+| All Recipes | <img src="readme/documentation/validation/html/index.png"> | No Errors |
+| Single Recipe | <img src="readme/documentation/validation/html/single_recipe.png"> | No Errors |
+| Edit Comment | <img src="readme/documentation/validation/html/comment_edit.png"> | No Errors |
+| Delete Comment | <img src="readme/documentation/validation/html/comment_delete.png"> | No Errors |
+| Add Recipe | <img src="readme/documentation/validation/html//admin_recipe_create.png> | No Errors |
+| Edit Recipe | <img src="readme/documentation/validation/html/admin_recipe_edit.png"> | No Errors |
+| Delete Recipe | <img src="readme/documentation/validation/html/admin_recipe_delete.png"> | No Errors |
+| Signup | <img src="readme/documentation/validation/html/signup.png"> | Error with signup form not accessible |
+| Login | <img src="readme/documentation/validation/html/login.png"> | No Errors |
+| Logout | <img src="readme/documentation/validation/html/logout.png"> | No Errors |
+| 404 | <img src="readme/documentation/validation/html/404.png"> | No Errors |
 
 - - - 
 
@@ -178,7 +178,7 @@ The [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator/) was used to val
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
-| style.css | ![style.css](documentation/images/v-css.png) | ![style.css warning](documentation/images/v-css-warning.png) |
+| style.css | <img src="readme/documentation/validation/css/style.png">| No Errors |
 
 - - - 
 
@@ -188,7 +188,7 @@ The [JShint Validator](https://jshint.com/) was used to validate the JavaScript 
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
-| titbit.js | ![screenshot](documentation/images/v-javascript.png) | Unused variables: commentReply Toggle, showNotifications and removeNotifications |
+| script.js | <img src="readme/documentation/validation/javascript/script.png"> | No Errors |
 
 
 - - - 
@@ -202,30 +202,20 @@ The [Code Institute Python Linter](https://pep8ci.herokuapp.com)was used to vali
 
 | File | Screenshot  | Notes|
 | --- | ------ |:---:|
-| settings.py |  ![Settings](documentation/images/v-network-settings.png) | Pass - Line too long due to AUTH_PASSWORD_VALIDATORS|
-| urls.py (main) |  ![Urls](documentation/images/v-network-urls.png) | Pass |
-| views.py | ![Views](documentation/images/v-network-views.png)  | Pass |
+| settings.py |  <img src="readme/documentation/validation/python/letseat/settings.png">  | Pass - Line too long due to AUTH_PASSWORD_VALIDATORS|
+| urls.py (main) |  <img src="readme/documentation/validation/python/letseat/urls.png">  | Pass |
+| views.py | <img src="readme/documentation/validation/python/letseat/views.png>  | Pass |
 
 
-#### Home app
-
-| File | Screenshot  | Notes|
-| --- | --- | --- |
-| urls.py | ![Urls](documentation/images/v-home-urls.png)  | Pass |
-| views.py | ![Views](documentation/images/v-home-views.png)  | Pass |
-| custom_tags.py |  ![Custom Tags](documentation/images/v-home-custom-tags.png) | Pass |
-
-
-#### Titbit app
+#### Blog app
 
 | File | Screenshot  | Notes|
 | --- | --- | --- |
-| admin.py | ![Admin](documentation/images/v-titbit-admin.png)  | Pass |
-| forms.py | ![Forms](documentation/images/v-titbit-forms.png)  | Pass |
-| models.py | ![Models](documentation/images/v-titbit-models.png)  | Pass |
-| tests.py |  ![Tests](documentation/images/v-titbit-tests.png)  | Pass |
-| urls.py |  ![Urls](documentation/images/v-titbit-urls.png) | Pass |
-| views.py | ![Views](documentation/images/v-titbit-views.png)  | Pass |
+| admin.py | <img src="readme/documentation/validation/python/blog/admin.png>   | Pass |
+| forms.py | <img src="readme/documentation/validation/python/blog/forms.png>   | Pass |
+| models.py | <img src="readme/documentation/validation/python/blog/models.png">   | Pass |
+| urls.py |  <img src="readme/documentation/validation/python/blog/urls.png">  | Pass |
+| views.py | <img src="readme/documentation/validation/python/blog/views.png">   | Pass |
 
 </details>
 
@@ -243,11 +233,11 @@ Check out the video with some tests by clicking [here](documentation/video/test.
 There are several screenshots of the features in the [README.md](README.md) file.
 
 
-### New Site Users
+### Site User
 
 - - -
 
-As a first time user of the site, I want to be able to:
+As a Site User, I want to be able to:
 
 *Must Have*
 
@@ -256,14 +246,6 @@ As a first time user of the site, I want to be able to:
 | understand what the site is for and how to navigate the site, so I can decide wheter or not to sign up. | Pass |
 | register for an account, so that I can create my profile and explore the website. |  Pass |
 | easily navigate the site, so that I can access what I need at the click of a button. | Pass |
-
-
-
-### **Registered Users**
-
-- - -
-
-As a registered user of the site, I want to be able to:
 
 *Must Have*
 
@@ -311,7 +293,7 @@ As a registered user of the site, I want to be able to:
 | add a background picture so that I will show what I like to other users | Pass |
 
 
-### **Admin User**
+### **Site Admin**
 
 - - -
 
