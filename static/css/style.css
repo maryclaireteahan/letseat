@@ -1254,7 +1254,7 @@ textarea {
 
   .ingredients {
     width: 70%;
-    font-size: larger;
+    font-size: large;
   }
 
   .ingredients-h2 {
@@ -1358,10 +1358,6 @@ textarea {
 /* Large devices (laptops and desktops, 1200px and up) -----------------------------------------------1200--------------------------------------------------------------------------- */
 @media screen and (min-width: 1200px) {
   body {
-    font-size: xx-large;
-  }
-
-  nav ul {
     font-size: x-large;
   }
 }
