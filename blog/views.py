@@ -61,6 +61,7 @@ class RecipeDetail(View):
             liked = True
 
         comment_form = CommentForm(data=request.POST)
+
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment_form.instance.email = request.user.email

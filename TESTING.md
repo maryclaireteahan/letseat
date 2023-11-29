@@ -200,7 +200,7 @@ The [Code Institute Python Linter](https://pep8ci.herokuapp.com)was used to vali
 
 | File | Screenshot  | Notes|
 | --- | ------ |:---:|
-| settings.py |  <img src="readme/documentation/validation/python/letseat/settings.png">  | Pass - Line too long due to AUTH_PASSWORD_VALIDATORS|
+| settings.py |  <img src="readme/documentation/validation/python/letseat/settings.png">  | Pass |
 | urls.py (main) |  <img src="readme/documentation/validation/python/letseat/urls.png">  | Pass |
 | views.py | <img src="readme/documentation/validation/python/letseat/views.png">  | Pass |
 
@@ -222,7 +222,6 @@ The [Code Institute Python Linter](https://pep8ci.herokuapp.com)was used to vali
 ## USER STORIES TESTING
 
 <details>
-<summary>👇</summary>
 
 The implemented User Stories were tested during the development of this project and also after it was finished with the below user acceptance testing:
 
@@ -276,7 +275,6 @@ As an administrator for the site I want to be able to:
 | see who commented what under each post so that I can see what the Site Users think of specific recipes and how they might change them. | Pass |
 | see how many likes a post has received so that I can see what recipes are most popular. | Pass |
 
-
 </details>
 
 - - -
@@ -284,15 +282,6 @@ As an administrator for the site I want to be able to:
 ## FEATURES TESTING
 
 <details>
-<summary>👇</summary>
-
-The features were manually tested as defensive programming during the development of this project and also after it was finished with the below user acceptance testing:
-
-
- Video recorded with testing:
-  
-![Click here to watch](https://github.com/luandretta/network/assets/113333171/bc92614c-b519-40a2-8570-186dfa59dde2)
-
 
 | Page | User Action | Expected Result| Notes |
 | --- | --- | --- | --- |
@@ -320,85 +309,51 @@ The features were manually tested as defensive programming during the developmen
 | | Click Login button (username provided) | Password required | Pass |
 | | Click Login button (valid username and invalid password provided) | Username and/or password incorrect | Pass |
 | | Click Login button (invalid username provided) | username and/or password incorrect  | Pass |
-| | Enter valid email address in username field | field will only accept valid username | Pass |
+| | Enter user email address in username field | field will only accept valid username | Pass |
 | | Enter valid password | Field will only accept password format | Pass |
 | | Click Login button with all valid information | Redirection to Index page and displays message | Pass |
 | | Click on Sign Up link | Redirection to Sign Up page | Pass |
 | | Click Cancel button | Redirection to Index page | Pass |
-
 | **Log Out** |  |  |  |
 | | click on dropdown menu, then log out | Redirects to log out page | Pass |
 | | Click to confirm to sign out  | Redirects to landing page and displays message with the sign out confirmation | Pass |
 | | Click Cancel button | Redirection to Index page | Pass |
-
 | **All Recipes** |  |  |  |
-| | Create a post only with text as content | New post only with text is created | Pass |
-| | Create a post only with picture | User is prompted to type something into the content field before sending | Pass |
-| | Create a post with text and picture | New post with text and picture is created | Pass |
-| | Click send on new post form without adding content | User is prompted to enter something into the field before sending | Pass |
-| | Click on a post | User will be redirected to the post detail page | Pass |
-| | Click on the username on a post | User will be redirected to the post author's profile | Pass |
-| | Click the like button on a post | Like button will fill with colour and the like count will increase by 1, Post author receives a notification letting them know someone has liked their post | Pass  |
-| | Click the like button on a post already liked by the user | Like button will become clear in the middle like count will decrease by 1 | Pass |
-| | Click the dislike button on a post | Dislike button will fill with colour and the dislike count will increase by 1 | Pass  |
-| | Click the dislike button on a post already liked by the user | Dislike button will become clear in the middle dislike count will decrease by 1 | Pass  |
-| | Click edit icon on own post | User is redirected to post edit page | Pass   |
-| | Click delete icon on own post | User is redirected to post delete confirmation page | Pass  |
-| | Click on the pagination | Change the pages correctly | Pass |
+| | Click anywhere on a recipe card | User will be redirected to the Single Recipe page | Pass |
 | **Single Recipe** |  |  |  |
-| | Create a post only with text as content | New post only with text is created | Pass |
-| | Create a post only with picture | User is prompted to type something into the content field before sending | Pass |
-| | Create a post with text and picture | New post with text and picture is created | Pass |
-| | Click send on new post form without adding content | User is prompted to enter something into the field before sending | Pass |
-| | Click on a post | User will be redirected to the post detail page | Pass |
-| | Click on the username on a post | User will be redirected to the post author's profile | Pass |
-| | Click the like button on a post | Like button will fill with colour and the like count will increase by 1, Post author receives a notification letting them know someone has liked their post | Pass  |
-| | Click the like button on a post already liked by the user | Like button will become clear in the middle like count will decrease by 1 | Pass |
-| | Click the dislike button on a post | Dislike button will fill with colour and the dislike count will increase by 1 | Pass  |
-| | Click the dislike button on a post already liked by the user | Dislike button will become clear in the middle dislike count will decrease by 1 | Pass  |
-| | Click edit icon on own post | User is redirected to post edit page | Pass   |
-| | Click delete icon on own post | User is redirected to post delete confirmation page | Pass  |
-| | Click on the pagination | Change the pages correctly | Pass |
-| **Add Recipe** |  |  |  |
-| | Create a post only with text as content | New post only with text is created | Pass |
-| | Create a post only with picture | User is prompted to type something into the content field before sending | Pass |
-| | Create a post with text and picture | New post with text and picture is created | Pass |
-| | Click send on new post form without adding content | User is prompted to enter something into the field before sending | Pass |
-| | Click on a post | User will be redirected to the post detail page | Pass |
-| | Click on the username on a post | User will be redirected to the post author's profile | Pass |
-| | Click the like button on a post | Like button will fill with colour and the like count will increase by 1, Post author receives a notification letting them know someone has liked their post | Pass  |
-| | Click the like button on a post already liked by the user | Like button will become clear in the middle like count will decrease by 1 | Pass |
-| | Click the dislike button on a post | Dislike button will fill with colour and the dislike count will increase by 1 | Pass  |
-| | Click the dislike button on a post already liked by the user | Dislike button will become clear in the middle dislike count will decrease by 1 | Pass  |
-| | Click edit icon on own post | User is redirected to post edit page | Pass   |
-| | Click delete icon on own post | User is redirected to post delete confirmation page | Pass  |
-| | Click on the pagination | Change the pages correctly | Pass |
-| **Edit Recipe** | | | | 
-| | Fill in post form and click submit | Original post can be edited | Pass | 
-| | Click on the Back To Post button | User will be redirected to the original post | Pass | 
-| **Delete Recipe** | | | | 
-| | Click on the Delete button | Post will be permanently deleted | Pass | 
-| | Click on the Back To Post button | User will be redirected to the original post | Pass | 
-| **Comments on Recipe** | | | | 
-| | Comment a post | New comment is created, the post author is notificated | Pass |
-| | Click submit on new comment form without adding content | User is prompted to enter something into the field before sending | Pass |
-| | Click the like button on a post already liked by the user | Like button will become clear in the middle like count will decrease by 1 | Pass |
-| | Click the dislike button on a post | Dislike button will fill with colour and the dislike count will increase by 1 | Pass  |
-| | Click the dislike button on a post already liked by the user | Dislike button will become clear in the middle dislike count will decrease by 1 | Pass   |
-| | Click edit icon on own comment | User is redirected to comment edit page | Pass  |
-| | Click delete icon on own comment | User is redirected to comment delete confirmation page | Pass  |
-| | Click on the username on a comment | User will be redirected to the comment author's profile | Pass | 
-| | Click on the comment icon | Open a form to reply the comment | Pass | 
-| | Click edit icon on own comment | User is redirected to comment edit page | Pass | 
-| | Click delete icon on own comment | User is redirected to comment delete page | Pass | 
-| | Click on the pagination | Change the pages correctly | Pass |
-| | Attempt to delete a comment as admin | Admin is redirected to  delete page | Pass |
-| | Brute forcing the URL to delete another user's comment if not on your post | Redirects user to error page | Pass | 
+| | Click the like icon on a recipe if not logged in | Like count remains unchanged | Pass  |
+| | Click the like button on a recipe that the user hasn't liked before | Like count will increase by 1 | Pass |
+| | Click the like button on a recipe already liked by the user | Like count will decrease by 1 | Pass |
+| | Click delete on recipe (only visable to admin)  | User is redirected to Delete Recipe confirmation page | Pass  |
+| | Click edit on recipe (only visable to admin) | User is redirected to Edit Recipe page | Pass   |
+| | Brute forcing the URL to delete recipe if not logged in | Redirects user to login page | Pass | 
+| | Brute forcing the URL to delete recipe while logged in (NOT admin) | Redirects user to error page | Pass |
+| | Brute forcing the URL to edit recipe if not logged in | Redirects user to login page | Pass | 
+| | Brute forcing the URL to edit recipe while logged in not as (NOT admin) | Redirects user to error page | Pass |
+| **Comments on Single Recipe** | | | | 
+| | Comment a recipe if not logged in| Feature not available, user promted to log in | Pass |
+| | Click submit on new comment form on a recipe | New comment is created | Pass |
+| | Click submit on new comment form without adding content | User is prompted to enter something into the field before submitting | Pass |
+| | Click edit on own comment (only visable to comment user) | User is redirected to comment edit page | Pass  |
+| | Click delete on own comment (only visable to comment user) | User is redirected to comment delete confirmation page | Pass  |
+| | Brute forcing the URL to delete another user's comment if not logged in | Redirects user to login page | Pass | 
+| | Brute forcing the URL to delete another user's comment while logged in | Redirects user to error page | Pass |
+| | Brute forcing the URL to edit another user's comment if not logged in | Redirects user to login page | Pass | 
+| | Brute forcing the URL to edit another user's comment while logged in | Redirects user to error page | Pass | 
 | **Edit Comment** | | | | 
 | | Fill in comment form and click submit | Original comment will be edited User will be redirected to the All Recipes | Pass | 
-| | Click on the Back To Post button | User will be redirected to the All Recipes| Pass | 
+| | Click on the Cancel button | User will be redirected to All Recipes| Pass | 
 | **Delete Comment** | | | | 
-| | Click on the Delete button | Comment or reply will be permanently deleted and User will be redirected to the All Recipes | Pass | 
+| | Click on the Delete button | Comment or reply will be permanently deleted and User will be redirected to All Recipes | Pass | 
+| | Click on the Cancel button | User will be redirected to All Recipes | Pass |  
+| **Add Recipe** |  |  |  |
+| | Click Submit on add recipe form without adding content | User is prompted to enter something into each field before submitting | Pass |
+| | Click Cancel on add recipe form | User will be redirected to All Recipes | Pass |
+| **Edit Recipe** | | | | 
+| | Fill in post form and click submit | Original recipe can be edited and User will be redirected to the All Recipes | Pass | 
+| | Click on the Cancel button | User will be redirected to the All Recipes | Pass | 
+| **Delete Recipe** | | | | 
+| | Click on the Delete button | Recipes will be permanently deleted and User will be redirected to the All Recipes | Pass | 
 | | Click on the Cancel button | User will be redirected to the All Recipes | Pass | 
 | **Error Pages** | | | | 
 | | Click on Home button | User will be redirected to Index page | Pass | 
@@ -408,7 +363,6 @@ The features were manually tested as defensive programming during the developmen
 | | Click on Youtube Icon | Opens new tab to Youtube | Pass |
 | | Click on Instagram Icon | Opens new tab to Instagram | Pass |
 | | Click on Linkedin Icon | Opens new tab to LinkedIn | Pass |
-
 
 </details>
 
