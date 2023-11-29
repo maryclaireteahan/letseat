@@ -51,6 +51,7 @@ header {
 
 .logo-header {
   height: 4.5em;
+  width: auto;
 }
 
 header a {
@@ -213,7 +214,6 @@ p {
 
 .logo-header-index {
   height: 7em;
-  width: auto;
 }
 
 .about-me-and-button-container {
