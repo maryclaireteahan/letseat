@@ -96,36 +96,32 @@ The issues listed in the table below were indentified during the development of 
 
 <details>
 
-The deployed project was tested using the Lighthouse Audit tool to check for any major issues. The results for each page are listed bellow.
+The deployed project was tested using the Lighthouse Audit tool to check for any major issues. The results for each page are listed below.
 
-Notes:
-
-* **Best Practices**: Displays images with incorrect aspect ratio - this will happen due to the uploading of photos by the user.
-
-|Page | Screenshot | 
-|:---:|:---: |
-|Index Desktop |<img src="readme/documentation/performance/desktop/index.png">|
-|Index Mobile |<img src="readme/documentation/performance/mobile/index.png">|
-|All Recipes Desktop |<img src="readme/documentation/performance/desktop/all_recipes.png">|
-|All Recipes Mobile |<img src="readme/documentation/performance/mobile/all_recipes.png">|
-|Single Recipe Desktop |<img src="readme/documentation/performance/desktop/single_recipe.png">|
-|Single Recipe Mobile |<img src="readme/documentation/performance/mobile/single_recipe.png">|
-|Delete Comment Desktop |<img src="readme/documentation/performance/desktop/comment_delete.png">|
-|Delete Comment Mobile |<img src="readme/documentation/performance/mobile/comment_delete.png">|
-|Edit Comment Desktop |<img src="readme/documentation/performance/desktop/comment_edit.png">|
-|Edit Comment Mobile |<img src="readme/documentation/performance/mobile/comment_edit.png">|
-|Add Recipe Desktop |<img src="readme/documentation/performance/desktop/admin_recipe_create.png">|
-|Add Recipe Mobile |<img src="readme/documentation/performance/mobile/admin_recipe_create.png">|
-|Edit Recipe Desktop |<img src="readme/documentation/performance/desktop/admin_recipe_edit.png">|
-|Edit Recipe Mobile |<img src="readme/documentation/performance/mobile/admin_recipe_edit.png">|
-|Delete Recipe Desktop |<img src="readme/documentation/performance/desktop/admin_recipe_delete.png">|
-|Delete Recipe Mobile |<img src="readme/documentation/performance/mobile/admin_recipe_delete.png">|
-|Signup Desktop |<img src="readme/documentation/performance/desktop/signup.png">|
-|Signup Mobile |<img src="readme/documentation/performance/mobile/signup.png">|
-|Login Desktop |<img src="readme/documentation/performance/desktop/login.png">|
-|Login Mobile |<img src="readme/documentation/performance/mobile/login.png">|
-|Logout Desktop |<img src="readme/documentation/performance/desktop/logout.png">|
-|Logout Mobile |<img src="readme/documentation/performance/mobile/logout.png">|
+|Page | Screenshot | Notes |
+|:---:|:---: |:---: |
+|Index Desktop |<img src="readme/documentation/performance/desktop/index.png">||
+|Index Mobile |<img src="readme/documentation/performance/mobile/index.png">| Height and width for images stated as reason for lower score. |
+|All Recipes Desktop |<img src="readme/documentation/performance/desktop/all_recipes.png">||
+|All Recipes Mobile |<img src="readme/documentation/performance/mobile/all_recipes.png">||
+|Single Recipe Desktop |<img src="readme/documentation/performance/desktop/single_recipe.png">||
+|Single Recipe Mobile |<img src="readme/documentation/performance/mobile/single_recipe.png">||
+|Delete Comment Desktop |<img src="readme/documentation/performance/desktop/comment_delete.png">||
+|Delete Comment Mobile |<img src="readme/documentation/performance/mobile/comment_delete.png">||
+|Edit Comment Desktop |<img src="readme/documentation/performance/desktop/comment_edit.png">||
+|Edit Comment Mobile |<img src="readme/documentation/performance/mobile/comment_edit.png">||
+|Add Recipe Desktop |<img src="readme/documentation/performance/desktop/admin_recipe_create.png">||
+|Add Recipe Mobile |<img src="readme/documentation/performance/mobile/admin_recipe_create.png">||
+|Edit Recipe Desktop |<img src="readme/documentation/performance/desktop/admin_recipe_edit.png">||
+|Edit Recipe Mobile |<img src="readme/documentation/performance/mobile/admin_recipe_edit.png">||
+|Delete Recipe Desktop |<img src="readme/documentation/performance/desktop/admin_recipe_delete.png">||
+|Delete Recipe Mobile |<img src="readme/documentation/performance/mobile/admin_recipe_delete.png">||
+|Signup Desktop |<img src="readme/documentation/performance/desktop/signup.png">||
+|Signup Mobile |<img src="readme/documentation/performance/mobile/signup.png">||
+|Login Desktop |<img src="readme/documentation/performance/desktop/login.png">||
+|Login Mobile |<img src="readme/documentation/performance/mobile/login.png">||
+|Logout Desktop |<img src="readme/documentation/performance/desktop/logout.png">||
+|Logout Mobile |<img src="readme/documentation/performance/mobile/logout.png">||
 
 </details>
 
