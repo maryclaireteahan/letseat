@@ -153,7 +153,7 @@ The result for each page are listed bellow:
 | Single Recipe | <img src="readme/documentation/validation/html/single_recipe.png"> | No Errors |
 | Edit Comment | <img src="readme/documentation/validation/html/comment_edit.png"> | No Errors |
 | Delete Comment | <img src="readme/documentation/validation/html/comment_delete.png"> | No Errors |
-| Add Recipe | <img src="readme/documentation/validation/html//admin_recipe_create.png> | No Errors |
+| Add Recipe | <img src="readme/documentation/validation/html//admin_recipe_create.png"> | No Errors |
 | Edit Recipe | <img src="readme/documentation/validation/html/admin_recipe_edit.png"> | No Errors |
 | Delete Recipe | <img src="readme/documentation/validation/html/admin_recipe_delete.png"> | No Errors |
 | Signup | <img src="readme/documentation/validation/html/signup.png"> | Error with signup form not accessible |
