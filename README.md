@@ -621,7 +621,7 @@ python3 manage.py runserver
 
 - I would like to thank my mentor Lauren-Nicole for all her support and guidance during this project 
 - I would also like to thank our cohort facilitator Marko Tot, for sending me useful links as well as giving me one to one support when I was struggling particularly with the models and 404 error page.
-- I would like to thank Hennadi and Mehatab who also helped me a lot when I was struggling with my models.
+- I would like to thank my classmates Hennadi and Mehatab who also helped me a lot when I was struggling with my models.
 </details>
 
 - - -
