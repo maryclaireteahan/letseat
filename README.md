@@ -401,8 +401,6 @@ Below is the database diagram that I created using LucidCharts.
 
 </details>
 
-
-
  - - -
 
 ## Testing
@@ -414,36 +412,46 @@ The testing section can be found [here](TESTING.md).
 
 - - -
 
-
 ##  Deployment & Local Development
-
+👩‍💻
+- - -
 <details>
+<summary>👇</summary>
 
 The live deployment application can be found on [Heroku](https://maryclaireteahan-letseat-0b5910f8e882.herokuapp.com/).
 
+
 ###   Local Development
+🏡
+
+#### How to Fork
+
+To fork the repository:
+
+1. Log in (or sign up) to Github.
+
+2. Go to the repository for this project, [letseat](https://github.com/maryclaireteahan/letseat).
+
+
+3. Click the Fork button in the top right corner.
 
 #### How to Clone
 
 To clone the repository:
 
-- Go to the [letseat](https://github.com/maryclaireteahan/letseat) repository on GitHub 
-- Click the "Code" button to the right of the screen, click HTTPs and copy the link there
-- Open a GitBash terminal and navigate to the directory where you want to locate the clone
-- On the command line, type "git clone" then paste in the copied url and press the Enter key to begin the clone process
-- git add .
-- git commit -m "Initial commit"
-- git push
-
 1. Log in (or sign up) to GitHub.
 
-2. Go to the [letseat](https://github.com/maryclaireteahan/letseat) repository on GitHub .
+2. Go to the repository for this project, [Titbit](https://github.com/luandretta/network).
 
-3. Click the "Code" button to the right of the screen, click HTTPs and copy the link there.
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 
-4. Open a GitBash terminal and navigate to the directory where you want to locate the clone.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 
-5. On the command line, type "git clone" then paste in the copied url and press the Enter key to begin the clone process
+5. Type the following command in the terminal (after the git clone you will need to paste the link you copied in step 3 above):
+
+    ```bash
+    git clone https://github.com/luandretta/network
+    ```
 
 6. Set up a virtual environment (this step is not required if you are using the Code Institute Template in GitPod as this will already be set up for you).
 
@@ -451,15 +459,6 @@ To clone the repository:
 
     ```bash
     pip3 install -r requirements.txt
-    ```
-8.  ```
-    git add
-    ``` 
-9.  ```
-    git commit -m "Initial commit"
-    ```
-10. ```
-    git push
     ```
 
 
@@ -513,17 +512,17 @@ Heroku needs two additional files in order to deploy properly.
 - Procfile
 
 You can install this project's **requirements** (where applicable) using:
-```
+```bash
 pip3 install -r requirements.txt
 ```
 
 If you have your own packages that have been installed, then the requirements file needs updated using:
-```
+```bash
 pip3 freeze --local > requirements.txt
 ```
 
 The **Procfile** can be created with the following command:
-```
+```bash
 echo web: gunicorn app_name.wsgi > Procfile
 ```
 - *replace **app_name** with the name of your primary Django app name; the folder where settings.py is located*
@@ -535,17 +534,17 @@ Either:
 
 Or:
 - In the Terminal/CLI, connect to Heroku using this command: 
-```
+```bash
 heroku login -i
 ```
 
 - Set the remote for Heroku: 
-```
+```bash
 heroku git:remote -a app_name #(replace *app_name* with your app name)
 ```
 
 - After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
-```
+```bash
 git push heroku main
 ```
 The project should now be connected and deployed to Heroku!
@@ -576,24 +575,24 @@ os.environ.setdefault("DEBUG", "True")
 
 Once the project is cloned or forked, in order to run it locally, you'll need to follow these steps:
 - Start the Django app: 
-```
+```bash
 python3 manage.py runserver
 ```
 - Stop the app once it's loaded: `CTRL+C` or `⌘+C` (Mac)
 - Make any necessary migrations:
-```
+```bash
 python3 manage.py makemigrations
 ```
 - Migrate the data to the database:
-```
+```bash
 python3 manage.py migrate
 ```
 - Create a superuser:
-```
+```bash
 python3 manage.py createsuperuser
 ```
 - Run the Django app:
-```
+```bash
 python3 manage.py runserver
 ```
 
@@ -607,18 +606,17 @@ python3 manage.py runserver
 <details>
 
 - [Stack Overflow](https://stackoverflow.com/) 
-- [W3schools](https://www.w3schools.com/) this was great for looking up forgotten **CSS** syntax and how to use it.
+- [W3schools](https://www.w3schools.com/) 
 - [CodeInstitute](https://learn.codeinstitute.net/) for their walkthrough project, which guided me with website build especially for publishing posts, comments and likes section which I code along with the video with few adjustments
 - [BBC Good Food](https://www.bbcgoodfood.com/) for providing me some text and useful information for my posts
-- [youtube](https://www.youtube.com/) videos from **codemy**, **netninja**, **veryacademy**, **djangolessons** and **ProgrammingWithJosh** channels for guidance and examples on how to create blog and improve website. I watch videos and tried to recreate some features accross my website such as 'search-box' & 'subscription', specific links could be found here
-- [veryacademy](https://www.youtube.com/watch?v=k_RY1og4Zj0&list=PLOLrQ9Pn6cawWd-5UZM6CIm0uqFXeBcTd&ab_channel=VeryAcademy)
-- [Allauth](https://django-allauth.readthedocs.io/en/latest/) for their documentation which was helpfull in creating user authentication
+- [youtube](https://www.youtube.com/) videos from **Dee Mc**. I watched her Django Recipe Sharing Tutorial from which I got a lot of help regarding models and views.
+- [Medium](https://medium.com/) in particular, an article by **Adi Ramadhan**, Django CRUD with Forms and Bootstrap Template, for help coding in CRUD functionality
+- [Django Documentation](https://docs.djangoproject.com/en/4.2/) For all queries regarding django including, models, views, forms, urls, settings, alert messages
 - [Shopify](https://www.shopify.com/) for providing me with tools to easier generate my idea and create logo
 - [Djangoforbeginners](https://djangoforbeginners.com/) for providing useful information abut basic concepts and setup for django
-- [DEV community](https://dev.to/) for helping me to setup email with django
-- [Traversy media](https://www.traversymedia.com/) for providing me with the code for dissapering hero text
 - [Lucidchart](https://lucid.app/) for providing me with tools to create my database system
-- [Balsamic](https://balsamiq.com/wireframes/) was used to create wireframes
+- [Balsamiq](https://balsamiq.com/wireframes/) was used to create wireframes
+- [mycolor](https://mycolor.space/) was used to generate color gradient
 </details>
 
 - - -
