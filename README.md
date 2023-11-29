@@ -344,7 +344,6 @@ Below is the database diagram that I created using LucidCharts.
 <details>
 
 <details><summary>Future features</summary>
-<img src="readme_img/page_screen/future.png">
 </details>
 
 There are 3 features that I would like to implement in the next iteration that would improve user experience and attract more traffic to my website
