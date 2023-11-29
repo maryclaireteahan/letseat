@@ -165,12 +165,14 @@ For this website, I chose a hero image and based the color palette off of that. 
 - - -
 
 ### DataBase Diagram
+<details>
 
 Below is the database diagram that I created using LucidCharts.
 
 <details><summary>DataBase diagram</summary>
 <img src="readme/documentation/database/database.png">
 </details>  
+</details>
 
 - - -
 
@@ -365,7 +367,7 @@ There are 3 features that I would like to implement in the next iteration that w
 - [Django](https://www.djangoproject.com/) was the framework that was used.
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language)), django is a python framework.
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used for interactiveness with the messages.
-- [Gitpod](https://www.gitpod.io/about) was used to create this site and then push everything to github.
+- [Visual Studio Code](https://www.gitpod.io/about) was used to create this site and then push everything to github.
 - [Heroku](https://en.wikipedia.org/wiki/Heroku) is used to host this site.
 - [Github](https://en.wikipedia.org/wiki/GitHub) was used to store the code.
 - [Git](https://en.wikipedia.org/wiki/Git) was used for version control.
