@@ -351,6 +351,9 @@ There are 3 features that I would like to implement in the next iteration that w
 - Give users the option to reply to other users' comments
 - Allow users to reset their passwords
 - Add a top picks section where the user admin can update their top picks of their recipes weekly
+- Have the user redirected to the relevant recipe page when edit or delete their comment on that recipe 
+- Have the admin redirected to the relevant recipe page when edit or delete that recipe or create a recipe 
+
 </details>
 
 - - -
