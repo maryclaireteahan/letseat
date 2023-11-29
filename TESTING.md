@@ -34,7 +34,7 @@ It works as expected according to the wireframes and no issue was found.
 | 992px  |  <img src="readme/documentation/responsiveness/sizes/992.png">  |
 | 768px  |  <img src="readme/documentation/responsiveness/sizes/768.png">  |
 | 576px  |  <img src="readme/documentation/responsiveness/sizes/576.png"> |
-| 320px  |  <img src="readme/documentation/responsiveness/sizes/320px.png"> |
+| 320px  |  <img src="readme/documentation/responsiveness/sizes/320.png"> |
 
 
 </details>
