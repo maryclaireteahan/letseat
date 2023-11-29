@@ -31,10 +31,12 @@ It works as expected according to the wireframes and no issue was found.
 
 |Device| Screenshot | 
 |:---|:---: |
-| Desktop |  <img src="readme/documentation/responsiveness/sizes/12oo.png">  |
-| Laptop  |  <img src="readme/documentation/responsiveness/sizes/992.png">  |
-| Tablet  |  <img src="readme/documentation/responsiveness/sizes/768.png">  |
-| Mobile  |  <img src="readme/documentation/responsiveness/sizes/576.png"> |
+| 1200px |  <img src="readme/documentation/responsiveness/sizes/1200.png">  |
+| 992px  |  <img src="readme/documentation/responsiveness/sizes/992.png">  |
+| 768px  |  <img src="readme/documentation/responsiveness/sizes/768.png">  |
+| 576px  |  <img src="readme/documentation/responsiveness/sizes/576.png"> |
+| 320px  |  <img src="readme/documentation/responsiveness/sizes/320px.png"> |
+
 
 </details>
 
