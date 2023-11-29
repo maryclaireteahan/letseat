@@ -39,7 +39,7 @@ Let's Eat is a fully responsive full-stack website that I have built using the D
 9. [Credits](#credits)
 10. [Acknowledgements](#acknowledgements)
 
-## Design & Planning:
+## Design & Planning
 
 <details>
 
