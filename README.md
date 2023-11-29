@@ -1,6 +1,6 @@
 # Let's Eat
 
-Let's Eat is a fully responsive full-stack website that I have built using the Django Full Stack framework for my Portfolio Project 4. This website gives the user the ability to browse recipies based on their category, comment on and like them.
+"Let's Eat" represents my utilization of the Django Full Stack framework for Portfolio Project 4. This fully responsive website is strategically designed with an inviting color scheme and an intuitive layout to optimize user engagement. The deliberate design choices aim to attract users by offering a seamless browsing experience for recipes categorized for easy navigation. The focus lies not only on aesthetics but also on functionality, aiming to maintain user interest and encourage prolonged interaction. The website's design ethos is centered on user retention through an interface that facilitates easy exploration, providing users with a platform where they can effortlessly discover, comment on, and engage with a wide range of recipes.
   
 ![Am i responsive image](readme/documentation/responsiveness/amiresponsive.png)  
 

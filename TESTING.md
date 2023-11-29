@@ -101,7 +101,7 @@ The deployed project was tested using the Lighthouse Audit tool to check for any
 |Page | Screenshot | Notes |
 |:---:|:---: |:---: |
 |Index Desktop |<img src="readme/documentation/performance/desktop/index.png">||
-|Index Mobile |<img src="readme/documentation/performance/mobile/index.png">| Height and width for images stated as reason for lower score. |
+|Index Mobile |<img src="readme/documentation/performance/mobile/index.png">| Height and width for images stated as reason for lower score. I tried changin them but it made no difference. |
 |All Recipes Desktop |<img src="readme/documentation/performance/desktop/all_recipes.png">||
 |All Recipes Mobile |<img src="readme/documentation/performance/mobile/all_recipes.png">||
 |Single Recipe Desktop |<img src="readme/documentation/performance/desktop/single_recipe.png">||
