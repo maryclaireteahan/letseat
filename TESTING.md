@@ -60,9 +60,9 @@ The deployed project was tested on multiple browsers to check for compatibility 
 
 ## BUGS RESOLVED AND UNRESOLVED 
 
-The issues listed in the table below were indentified during the development of the project.
-
 <details>
+
+The issues listed in the table below were indentified during the development of the project.
 
 ### Resolved bugs and issues
 
