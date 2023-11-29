@@ -347,7 +347,7 @@ Below is the database diagram that I created using LucidCharts.
 <img src="readme_img/page_screen/future.png">
 </details>
 
-- There are 3 features that I would like to implement in the next iteration that would improve user experience and attract more traffic to my website
+There are 3 features that I would like to implement in the next iteration that would improve user experience and attract more traffic to my website
 - Give users the option to reply to other users' comments
 - Allow users to reset their passwords
 - Add a top picks section where the user admin can update their top picks of their recipes weekly
