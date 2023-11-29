@@ -68,7 +68,6 @@ The issues listed in the table below were indentified during the development of 
 
 |N.| Issue |  Action | Status | 
 |:---|:--- |:--- |:--- |
-
 |01| Instructions, Ingredients and Category fields weren't required to submit a new recipe | Remove null and blank = True and set a default | Closed | 
 |02| edit/delete recipe available to all users | Add condition for user to authenticated and a super user to have edit/delete option render | Closed | 
 |03| Brute forcing the URL to edit/delete recipe allowed non superuser to edit/delete recipes | Update views to have non-superusers redirected to 404 error page | Closed | 
@@ -83,9 +82,9 @@ The issues listed in the table below were indentified during the development of 
 |14| Console Error that messageRow is not a valid DOM element however it disappears when the alert message for logging in and out appears. | Delete relevant console.log from script.js | Closed |
 
 ### Unresolved bugs and issues
+
 |N.| Issue |  Action | Status | 
 |:---|:--- |:--- |:--- |
-
 |01| Ingredients and Instructions do not render in the form of a list even when typed as such in the textareas. | Textarea field in the backend allow lists to be rendered on posted recipe. I have checked the views but isn't clear why the same textareas in the frontend and backend are operating differently | Open |
 |02| When a user likes a recipe the like initial icon of a heart outline should fill in tp be a solid heart but it doesn't | I have checked the html and views and can't find an obvious reason as to why it isn't changing | Open |
 
