@@ -2,7 +2,7 @@
 
 For a proper conclusion to this project several tests were performed.
 
-## 🚀 TABLE OF CONTENTS
+## TABLE OF CONTENTS
 
 * [RESPONSIVENESS TESTING](#responsiveness-testing)
 * [BROWSER COMPABILITY TESTING](#browser-compability-testing)
@@ -21,9 +21,8 @@ Return back to the [README.md](README.md) file.
 ## RESPONSIVENESS TESTING
 
 <details>
-<summary>👇</summary>
 
-The deployed application was tested on multiple devices to check for responsiveness issues. The bootstrap classes were used to be as responsive as possible and there was no need to add media queries.
+The deployed application was tested on multiple devices to check for responsiveness issues. 
 
 It works as expected according to the wireframes and no issue was found.
 
@@ -46,7 +45,6 @@ It works as expected according to the wireframes and no issue was found.
 
 
 <details>
-<summary>👇</summary>
 
 The deployed project was tested on multiple browsers to check for compatibility issues and works as expected.
 
@@ -62,37 +60,24 @@ The deployed project was tested on multiple browsers to check for compatibility 
 
 ## BUGS RESOLVED AND UNRESOLVED 
 
-☠️ The issues listed in the table below were indentified during the development of the project.
+The issues listed in the table below were indentified during the development of the project.
 
 <details>
-<summary>👇</summary>
 
 |N.| Issue |  Action | Status | 
 |:---|:--- |:--- |:--- |
-|01| Table django_session don't exists | Command: python manage.py migrate sessions | Closed | 
-|02 | After migration to codeanywhere, Error: pg_config executable not found | install psycopg2-binary | Closed |
-|03 | After migration to codeanywhere, the app didn't run | Create virtual enviroment | Closed |
-|04 | Sticky footer overlapping content | Remove class fixed-sm-bottom; add display: flex, direction: column and min-height:100vh to body and margin-top:auto to footer | Closed |
-|05 | Bullets in nav list | Edit default in CSS nav ul {list-style-type: none;} | Closed |
-|06 | Dropdown menu doesn't display own profile | Change the user.profile.pk to request.user.profile.pk | Closed | 
-|07 | Profile_pic doesn't display correctly | Edit templates, change bootstrap classes | Closed |
-|08 | Admin couldn't delete post or comment from other users | Edit the template and view adding request.user.is_superuser | Closed |
-|09 | Inpunt form doesn't clean after submit | Add class form-control | Closed |
-|10 | Default profile_pic doesn't display | Add boolean to templates | Closed |
-|11 | Reply comment icon button doesn't work. Parent_id was not found. | Remove '' from argument in the function.  | Closed |
-|12 | Default profile picture doesn't be displayed at followers_list. | Edit the template followers_list with boolean | Closed | 
-|13 | ConnectionRefusedError at /accounts/password/reset/ | Google and Gitpod don't see eye-to-eye and will not send emails from a Google SMPT account. Use outlook account to send email to reset password, but got Error 500 at Heroku, then changed to a new google account, turn on the 2-Step Verification and use the App Password.| Closed |
-|14 | Skip collestactic at Heroky during deployment | Run the command `python manage.py collectstatic` then deploy the project again. | Closed|
-|15 | Couldn't test the application using a free version of Elephant as a database | Create a temporary database to test the application | Closed |
-|16 | Post and Comment form doesn't clear after it's submitted | Call the empty form after save the content posted | Closed |
-|17 | After changed the password redirects to change password page | Add a path with reverse_lazy to overwrite django allauth | Closed |
-|18 | Post author couldn't delete comments in own post | Edit view and template adding if request.user == post.author. | Closed |
-|19 | The table of contents on the README.md an TESTING.md doesn't work due to emojis in titles. | Remove all emojis from titles. | Closed|
-|20 | NameError: name 'settings' is not defined | Remove the static from urls | Closed |
-|21 | Pagination from Search and Users doesn't work correctly | Add `&amp` due to paramenters.| Closed |
-| 22 | Video of the testing exceeds GitHub's file size limit and push was rejected | Delete video, `git reset --soft` was used to reset the last three commits, new commit was done with the changes, then the code was pushed to GitHub successfully | Closed | 
 
-There are no remaining bugs.
+|01| Instructions, Ingredients and Category fields weren't required to submit a new recipe | Remove null and blank = True and set a default | Closed | 
+|02| edit/delete recipe available to all users | Add condition for user to authenticated and a super user to have edit/delete option render | Closed | 
+|03| Brute forcing the URL to edit/delete recipe allowed non superuser to edit/delete recipes | Update views to have non-superusers redirected to 404 error page | Closed | 
+|04| Brute forcing the URL to edit/delete comments allowed any user to edit/delete any other users' comments | Update views to have user's who isn't the comment owner redirected to 404 error page | Closed | 
+|05| Alert messages wouldn't close when clicking the X | Add javascript to remove the element when the X is clicked | Closed | 
+|06| edit/delete recipe available to all users | Add condition for user to authenticated and a super user to have edit/delete option render | Closed |
+|09| Inpunt forms don't prepoulate fields with original comment or recipe values when editing | passed the recipe instance as an argument to the form constructor | Closed |
+|10| Heroku deployment failing | Removed unused CAB import from msli | Closed |
+|11| Categories weren't rendering | In models.py relevant functions were moved inside catergories class as they were mistakenly sitting outside it | Closed | 
+|12| 404 error page wasn't loading | Input handlere404 function to letseat views.py and at the end of relevant conditions in blog views.py   | Closed |
+|13| Styles not rendering in live preview | Switch debug to true   | Closed |
 
 </details>
 
@@ -101,15 +86,12 @@ There are no remaining bugs.
 ## LIGHTHOUSE TESTING OUTCOMES
 
 <details>
-<summary>👇</summary>
 
 The deployed project was tested using the Lighthouse Audit tool to check for any major issues. The results for each page are listed bellow.
 
 Notes:
 
 * **Best Practices**: Displays images with incorrect aspect ratio - this will happen due to the uploading of photos by the user.
-
-* Some tests were made using DevTool with Google Chrome, but it was very slow and other tests were made with Microsoft Edge, where the language was German. (Leistung = Performance, Barrierefreiheit = Accessibility)
 
 |Page | Screenshot | 
 |:---:|:---: |
@@ -143,7 +125,6 @@ Notes:
 ## CODE VALIDATION
 
 <details>
-<summary>👇</summary>
 
 ### HTML
 
