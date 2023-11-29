@@ -164,7 +164,6 @@ The result for each page are listed bellow:
 
 - - - 
 
-
 ### CSS
 
 The [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator/) was used to validate the CSS file.
@@ -216,12 +215,7 @@ The [Code Institute Python Linter](https://pep8ci.herokuapp.com)was used to vali
 
 <details>
 
-The implemented User Stories were tested during the development of this project and also after it was finished with the below user acceptance testing:
-
-Check out the video with some tests by clicking [here](documentation/video/test.mp4).
-
-There are several screenshots of the features in the [README.md](README.md) file.
-
+The implemented User Stories were tested during the development of this project and also after it was finished.
 
 ### Site User
 
@@ -257,7 +251,7 @@ As a Site User, I want to be able to:
 
 - - -
 
-As an administrator for the site I want to be able to:
+As Site Admin for the site I want to be able to:
 
 *Must Have*
 
@@ -279,14 +273,15 @@ As an administrator for the site I want to be able to:
 | Page | User Action | Expected Result| Notes |
 | --- | --- | --- | --- |
 | **Index**   |  |  | |
-| Landing | Click on Logo | Redirection to Index page | Pass |
+| | Click on Logo | Redirection to Index page | Pass |
 | | Click on Nav Toggle | Show Nav items - Home, Recipes, Signup, Login | Pass |
+| | Click on Nav Toggle (while logged in) | Show Nav items - Home, Recipes, Logout | Pass |
+| | Click on Nav Toggle (while admin logged in) | Show Nav items - Home, Recipes, Logout, Add Recipe | Pass |
 | | Click on Home button | Redirection to Index page | Pass |
 | | Click on Discover Recipes | Redirection to All Recipes page | Pass |
 | | Click on Sign Up button  | Redirection to Sign Up page | Pass |
 | | Click on Login button | Redirection to Login page | Pass |
 | | Click on Discover Recipes button | Redirection to All Recipes page | Pass |
-| Logged in | Click on Nav Toggle | Show Nav items - Home, Recipes, Logout, Add Recipe | Pass |
 | **Sign Up** |  |  |  |
 | | Click Sign Up button | Username required | Pass |
 | | Click Sign Up button (username provided) | Password required | Pass |
