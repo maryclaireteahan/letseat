@@ -164,12 +164,13 @@ For this website, I chose a hero image and based the color palette off of that. 
 
 - - -
 
-<!-- ### DataBase Diagram
+### DataBase Diagram
+
 Below is the database diagram that I created using LucidCharts.
 
 <details><summary>DataBase diagram</summary>
-<img src="readme_img/wireframes/dtb.jpeg">
-</details>  -->
+<img src="readme/documentation/database/database.png">
+</details>  
 
 - - -
 
@@ -665,13 +666,3 @@ python3 manage.py runserver
 - - -
 
 [Back to the top](#let's-eat)
-
-
-
-### DataBase Diagram
-
-Below is the database diagram that I created using LucidCharts.
-
-<details><summary>DataBase diagram</summary>
-<img src="readme/documentation/database/database.png">
-</details>  
