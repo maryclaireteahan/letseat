@@ -51,7 +51,7 @@ header {
 
 .logo-header {
   height: 4.5em;
-  width: auto;
+  width: 4.5em;
 }
 
 header a {
@@ -213,6 +213,7 @@ p {
 }
 
 .logo-header-index {
+  width: 7em;
   height: 7em;
 }
 
