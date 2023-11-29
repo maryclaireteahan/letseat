@@ -66,7 +66,6 @@ Let's Eat is a fully responsive full-stack website that I have built using the D
 ### Wireframes
 Below are the wireframes for the site that I created using balsamiq. As I was developing my website I was using agile approach and adding/updating my website/elements so for that reason some wireframes are not matching my final product.
 
-#### Desktop
 <details><summary>Index</summary>
 <img src="readme/documentation/wireframes/index.png">
 </details>
@@ -320,8 +319,6 @@ Below is the database diagram that I created using LucidCharts.
 <img src="readme/documentation/features/signup/password_errors1.png">
 <img src="readme/documentation/features/signup/password_errors2.png">
 <img src="readme/documentation/features/signup/sucessful_signup.png">
-</details>
-
 </details>
 
 ### 404 Error Page
