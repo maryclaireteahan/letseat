@@ -143,6 +143,7 @@ I divided the project board into 3 sections:
 - - -
 
 ### Typography
+
 <details>
 
 Google Fonts were used to import Oxygen font into styles.css.  It was chosen as it is a simple, font with a strong clear feel that doesn't distract from the content.
@@ -151,6 +152,7 @@ Google Fonts were used to import Oxygen font into styles.css.  It was chosen as 
 - - -
 
 ### Colour Scheme
+
 <details>
 
 For this website, I chose a hero image and based the color palette off of that. There is a contrast between the dark fonts and light backgrounds in order to keep the site accessible.
@@ -165,6 +167,7 @@ For this website, I chose a hero image and based the color palette off of that. 
 - - -
 
 ### DataBase Diagram
+
 <details>
 
 Below is the database diagram that I created using LucidCharts.
@@ -177,10 +180,11 @@ Below is the database diagram that I created using LucidCharts.
 - - -
 
 ## Features:
+
 <details>
 
 ### Navigation Bar
-- The navigation bar has a consistent look and placement on all three pages of the website supporting easy navigation.  It includes a simple Logo, and the menu options: Home page, Recipes page, Login page, Signup page and Logout page and is responsive on multiple screen sizes. The menu options are hidden until a burger icon is clicked which then brings up the menu options.
+- The navigation bar has a consistent look and placement on all three pages of the website supporting easy navigation.  It includes a simple Logo, and the menu options: Home page, Recipes page, Login page, Signup page, Logout page and Add Recipe and is responsive on multiple screen sizes. The menu options are hidden until a burger icon is clicked which then brings up the menu options.
 
 <details><summary>Navbar</summary>
 <img src="readme/documentation/features/base/header.png">
@@ -333,9 +337,6 @@ Below is the database diagram that I created using LucidCharts.
 <img src="readme/documentation/features/404/delete_recipe_not_auth.png">
 <img src="readme/documentation/features/404/edit_comment_not_auth.png">
 <img src="readme/documentation/features/404/delete_recipe_not_auth.png">
-
-
-
 </details>
 
 </details>
@@ -343,10 +344,8 @@ Below is the database diagram that I created using LucidCharts.
 - - -
 
 ## Future Features
-<details>
 
-<details><summary>Future features</summary>
-</details>
+<details>
 
 There are 3 features that I would like to implement in the next iteration that would improve user experience and attract more traffic to my website
 - Give users the option to reply to other users' comments
@@ -400,7 +399,7 @@ There are 3 features that I would like to implement in the next iteration that w
 
 </details>
 
- - - -
+- - -
 
 ## Testing
 
@@ -596,7 +595,6 @@ python3 manage.py runserver
 
 - - -
 
-
 ## Credits
 
 <details>
@@ -618,6 +616,7 @@ python3 manage.py runserver
 - - -
 
 ## Acknowledgements:
+
 <details>
 
 - I would like to thank my mentor Lauren-Nicole for all her support and guidance during this project 
