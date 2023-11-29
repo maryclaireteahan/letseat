@@ -75,7 +75,7 @@ The issues listed in the table below were indentified during the development of 
 |05| Alert messages wouldn't close when clicking the X | Add javascript to remove the element when the X is clicked | Closed | 
 |06| edit/delete recipe available to all users | Add condition for user to authenticated and a super user to have edit/delete option render | Closed |
 |09| Inpunt forms don't prepoulate fields with original comment or recipe values when editing | passed the recipe instance as an argument to the form constructor | Closed |
-|10| Heroku deployment failing | Removed unused CAB import from msli | Closed |
+|10| Heroku deployment failing | Removed unused CAB import from msilib | Closed |
 |11| Categories weren't rendering | In models.py relevant functions were moved inside catergories class as they were mistakenly sitting outside it | Closed | 
 |12| 404 error page wasn't loading | Input handlere404 function to letseat views.py and at the end of relevant conditions in blog views.py   | Closed |
 |13| Styles not rendering in live preview | Switch debug to true   | Closed |
