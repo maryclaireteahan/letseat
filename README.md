@@ -603,7 +603,7 @@ python3 manage.py runserver
 - [W3schools](https://www.w3schools.com/) 
 - [CodeInstitute](https://learn.codeinstitute.net/) for their walkthrough project, which guided me with website build especially for publishing posts, comments and likes section which I code along with the video with few adjustments
 - [BBC Good Food](https://www.bbcgoodfood.com/) for providing me some text and useful information for my posts
-- [youtube](https://www.youtube.com/) videos from **Dee Mc**. I watched her Django Recipe Sharing Tutorial from which I got a lot of help regarding models and views.
+- [youtube](https://www.youtube.com/) videos from **Dee Mc**. I watched her Django Recipe Sharing Tutorial from which I got a lot of help for the overall development for a Django project.
 - [Medium](https://medium.com/) in particular, an article by **Adi Ramadhan**, Django CRUD with Forms and Bootstrap Template, for help coding in CRUD functionality
 - [Django Documentation](https://docs.djangoproject.com/en/4.2/) For all queries regarding django including, models, views, forms, urls, settings, alert messages
 - [Shopify](https://www.shopify.com/) for providing me with tools to easier generate my idea and create logo
