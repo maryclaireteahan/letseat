@@ -410,16 +410,13 @@ The testing section can be found [here](TESTING.md).
 - - -
 
 ##  Deployment & Local Development
-👩‍💻
-- - -
+
 <details>
-<summary>👇</summary>
 
 The live deployment application can be found on [Heroku](https://maryclaireteahan-letseat-0b5910f8e882.herokuapp.com/).
 
-
 ###   Local Development
-🏡
+
 
 #### How to Fork
 
