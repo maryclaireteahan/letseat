@@ -436,7 +436,7 @@ To clone the repository:
 
 1. Log in (or sign up) to GitHub.
 
-2. Go to the repository for this project, [Titbit](https://github.com/luandretta/network).
+2. Go to the repository for this project, [letseat](https://github.com/maryclaireteahan/letseat).
 
 3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 
@@ -445,7 +445,7 @@ To clone the repository:
 5. Type the following command in the terminal (after the git clone you will need to paste the link you copied in step 3 above):
 
     ```bash
-    git clone https://github.com/luandretta/network
+    git clone https://github.com/maryclaireteahan/letseat
     ```
 
 6. Set up a virtual environment (this step is not required if you are using the Code Institute Template in GitPod as this will already be set up for you).
