@@ -211,13 +211,9 @@ p {
   justify-content: center;
 }
 
-.logo-header a img {
-  height: 7em;
-  width: auto;
-}
-
 .logo-header-index {
   height: 7em;
+  width: auto;
 }
 
 .about-me-and-button-container {
