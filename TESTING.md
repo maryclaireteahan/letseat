@@ -26,7 +26,7 @@ The deployed application was tested on multiple devices to check for responsiven
 
 It works as expected according to the wireframes and no issue was found.
 
-![Responsiveness](<img src="readme/documentation/responsiveness/amiresponsive.png">)
+![Responsiveness]<img src="readme/documentation/responsiveness/amiresponsive.png">
 
 |Device| Screenshot | 
 |:---|:---: |
