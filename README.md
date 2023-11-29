@@ -379,33 +379,29 @@ Below is the database diagram that I created using LucidCharts.
 
 - - -
 
-<!-- ## Libraries
+## Libraries
 
 <details>
 
 - asgiref - A standard Python library to allow for asynchronous web apps and servers to communicate with each other.
 - cloudinary - A Python package allowing integration between the application and Cloudinary.
-- coverage - is a third-party package that helps developers measure code coverage in their Python codebase.
 - dj-database-url - A Django utility to utilise the DATABASE_URL environment variable to configure the Django application. Used with PostgreSQL.
 - dj3-cloudinary-storage - A Django package that facilitates integration with Cloudinary storage.
 - Django - A python package for the Django framework.
-- django-active-link - A Django package used to highlight an active link in the site navigation bars.
 - django-allauth - An integrated set of Django applications addressing user authentication, registration and account management.
-- django-summernote - is a third-party package that provides a rich text editor widget for Django web applications.
 - django-crispy-forms - A Django package that provides tags and filters to control the rendering behaviour of Django forms. 
+- django-summernote - is a third-party package that provides a rich text editor widget for Django web applications.
 - gunicorn - A Python WSGI HTTP Server for UNIX.
 - oauthlib - A generic, spec-compliant, thorough implementation of the OAuth request-signing logic for Python 3.6+.
 - psycopg2 - A PostgreSQL database adapter for Python.
-- PyJWT - A Python library that allows for encoding and decoding of JSON Web Tokens (JWT).
 - python3-openid - A set of Python packages to support use of the OpenID decentralized identity system.
 - pytz - A Python package for world timezone definitions, modern and historical.
-- Pillow - A Python Imaging Library adds image processing capabilities
 - requests-oauthlib - A Python package for OAuthlib authentication support for Requests.
 - sqlparse - A non-validating SQL parser for Python.
 
 </details>
 
- -->
+
 
  - - -
 
@@ -418,34 +414,6 @@ The testing section can be found [here](TESTING.md).
 
 - - -
 
-## Bugs
-
-<details>
-
-| **Bug** | **Fix** |
-| ----------- | ----------- |
-| On index page hero image was not rendering on deployed site | Added the image in an img tag using static tags |
-| Alert messages were displaying but without an x the remove the alert | Added static tags to the script tag in the base.html in order to load the javascript for the alerts |
-| Admin page have no style | Set DEBUG to True| 
-| Cancel button on edit pages wouldn't work unless I filled in required fields | Changed cancel button to a tag |
-| No css style on Heroku | Before every deployment set debug to false and clear the cache |
-| Ingredients and Instructions weren't required fields so recipe could be uploaded without them | Removed null and blank = True and gave a defualt value for both |
-| Recipes uploaded without a category weren't rendering as the view requires a category | Removed null and blank = True and gave a defualt value for it |
-| Every user was able to edit and delete recipes | Added condition that user must be a superuser in order to edit or delete recipies |
-| Every user was able to edit and delete anyone's comment | Added condition that edit/delete option only appeared under the comments of the current site user |
-| Site would not deploy to heroku | Removed unused import CAB from |
-
-### Unresolved bugs and issues
-| **Bug** | **Fix** |
-| ----------- | ----------- |
-| Ingredients and Instructions do not render in the form of a list even when typed as such in the textareas | X |
-| Occaisionally when checking responsiveness in Dev Tools the Index page width shrinks causing white space on the right side of the screen.  | X |
-| The order of the categories is random and not as listed in models.py | X |
-| In dev tools in console I'm getting and error that messageRow is not a valid DOM element however it disappears when the alert message for logging in and out appears. | X |
-
-</details>
-
-- - -
 
 ##  Deployment & Local Development
 

@@ -64,6 +64,8 @@ The issues listed in the table below were indentified during the development of 
 
 <details>
 
+### Resolved bugs and issues
+
 |N.| Issue |  Action | Status | 
 |:---|:--- |:--- |:--- |
 
@@ -78,6 +80,14 @@ The issues listed in the table below were indentified during the development of 
 |11| Categories weren't rendering | In models.py relevant functions were moved inside catergories class as they were mistakenly sitting outside it | Closed | 
 |12| 404 error page wasn't loading | Input handlere404 function to letseat views.py and at the end of relevant conditions in blog views.py   | Closed |
 |13| Styles not rendering in live preview | Switch debug to true   | Closed |
+|14| Console Error that messageRow is not a valid DOM element however it disappears when the alert message for logging in and out appears. | Delete relevant console.log from script.js | Closed |
+
+### Unresolved bugs and issues
+|N.| Issue |  Action | Status | 
+|:---|:--- |:--- |:--- |
+
+|01| Ingredients and Instructions do not render in the form of a list even when typed as such in the textareas. | Will try to adjust model so that field gives user the option of submitting in list format | Open |
+
 
 </details>
 
