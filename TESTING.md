@@ -297,25 +297,69 @@ The features were manually tested as defensive programming during the developmen
 | Page | User Action | Expected Result| Notes |
 | --- | --- | --- | --- |
 | **Index**   |  |  | |
-| Landing | Click on Logo | Redirection to Home page | Pass |
+| Landing | Click on Logo | Redirection to Index page | Pass |
+| | Click on Nav Toggle | Show Nav items - Home, Recipes, Signup, Login | Pass |
+| | Click on Home button | Redirection to Index page | Pass |
+| | Click on Discover Recipes | Redirection to All Recipes page | Pass |
 | | Click on Sign Up button  | Redirection to Sign Up page | Pass |
-| | Click on Sign In button | Redirection to Sign In page | Pass |
-| Logged in | Click on Logo | Redirection to Main Feed | Pass |
+| | Click on Login button | Redirection to Login page | Pass |
+| | Click on Discover Recipes button | Redirection to All Recipes page | Pass |
+| Logged in | Click on Nav Toggle | Show Nav items - Home, Recipes, Logout, Add Recipe | Pass |
 | **Sign Up** |  |  |  |
-| | Enter valid email address | Field will only accept email address format | Pass |
-| | Enter valid password (twice) | Field will only accept password format | Pass |
-| | Click Sign Up button on sign up page  | Redirects user to feed and displays message | Pass |
-| | Click on Sign In link | Redirection to Sign In page | Pass |
+| | Click Sign Up button | Username required | Pass |
+| | Click Sign Up button (username provided) | Password required | Pass |
+| | Click Sign Up button (username and password provided) | Password (again) required | Pass |
+| | Click Sign Up button with all valid information | Redirection to Index page and displays message | Pass |
+| | Click Sign Up button (username, email (already in use), password, password (again) provided, passwords matching) | Field only accepts new email | Pass |
+| | Click Sign Up button (username, password, password (again) provided, passwords matching, using invalid password format) | Field will only accept password format  | Pass |
+| | Click Sign Up button (username, password, password (again) provided, passwords not matching) | Passwords required to match | Pass |
+| | Click on Login link | Redirection to Login page | Pass |
+| | Click Cancel button | Redirection to Index page | Pass |
 | **Log In** |  |  |  |
-| | Enter valid email address | Field will only accept email address format or valid username | Pass |
+| | Click Login button | Username required | Pass |
+| | Click Login button (username provided) | Password required | Pass |
+| | Click Login button (valid username and invalid password provided) | Username and/or password incorrect | Pass |
+| | Click Login button (invalid username provided) | username and/or password incorrect  | Pass |
+| | Enter valid email address in username field | field will only accept valid username | Pass |
 | | Enter valid password | Field will only accept password format | Pass |
-| | Click Login button on login page | Redirects user to main feed and displays message | Pass |
-| | Click Forgot Password | Redirects user to password reset page | Pass |
+| | Click Login button with all valid information | Redirection to Index page and displays message | Pass |
 | | Click on Sign Up link | Redirection to Sign Up page | Pass |
+| | Click Cancel button | Redirection to Index page | Pass |
+
 | **Log Out** |  |  |  |
-| | click on dropdown menu, then sign out | Redirects to sign out page | Pass |
+| | click on dropdown menu, then log out | Redirects to log out page | Pass |
 | | Click to confirm to sign out  | Redirects to landing page and displays message with the sign out confirmation | Pass |
+| | Click Cancel button | Redirection to Index page | Pass |
+
 | **All Recipes** |  |  |  |
+| | Create a post only with text as content | New post only with text is created | Pass |
+| | Create a post only with picture | User is prompted to type something into the content field before sending | Pass |
+| | Create a post with text and picture | New post with text and picture is created | Pass |
+| | Click send on new post form without adding content | User is prompted to enter something into the field before sending | Pass |
+| | Click on a post | User will be redirected to the post detail page | Pass |
+| | Click on the username on a post | User will be redirected to the post author's profile | Pass |
+| | Click the like button on a post | Like button will fill with colour and the like count will increase by 1, Post author receives a notification letting them know someone has liked their post | Pass  |
+| | Click the like button on a post already liked by the user | Like button will become clear in the middle like count will decrease by 1 | Pass |
+| | Click the dislike button on a post | Dislike button will fill with colour and the dislike count will increase by 1 | Pass  |
+| | Click the dislike button on a post already liked by the user | Dislike button will become clear in the middle dislike count will decrease by 1 | Pass  |
+| | Click edit icon on own post | User is redirected to post edit page | Pass   |
+| | Click delete icon on own post | User is redirected to post delete confirmation page | Pass  |
+| | Click on the pagination | Change the pages correctly | Pass |
+| **Single Recipe** |  |  |  |
+| | Create a post only with text as content | New post only with text is created | Pass |
+| | Create a post only with picture | User is prompted to type something into the content field before sending | Pass |
+| | Create a post with text and picture | New post with text and picture is created | Pass |
+| | Click send on new post form without adding content | User is prompted to enter something into the field before sending | Pass |
+| | Click on a post | User will be redirected to the post detail page | Pass |
+| | Click on the username on a post | User will be redirected to the post author's profile | Pass |
+| | Click the like button on a post | Like button will fill with colour and the like count will increase by 1, Post author receives a notification letting them know someone has liked their post | Pass  |
+| | Click the like button on a post already liked by the user | Like button will become clear in the middle like count will decrease by 1 | Pass |
+| | Click the dislike button on a post | Dislike button will fill with colour and the dislike count will increase by 1 | Pass  |
+| | Click the dislike button on a post already liked by the user | Dislike button will become clear in the middle dislike count will decrease by 1 | Pass  |
+| | Click edit icon on own post | User is redirected to post edit page | Pass   |
+| | Click delete icon on own post | User is redirected to post delete confirmation page | Pass  |
+| | Click on the pagination | Change the pages correctly | Pass |
+| **Add Recipe** |  |  |  |
 | | Create a post only with text as content | New post only with text is created | Pass |
 | | Create a post only with picture | User is prompted to type something into the content field before sending | Pass |
 | | Create a post with text and picture | New post with text and picture is created | Pass |
@@ -337,8 +381,7 @@ The features were manually tested as defensive programming during the developmen
 | | Click on the Back To Post button | User will be redirected to the original post | Pass | 
 | **Comments on Recipe** | | | | 
 | | Comment a post | New comment is created, the post author is notificated | Pass |
-| | Click send on new comment form without adding content | User is prompted to enter something into the field before sending | Pass |
-| | Click the like button on a comment | Like button will fill with colour and the like count will increase by 1, Post author receives a notification letting them know someone has liked their post | Pass  |
+| | Click submit on new comment form without adding content | User is prompted to enter something into the field before sending | Pass |
 | | Click the like button on a post already liked by the user | Like button will become clear in the middle like count will decrease by 1 | Pass |
 | | Click the dislike button on a post | Dislike button will fill with colour and the dislike count will increase by 1 | Pass  |
 | | Click the dislike button on a post already liked by the user | Dislike button will become clear in the middle dislike count will decrease by 1 | Pass   |
@@ -352,17 +395,20 @@ The features were manually tested as defensive programming during the developmen
 | | Attempt to delete a comment as admin | Admin is redirected to  delete page | Pass |
 | | Brute forcing the URL to delete another user's comment if not on your post | Redirects user to error page | Pass | 
 | **Edit Comment** | | | | 
-| | Fill in comment form and click submit | Original comment will be edited | Pass | 
-| | Click on the Back To Post button | User will be redirected to the original post | Pass | 
+| | Fill in comment form and click submit | Original comment will be edited User will be redirected to the All Recipes | Pass | 
+| | Click on the Back To Post button | User will be redirected to the All Recipes| Pass | 
 | **Delete Comment** | | | | 
-| | Click on the Delete button | Comment or reply will be permanently deleted | Pass | 
-| | Click on the Back button | User will be redirected to the original post | Pass | 
+| | Click on the Delete button | Comment or reply will be permanently deleted and User will be redirected to the All Recipes | Pass | 
+| | Click on the Cancel button | User will be redirected to the All Recipes | Pass | 
 | **Error Pages** | | | | 
-| | Click on Home button | User will be redirected to his feed | Pass | 
+| | Click on Home button | User will be redirected to Index page | Pass | 
 | **Footer** | | | | 
-| | Click on Linkedin Icon | Redirects to LinkedIn from the creator of this application | Pass |
-| | Click on GitHub Icon | Redirects to GitHub repository | Pass |
-| | Click on "Lucimeri Andretta" link | Redirects to GitHub from the creator of this application | Pass |
+| | Click on Facebook Icon | Opens new tab to Facebook | Pass |
+| | Click on Twitter Icon | Opens new tab to Twitter | Pass |
+| | Click on Youtube Icon | Opens new tab to Youtube | Pass |
+| | Click on Instagram Icon | Opens new tab to Instagram | Pass |
+| | Click on Linkedin Icon | Opens new tab to LinkedIn | Pass |
+
 
 </details>
 
