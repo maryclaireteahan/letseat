@@ -40,6 +40,7 @@ Let's Eat is a fully responsive full-stack website that I have built using the D
 10. [Acknowledgements](#acknowledgements)
 
 ## Design & Planning:
+
 <details>
 
 ### User Stories
@@ -138,6 +139,7 @@ I divided the project board into 3 sections:
 </details>
 </details>
 </details>
+
 - - -
 
 ### Typography
@@ -145,6 +147,7 @@ I divided the project board into 3 sections:
 
 Google Fonts were used to import Oxygen font into styles.css.  It was chosen as it is a simple, font with a strong clear feel that doesn't distract from the content.
 </details>
+
 - - -
 
 ### Colour Scheme
@@ -158,6 +161,7 @@ For this website, I chose a hero image and based the color palette off of that. 
 <img src="readme/documentation/color/palette3.png">
 </details>
 </details>
+
 - - -
 
 <!-- ### DataBase Diagram
@@ -166,6 +170,7 @@ Below is the database diagram that I created using LucidCharts.
 <details><summary>DataBase diagram</summary>
 <img src="readme_img/wireframes/dtb.jpeg">
 </details>  -->
+
 - - -
 
 ## Features:
@@ -177,6 +182,7 @@ Below is the database diagram that I created using LucidCharts.
 <details><summary>Navbar</summary>
 <img src="readme/documentation/features/base/header.png">
 <img src="readme/documentation/features/base/header_items.png">
+
 </details>
 
 
@@ -315,6 +321,24 @@ Below is the database diagram that I created using LucidCharts.
 </details>
 
 </details>
+
+### 404 Error Page
+- If an invalid url is input or an unauthorised user tries to create a recipe or edit/delete a recipe or another user's comment by brute forcing their urls they will see this page.
+
+<details><summary>404 Error page</summary>
+<img src="readme/documentation/features/404/does_not_exist.png">
+<img src="readme/documentation/features/404/create_recipe_not_auth.png">
+<img src="readme/documentation/features/404/edit_recipe_not_auth.png">
+<img src="readme/documentation/features/404/delete_recipe_not_auth.png">
+<img src="readme/documentation/features/404/edit_comment_not_auth.png">
+<img src="readme/documentation/features/404/delete_recipe_not_auth.png">
+
+
+
+</details>
+
+</details>
+
 - - -
 
 ## Future Features
@@ -329,9 +353,11 @@ Below is the database diagram that I created using LucidCharts.
 - Allow users to reset their passwords
 - Add a top picks section where the user admin can update their top picks of their recipes weekly
 </details>
+
 - - -
 
 ## Technologies Used
+
 <details>
 
 - [Balsamiq](https://en.wikipedia.org/wiki/Balsamiq) was used to create the wireframes.
@@ -347,10 +373,13 @@ Below is the database diagram that I created using LucidCharts.
 - [Git](https://en.wikipedia.org/wiki/Git) was used for version control.
 - [Cloudinary](https://cloudinary.com/) was used to store the images.
 - [ElephantSQL](https://www.elephantsql.com/) was used to store the database.
+
 </details>
+
 - - -
 
 <!-- ## Libraries
+
 <details>
 
 - asgiref - A standard Python library to allow for asynchronous web apps and servers to communicate with each other.
@@ -372,18 +401,24 @@ Below is the database diagram that I created using LucidCharts.
 - Pillow - A Python Imaging Library adds image processing capabilities
 - requests-oauthlib - A Python package for OAuthlib authentication support for Requests.
 - sqlparse - A non-validating SQL parser for Python.
+
 </details>
 
  -->
+
  - - -
 
 ## Testing
+
 <details>
 
 The testing section can be found [here](TESTING.md).
 </details>
 
+- - -
+
 ## Bugs
+
 <details>
 
 | **Bug** | **Fix** |
@@ -408,9 +443,11 @@ The testing section can be found [here](TESTING.md).
 | In dev tools in console I'm getting and error that messageRow is not a valid DOM element however it disappears when the alert message for logging in and out appears. | X |
 
 </details>
+
 - - -
 
 ##  Deployment & Local Development
+
 <details>
 
 The live deployment application can be found on [Heroku](https://maryclaireteahan-letseat-0b5910f8e882.herokuapp.com/).
@@ -592,10 +629,12 @@ python3 manage.py runserver
 ```
 
 </details>
+
 - - -
 
 
 ## Credits
+
 <details>
 
 - [Stack Overflow](https://stackoverflow.com/) 
@@ -612,15 +651,27 @@ python3 manage.py runserver
 - [Lucidchart](https://lucid.app/) for providing me with tools to create my database system
 - [Balsamic](https://balsamiq.com/wireframes/) was used to create wireframes
 </details>
+
 - - -
 
 ## Acknowledgements:
 <details>
 
 - I would like to thank my mentor Lauren-Nicole for all her support and guidance during this project 
-- I would also like to thank our cohort facilitator Marko Tot, for sending me useful links as well as giving me one to one support when I was struggling particularly with the models.
+- I would also like to thank our cohort facilitator Marko Tot, for sending me useful links as well as giving me one to one support when I was struggling particularly with the models and 404 error page.
 - I would like to thank Hennadi and Mehatab who also helped me a lot when I was struggling with my models.
 </details>
+
 - - -
 
 [Back to the top](#let's-eat)
+
+
+
+### DataBase Diagram
+
+Below is the database diagram that I created using LucidCharts.
+
+<details><summary>DataBase diagram</summary>
+<img src="readme/documentation/database/database.png">
+</details>  
